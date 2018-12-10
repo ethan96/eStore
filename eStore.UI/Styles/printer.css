@@ -1,0 +1,12 @@
+﻿.estoretable th,.orderinformationsummary p
+{
+    border-bottom: 1px solid #DDDDDD!important;
+    }
+
+.c_heat_1
+{
+border-bottom: 1px solid #DDDDDD!important;
+border-top: 1px solid #DDDDDD!important;
+}
+.printlink{display:none;}
+.eStore_order_orderDetails input{display:none;}

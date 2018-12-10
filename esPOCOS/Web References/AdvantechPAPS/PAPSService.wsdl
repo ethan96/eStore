@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strRegionId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsCategoryList">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCategoryResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsCategoryList">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSubCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strRegionId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCategoryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSubCategoryList">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSubCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getSubCategoryResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSubCategoryList">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getProductSelection">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strRegionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSubCategory" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCriteriaList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSelectionOpion">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="dsProductList">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getProductSelectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getProductSelectionResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSelectionOpion">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="dsProductList">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompatibilityPartNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strpart_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="product_list_xml">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompatibilityPartNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCompatibilityPartNoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="product_list_xml">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompatibilityPartNo2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strpart_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="product_list_xml">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompatibilityPartNo2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCompatibilityPartNo2Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="product_list_xml">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getReplacement">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="part_no" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getReplacementResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getReplacementResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getReplacementMulti">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="product_list_ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getReplacementMultiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getReplacementMultiResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="product_list_ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getProductBaseMulti">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="product_list_ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getProductBaseMultiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getProductBaseMultiResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="product_list_ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSearchCompatibilityPartNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pStrKeyword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDsPartNo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSearchCompatibilityPartNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getSearchCompatibilityPartNoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDsPartNo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPAPSProductDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pStrPartNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOPAPSProduct" type="tns:PAPSProduct" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDsAttri">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PAPSProduct">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="GetProductNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GetProductImgName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GetProductDatasheet" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GetProductReport" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GetProductLargePic" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GetProductDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GetAttrDataset">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getPAPSProductDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getPAPSProductDetailResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOPAPSProduct" type="tns:PAPSProduct" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDsAttri">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:getCategory" />
+  </wsdl:message>
+  <wsdl:message name="getCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:getCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSubCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:getSubCategory" />
+  </wsdl:message>
+  <wsdl:message name="getSubCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:getSubCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProductSelectionSoapIn">
+    <wsdl:part name="parameters" element="tns:getProductSelection" />
+  </wsdl:message>
+  <wsdl:message name="getProductSelectionSoapOut">
+    <wsdl:part name="parameters" element="tns:getProductSelectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompatibilityPartNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompatibilityPartNo" />
+  </wsdl:message>
+  <wsdl:message name="GetCompatibilityPartNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompatibilityPartNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompatibilityPartNo2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompatibilityPartNo2" />
+  </wsdl:message>
+  <wsdl:message name="GetCompatibilityPartNo2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompatibilityPartNo2Response" />
+  </wsdl:message>
+  <wsdl:message name="getReplacementSoapIn">
+    <wsdl:part name="parameters" element="tns:getReplacement" />
+  </wsdl:message>
+  <wsdl:message name="getReplacementSoapOut">
+    <wsdl:part name="parameters" element="tns:getReplacementResponse" />
+  </wsdl:message>
+  <wsdl:message name="getReplacementMultiSoapIn">
+    <wsdl:part name="parameters" element="tns:getReplacementMulti" />
+  </wsdl:message>
+  <wsdl:message name="getReplacementMultiSoapOut">
+    <wsdl:part name="parameters" element="tns:getReplacementMultiResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProductBaseMultiSoapIn">
+    <wsdl:part name="parameters" element="tns:getProductBaseMulti" />
+  </wsdl:message>
+  <wsdl:message name="getProductBaseMultiSoapOut">
+    <wsdl:part name="parameters" element="tns:getProductBaseMultiResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSearchCompatibilityPartNoSoapIn">
+    <wsdl:part name="parameters" element="tns:getSearchCompatibilityPartNo" />
+  </wsdl:message>
+  <wsdl:message name="getSearchCompatibilityPartNoSoapOut">
+    <wsdl:part name="parameters" element="tns:getSearchCompatibilityPartNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPAPSProductDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:getPAPSProductDetail" />
+  </wsdl:message>
+  <wsdl:message name="getPAPSProductDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:getPAPSProductDetailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PAPSServiceSoap">
+    <wsdl:operation name="getCategory">
+      <wsdl:input message="tns:getCategorySoapIn" />
+      <wsdl:output message="tns:getCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSubCategory">
+      <wsdl:input message="tns:getSubCategorySoapIn" />
+      <wsdl:output message="tns:getSubCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getProductSelection">
+      <wsdl:input message="tns:getProductSelectionSoapIn" />
+      <wsdl:output message="tns:getProductSelectionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompatibilityPartNo">
+      <wsdl:input message="tns:GetCompatibilityPartNoSoapIn" />
+      <wsdl:output message="tns:GetCompatibilityPartNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompatibilityPartNo2">
+      <wsdl:input message="tns:GetCompatibilityPartNo2SoapIn" />
+      <wsdl:output message="tns:GetCompatibilityPartNo2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getReplacement">
+      <wsdl:input message="tns:getReplacementSoapIn" />
+      <wsdl:output message="tns:getReplacementSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getReplacementMulti">
+      <wsdl:input message="tns:getReplacementMultiSoapIn" />
+      <wsdl:output message="tns:getReplacementMultiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getProductBaseMulti">
+      <wsdl:input message="tns:getProductBaseMultiSoapIn" />
+      <wsdl:output message="tns:getProductBaseMultiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSearchCompatibilityPartNo">
+      <wsdl:input message="tns:getSearchCompatibilityPartNoSoapIn" />
+      <wsdl:output message="tns:getSearchCompatibilityPartNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPAPSProductDetail">
+      <wsdl:input message="tns:getPAPSProductDetailSoapIn" />
+      <wsdl:output message="tns:getPAPSProductDetailSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PAPSServiceSoap" type="tns:PAPSServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCategory">
+      <soap:operation soapAction="http://tempuri.org/getCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubCategory">
+      <soap:operation soapAction="http://tempuri.org/getSubCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductSelection">
+      <soap:operation soapAction="http://tempuri.org/getProductSelection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompatibilityPartNo">
+      <soap:operation soapAction="http://tempuri.org/GetCompatibilityPartNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompatibilityPartNo2">
+      <soap:operation soapAction="http://tempuri.org/GetCompatibilityPartNo2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReplacement">
+      <soap:operation soapAction="http://tempuri.org/getReplacement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReplacementMulti">
+      <soap:operation soapAction="http://tempuri.org/getReplacementMulti" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductBaseMulti">
+      <soap:operation soapAction="http://tempuri.org/getProductBaseMulti" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSearchCompatibilityPartNo">
+      <soap:operation soapAction="http://tempuri.org/getSearchCompatibilityPartNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPAPSProductDetail">
+      <soap:operation soapAction="http://tempuri.org/getPAPSProductDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PAPSServiceSoap12" type="tns:PAPSServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCategory">
+      <soap12:operation soapAction="http://tempuri.org/getCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubCategory">
+      <soap12:operation soapAction="http://tempuri.org/getSubCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductSelection">
+      <soap12:operation soapAction="http://tempuri.org/getProductSelection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompatibilityPartNo">
+      <soap12:operation soapAction="http://tempuri.org/GetCompatibilityPartNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompatibilityPartNo2">
+      <soap12:operation soapAction="http://tempuri.org/GetCompatibilityPartNo2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReplacement">
+      <soap12:operation soapAction="http://tempuri.org/getReplacement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReplacementMulti">
+      <soap12:operation soapAction="http://tempuri.org/getReplacementMulti" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductBaseMulti">
+      <soap12:operation soapAction="http://tempuri.org/getProductBaseMulti" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSearchCompatibilityPartNo">
+      <soap12:operation soapAction="http://tempuri.org/getSearchCompatibilityPartNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPAPSProductDetail">
+      <soap12:operation soapAction="http://tempuri.org/getPAPSProductDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PAPSService">
+    <wsdl:port name="PAPSServiceSoap" binding="tns:PAPSServiceSoap">
+      <soap:address location="http://ags.advantech.com/WebService/PAPSService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PAPSServiceSoap12" binding="tns:PAPSServiceSoap12">
+      <soap12:address location="http://ags.advantech.com/WebService/PAPSService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

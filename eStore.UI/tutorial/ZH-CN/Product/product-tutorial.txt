@@ -1,0 +1,9 @@
+﻿<div class="tutorial-product tutorial-pop">
+    <span class="arrowLeft"></span><span class="close"></span>
+    <div class="title">
+        <p>
+            轻轻一滑，产品细节一览无遗！</p>
+    </div>
+    <div class="img">
+        <img src="/tutorial/en-US/Product/tutorial-product-1.jpg" /></div>
+</div>

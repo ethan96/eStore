@@ -1,0 +1,1992 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="Prospect db" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="Prospect db" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="Prospect db">
+      <s:import namespace="http://tempuri.org/PoolDAL.xsd" />
+      <s:import schemaLocation="http://unica.advantech.com.tw/Services/ExtApi.asmx?schema=PoolDAL" namespace="http://tempuri.org/PoolDAL.xsd" />
+      <s:element name="HelloKitty">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloKittyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloKittyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eStoreUserActivityToInterestedProducts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eStoreUserActivityToInterestedProductsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eStoreUserActivityToInterestedProductsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TriggerSyncRegisteredContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Contact_Row_Id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WebType" type="tns:WebUserTypeEnum" />
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrationActivityRowId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="WebUserTypeEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Alibaba" />
+          <s:enumeration value="DirectIndustry" />
+          <s:enumeration value="DirectIndustry_ClickThrough" />
+          <s:enumeration value="DirectIndustry_SalesRequest" />
+          <s:enumeration value="GlobalSpec" />
+          <s:enumeration value="TracePart" />
+          <s:enumeration value="OtherExtSource" />
+          <s:enumeration value="ON24" />
+          <s:enumeration value="ASF" />
+          <s:enumeration value="ADF" />
+          <s:enumeration value="Support" />
+          <s:enumeration value="RMA" />
+          <s:enumeration value="SUSI_Access" />
+          <s:enumeration value="Web_Access" />
+          <s:enumeration value="Adam_Forum" />
+          <s:enumeration value="iPlanet_Forum" />
+          <s:enumeration value="Corporate_Website" />
+          <s:enumeration value="Sector_Portal" />
+          <s:enumeration value="eStore" />
+          <s:enumeration value="MyAdvantech" />
+          <s:enumeration value="eDM" />
+          <s:enumeration value="AOnlineSalesPortal" />
+          <s:enumeration value="Resource" />
+          <s:enumeration value="Siebel" />
+          <s:enumeration value="iPROS" />
+          <s:enumeration value="eGrabber" />
+          <s:enumeration value="Innocore" />
+          <s:enumeration value="Dlog" />
+          <s:enumeration value="iServicesBlog" />
+          <s:enumeration value="SolutionDay" />
+          <s:enumeration value="AGS" />
+          <s:enumeration value="ITMedia" />
+          <s:enumeration value="Gongye360" />
+          <s:enumeration value="AsianProducts" />
+          <s:enumeration value="LiveChat" />
+          <s:enumeration value="WESTWICK_FARROW" />
+          <s:enumeration value="Event_Tradeshow_Exhibition" />
+          <s:enumeration value="OnlineWebinar" />
+          <s:enumeration value="Netprospex" />
+          <s:enumeration value="Zoominfo" />
+          <s:enumeration value="IEN" />
+          <s:enumeration value="MedicalExpo" />
+          <s:enumeration value="Prognosysd" />
+          <s:enumeration value="ActOn" />
+          <s:enumeration value="SimpleForm" />
+          <s:enumeration value="DIGITIMES" />
+          <s:enumeration value="IntelSolutionDirectory" />
+          <s:enumeration value="Unomy" />
+          <s:enumeration value="Insideview" />
+          <s:enumeration value="EnquiryInbox" />
+          <s:enumeration value="IPC_Nsoukeyi" />
+          <s:enumeration value="HubSpot" />
+          <s:enumeration value="Datacom" />
+          <s:enumeration value="ACN_ASF" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="TriggerSyncRegisteredContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TriggerSyncRegisteredContactResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadContactListToCPool">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ContactTable">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/PoolDAL.xsd" name="namespace" />
+                <s:attribute fixed="LIST_DETAIL_VIEWDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListDescription" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SalesOwnerEmail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UploadFrom" type="tns:UploadFromEnum" />
+            <s:element minOccurs="1" maxOccurs="1" name="WebUserType" type="tns:WebUserTypeEnum" />
+            <s:element minOccurs="0" maxOccurs="1" name="SiebelSourceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InterestedProduct" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="UploadFromEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="Global_Spec" />
+          <s:enumeration value="Alibaba" />
+          <s:enumeration value="Direct_Industry_Click_Through" />
+          <s:enumeration value="Direct_Industry_Sales_Request" />
+          <s:enumeration value="Hoovers" />
+          <s:enumeration value="Trace_Part" />
+          <s:enumeration value="iPROS" />
+          <s:enumeration value="eGrabber" />
+          <s:enumeration value="Others" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="UploadContactListToCPoolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UploadContactListToCPoolResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCuratedContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ContactTable">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/PoolDAL.xsd" name="namespace" />
+                <s:attribute fixed="LIST_DETAIL_VIEWDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="InterestedProducts" type="tns:InterestedProduct" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InterestedProduct">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AppendItems" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="RemovedItems" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateCuratedContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateCuratedContactResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportContactAndActivity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WebUserType" type="tns:WebUserTypeEnum" />
+            <s:element minOccurs="1" maxOccurs="1" name="ActivityType" type="tns:ActivityType" />
+            <s:element minOccurs="0" maxOccurs="1" name="SiebelSourceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InterestedProduct" type="tns:ArrayOfProductLevelAndValue" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="ActivityType">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Abandoned_Live_Chat" />
+          <s:enumeration value="Abort_Check_Out" />
+          <s:enumeration value="ACN_ASF_Browse_Product" />
+          <s:enumeration value="ACN_ASF_Buy_List" />
+          <s:enumeration value="ACN_ASF_Download_Material" />
+          <s:enumeration value="ACN_ASF_Sales_Inquiry" />
+          <s:enumeration value="Add_To_Cart" />
+          <s:enumeration value="Alibaba_Sales_Inquiry" />
+          <s:enumeration value="Browse_CMS" />
+          <s:enumeration value="Browse_ContactPage" />
+          <s:enumeration value="Browse_General_Info" />
+          <s:enumeration value="Browse_ProductPage" />
+          <s:enumeration value="Browse_ProductPage_From_Sales_Inquiries" />
+          <s:enumeration value="Build_System" />
+          <s:enumeration value="Buy_List" />
+          <s:enumeration value="Call_Inbound" />
+          <s:enumeration value="Click_Forward_To_Friends" />
+          <s:enumeration value="Click_Live_Chat" />
+          <s:enumeration value="Click_To_SNS" />
+          <s:enumeration value="CorpSite_Browse_BU_Page" />
+          <s:enumeration value="CorpSite_Browse_Product_Category" />
+          <s:enumeration value="CorpSite_Browse_Model_Page" />
+          <s:enumeration value="CorpSite_Browse_Online_Catalog" />
+          <s:enumeration value="CorpSite_Browse_Case_Study" />
+          <s:enumeration value="CorpSite_Browse_Video" />
+          <s:enumeration value="CorpSite_Browse_White_Papers" />
+          <s:enumeration value="CorpSite_Browse_Product_News" />
+          <s:enumeration value="CorpSite_Browse_Feature_Article" />
+          <s:enumeration value="CorpSite_Browse_Datasheet" />
+          <s:enumeration value="CorpSite_View_3D_Model" />
+          <s:enumeration value="CorpSite_Configure_System" />
+          <s:enumeration value="CorpSite_Visit_Ministe_on_BU_Page" />
+          <s:enumeration value="CorpSite_Redirect_to_eStore" />
+          <s:enumeration value="CorpSite_Browse_Solution_Page" />
+          <s:enumeration value="CorpSite_Browse_Technology_Highlight" />
+          <s:enumeration value="CorpSite_Browse_Industry_Focus" />
+          <s:enumeration value="CorpSite_Download_3DModel" />
+          <s:enumeration value="CorpSite_Download_White_Papers" />
+          <s:enumeration value="CorpSite_Browse_Search_Support_Downloads" />
+          <s:enumeration value="CorpSite_Contact_Page" />
+          <s:enumeration value="CorpSite_Redirect_to_IoTMart" />
+          <s:enumeration value="CorpSite_Redirect_to_Ushop" />
+          <s:enumeration value="CorpSite_Product_Search" />
+          <s:enumeration value="CorpSite_Browse_MyAdvantech_Mag" />
+          <s:enumeration value="CorpSite_Request_MyAdvantech_Mag_Hard_Copy" />
+          <s:enumeration value="CorpSite_Registration" />
+          <s:enumeration value="CorpSite_Download_Login_without_PW" />
+          <s:enumeration value="CorpSite_Subscribe_ENews" />
+          <s:enumeration value="CorpSite_WPC_Registration" />
+          <s:enumeration value="CorpSite_Training_Registration" />
+          <s:enumeration value="CorpSite_Inquiry_Price_and_Quotation" />
+          <s:enumeration value="CorpSite_Inquiry_Quantity_Discount_Request" />
+          <s:enumeration value="CorpSite_Inquiry_Customization_Requirement" />
+          <s:enumeration value="CorpSite_Inquiry_Technical_Support" />
+          <s:enumeration value="CorpSite_Inquiry_eDM_Request" />
+          <s:enumeration value="CorpSite_Inquiry_Catalog_Request" />
+          <s:enumeration value="CorpSite_Inquiry_Others" />
+          <s:enumeration value="CorpSite_Inquiry_RMA_Service" />
+          <s:enumeration value="CorpSite_Inquiry_Sample_Board" />
+          <s:enumeration value="Compare_Product" />
+          <s:enumeration value="Data_com_Browse_Product" />
+          <s:enumeration value="Data_com_Buy_List" />
+          <s:enumeration value="Data_com_Download_Material" />
+          <s:enumeration value="Data_com_Sales_Inquiry" />
+          <s:enumeration value="DIGITIMES_Browse_Product" />
+          <s:enumeration value="DIGITIMES_Buy_List" />
+          <s:enumeration value="DIGITIMES_Download_Material" />
+          <s:enumeration value="DIGITIMES_Sales_Inquiry" />
+          <s:enumeration value="DirectIndustry_Browse_Product" />
+          <s:enumeration value="DirectIndustry_Buy_List" />
+          <s:enumeration value="DirectIndustry_Download_Material" />
+          <s:enumeration value="DirectIndustry_Sales_Inquiry" />
+          <s:enumeration value="Download_3DModel" />
+          <s:enumeration value="Download_MarketingFile" />
+          <s:enumeration value="Download_SR" />
+          <s:enumeration value="Download_TechFile" />
+          <s:enumeration value="eDM_Open" />
+          <s:enumeration value="eDM_Click" />
+          <s:enumeration value="eDM_Click_Product_Page" />
+          <s:enumeration value="eDM_Click_BU_Solution_Page" />
+          <s:enumeration value="eDM_Click_Category_Page" />
+          <s:enumeration value="eDM_Click_Online_Forum" />
+          <s:enumeration value="eDM_Click_Catalog_Brochure" />
+          <s:enumeration value="eDM_Click_Whitepaper" />
+          <s:enumeration value="eDM_Click_Case_Study" />
+          <s:enumeration value="eDM_Click_News" />
+          <s:enumeration value="eDM_Click_Datasheet" />
+          <s:enumeration value="eDM_Click_Video" />
+          <s:enumeration value="eDM_Click_Webinar" />
+          <s:enumeration value="eDM_Click_Social_Media" />
+          <s:enumeration value="eDM_Download_Software" />
+          <s:enumeration value="eDM_Download_3DModel" />
+          <s:enumeration value="eDM_Download_Tech_Doc" />
+          <s:enumeration value="eDM_Click_Forward_to_Friend" />
+          <s:enumeration value="eDM_Click_Contact_Page" />
+          <s:enumeration value="eDM_Click_Live_Chat" />
+          <s:enumeration value="eDM_Call_Me_Now" />
+          <s:enumeration value="eDM_Click_to_Email" />
+          <s:enumeration value="eGrabber_Browse_Product" />
+          <s:enumeration value="eGrabber_Buy_List" />
+          <s:enumeration value="eGrabber_Download_Material" />
+          <s:enumeration value="eGrabber_Sales_Inquiry" />
+          <s:enumeration value="EnquiryInbox_Browse_Product" />
+          <s:enumeration value="EnquiryInbox_Buy_List" />
+          <s:enumeration value="EnquiryInbox_Download_Material" />
+          <s:enumeration value="EnquiryInbox_Sales_Inquiry" />
+          <s:enumeration value="eStore_Browse_All_Products" />
+          <s:enumeration value="eStore_Browse_Category_Page" />
+          <s:enumeration value="eStore_Browse_Product_Page" />
+          <s:enumeration value="eStore_Browse_Widget_Page" />
+          <s:enumeration value="eStore_Print_Product_Page" />
+          <s:enumeration value="eStore_Browse_General_Info" />
+          <s:enumeration value="eStore_Browse_Extended_Spec" />
+          <s:enumeration value="eStore_Browse_News" />
+          <s:enumeration value="eStore_Browse_Whitepaper" />
+          <s:enumeration value="eStore_Browse_Case_Study" />
+          <s:enumeration value="eStore_See_Configured_Systems" />
+          <s:enumeration value="eStore_Search_Product" />
+          <s:enumeration value="eStore_Click_Today_Highlight_Banner" />
+          <s:enumeration value="eStore_Click_Home_Banner" />
+          <s:enumeration value="eStore_Customized_It" />
+          <s:enumeration value="eStore_Download_Datasheet" />
+          <s:enumeration value="eStore_Download_Files" />
+          <s:enumeration value="eStore_Download_Driver" />
+          <s:enumeration value="eStore_Download_Manual" />
+          <s:enumeration value="eStore_Download_Utilities" />
+          <s:enumeration value="eStore_Registration" />
+          <s:enumeration value="eStore_Compare_Product" />
+          <s:enumeration value="eStore_Print_Comparison_Table" />
+          <s:enumeration value="eStore_Get_to_Quote" />
+          <s:enumeration value="eStore_Browse_My_Quote" />
+          <s:enumeration value="eStore_Add_To_Cart" />
+          <s:enumeration value="eStore_View_Cart" />
+          <s:enumeration value="eStore_Purchase" />
+          <s:enumeration value="eStore_Browse_My_Order" />
+          <s:enumeration value="eStore_Check_Out" />
+          <s:enumeration value="eStore_Abort_Check_Out" />
+          <s:enumeration value="eStore_Order_by_PN" />
+          <s:enumeration value="eStore_Call_Inbound" />
+          <s:enumeration value="eStore_Email_Inbound" />
+          <s:enumeration value="eStore_Sales_Inquiry" />
+          <s:enumeration value="eStore_General_Inquiries" />
+          <s:enumeration value="eStore_Techical_Support" />
+          <s:enumeration value="eStore_Request_Qty_Discount" />
+          <s:enumeration value="eStore_Subscription_ANA" />
+          <s:enumeration value="Exhibition_Participant" />
+          <s:enumeration value="Event_Attendants" />
+          <s:enumeration value="Event_Attendants_with_Sales_Inquiry" />
+          <s:enumeration value="Event_Buy_List" />
+          <s:enumeration value="Event_Registrants_without_Attendance" />
+          <s:enumeration value="Get_Quote" />
+          <s:enumeration value="Giveaway" />
+          <s:enumeration value="GlobalSpec_Buy_List" />
+          <s:enumeration value="GlobalSpec_Browse_Product" />
+          <s:enumeration value="GlobalSpec_Download_Material" />
+          <s:enumeration value="GlobalSpec_Sales_Inquiry" />
+          <s:enumeration value="Gongye360_Browse_Product" />
+          <s:enumeration value="Gongye360_Buy_List" />
+          <s:enumeration value="Gongye360_Download_Material" />
+          <s:enumeration value="Gongye360_Sales_Inquiry" />
+          <s:enumeration value="Hoovers_List" />
+          <s:enumeration value="Hoovers_Buy_List" />
+          <s:enumeration value="Hoovers_Browse_Product" />
+          <s:enumeration value="Hoovers_Download_Material" />
+          <s:enumeration value="Hoovers_Sales_Inquiry" />
+          <s:enumeration value="HubSpot_Buy_List" />
+          <s:enumeration value="HubSpot_Browse_Product" />
+          <s:enumeration value="HubSpot_Sales_Inquiry" />
+          <s:enumeration value="HubSpot_Download_Material" />
+          <s:enumeration value="IEN_Browse_Product" />
+          <s:enumeration value="IEN_Buy_List" />
+          <s:enumeration value="IEN_Download_Material" />
+          <s:enumeration value="IEN_Sales_Inquiry" />
+          <s:enumeration value="Insideview_Browse_Product" />
+          <s:enumeration value="Insideview_Buy_List" />
+          <s:enumeration value="Insideview_Download_Material" />
+          <s:enumeration value="Insideview_Sales_Inquiry" />
+          <s:enumeration value="Intel_Solution_Directory_Buy_List" />
+          <s:enumeration value="Intel_Solution_Directory_Browse_Product" />
+          <s:enumeration value="Intel_Solution_Directory_Download_Material" />
+          <s:enumeration value="Intel_Solution_Directory_Sales_Inquiry" />
+          <s:enumeration value="IPC_Nsoukeyi_Browse_Product" />
+          <s:enumeration value="IPC_Nsoukeyi_Buy_List" />
+          <s:enumeration value="IPC_Nsoukeyi_Download_Material" />
+          <s:enumeration value="IPC_Nsoukeyi_Sales_Inquiry" />
+          <s:enumeration value="iPROS_Buy_List" />
+          <s:enumeration value="iPROS_Browse_Product" />
+          <s:enumeration value="iPROS_Download_Material" />
+          <s:enumeration value="iPROS_Sales_Inquiry" />
+          <s:enumeration value="ITMedia_Browse_Product" />
+          <s:enumeration value="ITMedia_Buy_List" />
+          <s:enumeration value="ITMedia_Download_Material" />
+          <s:enumeration value="ITMedia_Sales_Inquiry" />
+          <s:enumeration value="Live_Chat" />
+          <s:enumeration value="LiveChat_Abandon_Live_Chat" />
+          <s:enumeration value="LiveChat_Click_Live_Chat" />
+          <s:enumeration value="LiveChat_Call_Me_Now" />
+          <s:enumeration value="Media_PR" />
+          <s:enumeration value="MedicalExpo_Browse_Product" />
+          <s:enumeration value="MedicalExpo_Buy_List" />
+          <s:enumeration value="MedicalExpo_Download_Material" />
+          <s:enumeration value="MedicalExpo_Sales_Inquiry" />
+          <s:enumeration value="MyAdvantech_Registration" />
+          <s:enumeration value="Netprospex_Buy_List" />
+          <s:enumeration value="Netprospex_Browse_Product" />
+          <s:enumeration value="Netprospex_Download_Material" />
+          <s:enumeration value="Netprospex_Sales_Inquiry" />
+          <s:enumeration value="OnDemand_Webinar" />
+          <s:enumeration value="OnlineWebinar_Qualified_Sales_Leads" />
+          <s:enumeration value="OnlineWebinar_Buy_List" />
+          <s:enumeration value="Others_Attendants" />
+          <s:enumeration value="Others_Attendants_with_Sales_Inquiry" />
+          <s:enumeration value="Others_Buy_List" />
+          <s:enumeration value="Others_Browse_Product" />
+          <s:enumeration value="Others_Download_Material" />
+          <s:enumeration value="Others_Sales_Inquiry" />
+          <s:enumeration value="Others_Registrants_without_Attendance" />
+          <s:enumeration value="Prognosysd_Buy_List" />
+          <s:enumeration value="Prognosysd_Browse_Product" />
+          <s:enumeration value="Prognosysd_Download_Material" />
+          <s:enumeration value="Prognosysd_Sales_Inquiry" />
+          <s:enumeration value="Purchase" />
+          <s:enumeration value="Register_Product" />
+          <s:enumeration value="Registration" />
+          <s:enumeration value="Registration_Without_Pwd" />
+          <s:enumeration value="Request_Qty_Discount" />
+          <s:enumeration value="Qualified_Sales_Leads_from_ActOn" />
+          <s:enumeration value="Qualified_Sales_Leads_from_Webinar" />
+          <s:enumeration value="Sales_Inquiry" />
+          <s:enumeration value="SalesPortal_eDM_Open" />
+          <s:enumeration value="SalesPortal_eDM_Click" />
+          <s:enumeration value="Search_Product" />
+          <s:enumeration value="Send_SR" />
+          <s:enumeration value="Share_To_SNS" />
+          <s:enumeration value="Siebel_Email_Inbound_Service" />
+          <s:enumeration value="Siebel_Email_Inbound" />
+          <s:enumeration value="Siebel_Email_Inbound_Sales" />
+          <s:enumeration value="Siebel_Call_Inbound" />
+          <s:enumeration value="Siebel_Call_Inbound_Sales" />
+          <s:enumeration value="Siebel_Call_Inbound_Service" />
+          <s:enumeration value="Siebel_Fax_Inbound" />
+          <s:enumeration value="Siebel_IM_Inbound" />
+          <s:enumeration value="Siebel_Sales_Inquiry" />
+          <s:enumeration value="Siebel_Web_Inbound_Sales" />
+          <s:enumeration value="Siebel_Web_Inbound" />
+          <s:enumeration value="Siebel_Web_Inbound_Services" />
+          <s:enumeration value="Siebel_Web_Update" />
+          <s:enumeration value="Siebel_eStore_Registration" />
+          <s:enumeration value="SimpleForm_Build_System" />
+          <s:enumeration value="SimpleForm_Compare_Product" />
+          <s:enumeration value="SimpleForm_Download_3DModel" />
+          <s:enumeration value="SimpleForm_Download_Marketing_File" />
+          <s:enumeration value="SimpleForm_Download_SR" />
+          <s:enumeration value="SimpleForm_eNews_Subscription" />
+          <s:enumeration value="SimpleForm_eNews_Clips" />
+          <s:enumeration value="SimpleForm_Exhibition" />
+          <s:enumeration value="SimpleForm_Giveaway" />
+          <s:enumeration value="SimpleForm_On_Demand_Webinar" />
+          <s:enumeration value="SimpleForm_Media_PR" />
+          <s:enumeration value="SimpleForm_Request_for_Sales_Contact" />
+          <s:enumeration value="Simple_SolutionDay_Forum_Seminar" />
+          <s:enumeration value="SimpleForm_Training" />
+          <s:enumeration value="SimpleForm_Web_Registrations" />
+          <s:enumeration value="SolutionDay_Forum_Seminar" />
+          <s:enumeration value="Subscribe_ENews" />
+          <s:enumeration value="TraceParts_Buy_List" />
+          <s:enumeration value="TraceParts_Browse_Product" />
+          <s:enumeration value="Traceparts_Download_Material" />
+          <s:enumeration value="TraceParts_Sales_Inquiry" />
+          <s:enumeration value="Training" />
+          <s:enumeration value="Update_User_Profile" />
+          <s:enumeration value="Uploaded_List" />
+          <s:enumeration value="OnlineForum_Watch_Video" />
+          <s:enumeration value="OnlineForum_Visit_Booth" />
+          <s:enumeration value="OnlineForum_Vew_Document" />
+          <s:enumeration value="OnlineForum_Stay_Over_30_Minutes" />
+          <s:enumeration value="OnlineForum_Stay_Over_90_Minutes" />
+          <s:enumeration value="InterestRate_Over_50" />
+          <s:enumeration value="Unomy_Buy_List" />
+          <s:enumeration value="Unomy_Browse_Product" />
+          <s:enumeration value="Unomy_Download_Material" />
+          <s:enumeration value="Unomy_Sales_Inquiry" />
+          <s:enumeration value="WestwickFarrow_Browse_Product" />
+          <s:enumeration value="WestwickFarrow_Buy_List" />
+          <s:enumeration value="WestwickFarrow_Download_Material" />
+          <s:enumeration value="WestwickFarrow_Sales_Inquiry" />
+          <s:enumeration value="Zoominfo_Browse_Product" />
+          <s:enumeration value="Zoominfo_Buy_List" />
+          <s:enumeration value="Zoominfo_Download_Material" />
+          <s:enumeration value="Zoominfo_Sales_Inquiry" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfProductLevelAndValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProductLevelAndValue" nillable="true" type="tns:ProductLevelAndValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProductLevelAndValue">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ProductLevel" type="tns:ProductLevelEnum" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductValue" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ProductLevelEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="ProductGroup" />
+          <s:enumeration value="InterestedProduct" />
+          <s:enumeration value="SubCategory" />
+          <s:enumeration value="ModelNo" />
+          <s:enumeration value="PartNo" />
+          <s:enumeration value="SerialNo" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ImportContactAndActivityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImportContactAndActivityResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportContactAndActivityV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WebUserType" type="tns:WebUserTypeEnum" />
+            <s:element minOccurs="1" maxOccurs="1" name="ActivityType" type="tns:ActivityType" />
+            <s:element minOccurs="0" maxOccurs="1" name="SiebelSourceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InterestedProduct" type="tns:ArrayOfProductLevelAndValue" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSiebelContactRowId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportContactAndActivityV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ImportContactAndActivityV2Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSiebelContactRowId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportContactAndActivityV3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WebUserType" type="tns:WebUserTypeEnum" />
+            <s:element minOccurs="1" maxOccurs="1" name="ActivityType" type="tns:ActivityType" />
+            <s:element minOccurs="0" maxOccurs="1" name="SiebelSourceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InterestedProduct" type="tns:ArrayOfProductLevelAndValue" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSiebelContactRowId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsCreateLead" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportContactAndActivityV3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ImportContactAndActivityV3Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSiebelContactRowId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsCreateLead" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportContactAndActivityV4">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ImmediateCreateLead" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WebUserType" type="tns:WebUserTypeEnum" />
+            <s:element minOccurs="1" maxOccurs="1" name="ActivityType" type="tns:ActivityType" />
+            <s:element minOccurs="0" maxOccurs="1" name="SiebelSourceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InterestedProduct" type="tns:ArrayOfProductLevelAndValue" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSiebelContactRowId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsCreateLead" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportContactAndActivityV4Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ImportContactAndActivityV4Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSiebelContactRowId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsCreateLead" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportContactAndActivityV5">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ImmediateCreateLead" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WebUserType" type="tns:WebUserTypeEnum" />
+            <s:element minOccurs="1" maxOccurs="1" name="ActivityType" type="tns:ActivityType" />
+            <s:element minOccurs="0" maxOccurs="1" name="SiebelSourceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InterestedProduct" type="tns:ArrayOfProductLevelAndValue" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSiebelContactRowId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsCreateLead" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportContactAndActivityV5Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ImportContactAndActivityV5Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSiebelContactRowId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsCreateLead" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportContactAndActivityV6">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WebUserType" type="tns:WebUserTypeEnum" />
+            <s:element minOccurs="1" maxOccurs="1" name="ActivityType" type="tns:ActivityType" />
+            <s:element minOccurs="0" maxOccurs="1" name="SiebelSourceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InterestedProduct" type="tns:ArrayOfProductLevelAndValue" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSiebelContactRowId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsCreateLead" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportContactAndActivityV6Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImportContactAndActivityV6Result" type="tns:LeadRetInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSiebelContactRowId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsCreateLead" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LeadRetInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LeadId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActivityId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactRowId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsCreateLead" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReturnValue" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="LDRs" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ImportContactAndActivityV7">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objImportedAc" type="tns:ObjImportedActivity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ObjImportedActivity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WebUserType" type="tns:WebUserTypeEnum" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActivityType" type="tns:ActivityType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiebelSourceId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InterestedProduct" type="tns:ArrayOfProductLevelAndValue" />
+          <s:element minOccurs="1" maxOccurs="1" name="ImmediateCreateLead" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="strSiebelContactRowId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobFunction" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZipCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UploadFrom" type="tns:LeadUploadSource" />
+          <s:element minOccurs="1" maxOccurs="1" name="eNewsLetter" type="tns:eNewsLetter" />
+          <s:element minOccurs="0" maxOccurs="1" name="RouteID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UploadViaFunc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActionDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="AOnline_Select_Topic" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="SIC_Code" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="BAA" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="GCLID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Org" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SimpleFormOwnerEmail" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="LeadUploadSource">
+        <s:restriction base="s:string">
+          <s:enumeration value="Daily" />
+          <s:enumeration value="External" />
+          <s:enumeration value="List" />
+          <s:enumeration value="Unica" />
+          <s:enumeration value="Manual" />
+          <s:enumeration value="ThankLetter" />
+          <s:enumeration value="MarketingLead" />
+          <s:enumeration value="LiveChat" />
+          <s:enumeration value="eDM_Rule" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="eNewsLetter">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="IoTMart_eNews_Embedded" />
+          <s:enumeration value="IoTMart_eNews_Industry_4_0" />
+          <s:enumeration value="IoTMart_eNews_Intelligent_Environment" />
+          <s:enumeration value="IoTMart_eNews_Intelligent_Hospital" />
+          <s:enumeration value="eNews_Clips_Industry_4_0" />
+          <s:enumeration value="eNews_Clips_Industry_IoT" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ImportContactAndActivityV7Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImportContactAndActivityV7Result" type="tns:LeadRetInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImportedLogByEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImportedLogByEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetImportedLogByEmailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportSimpleFormContactAndActivity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrationURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FormActivityURL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsFormWithPassword" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WebUserType" type="tns:WebUserTypeEnum" />
+            <s:element minOccurs="1" maxOccurs="1" name="FormActivityType" type="tns:ActivityType" />
+            <s:element minOccurs="0" maxOccurs="1" name="SiebelSourceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InterestedProduct" type="tns:ArrayOfProductLevelAndValue" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSiebelContactRowId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportSimpleFormContactAndActivityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ImportSimpleFormContactAndActivityResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSiebelContactRowId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportEStoreActivity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objImportedAct" type="tns:ObjImportedActivity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportEStoreActivityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImportEStoreActivityResult" type="tns:LeadRetInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SyncCMSContentToUNICA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CMSContentId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReturnMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SyncCMSContentToUNICAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SyncCMSContentToUNICAResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReturnMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendCMSContent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SendTo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendCMSContentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendCMSContentResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveCMSContentToECampaign">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eCampaignId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CMSId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="eCampaignName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RBU" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveCMSContentToECampaignResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RetrieveCMSContentToECampaignResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMKTLeadNum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateFrom" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateTo" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMKTLeadNumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMKTLeadNumResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEDMNum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateFrom" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateTo" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEDMNumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetEDMNumResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTANum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateFrom" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateTo" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTANumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTANumResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetELetterNumBySendDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DateFrom" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateTo" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetELetterNumBySendDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetELetterNumBySendDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetELetterNumByDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DateFrom" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateTo" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetELetterNumByDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetELetterNumByDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLeadFlashMarketingLead">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Year" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Month" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLeadFlashMarketingLeadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLeadFlashMarketingLeadResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLeadFlashSalesLead">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Year" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Month" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLeadFlashSalesLeadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLeadFlashSalesLeadResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMKTLeadByDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DateFrom" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateTo" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMKTLeadByDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMKTLeadByDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBUSectorBySalesLead">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LeadID" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBUSectorBySalesLeadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBUSectorBySalesLeadResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLDR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContactEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InterestedProduct" type="tns:ArrayOfProductLevelAndValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLDRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLDRResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegistrationSBU">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DateFrom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateTo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegistrationSBUResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRegistrationSBUResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAKRLoyaltyList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DBName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContactEmail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAKRLoyaltyListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAKRLoyaltyListResult" type="tns:ArrayOfAkrPoint" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAkrPoint">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AkrPoint" nillable="true" type="tns:AkrPoint" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AkrPoint">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Points" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloKittySoapIn">
+    <wsdl:part name="parameters" element="tns:HelloKitty" />
+  </wsdl:message>
+  <wsdl:message name="HelloKittySoapOut">
+    <wsdl:part name="parameters" element="tns:HelloKittyResponse" />
+  </wsdl:message>
+  <wsdl:message name="eStoreUserActivityToInterestedProductsSoapIn">
+    <wsdl:part name="parameters" element="tns:eStoreUserActivityToInterestedProducts" />
+  </wsdl:message>
+  <wsdl:message name="eStoreUserActivityToInterestedProductsSoapOut">
+    <wsdl:part name="parameters" element="tns:eStoreUserActivityToInterestedProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="TriggerSyncRegisteredContactSoapIn">
+    <wsdl:part name="parameters" element="tns:TriggerSyncRegisteredContact" />
+  </wsdl:message>
+  <wsdl:message name="TriggerSyncRegisteredContactSoapOut">
+    <wsdl:part name="parameters" element="tns:TriggerSyncRegisteredContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadContactListToCPoolSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadContactListToCPool" />
+  </wsdl:message>
+  <wsdl:message name="UploadContactListToCPoolSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadContactListToCPoolResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCuratedContactSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCuratedContact" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCuratedContactSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCuratedContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="ImportContactAndActivitySoapIn">
+    <wsdl:part name="parameters" element="tns:ImportContactAndActivity" />
+  </wsdl:message>
+  <wsdl:message name="ImportContactAndActivitySoapOut">
+    <wsdl:part name="parameters" element="tns:ImportContactAndActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ImportContactAndActivityV2SoapIn">
+    <wsdl:part name="parameters" element="tns:ImportContactAndActivityV2" />
+  </wsdl:message>
+  <wsdl:message name="ImportContactAndActivityV2SoapOut">
+    <wsdl:part name="parameters" element="tns:ImportContactAndActivityV2Response" />
+  </wsdl:message>
+  <wsdl:message name="ImportContactAndActivityV3SoapIn">
+    <wsdl:part name="parameters" element="tns:ImportContactAndActivityV3" />
+  </wsdl:message>
+  <wsdl:message name="ImportContactAndActivityV3SoapOut">
+    <wsdl:part name="parameters" element="tns:ImportContactAndActivityV3Response" />
+  </wsdl:message>
+  <wsdl:message name="ImportContactAndActivityV4SoapIn">
+    <wsdl:part name="parameters" element="tns:ImportContactAndActivityV4" />
+  </wsdl:message>
+  <wsdl:message name="ImportContactAndActivityV4SoapOut">
+    <wsdl:part name="parameters" element="tns:ImportContactAndActivityV4Response" />
+  </wsdl:message>
+  <wsdl:message name="ImportContactAndActivityV5SoapIn">
+    <wsdl:part name="parameters" element="tns:ImportContactAndActivityV5" />
+  </wsdl:message>
+  <wsdl:message name="ImportContactAndActivityV5SoapOut">
+    <wsdl:part name="parameters" element="tns:ImportContactAndActivityV5Response" />
+  </wsdl:message>
+  <wsdl:message name="ImportContactAndActivityV6SoapIn">
+    <wsdl:part name="parameters" element="tns:ImportContactAndActivityV6" />
+  </wsdl:message>
+  <wsdl:message name="ImportContactAndActivityV6SoapOut">
+    <wsdl:part name="parameters" element="tns:ImportContactAndActivityV6Response" />
+  </wsdl:message>
+  <wsdl:message name="ImportContactAndActivityV7SoapIn">
+    <wsdl:part name="parameters" element="tns:ImportContactAndActivityV7" />
+  </wsdl:message>
+  <wsdl:message name="ImportContactAndActivityV7SoapOut">
+    <wsdl:part name="parameters" element="tns:ImportContactAndActivityV7Response" />
+  </wsdl:message>
+  <wsdl:message name="GetImportedLogByEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetImportedLogByEmail" />
+  </wsdl:message>
+  <wsdl:message name="GetImportedLogByEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetImportedLogByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ImportSimpleFormContactAndActivitySoapIn">
+    <wsdl:part name="parameters" element="tns:ImportSimpleFormContactAndActivity" />
+  </wsdl:message>
+  <wsdl:message name="ImportSimpleFormContactAndActivitySoapOut">
+    <wsdl:part name="parameters" element="tns:ImportSimpleFormContactAndActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ImportEStoreActivitySoapIn">
+    <wsdl:part name="parameters" element="tns:ImportEStoreActivity" />
+  </wsdl:message>
+  <wsdl:message name="ImportEStoreActivitySoapOut">
+    <wsdl:part name="parameters" element="tns:ImportEStoreActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncCMSContentToUNICASoapIn">
+    <wsdl:part name="parameters" element="tns:SyncCMSContentToUNICA" />
+  </wsdl:message>
+  <wsdl:message name="SyncCMSContentToUNICASoapOut">
+    <wsdl:part name="parameters" element="tns:SyncCMSContentToUNICAResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendCMSContentSoapIn">
+    <wsdl:part name="parameters" element="tns:SendCMSContent" />
+  </wsdl:message>
+  <wsdl:message name="SendCMSContentSoapOut">
+    <wsdl:part name="parameters" element="tns:SendCMSContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveCMSContentToECampaignSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveCMSContentToECampaign" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveCMSContentToECampaignSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveCMSContentToECampaignResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMKTLeadNumSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMKTLeadNum" />
+  </wsdl:message>
+  <wsdl:message name="GetMKTLeadNumSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMKTLeadNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEDMNumSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEDMNum" />
+  </wsdl:message>
+  <wsdl:message name="GetEDMNumSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEDMNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTANumSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTANum" />
+  </wsdl:message>
+  <wsdl:message name="GetTANumSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTANumResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetELetterNumBySendDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetELetterNumBySendDate" />
+  </wsdl:message>
+  <wsdl:message name="GetELetterNumBySendDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetELetterNumBySendDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetELetterNumByDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetELetterNumByDate" />
+  </wsdl:message>
+  <wsdl:message name="GetELetterNumByDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetELetterNumByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLeadFlashMarketingLeadSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLeadFlashMarketingLead" />
+  </wsdl:message>
+  <wsdl:message name="GetLeadFlashMarketingLeadSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLeadFlashMarketingLeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLeadFlashSalesLeadSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLeadFlashSalesLead" />
+  </wsdl:message>
+  <wsdl:message name="GetLeadFlashSalesLeadSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLeadFlashSalesLeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMKTLeadByDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMKTLeadByDate" />
+  </wsdl:message>
+  <wsdl:message name="GetMKTLeadByDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMKTLeadByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBUSectorBySalesLeadSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBUSectorBySalesLead" />
+  </wsdl:message>
+  <wsdl:message name="GetBUSectorBySalesLeadSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBUSectorBySalesLeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLDRSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLDR" />
+  </wsdl:message>
+  <wsdl:message name="GetLDRSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLDRResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegistrationSBUSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRegistrationSBU" />
+  </wsdl:message>
+  <wsdl:message name="GetRegistrationSBUSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRegistrationSBUResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAKRLoyaltyListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAKRLoyaltyList" />
+  </wsdl:message>
+  <wsdl:message name="GetAKRLoyaltyListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAKRLoyaltyListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ExtApiSoap">
+    <wsdl:operation name="HelloKitty">
+      <wsdl:input message="tns:HelloKittySoapIn" />
+      <wsdl:output message="tns:HelloKittySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eStoreUserActivityToInterestedProducts">
+      <wsdl:input message="tns:eStoreUserActivityToInterestedProductsSoapIn" />
+      <wsdl:output message="tns:eStoreUserActivityToInterestedProductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TriggerSyncRegisteredContact">
+      <wsdl:input message="tns:TriggerSyncRegisteredContactSoapIn" />
+      <wsdl:output message="tns:TriggerSyncRegisteredContactSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadContactListToCPool">
+      <wsdl:input message="tns:UploadContactListToCPoolSoapIn" />
+      <wsdl:output message="tns:UploadContactListToCPoolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCuratedContact">
+      <wsdl:input message="tns:UpdateCuratedContactSoapIn" />
+      <wsdl:output message="tns:UpdateCuratedContactSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivity">
+      <wsdl:input message="tns:ImportContactAndActivitySoapIn" />
+      <wsdl:output message="tns:ImportContactAndActivitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivityV2">
+      <wsdl:input message="tns:ImportContactAndActivityV2SoapIn" />
+      <wsdl:output message="tns:ImportContactAndActivityV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivityV3">
+      <wsdl:input message="tns:ImportContactAndActivityV3SoapIn" />
+      <wsdl:output message="tns:ImportContactAndActivityV3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivityV4">
+      <wsdl:input message="tns:ImportContactAndActivityV4SoapIn" />
+      <wsdl:output message="tns:ImportContactAndActivityV4SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivityV5">
+      <wsdl:input message="tns:ImportContactAndActivityV5SoapIn" />
+      <wsdl:output message="tns:ImportContactAndActivityV5SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivityV6">
+      <wsdl:input message="tns:ImportContactAndActivityV6SoapIn" />
+      <wsdl:output message="tns:ImportContactAndActivityV6SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivityV7">
+      <wsdl:input message="tns:ImportContactAndActivityV7SoapIn" />
+      <wsdl:output message="tns:ImportContactAndActivityV7SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImportedLogByEmail">
+      <wsdl:input message="tns:GetImportedLogByEmailSoapIn" />
+      <wsdl:output message="tns:GetImportedLogByEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportSimpleFormContactAndActivity">
+      <wsdl:input message="tns:ImportSimpleFormContactAndActivitySoapIn" />
+      <wsdl:output message="tns:ImportSimpleFormContactAndActivitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportEStoreActivity">
+      <wsdl:input message="tns:ImportEStoreActivitySoapIn" />
+      <wsdl:output message="tns:ImportEStoreActivitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncCMSContentToUNICA">
+      <wsdl:input message="tns:SyncCMSContentToUNICASoapIn" />
+      <wsdl:output message="tns:SyncCMSContentToUNICASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCMSContent">
+      <wsdl:input message="tns:SendCMSContentSoapIn" />
+      <wsdl:output message="tns:SendCMSContentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCMSContentToECampaign">
+      <wsdl:input message="tns:RetrieveCMSContentToECampaignSoapIn" />
+      <wsdl:output message="tns:RetrieveCMSContentToECampaignSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMKTLeadNum">
+      <wsdl:input message="tns:GetMKTLeadNumSoapIn" />
+      <wsdl:output message="tns:GetMKTLeadNumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEDMNum">
+      <wsdl:input message="tns:GetEDMNumSoapIn" />
+      <wsdl:output message="tns:GetEDMNumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTANum">
+      <wsdl:input message="tns:GetTANumSoapIn" />
+      <wsdl:output message="tns:GetTANumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetELetterNumBySendDate">
+      <wsdl:input message="tns:GetELetterNumBySendDateSoapIn" />
+      <wsdl:output message="tns:GetELetterNumBySendDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetELetterNumByDate">
+      <wsdl:input message="tns:GetELetterNumByDateSoapIn" />
+      <wsdl:output message="tns:GetELetterNumByDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLeadFlashMarketingLead">
+      <wsdl:input message="tns:GetLeadFlashMarketingLeadSoapIn" />
+      <wsdl:output message="tns:GetLeadFlashMarketingLeadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLeadFlashSalesLead">
+      <wsdl:input message="tns:GetLeadFlashSalesLeadSoapIn" />
+      <wsdl:output message="tns:GetLeadFlashSalesLeadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMKTLeadByDate">
+      <wsdl:input message="tns:GetMKTLeadByDateSoapIn" />
+      <wsdl:output message="tns:GetMKTLeadByDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBUSectorBySalesLead">
+      <wsdl:input message="tns:GetBUSectorBySalesLeadSoapIn" />
+      <wsdl:output message="tns:GetBUSectorBySalesLeadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLDR">
+      <wsdl:input message="tns:GetLDRSoapIn" />
+      <wsdl:output message="tns:GetLDRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistrationSBU">
+      <wsdl:input message="tns:GetRegistrationSBUSoapIn" />
+      <wsdl:output message="tns:GetRegistrationSBUSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAKRLoyaltyList">
+      <wsdl:input message="tns:GetAKRLoyaltyListSoapIn" />
+      <wsdl:output message="tns:GetAKRLoyaltyListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ExtApiSoap" type="tns:ExtApiSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloKitty">
+      <soap:operation soapAction="Prospect db/HelloKitty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eStoreUserActivityToInterestedProducts">
+      <soap:operation soapAction="Prospect db/eStoreUserActivityToInterestedProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TriggerSyncRegisteredContact">
+      <soap:operation soapAction="Prospect db/TriggerSyncRegisteredContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadContactListToCPool">
+      <soap:operation soapAction="Prospect db/UploadContactListToCPool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCuratedContact">
+      <soap:operation soapAction="Prospect db/UpdateCuratedContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivity">
+      <soap:operation soapAction="Prospect db/ImportContactAndActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivityV2">
+      <soap:operation soapAction="Prospect db/ImportContactAndActivityV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivityV3">
+      <soap:operation soapAction="Prospect db/ImportContactAndActivityV3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivityV4">
+      <soap:operation soapAction="Prospect db/ImportContactAndActivityV4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivityV5">
+      <soap:operation soapAction="Prospect db/ImportContactAndActivityV5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivityV6">
+      <soap:operation soapAction="Prospect db/ImportContactAndActivityV6" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivityV7">
+      <soap:operation soapAction="Prospect db/ImportContactAndActivityV7" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImportedLogByEmail">
+      <soap:operation soapAction="Prospect db/GetImportedLogByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportSimpleFormContactAndActivity">
+      <soap:operation soapAction="Prospect db/ImportSimpleFormContactAndActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportEStoreActivity">
+      <soap:operation soapAction="Prospect db/ImportEStoreActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncCMSContentToUNICA">
+      <soap:operation soapAction="Prospect db/SyncCMSContentToUNICA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCMSContent">
+      <soap:operation soapAction="Prospect db/SendCMSContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCMSContentToECampaign">
+      <soap:operation soapAction="Prospect db/RetrieveCMSContentToECampaign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMKTLeadNum">
+      <soap:operation soapAction="Prospect db/GetMKTLeadNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEDMNum">
+      <soap:operation soapAction="Prospect db/GetEDMNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTANum">
+      <soap:operation soapAction="Prospect db/GetTANum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetELetterNumBySendDate">
+      <soap:operation soapAction="Prospect db/GetELetterNumBySendDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetELetterNumByDate">
+      <soap:operation soapAction="Prospect db/GetELetterNumByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLeadFlashMarketingLead">
+      <soap:operation soapAction="Prospect db/GetLeadFlashMarketingLead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLeadFlashSalesLead">
+      <soap:operation soapAction="Prospect db/GetLeadFlashSalesLead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMKTLeadByDate">
+      <soap:operation soapAction="Prospect db/GetMKTLeadByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBUSectorBySalesLead">
+      <soap:operation soapAction="Prospect db/GetBUSectorBySalesLead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLDR">
+      <soap:operation soapAction="Prospect db/GetLDR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistrationSBU">
+      <soap:operation soapAction="Prospect db/GetRegistrationSBU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAKRLoyaltyList">
+      <soap:operation soapAction="Prospect db/GetAKRLoyaltyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ExtApiSoap12" type="tns:ExtApiSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloKitty">
+      <soap12:operation soapAction="Prospect db/HelloKitty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eStoreUserActivityToInterestedProducts">
+      <soap12:operation soapAction="Prospect db/eStoreUserActivityToInterestedProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TriggerSyncRegisteredContact">
+      <soap12:operation soapAction="Prospect db/TriggerSyncRegisteredContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadContactListToCPool">
+      <soap12:operation soapAction="Prospect db/UploadContactListToCPool" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCuratedContact">
+      <soap12:operation soapAction="Prospect db/UpdateCuratedContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivity">
+      <soap12:operation soapAction="Prospect db/ImportContactAndActivity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivityV2">
+      <soap12:operation soapAction="Prospect db/ImportContactAndActivityV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivityV3">
+      <soap12:operation soapAction="Prospect db/ImportContactAndActivityV3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivityV4">
+      <soap12:operation soapAction="Prospect db/ImportContactAndActivityV4" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivityV5">
+      <soap12:operation soapAction="Prospect db/ImportContactAndActivityV5" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivityV6">
+      <soap12:operation soapAction="Prospect db/ImportContactAndActivityV6" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportContactAndActivityV7">
+      <soap12:operation soapAction="Prospect db/ImportContactAndActivityV7" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImportedLogByEmail">
+      <soap12:operation soapAction="Prospect db/GetImportedLogByEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportSimpleFormContactAndActivity">
+      <soap12:operation soapAction="Prospect db/ImportSimpleFormContactAndActivity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportEStoreActivity">
+      <soap12:operation soapAction="Prospect db/ImportEStoreActivity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncCMSContentToUNICA">
+      <soap12:operation soapAction="Prospect db/SyncCMSContentToUNICA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCMSContent">
+      <soap12:operation soapAction="Prospect db/SendCMSContent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCMSContentToECampaign">
+      <soap12:operation soapAction="Prospect db/RetrieveCMSContentToECampaign" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMKTLeadNum">
+      <soap12:operation soapAction="Prospect db/GetMKTLeadNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEDMNum">
+      <soap12:operation soapAction="Prospect db/GetEDMNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTANum">
+      <soap12:operation soapAction="Prospect db/GetTANum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetELetterNumBySendDate">
+      <soap12:operation soapAction="Prospect db/GetELetterNumBySendDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetELetterNumByDate">
+      <soap12:operation soapAction="Prospect db/GetELetterNumByDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLeadFlashMarketingLead">
+      <soap12:operation soapAction="Prospect db/GetLeadFlashMarketingLead" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLeadFlashSalesLead">
+      <soap12:operation soapAction="Prospect db/GetLeadFlashSalesLead" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMKTLeadByDate">
+      <soap12:operation soapAction="Prospect db/GetMKTLeadByDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBUSectorBySalesLead">
+      <soap12:operation soapAction="Prospect db/GetBUSectorBySalesLead" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLDR">
+      <soap12:operation soapAction="Prospect db/GetLDR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistrationSBU">
+      <soap12:operation soapAction="Prospect db/GetRegistrationSBU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAKRLoyaltyList">
+      <soap12:operation soapAction="Prospect db/GetAKRLoyaltyList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExtApi">
+    <wsdl:port name="ExtApiSoap" binding="tns:ExtApiSoap">
+      <soap:address location="http://unica.advantech.com.tw/Services/ExtApi.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ExtApiSoap12" binding="tns:ExtApiSoap12">
+      <soap12:address location="http://unica.advantech.com.tw/Services/ExtApi.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

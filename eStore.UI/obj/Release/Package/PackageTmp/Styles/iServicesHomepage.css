@@ -1,0 +1,1056 @@
+﻿
+h1.homepagetitle{ text-align:center; padding:40px 0px;}
+
+.app{
+	 display: inline;
+	 float: left;
+	 padding-right:20px;
+	 width: 225px;
+	  position:relative;
+      margin-bottom:40px;
+}
+
+.application{ 
+	text-align: left;
+	position: absolute; 
+   top: 10px; 
+   left: 10px; 
+   width: 100%; 
+   padding: 0;
+   border: none;
+   font-size: 16px;
+
+   	font-family: Open Sans, Arial, Helvetica, sans-serif;
+	font-weight: 600;
+ 
+	color: #f39903;
+ 
+	margin: 0 auto;
+   text-transform: uppercase;
+}
+ 
+.image{
+	position: relative;
+width: 100%;
+}
+.view{ 
+   text-align: left;
+   position: absolute; 
+   top: 141px; 
+   width: 98%; 
+   padding: 5px 0px 5px 10px;
+   color: #4598ee;
+   background-color: rgba(255, 255, 255, 0.8);
+
+ 
+	Font-family: Open Sans, Arial, Helvetica, sans-serif;
+	font-weight: 600;
+	font-size: 16px;
+ 
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.view:hover{
+	color: #ffffff;
+	background-color: rgba(69, 152, 238, 0.8);
+	}
+.medical-home-EcoPartnership li {  float:left; width:160px;}
+.medical-home-EcoPartnership li img {
+    max-width: 160px;
+    margin: auto 0px;
+    vertical-align: middle;
+}
+.medical-home-EcoPartnership-action { text-align:center ; padding:25px;}
+.medical-home-EcoPartnership-action .eStore_btn{ margin:0px 20px;}
+.ls-wrapper .liquid-slider .title {
+    display: none;
+}
+
+.ls-wrapper .panel-container .content {
+    width: 460px;
+    top: 80px;
+    right: 0px;
+    text-align: left;
+    background-image: url("uStoreApplication/bg_headline.png");
+    opacity: 0.8;
+    filter: alpha(opacity =80);
+    background-color: #666;
+    padding: 10px 15px 10px 15px;
+}
+
+    .ls-wrapper .panel-container .content .contenttitle {
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: normal;
+    }
+
+    .ls-wrapper .panel-container .content .price {
+        color: rgb(255,192,0);
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 0px 0px;
+        display: block;
+        float: left;
+    }
+
+
+/******** head promote ***********/
+.headerpromote {
+    width: 1280px;
+    height: 500px;
+    z-index: 97;
+    margin: -500px 0px 0px 0px;
+}
+
+.blk_pmo {
+    width: 980px;
+    padding-left: 150px;
+}
+
+.pmo_firstrow {
+    margin-bottom: 20px;
+    margin-left: 430px;
+}
+
+.pmo_secondrow {
+    margin-left: 350px;
+}
+
+
+.pmo_repeat {
+    background-color: #fff;
+    display: block;
+    float: left;
+    height: 150px;
+    margin-left: 30px;
+    padding: 10px;
+    position: relative;
+    width: 220px;
+}
+
+.pmo_info {
+    background-repeat: repeat;
+    bottom: 0;
+    line-height: 18px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    position: absolute;
+    text-align: center;
+    width: 220px;
+}
+
+
+
+.pmo_category {
+    color: #004280;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+    .pmo_category a:link, .pmo_category a:visited {
+        color: #004280;
+        text-decoration: none;
+    }
+
+    .pmo_category a:hover, .pmo_category a:active {
+        color: #004280;
+        text-decoration: underline;
+    }
+
+.pmo_no {
+    color: #004280;
+    font-size: 12px;
+}
+
+    .pmo_no a:link, .pmo_no a:visited {
+        color: #004280;
+        text-decoration: none;
+    }
+
+    .pmo_no a:hover, .pmo_no a:active {
+        color: #004280;
+        text-decoration: underline;
+    }
+
+
+.pmo_price {
+    background-image: url(uStoreApplication/bg_pmoprice.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    height: 76px;
+    margin-left: 160px;
+    margin-top: -20px;
+    position: absolute;
+    padding-top: 18px;
+    text-align: center;
+    width: 76px;
+}
+
+.txt_black {
+    color: #000;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+
+
+
+.pd_repeat {
+    background-color: #fff;
+    border-right: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    display: block;
+    float: left;
+    padding: 20px 15px 15px 15px;
+    position: relative;
+    width: 229px;
+}
+
+.pd_groupname {
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+    .pd_groupname a:link, .pd_groupname a:visited {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .pd_groupname a:hover, .pd_groupname a:active {
+        color: #555;
+        text-decoration: underline;
+    }
+
+.pd_description {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+    .pd_description a:link, .pd_description a:visited {
+        color: #777;
+        text-decoration: none;
+    }
+
+    .pd_description a:hover, .pd_description a:active {
+        color: #777;
+        text-decoration: underline;
+    }
+
+.pd_pic {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.pd_price {
+    background-image: url(uStoreApplication/bg_pricetag.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    bottom: 0px;
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    height: 35px;
+    line-height: 31px;
+    margin-left: -20px;
+    margin-bottom: 15px;
+    position: absolute;
+    text-align: center;
+    width: 162px;
+}
+
+.txt_brown {
+    color: #663300;
+    font-size: 12px;
+    margin-right: 4px;
+}
+
+/*****/
+.blk_app {
+    background-color: #FFF;
+}
+
+    .blk_app img {
+        float: left;
+    }
+
+    .blk_app h4 {
+        border-bottom: 1px solid #eee;
+        color: #000;
+        font-size: 13px;
+        line-height: 42px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .blk_app ul.appmenu {
+        display: block;
+        font-size: 13px;
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+
+ul.appmenu li {
+    color: #000;
+    display: block;
+    font-weight: bold;
+    line-height: 32px;
+    list-style: none;
+    margin-bottom: 12px;
+    float: left;
+    background: url(uStoreApplication/icon_e_bg.jpg);
+    background-repeat: no-repeat;
+}
+
+    ul.appmenu li img {
+        padding-left: 5px;
+    }
+
+    ul.appmenu li a.appname {
+        float: right;
+    }
+
+    ul.appmenu li a.appimage {
+        float: left;
+    }
+
+    ul.appmenu li a.appname:link, ul.appmenu li a.appname:visited {
+        color: #000;
+        text-decoration: none;
+        width: 128px;
+        display: block;
+        height: 32px;
+        line-height: 32px;
+    }
+
+    ul.appmenu li a:hover {
+        color: #000;
+        text-decoration: none;
+    }
+
+    ul.appmenu li a:active {
+        color: #000;
+        text-decoration: none;
+    }
+
+
+
+
+    ul.appmenu li img {
+        margin-right: 10px;
+        float: left;
+    }
+
+
+ul.appitem {
+    clear: both;
+    display: none;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+    ul.appitem li {
+        color: #295C88;
+        background-color: #fff;
+        background-image: url(uStoreApplication/icon_dot.png);
+        background-repeat: no-repeat;
+        background-position: 5px 13px;
+        font-size: 12px;
+        font-weight: normal;
+        display: block;
+        line-height: 17px;
+        margin-bottom: 0px;
+        padding: 5px 0px 0px 15px;
+    }
+
+        ul.appitem li a:link, ul.appitem li a:visited {
+            background-color: #fff;
+            color: #295C88;
+            display: block;
+            text-decoration: none;
+            background-image: none;
+        }
+
+        ul.appitem li a:hover, ul.appitem li a:active {
+            background-color: #fff;
+            color: #ffb034;
+            display: block;
+            text-decoration: underline;
+            background-image: none;
+        }
+
+
+
+.medical-home-content a img, a img:hover {
+    border: none;
+}
+
+.medical-home-content .pic img {
+    width: 220px;
+}
+
+.medical-home-content ul, .medical-home-content ol, .medical-home-content li {
+    list-style: none;
+}
+
+.medical-home-content input {
+    outline: none;
+}
+
+.medical-home-content .pull-left {
+    float: left;
+}
+
+.medical-home-content .pull-right {
+    float: right;
+}
+
+.medical-home-content .clearfix {
+    clear: both;
+    height: 0px;
+    visibility: inherit;
+}
+
+.medical-home-content .overflow-hidden {
+    overflow: hidden;
+}
+
+.medical-home-content .text-center {
+    text-align: center;
+}
+
+.medical-home-content .text-right {
+    text-align: right;
+}
+
+.medical-home-content .text-left {
+    text-align: left;
+}
+
+.medical-home-content .block-center {
+    margin: 0 auto;
+}
+/**** 結束內文的浮動 ****/
+.medical-container:after, .medical-ProCol:after, .medical-home-content:after {
+    content: ".";
+    display: block;
+    height: 0px;
+    clear: both;
+    visibility: hidden;
+}
+/**** 結束內文的浮動 ****/
+
+
+/****************************************************** index content ******************************************************/
+.medical-home-content {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    clear: both;
+    padding: 20px 50px 40px 50px;
+}
+
+    .medical-home-content li {
+        float: left;
+        width: 251px;
+        margin: 0px 9px;
+        background-color: #f7f7f7;
+        padding: 0px 15px 25px 15px;
+        margin-bottom: 25px;
+    }
+
+        .medical-home-content li:hover {
+            -moz-box-shadow: 0px 0px 15px #cecece;
+            -webkit-box-shadow: 0px 0px 15px #cecece;
+            box-shadow: 0px 0px 15px #cecece;
+        }
+
+    .medical-home-content h3 {
+        text-transform: uppercase;
+        font-family: Open Sans, Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        color: #f39903;
+        padding: 20px 0px 25px 0;
+        margin: 0 auto;
+        text-align: center;
+        border-bottom: 0px;
+        height: 40px;
+    }
+
+        .medical-home-content h3.double-line {
+            font-family: Open Sans, Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            color: #f39903;
+            margin: 0 auto;
+            padding: 20px 0px 5px 0px;
+            text-align: center;
+        }
+
+    .medical-home-content div.pic {
+        text-align: center;
+        margin: auto;
+    }
+
+    .medical-home-content .eStore_btn {
+ width:94%;
+    }
+
+.priceOrange {
+    margin: 15px 10px;
+}
+
+.pad2 {
+    height: 120px;
+    overflow: hidden;
+    padding: 20px 10px 0px 5px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #666666;
+}
+
+#HeaderBanner.iService .cycle-overlay {
+    background-color: transparent;
+    width: 100%;
+}
+
+    #HeaderBanner.iService .cycle-overlay p {
+        font-family: Lato, Open Sans, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        color: #B4784F;
+        padding: 10px 25px 0 25px;
+        font-size: 1.7em;
+        margin-top: 0;
+    }
+
+    #HeaderBanner.iService .cycle-overlay h1 {
+        font-family: Lato, Open Sans, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        color: #B4784F;
+        margin-bottom: 10px;
+        font-size: 2.7em;
+    }
+
+#HeaderBanner.Healthcare .cycle-overlay {
+    background-color: transparent;
+    width: 64%;
+    top: 35%;
+    left: auto;
+    right: 0px;
+}
+
+    #HeaderBanner.Healthcare .cycle-overlay h1 {
+        font-family: Lato, opan Sans, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        padding: 0px;
+        color: #fff;
+        margin-bottom: 10px;
+        font-size: 42px;
+    }
+
+    #HeaderBanner.Healthcare .cycle-overlay p {
+        font-family: Lato, opan Sans, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        color: #fff;
+        font-size: 23px;
+        margin-top: 0;
+    }
+
+.medical-home-col, .medical-home-col2 {
+    width: 238px;
+    height: 243px;
+    border: 1px solid #e1e1e1;
+    float: left;
+    margin: 0px 20px 20px 0px;
+    position: relative;
+}
+
+    .medical-home-col:first-child {
+        margin-left: 0px;
+    }
+
+    .medical-home-col:last-child {
+        margin-right: 0px;
+    }
+
+.medical-home-content a.txt {
+    width: 220px;
+    height: 225px;
+    padding: 9px;
+    display: inline-block;
+    color: #537388;
+    position: absolute;
+    border-color: #c2dff5;
+}
+
+.medical-home-summary {
+    width: 220px;
+}
+
+    .medical-home-summary .img {
+        position: relative;
+    }
+
+    .medical-home-summary .title {
+        font-size: 15px;
+        margin: 8px;
+        height: 32px;
+        width: 100%;
+    }
+
+    .medical-home-summary .price {
+        color: #ff8400;
+    }
+
+        .medical-home-summary .price span {
+            font-size: 21px;
+            padding: 0 15px 0 3px;
+            background: url(uStoreApplication/arrow.png) right 4px no-repeat;
+        }
+
+.medical-home-content a:hover {
+    text-decoration: none;
+}
+
+.medical-home-detail {
+    position: absolute;
+    top: 9px;
+    right: 13px;
+    width: 180px;
+    z-index: -2;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+    .medical-home-detail .content {
+        height: 200px;
+        overflow: hidden;
+    }
+
+.medical-home-col2 {
+    width: 498px;
+    margin-left: 0px;
+}
+
+    .medical-home-col2 a.txt {
+        width: 480px;
+    }
+
+    .medical-home-col2 .medical-home-summary {
+        width: 480px;
+    }
+
+        .medical-home-col2 .medical-home-summary .title {
+            font-size: 15px;
+            margin: 8px;
+            height: 32px;
+            width: 220px;
+        }
+
+.medical-home-content .medical-home-content a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.master-wrapper-center .medical-col-left a.btn {
+    position: absolute;
+    top: 209px;
+    right: -180px;
+    z-index: -2;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.medical-home-col.medical-col-left:hover, .medical-home-col2.medical-col-left:hover {
+    *left: 0px;
+}
+/**針對ie7**/
+.medical-home-col2-pro {
+    position: absolute;
+    top: 13px;
+    left: 273px;
+}
+
+
+/*********** Size ***********/
+.medical-ProCol-right-Size {
+    margin-top: 10px;
+}
+
+    .medical-ProCol-right-Size a {
+        border: 1px solid #2b8bc6;
+        color: #2b8bc6;
+        padding: 2px 8px;
+        margin-right: 5px;
+        display: inline-block;
+    }
+
+        .medical-ProCol-right-Size a.active, .medical-ProCol-right-Size a:hover {
+            background-color: #2b8bc6;
+            color: #fff;
+            text-decoration: none;
+        }
+
+/*********** bottom ***********/
+.medical-ProCol-right-msg {
+    margin-top: 20px;
+    color: #ff8400;
+    font-size: 18px;
+    vertical-align: bottom;
+}
+
+    .medical-ProCol-right-msg span {
+        font-size: 30px;
+        vertical-align: middle;
+        padding-left: 3px;
+    }
+
+/****************************************************** btn ******************************************************/
+.master-wrapper-center a.btn {
+    font-size: 13px;
+    color: #fff;
+    border: 1px solid #196cc8;
+    padding: 2px 5px;
+    margin-left: 10px;
+    display: inline-block;
+    background: linear-gradient(top,#2e97e1,#178cd6);
+    background: -moz-linear-gradient(top,#2e97e1,#178cd6);
+    background: -webkit-linear-gradient(top,#2e97e1,#178cd6);
+    background-color: #2e97e1;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+    .master-wrapper-center a.btn:hover {
+        text-decoration: none;
+        background: linear-gradient(bottom,#033390,#3494ed);
+        background: -moz-linear-gradient(bottom,#033390,#3494ed);
+        background: -webkit-linear-gradient(bottom,#033390,#3494ed);
+        background-color: #0164de;
+    }
+
+
+.master-wrapper-side .appmenu a img {
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+.master-wrapper-content {
+    padding-top: 5px;
+}
+
+.banner {
+    width: 980px;
+    padding-bottom: 40px;
+    background-image: url(uStoreApplication/homebanner.jpg);
+    background-repeat: no-repeat;
+    height: 280px;
+    width: 100%;
+}
+
+    .banner h1 {
+        font-family: Lato, opan Sans, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        color: #fff;
+        padding-top: 100px;
+        padding-left: 370px;
+        margin-bottom: 10px;
+        font-size: 42px;
+    }
+
+    .banner h2 {
+        font-family: Lato, opan Sans, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        color: #fff;
+        padding-left: 370px;
+        font-size: 23px;
+        ;
+        margin-top: 0;
+    }
+
+header {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: auto;
+    display: block;
+}
+
+#HeaderBanner .intro-text {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+#HeaderBanner h1 {
+    font-family: Lato, Open Sans, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    padding-top: 50px;
+    padding-left: 0;
+    margin-bottom: 20px;
+    font-size: 48px;
+}
+
+#HeaderBanner h2 {
+    font-family: Lato, Open Sans, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    margin-top: 0;
+    padding-left: 0;
+}
+
+#HeaderBanner.Healthcare h1 {
+    color: #fff;
+}
+
+#HeaderBanner.Healthcare h2 {
+    color: #fff;
+}
+
+#HeaderBanner.Healthcare .intro-text {
+    margin-left: 370px;
+    margin-right: 0px;
+}
+
+#HeaderBanner.iService .intro-text {
+    padding: 20px 0px 30px 50px;
+}
+
+#HeaderBanner.iService h1 {
+    color: #B4784F;
+    Padding: 35px 0px 35px 0px;
+    margin-bottom: 10px;
+    font-size: 3.1em;
+
+}
+
+#HeaderBanner.iService h2 {
+    color: #B4784F;
+    font-size: 1.8em;
+    Margin: 0;
+Padding: 0;
+
+}
+
+@media screen and (max-width: 980px) {
+    .medical-home-content {
+        padding: 20px 0px 0px 0px;
+    }
+
+        .medical-home-content li {
+            width: 43%;
+        }
+
+        .medical-home-content .estore-btn {
+            width: 90%;
+        }
+
+    #HeaderBanner.Healthcare .intro-text {
+        margin-right: 0px;
+        padding-bottom: 20px;
+        margin-left: 300px;
+    }
+
+    #HeaderBanner h1 {
+        font-family: Lato, Open Sans, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        padding-top: 20px;
+        padding-left: 0;
+        margin-bottom: 10px;
+        margin-top: 0;
+        font-size: 46px;
+    }
+
+    #HeaderBanner h2 {
+        font-size: 30px;
+        margin-top: 0;
+        padding-bottom: 10px;
+        padding-left: 0;
+    }
+
+    #HeaderBanner.Healthcare .intro-text {
+        background-color: transparent;
+    }
+
+
+    #HeaderBanner.iService .intro-text {
+        padding-left: 10px;
+        margin-right: 20%;
+        background-color: rgba(255, 255, 255, 0.6);
+        padding-bottom: 10px;
+    }
+
+
+    #HeaderBanner.iService h1 {
+        font-family: Lato, Open Sans, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        color: #68452D;
+        padding-left: 10px;
+        margin-bottom: 5px;
+    }
+
+    #HeaderBanner.iService h2 {
+        font-family: Lato, Open Sans, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        color: #68452D;
+        padding-left: 10px;
+        margin-top: 0;
+        padding-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .medical-home-content li {
+        width: 40%;
+    }
+
+    .banner {
+        background-size: cover;
+    }
+
+        .banner h1 {
+            padding-top: 60px;
+            padding-left: 270px;
+        }
+
+        .banner h2 {
+            padding-left: 270px;
+        }
+
+    #HeaderBanner.Healthcare .intro-text {
+        margin: 0px;
+        padding: 10px 0px 10px 80px;
+    }
+
+    #HeaderBanner h1 {
+        font-family: Lato, Open Sans, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        padding-top: 0px;
+        padding-left: 0;
+        margin-bottom: 5px;
+        margin-top: 0;
+        font-size: 2.5em;
+    }
+
+    #HeaderBanner h2 {
+        font-size: 1.7em;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    #HeaderBanner.Healthcare .intro-text {
+        background-color: transparent;
+        padding-left: 260px;
+    }
+
+    #HeaderBanner.iService h1 {
+        Padding: 0px;
+        font-size: 2em;
+    }
+
+    #HeaderBanner.iService h2 {
+        padding-top: 10px;
+        padding-left: 10px;
+        font-size: 1.2em;
+        height: 2.4em;
+        margin-top: 0;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner {
+        background-size: cover;
+    }
+
+        .banner h1 {
+            padding-top: 60px;
+            padding-left: 60px;
+        }
+
+        .banner h2 {
+            padding-left: 60px;
+        }
+
+    .medical-home-content {
+        padding: 20px 0px;
+    }
+
+        .medical-home-content li {
+            width: 90%;
+        }
+
+        .medical-home-content .estore-btn {
+            width: 90%;
+        }
+
+        .medical-home-content li {
+            width: 96%;
+            margin-left: 2%;
+            padding-left: 2%;
+        }
+
+
+
+    #HeaderBanner.Healthcare .intro-text {
+        padding-left: 90px;
+    }
+
+    #HeaderBanner.Healthcare h1 {
+        font-family: Lato, Open Sans, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        padding-top: 10px;
+        color: #fff;
+        font-size: 2em;
+        text-align: left;
+    }
+
+    #HeaderBanner.Healthcare h2 {
+        color: #fff;
+        font-size: 1.2em;
+  
+        margin-top: 0px;
+        margin-bottom: 0px;
+        text-align: left;
+    }
+
+    #HeaderBanner.iService .intro-text {
+        padding-left: 10px;
+        margin-right: 15%;
+        background-color: rgba(255, 255, 255, 0.6);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    #HeaderBanner.iService h1 {
+        font-family: Lato, Open Sans, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        color: #68452D;
+        padding-top: 0px;
+        padding-left: 10px;
+        margin-bottom: 5px;
+        font-size: 2.3em;
+    }
+
+    #HeaderBanner.iService h2 {
+        font-family: Lato, Open Sans, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        color: #68452D;
+        padding-left: 10px;
+        font-size: 1.5em;
+        margin-top: 0;
+        padding-bottom: 0px;
+    }
+}
+
+@media only screen and ( -webkit-min-device-pixel-ratio: 1.3 ) and (max-width: 480px), only screen and ( min--moz-device-pixel-ratio: 1.3 ) and (max-width: 480px), only screen and ( -o-min-device-pixel-ratio: 2.6/2 ) and (max-width: 480px), /* returns 1.3, see Dev.Opera */
+only screen and ( min-device-pixel-ratio: 1.3 ) and (max-width: 480px), only screen and ( min-resolution: 124.8dpi ) and (max-width: 480px), only screen and ( min-resolution: 1.3dppx ) and (max-width: 480px) {
+}

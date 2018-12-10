@@ -1,0 +1,8 @@
+D:\eStore4.5_Git\eStore\esUtilities\bin\Debug\esUtilities.dll.config
+D:\eStore4.5_Git\eStore\esUtilities\bin\Debug\esUtilities.dll
+D:\eStore4.5_Git\eStore\esUtilities\bin\Debug\esUtilities.pdb
+D:\eStore4.5_Git\eStore\esUtilities\bin\Debug\log4net.dll
+D:\eStore4.5_Git\eStore\esUtilities\bin\Debug\System.Net.IPNetwork.dll
+D:\eStore4.5_Git\eStore\esUtilities\bin\Debug\log4net.xml
+D:\eStore4.5_Git\eStore\esUtilities\obj\Debug\esUtilities.dll
+D:\eStore4.5_Git\eStore\esUtilities\obj\Debug\esUtilities.pdb

@@ -1,0 +1,11 @@
+﻿User-agent: * 
+Disallow: /Account/
+Disallow: /App_Data/
+Disallow: /bin/
+Disallow: /Cart/
+Disallow: /Quotation/
+Disallow: /MasterPages/
+Disallow: /Modules/
+Disallow: /Properties/
+Disallow: /admin/
+Disallow: /Product/OrderbyPartNO.aspx

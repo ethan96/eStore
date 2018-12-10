@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/AdvantechWS_VB/WS_eCommerce" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://tempuri.org/AdvantechWS_VB/WS_eCommerce" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/AdvantechWS_VB/WS_eCommerce">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="GetSapProductStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="part_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="plant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sales_org" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSapProductStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSapProductStatusResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Sndprn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sndsad" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetOrderStatusResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRemark" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetATPRFC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WERK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MATNR" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="REQ_QTY" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="REQ_Date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UNI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetATPRFCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetATPRFCResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRemark" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiATP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiATPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMultiATPResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRemark" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiATP_DataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiATP_DataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMultiATP_DataSetResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strRemark" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiATP_DataSet2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiATP_DataSet2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMultiATP_DataSet2Result" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRemark" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mandt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Vkorg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Kunnr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMultiPriceResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPriceRFC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mandt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Vkorg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Kunnr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Matnr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Mglme" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPriceRFCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPriceRFCResult" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_fltList_Price" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_fltUnit_Price" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvLoc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pLoc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPart_No" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pShow" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPlant" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvLocResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetInvLocResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_LGORT_SN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_STOCK" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPODetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pStrPONbr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPODetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPODetailResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDmfCall">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CallCenter" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Inbound" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Outbound" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CallWaiting" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDmfCallResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDmfCallResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="Inbound" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Outbound" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CallWaiting" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSapProductStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSapProductStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetSapProductStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSapProductStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetATPRFCSoapIn">
+    <wsdl:part name="parameters" element="tns:GetATPRFC" />
+  </wsdl:message>
+  <wsdl:message name="GetATPRFCSoapOut">
+    <wsdl:part name="parameters" element="tns:GetATPRFCResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiATPSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMultiATP" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiATPSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMultiATPResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiATP_DataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMultiATP_DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiATP_DataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMultiATP_DataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiATP_DataSet2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetMultiATP_DataSet2" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiATP_DataSet2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetMultiATP_DataSet2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMultiPrice" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMultiPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceRFCSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPriceRFC" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceRFCSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPriceRFCResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInvLocSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInvLoc" />
+  </wsdl:message>
+  <wsdl:message name="GetInvLocSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInvLocResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPODetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPODetail" />
+  </wsdl:message>
+  <wsdl:message name="GetPODetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPODetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDmfCallSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDmfCall" />
+  </wsdl:message>
+  <wsdl:message name="GetDmfCallSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDmfCallResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_eCommerceSoap">
+    <wsdl:operation name="GetSapProductStatus">
+      <wsdl:input message="tns:GetSapProductStatusSoapIn" />
+      <wsdl:output message="tns:GetSapProductStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderStatus">
+      <wsdl:input message="tns:GetOrderStatusSoapIn" />
+      <wsdl:output message="tns:GetOrderStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetATPRFC">
+      <wsdl:input message="tns:GetATPRFCSoapIn" />
+      <wsdl:output message="tns:GetATPRFCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiATP">
+      <wsdl:input message="tns:GetMultiATPSoapIn" />
+      <wsdl:output message="tns:GetMultiATPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiATP_DataSet">
+      <wsdl:input message="tns:GetMultiATP_DataSetSoapIn" />
+      <wsdl:output message="tns:GetMultiATP_DataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiATP_DataSet2">
+      <wsdl:input message="tns:GetMultiATP_DataSet2SoapIn" />
+      <wsdl:output message="tns:GetMultiATP_DataSet2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice">
+      <wsdl:input message="tns:GetMultiPriceSoapIn" />
+      <wsdl:output message="tns:GetMultiPriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceRFC">
+      <wsdl:input message="tns:GetPriceRFCSoapIn" />
+      <wsdl:output message="tns:GetPriceRFCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvLoc">
+      <wsdl:input message="tns:GetInvLocSoapIn" />
+      <wsdl:output message="tns:GetInvLocSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPODetail">
+      <wsdl:input message="tns:GetPODetailSoapIn" />
+      <wsdl:output message="tns:GetPODetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDmfCall">
+      <wsdl:input message="tns:GetDmfCallSoapIn" />
+      <wsdl:output message="tns:GetDmfCallSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_eCommerceSoap" type="tns:WS_eCommerceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSapProductStatus">
+      <soap:operation soapAction="http://tempuri.org/AdvantechWS_VB/WS_eCommerce/GetSapProductStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderStatus">
+      <soap:operation soapAction="http://tempuri.org/AdvantechWS_VB/WS_eCommerce/GetOrderStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetATPRFC">
+      <soap:operation soapAction="http://tempuri.org/AdvantechWS_VB/WS_eCommerce/GetATPRFC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiATP">
+      <soap:operation soapAction="http://tempuri.org/AdvantechWS_VB/WS_eCommerce/GetMultiATP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiATP_DataSet">
+      <soap:operation soapAction="http://tempuri.org/AdvantechWS_VB/WS_eCommerce/GetMultiATP_DataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiATP_DataSet2">
+      <soap:operation soapAction="http://tempuri.org/AdvantechWS_VB/WS_eCommerce/GetMultiATP_DataSet2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice">
+      <soap:operation soapAction="http://tempuri.org/AdvantechWS_VB/WS_eCommerce/GetMultiPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceRFC">
+      <soap:operation soapAction="http://tempuri.org/AdvantechWS_VB/WS_eCommerce/GetPriceRFC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvLoc">
+      <soap:operation soapAction="http://tempuri.org/AdvantechWS_VB/WS_eCommerce/GetInvLoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPODetail">
+      <soap:operation soapAction="http://tempuri.org/AdvantechWS_VB/WS_eCommerce/GetPODetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDmfCall">
+      <soap:operation soapAction="http://tempuri.org/AdvantechWS_VB/WS_eCommerce/GetDmfCall" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_eCommerce">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="WS_eCommerceSoap" binding="tns:WS_eCommerceSoap">
+      <soap:address location="http://172.21.1.93/AdvantechWS/WS_eCommerce.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

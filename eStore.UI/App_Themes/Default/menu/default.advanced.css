@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+/** 
+ * Default Advanced CSS Drop-Down Menu Theme
+ *
+ * @file		default.advanced.css
+ * @name		Default
+ * @version		0.1
+ * @type		transitional
+ * @browsers	Windows: IE5+, Opera9+, Firefox2+
+ *				Mac OS: Safari2+, Firefox2+
+ *
+ * @link		http://www.lwis.net/
+ * @copyright	2009 Live Web Institute. All Rights Reserved.
+ *
+ */
+
+@import "default.css";
+
+
+/*-------------------------------------------------/
+ * @section		Base Style Extension
+ */
+
+ul.dropdown li a {
+ display: block;
+ padding: 0 10px;
+}
+
+
+/*-------------------------------------------------/
+ * @section		Base Style Override
+ */
+
+ul.dropdown li {
+ padding: 0;
+}
+
+
+/*-------------------------------------------------/
+ * @section		Base Style Reinitiate: post-override activities
+ */
+
+ul.dropdown li.dir {
+ padding: 0 0px 0 6px; height:38px; line-height:38px;  
+  background: url(menubg.png) left -152px no-repeat;
+}
+ul.dropdown li.first {
+ padding: 0 0px 0 6px; height:38px; line-height:38px;  
+  background: url(menubg.png) left top no-repeat;
+}
+ul.dropdown li.dir a.rootlink{
+ padding: 0 30px 0 24px; height:38px; line-height:38px;
+     background: url(menubg.png) right -152px no-repeat;
+     clear:both; float:left
+}
+ul.dropdown li.dir.hover ,
+ul.dropdown li.dir:hover {
+  background: url(menubg.png) left -190px no-repeat;
+  color:#fff;
+}
+ul.dropdown li.first:hover,
+ul.dropdown li.first.hover {
+  background: url(menubg.png) left -38px no-repeat;
+}
+
+ul.dropdown li.dir.hover a.rootlink ,
+ul.dropdown li.dir:hover a.rootlink{
+  background: url(menubg.png) right -190px no-repeat;
+  color:#fff; 
+}
+ul.dropdown li.end {
+ padding: 0; height:38px; line-height:38px; width:6px;
+  background: url(menubg.png) left -76px no-repeat;
+  display:block; float:right;
+}
+
+ul.dropdown ul li.dir {
+ padding: 5px;
+}
+
+ul.dropdown li.dir ul{
+float:none;
+}
+
+ul.dropdown li.dir select,ul.dropdown li.dir input{position:relative;
+	vertical-align:middle;}
+	
+ul.dropdown li.item {
+ padding: 0 3px 0 10px; height:38px; line-height:38px; vertical-align:middle;
+ float:right;
+}
+ul.dropdown li.item:hover,
+ul.dropdown li.item.hover {
+ height:38px;line-height:38px;
+ background: url(menubg.png) left -114px no-repeat;
+}
+ul.dropdown li.item select,ul.dropdown li.item input{position:relative;
+	vertical-align:middle;}
+ul.dropdown li.item img{ vertical-align:middle;}
+
+* html ul.dropdown li.item select,* html ul.dropdown li.item input,* html ul.dropdown li.item img
+{
+margin-top:8px;
+padding-top: 0px;
+padding-bottom: 0px;
+text-decoration: none;
+}
+ 
+/*-------------------------------------------------/
+ * @section		Custom
+ */
+
+ul.dropdown ul {
+ padding: 0 10px;
+}
+
+ul.dropdown ul a {
+ width: 140px;
+ padding: 3px 5px;
+}
+
+ul.dropdown ul a:hover {
+ background-color: #ffa500;
+ color: #fff;
+}
+
+ul.dropdown ul ul {
+ padding: 0;
+ margin-left:0; 
+}

@@ -1,0 +1,9 @@
+﻿<div class="tutorial-categorylink tutorial-pop">
+    <span class="arrowLeft"></span><span class="close"></span>
+    <div class="title">
+        <p>
+            使用目錄篩選產品，簡單又快速！</p>
+    </div>
+    <div class="img">
+        <img src="/tutorial/en-US/Category/tutorial-categorylink-1.jpg" /></div>
+</div>

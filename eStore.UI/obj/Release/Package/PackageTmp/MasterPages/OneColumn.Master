@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OneColumn.master.cs"
+    Inherits="eStore.UI.MasterPages.OneColumn" %>
+
+<%@ Register Src="../Modules/Advertisement.ascx" TagName="Advertisement" TagPrefix="eStore" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <base href="<%= BaseUrl %>" />
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="eStoreMainForm" runat="server">
+    <asp:ScriptManager ID="eStoreScriptManager" runat="server">
+        <Services>
+            <asp:ServiceReference Path="/eStoreScripts.asmx"/>
+        </Services>
+    </asp:ScriptManager>
+    <div class="master-wrapper-page">
+        <div class="master-wrapper-content">
+            <eStore:Header ID="eStoreHeader" runat="server" />
+            <asp:ContentPlaceHolder ID="eStoreMainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="clear">
+            </div>
+            <eStore:Advertisement ID="Advertisement1" runat="server" />
+            <div class="clear">
+            </div>
+            <eStore:Footer ID="eStoreFooter" runat="server" />
+        </div>
+    </div>
+<div id="expandingAdvertisement"></div>
+</form>
+</body>
+</html>

@@ -1,0 +1,8 @@
+﻿.Local .eStoreLogo{ width:640px; padding-right:4px;height:64px;padding-left:0px; line-height:0px;}
+.Local .HeaderList{ width:326px;}
+.Local .accountInfo .divMargin{width:150px;float:left;}
+.Local .eStoreLogo .line1{ padding-left:305px;line-height:37px; height:25px;  display:block; padding-top:12px;}
+.Local .eStoreLogo .line2{ padding-left:0px; float:left; height:27px; line-height:27px; font-weight:normal;}
+.Local .OrderByPartNOPanel{ margin-top:16px;}
+.priceOrange span, .regularprice span{ white-space:nowrap;}
+.eStore_chatBox_txt h3 {font-size: 14px;}

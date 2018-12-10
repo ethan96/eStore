@@ -1,0 +1,15 @@
+﻿<#@ template language="C#v3.5" #>
+<#@ output extension="SQL" #>
+<#@ assembly name="Microsoft.SqlServer.ConnectionInfo" #>
+<#@ assembly name="Microsoft.SqlServer.Smo" #>
+<#@ import namespace="Microsoft.SqlServer.Management.Smo" #>
+<#
+                   eStore3Entities2 pedb = new eStore3Entities2();
+               var kk = (from c in pedb.es_Store
+                         where c.Store_URL.ToUpper() == hostname.ToUpper()
+                         select c).FirstOrDefault<es_Store>();
+            
+
+#>
+
+ 

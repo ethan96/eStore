@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PISModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="PISEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+    <FunctionImport Name="sp_GetLiteratureInfo" ReturnType="Collection(PISModel.sp_GetLiteratureInfo_Result)">
+      <Parameter Name="ID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetLiteratureTable" ReturnType="Collection(PISModel.sp_GetLiteratureTable_Result)">
+      <Parameter Name="Product_ID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetModelInfo_estore" ReturnType="Collection(PISModel.sp_GetModelInfo_estore_Result)">
+      <Parameter Name="Model_ID" Mode="In" Type="String" />
+      <Parameter Name="Lang_ID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetRelatedProducts" ReturnType="Collection(PISModel.sp_GetRelatedProducts_Result)">
+      <Parameter Name="PART_NO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetModelByPN_estore" ReturnType="Collection(PISModel.spGetModelByPN_estore_Result)">
+      <Parameter Name="ID1" Mode="In" Type="String" />
+      <Parameter Name="ID2" Mode="In" Type="String" />
+      <Parameter Name="PN" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetProductFeature" ReturnType="Collection(PISModel.sp_GetProductFeature_Result)">
+      <Parameter Name="ModelName" Mode="In" Type="String" />
+      <Parameter Name="Lang_ID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetLiteratureTableByLANG" ReturnType="Collection(PISModel.sp_GetLiteratureTableByLANG_Result)">
+      <Parameter Name="model_ID" Mode="In" Type="String" />
+      <Parameter Name="ID1" Mode="In" Type="String" />
+      <Parameter Name="ID2" Mode="In" Type="String" />
+      <Parameter Name="LANG" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getPublishedModelByDate" ReturnType="Collection(PISModel.getPublishedModelByDate_Result)">
+      <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+      <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spGetModelByPN_estore_NEW" ReturnType="Collection(PISModel.spGetModelByPN_estore_Result)">
+      <Parameter Name="ID1" Mode="In" Type="String" />
+      <Parameter Name="ID2" Mode="In" Type="String" />
+      <Parameter Name="PN" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="SAP_PRODUCT_STATUS" EntityType="PISModel.SAP_PRODUCT_STATUS" />
+    <FunctionImport Name="sp_GetCertificateByModelID" ReturnType="Collection(PISModel.sp_GetCertificateByModelID_Result)">
+      <Parameter Name="model_ID" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="PRODUCTs" EntityType="PISModel.PRODUCT" />
+    <FunctionImport Name="GetPISFullCategory" ReturnType="Collection(PISModel.GetPISFullCategory_Result)" />
+    <EntitySet Name="PAPS" EntityType="PISModel.PAP" />
+    <EntitySet Name="V_Spec_V2" EntityType="PISModel.V_Spec_V2" />
+    <FunctionImport Name="sp_GetBBAllPartNo" ReturnType="Collection(PISModel.sp_GetBBAllPartNo_Result)" />
+    <EntitySet Name="SAP_PRODUCT" EntityType="PISModel.SAP_PRODUCT" />
+    <FunctionImport Name="GetPISFullBBCategory" ReturnType="Collection(PISModel.GetPISFullCategory_Result)" />
+  </EntityContainer>
+  <ComplexType Name="sp_GetLiteratureInfo_Result">
+    <Property Type="String" Name="SIEBEL_FILENAME" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="LIT_NAME" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="FILE_NAME" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="FILE_EXT" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LIT_DESC" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="LIT_TYPE" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="FILE_SIZE" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_GetLiteratureTable_Result">
+    <Property Type="String" Name="LITERATURE_ID" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="LIT_TYPE" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FILE_NAME" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="LIT_DESC" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="FILE_EXT" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="FILE_SIZE" Nullable="true" Precision="10" Scale="0" />
+    <Property Type="DateTime" Name="LAST_UPDATED" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_GetModelInfo_estore_Result">
+    <Property Type="String" Name="CATALOG_ID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PARENT_CATEGORY_ID" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CATEGORY_ID" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="CATEGORY_NAME" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="DISPLAY_NAME" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="CATEGORY_DESC" Nullable="false" MaxLength="2000" />
+    <Property Type="String" Name="EXTENDED_DESC" Nullable="false" MaxLength="4000" />
+    <Property Type="String" Name="PRODUCT_DESC" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="IMAGE_ID" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="tumbnail_image_id" Nullable="true" MaxLength="604" />
+    <Property Type="String" Name="product_id" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="BLang" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="DLang" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_GetRelatedProducts_Result">
+    <Property Type="String" Name="part_no" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="ACCPN" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="PRODUCT_DESC" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="relation_type" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spGetModelByPN_estore_Result">
+    <Property Type="String" Name="DISPLAY_NAME" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="PART_NO" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="CATEGORY_ID" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_GetProductFeature_Result">
+    <Property Type="String" Name="model_name" Nullable="false" MaxLength="255" />
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="Model_id" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="FEATURE_SEQ" Nullable="false" />
+    <Property Type="String" Name="FEATURE_DESC" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="LANG_ID" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ORG_ID" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="LAST_UPDATED" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Last_updateby" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_GetLiteratureTableByLANG_Result">
+    <Property Type="String" Name="LITERATURE_ID" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="LIT_TYPE" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FILE_NAME" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="LIT_DESC" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="FILE_EXT" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="FILE_SIZE" Nullable="true" Precision="10" Scale="0" />
+    <Property Type="DateTime" Name="LAST_UPDATED" Nullable="true" Precision="23" />
+    <Property Type="String" Name="LANG" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="getPublishedModelByDate_Result">
+    <Property Type="String" Name="modelname" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="publisheddate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <EntityType Name="SAP_PRODUCT_STATUS">
+    <Key>
+      <PropertyRef Name="PART_NO" />
+      <PropertyRef Name="DLV_PLANT" />
+    </Key>
+    <Property Type="String" Name="PART_NO" Nullable="false" MaxLength="54" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DLV_PLANT" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="MIN_ORDER_QTY" Precision="13" Scale="3" />
+  </EntityType>
+  <ComplexType Name="sp_GetCertificateByModelID_Result">
+    <Property Type="String" Name="MODEL_NAME" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="MODEL_ID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="certpicpath" Nullable="true" MaxLength="146" />
+    <Property Type="String" Name="certname" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="PRODUCT">
+    <Key>
+      <PropertyRef Name="PART_NO" />
+    </Key>
+    <Property Type="String" Name="PRODUCT_ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PART_NO" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PRODUCT_DESC" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PRODUCT_DESC2" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="STATUS" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LAST_UPDATED" />
+    <Property Type="String" Name="LAST_UPDATED_BY" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CREATED" />
+    <Property Type="String" Name="CREATED_BY" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TUMBNAIL_IMAGE_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IMAGE_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ONLINE_PUBLISH" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EXTENTED_DESC" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="NEW_PRODUCT_DATE" />
+    <Property Type="Double" Name="ship_weight" />
+    <Property Type="Double" Name="net_weight" />
+    <Property Type="Int32" Name="DimensionW" />
+    <Property Type="Int32" Name="DimensionH" />
+    <Property Type="Int32" Name="DimensionL" />
+  </EntityType>
+  <ComplexType Name="GetPISFullCategory_Result">
+    <Property Type="Int32" Name="ItemLevel" Nullable="true" />
+    <Property Type="String" Name="DISPLAY_NAME" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="Sub_Count" Nullable="true" />
+    <Property Type="String" Name="EXTENDED_DESC" Nullable="true" />
+    <Property Type="String" Name="category_id" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="PARENT_CATEGORY_ID" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="RowOrder" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <EntityType Name="PAP">
+    <Key>
+      <PropertyRef Name="SN" />
+    </Key>
+    <Property Type="Int32" Name="SN" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Board_Form_Factor" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Board_CPU" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Board_Model_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Monitor_Part_No" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Cable_Type" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Cable_Part_No" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Cable_Bit" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="V_Spec_V2">
+    <Key>
+      <PropertyRef Name="ItemType" />
+      <PropertyRef Name="ProductNo" />
+      <PropertyRef Name="AttrCatID" />
+      <PropertyRef Name="AttrID" />
+      <PropertyRef Name="AttrValueID" />
+      <PropertyRef Name="DataSheet_Sequence" />
+      <PropertyRef Name="Is_Filter" />
+      <PropertyRef Name="SpecSetID" />
+    </Key>
+    <Property Type="String" Name="ItemType" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProductNo" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="AttrCatID" Nullable="false" />
+    <Property Type="String" Name="AttrCatName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="AttrID" Nullable="false" />
+    <Property Type="String" Name="AttrName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="AttrValueID" Nullable="false" />
+    <Property Type="String" Name="AttrValueName" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DataSheet_Sequence" Nullable="false" />
+    <Property Type="Boolean" Name="Is_Filter" Nullable="false" />
+    <Property Type="String" Name="SpecSetID" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="sp_GetBBAllPartNo_Result">
+    <Property Type="String" Name="part_no" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <EntityType Name="SAP_PRODUCT">
+    <Key>
+      <PropertyRef Name="PART_NO" />
+    </Key>
+    <Property Type="String" Name="PART_NO" Nullable="false" MaxLength="54" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MODEL_NO" Nullable="false" MaxLength="54" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MATERIAL_GROUP" Nullable="false" MaxLength="27" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DIVISION" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PRODUCT_HIERARCHY" Nullable="false" MaxLength="54" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PRODUCT_GROUP" Nullable="false" MaxLength="54" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PRODUCT_DIVISION" Nullable="false" MaxLength="54" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PRODUCT_LINE" Nullable="false" MaxLength="54" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GENITEMCATGRP" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PRODUCT_DESC" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ROHS_FLAG" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="STATUS" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EGROUP" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EDIVISION" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="NET_WEIGHT" />
+    <Property Type="Double" Name="GROSS_WEIGHT" />
+    <Property Type="String" Name="WEIGHT_UNIT" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="VOLUME" />
+    <Property Type="String" Name="VOLUME_UNIT" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CREATE_DATE" MaxLength="24" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LAST_UPD_DATE" MaxLength="24" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PRODUCT_TYPE" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GIP_CODE" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SIZE_DIMENSIONS" MaxLength="96" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SOURCE_LOCATION" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PRODUCT_FAMILY" MaxLength="54" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PLM_STATUS" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,9 @@
+﻿<div class="tutorial-systemPreview tutorial-pop">
+    <span class="arrowTop"></span><span class="close"></span>
+    <div class="title">
+        <p>
+            Optimize your shopping experience</p>
+    </div>
+    <div class="img">
+        <img src="/tutorial/en-US/System/tutorial-system-2.jpg" /></div>
+</div>

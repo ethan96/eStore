@@ -1,0 +1,41 @@
+﻿@charset "utf-8";
+/****************** article ******************/
+/*--article content--*/
+.eStore_article_btnBlock {text-align:right;}
+.eStore_article_btnBlock .eStore_btn{width:200px; display:inline-block; margin:5px 0;}
+.eStore_article_productAction a,.eStore_article_productMsgBlock a{color:#4398ef;}
+.eStore_article_link a,.eStore_article_btnBlock a{display:block; margin:5px 0;}
+/*--product--*/
+.eStore_article_productName span{margin-left:8px;}
+.eStore_article_productName p{font-size:15px; margin:5px 0;}
+.eStore_article_productPic,.eStore_article_productDetail,.eStore_article_productAction{float:left;}
+/*左*/
+.eStore_article_productPic{width:226px;}
+.eStore_article_picBig{position:relative; text-align:center; max-height:200px; z-index:2; width:200px; margin:0 13px;}
+.eStore_article_picBigImg{max-width:200px; max-height:200px;}
+.eStore_article_picSmall{width:198px; margin:10px 0 0 0; padding:0 14px;}
+.eStore_article_picSmall li{float:left; width:60px; height:40px; border:1px solid #fff; margin:0 2px; text-align:center;}
+.eStore_article_picSmall li.on{border:1px solid #e8e8e8;}
+.eStore_article_picSmall img{max-width:40px; max-height:40px;}
+.eStore_article_picSmall .prev,.eStore_article_picSmall .next{width:10px; height:22px; background:url(images/eStore_icon_all.png) 0 -200px no-repeat; left:0px;}
+.eStore_article_picSmall .next{background:url(images/eStore_icon_all.png) 0 -225px no-repeat; right:0px; left:auto;}
+.eStore_article_picSmall a:hover{background-position-x:-20px;}
+/*Zoom*/
+.eStore_article_focusBlock{background:#fff; opacity:0.6; filter:alpha(opacity=60); border:1px dashed rgb(187,187,187); width:100px; height:100px; cursor:move; display:none; position:absolute; margin:-50px 0 0 -50px;}
+.eStore_article_picZoom{background-color:#fff; position:absolute; width:200px; height:200px; top:0px; left:226px; border:1px solid #CCC; overflow:hidden; display:none; text-align:center;} 
+.eStore_article_picZoom img{position:absolute; max-width:400px; max-height:400px;}
+/*中*/
+.eStore_article_productDetail{width:480px; margin:0 38px 0 20px;}
+.eStore_article_productMsg{padding-top:30px; font-size:12px;}
+.eStore_article_productMsgBlock{margin-bottom:15px;}
+.eStore_article_productMsgBlock .eStore_title{color:#999;}
+.eStore_article_productMsgBlock span{margin-right:15px;}
+/*右*/
+.eStore_article_productAction{width:216px; font-size:12px;}
+.eStore_article_price .priceGray span{font-size:20px;}
+.eStore_article_price .priceOrange{line-height:2.4em;}
+.eStore_article_price .priceOrange span{font-size:24px;}
+.eStore_article_price .priceOrange .price{font-size:37px;}
+.eStore_article_date{padding-bottom:10px;}
+/*--more--*/
+.eStore_article_moreInfo .eStore_productBlock{margin:10px 11px;}

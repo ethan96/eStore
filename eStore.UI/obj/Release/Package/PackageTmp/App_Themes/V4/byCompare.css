@@ -1,0 +1,98 @@
+﻿@charset "utf-8";
+/****************** compare ******************/
+/*--compare_contentTop--*/
+.eStore_compare_content h2 span{font-size:12px; color:#999999; float:right;}
+.eStore_compare_content h2 span a{margin:0 0 0 10px;}
+.eStore_compare_content h2 span img{vertical-align:middle;}
+/*compare*/
+.eStore_compare_left,.eStore_compare_right,.eStore_compare_right li{float: left;}
+.eStore_compare_left *,.eStore_compare_contentBottom .eStore_compare_right li,.eStore_compare_right .eStore_productBlock_action,.eStore_compare_right .eStore_productBlock_link{padding: 10px;}
+.eStore_compare_left *{width: 160px; background: #f1f1f1;}
+.eStore_compare_right{width: 800px; background-color:White;}
+.eStore_compare_right li{width: 180px;}
+/*--compare_contentTop--*/
+.eStore_compare_contentTop *{text-align: center;}
+.eStore_compare_contentTop .eStore_productBlock_name{background-color:#999; color:#fff; padding:3px 10px;}
+.eStore_compare_contentTop .eStore_productBlock_name a{color:#fff;}
+
+.eStore_compare_contentTop .eStore_productBlock_action, .eStore_compare_contentTop .eStore_productBlock_link,.eStore_compare_contentCategory_title.openBox,.eStore_compare_contentBottom li{border-bottom: 1px solid #ddd;}
+.eStore_compare_contentTop .eStore_productBlock_action .eStore_btn{width:180px; padding:5px 0; margin-top:8px;}
+.eStore_compare_contentTop .eStore_productBlock_action .eStore_btn.borderBlue{width:178px; padding:4px 0;}
+.eStore_compare_contentTop .eStore_productBlock_pic .close{position:absolute; top:2px; right:30px;}
+.eStore_compare_contentTop .eStore_productBlock_pic .close img{width: 16px; height: 16px;}
+.eStore_compare_contentTop .eStore_productBlock_pic .eStore_btn:hover{background-color:#e10101; color:#fff;}
+.eStore_compare_contentTop .eStore_productBlock_pic{position: relative; padding: 20px 30px 0; height: 149px;}
+.eStore_compare_contentTop .carousel-control .prev, .eStore_compare_contentTop .carousel-control .next{top: 100px;}
+/*--compare_contentBottom--*/
+.eStore_compare_contentCategory_title{background:#e4e4e4 url(images/selectBox-open.png) no-repeat right 10px center; padding:5px 20px 5px 10px; border-top:1px solid #fff;}
+.eStore_compare_contentCategory_title.openBox{background:#e4e4e4 url(images/selectBox-close.png) no-repeat right 10px  center;}
+/*--compare_contentTop_left--*/
+.eStore_compare_contentTop .eStore_compare_left{background: #fff;}
+.eStore_compare_contentTop .eStore_compare_left .eStore_productBlock_name{margin-top: 169px;}
+.eStore_compare_contentTop .eStore_compare_right li{width: 200px;}
+/*--compare_contentTop_right--*/
+.eStore_compare_contentTop .eStore_compare_right .eStore_productBlock_name{border-left: 1px solid #fff; width:179px;}
+/*--positionFixed--*/
+.eStore_compare_left{position:relative; z-index: 1;}
+.positionFixed.eStore_compare_contentTop{position:relative; z-index: 2; background: #fff;}
+
+
+/****************** compare Mobile ******************/
+.eStore_compare_content_Mobile{width: 95%; margin: 0 auto;}
+/*--compare_contentTop--*/
+.eStore_compare_content_Mobile h2 span{float: right;}
+.eStore_compare_content_Mobile h2 span a{margin:0 0 0 10px;}
+.eStore_compare_content_Mobile h2 span img{vertical-align:middle;}
+/*eStore_compareProduct_list*/
+.eStore_compareProduct_list li{padding:10px; border-top: 1px solid #ddd;}
+.eStore_compareProduct_list li:first-child{border-top:none;}
+.eStore_compareProduct_listLeft{width: 95%; float: left;}
+.eStore_compareProduct_listLeft .title{color: #004280; font-size: 15px;}
+.eStore_compareProduct_listLeft a.eStore_btn{width: 190px; margin:5px 0 0 2%; float: left; padding:0px; border:1px solid #4398ef;}
+.eStore_compareProduct_listLeft a.eStore_btn.borderBlue{margin-left: 0px; padding:0px;}
+/*.eStore_linkDataSheet{margin:4px 0 0 2%;}*/
+.eStore_compareProduct_listRight{width: 5%; float: left; text-align: right;}
+.eStore_compareProduct_listRight .close img{width: 16px; height: 16px;}
+/*Store_compareProduct*/
+.eStore_compareProduct{margin: 10px 0 20px; font-size: 13px; line-height: 25px;}
+.eStore_compareProduct h3,.eStore_compareProduct h4{color: #666; font-size: 13px; line-height: 30px; background-color: #e4e4e4; padding:0 0 0 2%;}
+.eStore_compareProduct ul{border:1px solid #ddd; border-top: none;}
+.eStore_slideToggle{background: #e4e4e4 url(images/arrowBottom.png) 98% center no-repeat;}
+.eStore_slideToggle.on{background: #e4e4e4 url(images/arrowTop.png) 98% center no-repeat;}
+/*eStore_compareProduct_list*/
+.eStore_compareProduct_list span{color: #000; margin: 0 5px;}
+.eStore_compareProduct_list ul{display: none;}
+/*eStore_compareProduct_table*/
+.eStore_compareProduct_table h3{text-align: center; background: #999; color: #fff;}
+.eStore_compareProduct_table .eStore_slideToggle{margin-top: 0px; border-top: 1px solid #fff;}
+.eStore_compareProduct_tableList{padding:5px 0; display: none;}
+.eStore_compareProduct_tableList table{width: 100%;}
+.eStore_compareProduct_tableList td{padding:2px 2%; border-top: 1px solid #ddd; line-height: 20px;}
+.eStore_compareProduct_tableList .title{width: 40%;}
+.eStore_compareProduct_table li:first-child h4,.eStore_compareProduct_tableList tr:first-child td{border-top: none;}
+.priceOrange span, .remind, .regularprice span { color: #f39800; font-size: 16px; }
+@media screen and (max-width: 980px) {
+    .eStore_compare_left {
+    display:none;}
+    .eStore_compare_contentTop .eStore_compare_left {
+    display:none;}
+}
+@media screen and (max-width: 480px) {
+.eStore_compareProduct_listLeft{width: 90%; float: left;}
+.eStore_compareProduct_listRight{width: 10%; float: left; text-align: right;}
+.eStore_compareProduct_listLeft a.eStore_btn{width: 46%; margin:5px 0 5px 2%; float: left; padding:0px; border:1px solid #4398ef;}
+.eStore_compareProduct_listLeft a.eStore_btn.borderBlue{margin-left: 0px; padding:0px;}
+}
+
+
+@media only screen and ( -webkit-min-device-pixel-ratio: 1.3 ),
+       only screen and (    min--moz-device-pixel-ratio: 1.3 ),
+       only screen and (      -o-min-device-pixel-ratio: 2.6/2 ), /* returns 1.3, see Dev.Opera */
+       only screen and (         min-device-pixel-ratio: 1.3 ),
+       only screen and ( min-resolution: 124.8dpi ),
+       only screen and ( min-resolution: 1.3dppx ) {
+
+       	.eStore_slideToggle{background: #e4e4e4 url(images/arrowBottom@2x.png) 98% center no-repeat; background-size: 10px 5px;}
+		.eStore_slideToggle.on{background: #e4e4e4 url(images/arrowTop@2x.png) 98% center no-repeat; background-size: 10px 5px;}
+}
+

@@ -1,0 +1,23 @@
+﻿body { font: 15px/20px "微软雅黑",'Microsoft YaHei','Open Sans',Arial,"新細明體",sans-serif;}
+.SubCategory p {word-break:break-all;} 
+.HeaderList{width:400px;}
+.footerLiveperson{display:block; width:80px; height:35px; background-image:url(btn_online_off.png); background-repeat:no-repeat; background-position:center center ; float:left; cursor:pointer; margin:0 6px 0 25px;}
+.footerLivepersonhover{display:block; width:80px; height:35px; background-image:url(btn_online_over.png); background-repeat:no-repeat; background-position:center center ;float:left; cursor:pointer;margin:0 6px 0 25px;}
+.footerCallme{display:block; width:82px; height:35px; background-image:url(btn_call_off.png); background-repeat:no-repeat; background-position:center center ;float:left; cursor:pointer;margin:0 6px;}
+.footerCallmehover{display:block; width:82px; height:35px; background-image:url(btn_call_over.png); background-repeat:no-repeat; background-position:center center ;float:left; cursor:pointer;margin:0 6px;}
+
+.footerleft {float: left;background-image: url(footerinfobg_01.gif);background-repeat: no-repeat;width: 9px;height: 148px;}
+.fixLiveHelp { width:360px;background-image: url(footerinfobg_02.gif); font-weight:bold; color:#004280;}
+.fixFootercenter { width:188px;}
+.footercenterbg ul {margin: 0px;padding: 0px;white-space: nowrap;overflow: hidden;text-align: left;width: 90px;float: left;vertical-align: top;}
+.imgLiveHelpDiv { font-weight:bold;text-align:left; color:#004280;}
+.imgLiveHelp { float:left;padding-left: 30px; padding-right:20px;}
+.padding-top2px {padding-top: 15px;padding-bottom: 20px;text-align:left;}
+.footerLiveperson,.footerLivepersonhover{display: block;height: 43px;width: 180px;background-image: url('aol-tollfree.png');background-repeat: no-repeat;background-position: left center;float: left;cursor: pointer;margin: 0 6px 0 25px;}
+.footerCallme, .footerCallmehover{display: block;width: 82px;height: 35px;background-image: url('aol-qq-offical.png');background-repeat: no-repeat;background-position: center center;float: left;cursor: pointer;margin: 0 6px;}
+#Banners img {padding-bottom: 5px;}
+.HeaderList {width: 450px;}
+.iot-header .iot-topMsg { width: 550px;}
+.iot-header .ExtTitleLabel {float: left;height: 35px;overflow: hidden;width: 105px; font-weight:normal; font-style:inherit;margin-top: 30px;line-height: 15px;font-family: "Microsoft JhengHei";}
+.slide-out-div .panel-left li.livechat { background: url(../../images/IotMart/contact-qq-offical.gif) no-repeat; }
+.iot-highlightBlock .iot-proBlock-pic .iot-proDiscount { font-family: "Microsoft JhengHei"; }

@@ -1,0 +1,290 @@
+﻿#cmsMainDiv {
+	margin :15px auto;
+	/*width:70%;*/
+ font-size : 15px;
+    line-height: 20px;
+}
+#cmsMainDiv img{ padding:15px; max-width:100%;}
+#cmsMainDiv #cmsPic {
+	float: left;
+	padding-top: 0px;
+	padding-right: 15px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+
+#cmsMainDiv #cmsDetail {
+	height: 23px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #5e70a2;
+}
+#cmsMainDiv #cmsDetailView {
+	height: 30px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #5e70a2;
+}
+
+#cmsMainDiv ul
+{
+    margin-left:50px;
+    margin-bottom:15px;
+    }
+#cmsMainDiv p
+{
+    margin-bottom:15px;
+    }
+#cmsMainDiv #cmsDetail .Detail
+{
+    line-height: 18px;
+    background-image: url('../App_Themes/Default/cmsDetailBG.jpg');
+    height: 17px;
+    width: 52px;
+    float: right;
+    text-align: center;
+}
+#cmsMainDiv #cmsDetail .Detail a{
+	color: #FFF;
+	text-decoration: none;
+}
+#cmsMainDiv h3 {
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+#cmsMainDiv .comContent {
+	padding: 0px;
+	margin: 0px;
+	text-indent: 2ex;
+	line-height:20px;
+}
+.clear{
+	clear: both;	
+}
+#cmsMainDiv #cmsDate {
+	font-size: 10px;
+	color: #666;
+	margin-bottom:5px;
+}
+#cmsMainDiv #cmsDetailContext {
+	font-size: 10px;
+	text-indent: 10px;
+	color: #666;
+	margin-left: 15px;
+}
+#cmsMainDiv .cmsView {
+	width: 67px;
+	float: right;
+}
+
+#cmsMainDiv .ul,  #cmsMainDiv ol, #cmsMainDiv li {
+    list-style-type: disc;
+}
+
+.floatLeft{
+	float:left;
+}
+.css-CmsType
+{
+    margin-top: 15px;
+}
+
+
+#CMS-ContextAll {
+	width: 970px;
+	background-color: #f2f2f2;
+	border: 1px solid #d9d9d9;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+#CMS-ContextAll #CMS-DateAre {
+	width: 105px;
+	font-size: 12px;
+	color: #404040;
+	float: left;
+	padding-top: 10px;
+	padding-left: 15px;
+}
+#CMS-ContextAll #CMS-Contex {
+	float: left;
+	width: 850px;
+}
+#CMS-ContextAll #CMS-Contex .htitle,#CMS-ContextAll #CMS-Contex .pcontext {
+	margin: 0px;
+	padding: 0px;
+}
+#CMS-ContextAll #CMS-Contex .htitle {
+  margin-bottom: 5px;
+   line-height: 29px;
+
+}
+#CMS-ContextAll #CMS-Contex .htitle .hread {
+	font-size: 10px;
+	color: #00b0f0;
+	padding-left: 10px;
+}
+#CMS-ContextAll #CMS-Contex .htitle .hread a {
+	color: #00b0f0;
+	font-size:1.5em;
+}
+#CMS-ContextAll #CMS-Contex .pcontext {
+	line-height: 1.5em;
+	padding-left: 5px;
+}
+#CMS-ContextAll #CMS-Contex .cmsView {
+    float: right;
+}
+.textsize16{font-size: 16px;}
+
+/**** 广告样式 ******/
+#storeSideAds ul,#storeSideAds li{
+	margin: 0px;
+	padding: 0px;
+}
+ul#sidemenu{
+	width: 169px;
+}
+ul#sidemenu, ul#submen {
+	list-style-type: none;
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 8px;
+}
+ul#submen{
+	padding: 5px 5px 5px 15px;
+	}
+ul#sidemenu{
+	border: 1px solid #e4e4e4;
+	background-color: #fbfbfb;
+	}
+ul#sidemenu>li>a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #004889;
+	line-height: 24px;
+	font-weight: bold;
+	text-decoration: none;}
+ul#submen>li>a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #9C9C9C;
+	line-height: 18px;
+	text-decoration: none;
+	}
+ul#sidemenu>li>a:hover{
+	text-decoration: underline;}
+ul#submen>li>a:hover{
+	text-decoration: underline;}
+#storeSideAds img {
+width: auto;
+margin: 3px 0px;
+}
+
+
+.center{
+	text-align:center;
+}
+.cms-context ul dl {
+	background-color: #AAAAAA;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 14px;
+}
+.cms-context ul li{
+	padding-bottom: 14px;
+}
+
+.cms-context {
+	margin-top: 20px;
+	font-size: 12px;
+	color: #555555;
+}
+.cms-context dt {
+	float: left;
+	padding-right: 2%;
+	padding-left: 1%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.cms-context dt p {
+	line-height: 1.8em;
+	text-indent:2em;
+}
+.cms-context dl dt.rightline{
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #FFF;	
+}
+.cms-context ul dt.cms-title {
+	width: 70%;	
+}
+.cms-context ul dt.right{
+	float: right;
+	width: 10%;	
+}
+.cms-context .tdbg{
+	background-color: #eeeeee;
+}
+.cms-context .top4{
+	margin-top: 3%;
+}
+.cms-context h3{
+	font-size: 16px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	padding-top: 8px;
+	padding-bottom: 12px;
+}
+.cms-context h3 a{
+	color: #66CCFF;
+	text-decoration: none;
+}
+.cms-context h3 a:hover{
+	text-decoration:underline;
+}
+
+#material-content img {
+	max-width: 100%;
+}
+
+
+/**** end 广告样式 ******/
+
+@media screen and (max-width: 980px) 
+{#CMS-ContextAll{ width:100%;}
+ 
+#CMS-ContextAll #CMS-Contex{ width:100%;}
+    #CMS-ContextAll #CMS-DateAre{ padding-left:0px;}
+    }
+@media screen and (max-width: 767px) 
+{
+    #cmsMainDiv {
+    margin: 5px 20px;
+    width:   85%;
+    }
+
+#cmsMainDiv img{  text-align:center;
+               padding: 0 0 15px 0;
+                  float: none;}
+                  #CMS-ContextAll #CMS-Contex .htitle .hread a{
+font-size: 1.6em;}
+
+                  #CMS-ContextAll{
+Margin-bottom: 20px;}
+
+}
+@media screen and (max-width: 480px) 
+{
+    #CMS-ContextAll #CMS-Contex .htitle .hread a{
+font-size: 1.5em;}
+
+#CMS-ContextAll{
+Margin-bottom: 25px;}
+
+    }

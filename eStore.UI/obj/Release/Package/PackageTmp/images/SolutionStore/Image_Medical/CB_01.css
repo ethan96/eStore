@@ -1,0 +1,66 @@
+BODY {
+	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TD {
+	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.PXL13_Blk {
+	FONT: 13px Arial, Helvetica, sans-serif
+}
+.MD012 {
+	FONT-WEIGHT: bold; FONT-SIZE: 17px; COLOR: #006666; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-VARIANT: normal
+}
+.MD_Gray {
+	FONT-WEIGHT: bolder; FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TH {
+	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.CB_01BK_sub {
+	FONT-WEIGHT: bold; FONT-SIZE: 11pt; COLOR: #003366; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.List-Bullet {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 15px; FONT-WEIGHT: normal; LIST-STYLE-POSITION: outside; FONT-SIZE: 11px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; LIST-STYLE-TYPE: square
+}
+.MD_White_14pBold {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.P11_List_close {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.Sig_6666 {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 13px; PADDING-BOTTOM: 6px; COLOR: #caf5ff; PADDING-TOP: 6px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.Part_Number {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #3399ff; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.CB_List_feature {
+	FONT-SIZE: 8pt; COLOR: #000000; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.Study {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: #2152a3; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.CB_PartNumber {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #2453a2; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+CB_money {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #ff9900; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.style3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #ff6600
+}
+.style23 {
+	FONT: bold 12px Arial, Helvetica, sans-serif
+}
+.CB_VerWhiteTxt10 {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: #ffffff; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.CB_MiniTEXT {
+	FONT: 9pt Arial, Helvetica, sans-serif; COLOR: #333333
+}
+.CB_White_9pBold {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.CB_Price {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #ff6600; FONT-FAMILY: Arial, Helvetica, sans-serif
+}

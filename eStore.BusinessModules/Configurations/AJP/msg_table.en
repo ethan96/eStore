@@ -1,0 +1,39 @@
+##################################################
+# VeriTransカード Flexプラン
+# MDK　msg_table.en　Version 2.0.0
+# Copyright (c) 2000-2006 SBI VeriTrans Co., Ltd. 
+# Note: Message table in English
+##################################################
+
+# MDK Error Messages
+99000001    Missing the transaction type.
+99000002    Missing or empty mandatory field '%s'.
+99000003    Credit card number '%s' is longer than 26 characters.
+
+99000010    Could not write to the socket.
+99000011    Could not connect socket to the Merchant Payment Server.
+99000012    Could not connect socket to the Proxy Server.
+99000013    Connection to payment server timed out... try again later.
+99000014    401 Unauthorized.
+99000015    403 Forbidden.
+99000016    404 Not Found.
+99000017    500 Internal Server Error.
+99000018    502 Bad Gateway.
+99000019    503 Service Unavailable.
+99000020    Status code '%s' in server response.
+99000021    Misconfigured server/script secret.
+99000022    Invalid server response.
+
+99000031    This transaction is pending.
+
+99000041    Still not set '%s' in the configuration of MDK.
+99000042    System resources is lack.
+99000043    Could not write the pending file.
+99000044    Override transaction version.
+99000045    Permission deny pending directory.
+99000046    Fail to calcurate HMAC.
+99000048    Still not set '%s' in the registry of MDK.
+
+# Customize messages
+21000003    (custom message) Invalid order-id.
+21000044    (custom message) succeed authorization.

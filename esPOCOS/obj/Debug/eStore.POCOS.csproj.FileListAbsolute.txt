@@ -1,0 +1,17 @@
+D:\eStore4.5_Git\eStore\esPOCOS\bin\Debug\esPOCOS.dll.config
+D:\eStore4.5_Git\eStore\esPOCOS\bin\Debug\esPOCOS.dll
+D:\eStore4.5_Git\eStore\esPOCOS\bin\Debug\esPOCOS.pdb
+D:\eStore4.5_Git\eStore\esPOCOS\bin\Debug\estore.proxy.dll
+D:\eStore4.5_Git\eStore\esPOCOS\bin\Debug\esUtilities.dll
+D:\eStore4.5_Git\eStore\esPOCOS\bin\Debug\Newtonsoft.Json.dll
+D:\eStore4.5_Git\eStore\esPOCOS\bin\Debug\NPOI.dll
+D:\eStore4.5_Git\eStore\esPOCOS\bin\Debug\log4net.dll
+D:\eStore4.5_Git\eStore\esPOCOS\bin\Debug\System.Net.IPNetwork.dll
+D:\eStore4.5_Git\eStore\esPOCOS\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\eStore4.5_Git\eStore\esPOCOS\bin\Debug\estore.proxy.pdb
+D:\eStore4.5_Git\eStore\esPOCOS\bin\Debug\esUtilities.pdb
+D:\eStore4.5_Git\eStore\esPOCOS\bin\Debug\Newtonsoft.Json.xml
+D:\eStore4.5_Git\eStore\esPOCOS\bin\Debug\log4net.xml
+D:\eStore4.5_Git\eStore\esPOCOS\obj\Debug\eStore.POCOS.csprojResolveAssemblyReference.cache
+D:\eStore4.5_Git\eStore\esPOCOS\obj\Debug\esPOCOS.dll
+D:\eStore4.5_Git\eStore\esPOCOS\obj\Debug\esPOCOS.pdb

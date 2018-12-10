@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="eStore.POCOS.Quotation">
+    <Position X="4.5" Y="0.5" Width="1.75" />
+    <NestedTypes>
+      <Enum Name="eStore.POCOS.Quotation.QStatus" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\QuotationX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ZAABAMhEQGD0CiCW0ACEZQhQKBkAEMAAQAAhUAGBCgA=</HashCode>
+      <FileName>Quotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.Order">
+    <Position X="6.5" Y="0.5" Width="1.75" />
+    <NestedTypes>
+      <Enum Name="eStore.POCOS.Order.OStatus" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\OrderX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="eStore.POCOS.Order.OAlert" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\OrderX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>HAABAMhEQmT2EiCbmkIUNctRKhgAINAAAA1wYACBLyI=</HashCode>
+      <FileName>Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.Cart">
+    <Position X="2.5" Y="0.5" Width="1.75" />
+    <NestedTypes>
+      <Enum Name="eStore.POCOS.Cart.ContactGroup" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\CartX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>wQ1rAIAFwCGUAkA2ESCA4UoCCNkCkIABEkKkZ0lFCIE=</HashCode>
+      <FileName>Cart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.CartItem">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <NestedTypes>
+      <Enum Name="eStore.POCOS.CartItem.PackingTag" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\CartItemX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>NEKgIMgCYEggAC0SUECApAAAgBABAGAggggAABBoioA=</HashCode>
+      <FileName>CartItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.Contact">
+    <Position X="8.5" Y="0.5" Width="1.75" />
+    <NestedTypes>
+      <Enum Name="eStore.POCOS.Contact.CONTACTTYPE" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\ContactX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>UCABEIAgQACgAAQKAAEEAQwAQAoBAIGBAgBgVAAQAAE=</HashCode>
+      <FileName>Contact.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.VSAPCompany">
+    <Position X="8.5" Y="9.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAQIAgAAIAAAAKAAIACAAASAoAAABHCAAQBAAAABA=</HashCode>
+      <FileName>VSAPCompany.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

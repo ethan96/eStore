@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AddAction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EMP" type="tns:EMPLOYEE" />
+            <s:element minOccurs="0" maxOccurs="1" name="ACT" type="tns:ACTION" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EMPLOYEE">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ROW_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="USER_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PASSWORD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ORG" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="POS_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JOB_TITLE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ALIAS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FST_NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LST_NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ACTION">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CON_ROW_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SRC_ROW_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ACT_TYPE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CMT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CON_EMAIL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OWNER_EMAIL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ORG" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddActionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddActionResult" type="tns:RESULT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RESULT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ROW_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERR_MSG" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IS_COMMITTED" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IS_DUPE" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IS_EMPLOYEE" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddSR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EMP" type="tns:EMPLOYEE" />
+            <s:element minOccurs="0" maxOccurs="1" name="SR" type="tns:SVC_REQ" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SVC_REQ">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ROOT">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="FUNCTION" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ABSTRACT" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DESP" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CONTACT_EMAIL" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MODEL" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="OWNER_EMAIL" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ORG" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ROOT" />
+      <s:element name="AddSRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddSRResult" type="tns:RESULT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EMP" type="tns:EMPLOYEE" />
+            <s:element minOccurs="0" maxOccurs="1" name="CON" type="tns:CONTACT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CONTACT">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ROOT">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ROW_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ACC_ROW_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FST_NAME" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LST_NAME" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="WORK_PHONE" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FAX_PHONE" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="USER_TYPE" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="JOB_TITLE" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CMT" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DATA_SRC" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IS_NEVER_EMAIL" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IS_EMPLOYEE" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="OWNER_EMAIL" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LIST_IP" type="tns:ArrayOfString" />
+              <s:element minOccurs="0" maxOccurs="1" name="ORG" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddContactResult" type="tns:RESULT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddOppty">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EMP" type="tns:EMPLOYEE" />
+            <s:element minOccurs="0" maxOccurs="1" name="OPPTY" type="tns:OPPTY" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OPPTY">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ORG" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PRI_POS_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ACC_ROW_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CON_ROW_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PROJ_NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CHANNEL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BIZ_GROUP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SALES_METHOD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SALES_STAGE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SRC_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CLOSE_DATE" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="REVENUE" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PROGRAM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SUPPORT_REQUEST" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SUCCESS_FACTOR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REASON_WON_LOST" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LEAD_QUALITY" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IS_ASSIGN_TO_PARTNER" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="PARTNER_ROW_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CURRENCY_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OWNER_EMAIL" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddOpptyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddOpptyResult" type="tns:RESULT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddActionSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAction" />
+  </wsdl:message>
+  <wsdl:message name="AddActionSoapOut">
+    <wsdl:part name="parameters" element="tns:AddActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddSRSoapIn">
+    <wsdl:part name="parameters" element="tns:AddSR" />
+  </wsdl:message>
+  <wsdl:message name="AddSRSoapOut">
+    <wsdl:part name="parameters" element="tns:AddSRResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddContactSoapIn">
+    <wsdl:part name="parameters" element="tns:AddContact" />
+  </wsdl:message>
+  <wsdl:message name="AddContactSoapOut">
+    <wsdl:part name="parameters" element="tns:AddContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddOpptySoapIn">
+    <wsdl:part name="parameters" element="tns:AddOppty" />
+  </wsdl:message>
+  <wsdl:message name="AddOpptySoapOut">
+    <wsdl:part name="parameters" element="tns:AddOpptyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS4EMKTSoap">
+    <wsdl:operation name="AddAction">
+      <wsdl:input message="tns:AddActionSoapIn" />
+      <wsdl:output message="tns:AddActionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSR">
+      <wsdl:input message="tns:AddSRSoapIn" />
+      <wsdl:output message="tns:AddSRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddContact">
+      <wsdl:input message="tns:AddContactSoapIn" />
+      <wsdl:output message="tns:AddContactSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOppty">
+      <wsdl:input message="tns:AddOpptySoapIn" />
+      <wsdl:output message="tns:AddOpptySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS4EMKTSoap" type="tns:WS4EMKTSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddAction">
+      <soap:operation soapAction="http://tempuri.org/AddAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSR">
+      <soap:operation soapAction="http://tempuri.org/AddSR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContact">
+      <soap:operation soapAction="http://tempuri.org/AddContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOppty">
+      <soap:operation soapAction="http://tempuri.org/AddOppty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS4EMKTSoap12" type="tns:WS4EMKTSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddAction">
+      <soap12:operation soapAction="http://tempuri.org/AddAction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSR">
+      <soap12:operation soapAction="http://tempuri.org/AddSR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContact">
+      <soap12:operation soapAction="http://tempuri.org/AddContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOppty">
+      <soap12:operation soapAction="http://tempuri.org/AddOppty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS4EMKT">
+    <wsdl:port name="WS4EMKTSoap" binding="tns:WS4EMKTSoap">
+      <soap:address location="http://ecoverage:8089/ws4emkt.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS4EMKTSoap12" binding="tns:WS4EMKTSoap12">
+      <soap12:address location="http://ecoverage:8089/ws4emkt.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

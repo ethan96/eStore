@@ -1,0 +1,9 @@
+﻿<div class="tutorial-categorylink tutorial-pop">
+    <span class="arrowLeft"></span><span class="close"></span>
+    <div class="title">
+        <p>
+            Easy to Find the Product by Flat Category Layer</p>
+    </div>
+    <div class="img">
+        <img src="/tutorial/en-US/Category/tutorial-categorylink-1.jpg" /></div>
+</div>

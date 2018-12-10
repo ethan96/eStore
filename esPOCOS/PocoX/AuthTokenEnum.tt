@@ -1,0 +1,42 @@
+﻿<#@ assembly name = "System.Data.dll" #>
+<#@ assembly name = "System.XML.dll" #>
+<#@ import namespace = "System.Data" #>
+<#@ import namespace = "System.Collections.Generic" #>
+<#
+string dbConnection = "Data Source=172.21.1.20;Initial Catalog=eStroeProduction20161202;User Id=estore3test;password=estore3test";
+System.Data.SqlClient.SqlConnection sqlConnection = new System.Data.SqlClient.SqlConnection(dbConnection);
+   
+    string query = "select distinct replace(Name,' ','_') as ComponentID  FROM  AdminAuth where  Authid<>''";
+ 
+	System.Data.DataSet dataSet = new System.Data.DataSet();
+    System.Data.SqlClient.SqlCommand sqlCommand = new System.Data.SqlClient.SqlCommand(query, sqlConnection);
+   
+    System.Data.SqlClient.SqlDataAdapter sqlDataAdapter = new System.Data.SqlClient.SqlDataAdapter(sqlCommand);
+    sqlDataAdapter.Fill(dataSet, "CodeValue");
+ 
+     #>
+	using System;
+	using System.Collections.Generic;
+	using System.Linq;
+	using System.Text;
+	using eStore.POCOS.DAL;
+
+ 	namespace eStore.POCOS{ 
+	
+	public partial class Store
+	{
+    	public enum AuthToken
+    	{
+<#
+    foreach (System.Data.DataRow dataRow in dataSet.Tables["CodeValue"].Rows)
+    {
+#>
+          <#=dataRow["ComponentID"].ToString()#>,
+<#   
+    }
+#>
+    	};
+	  }
+	}
+ 
+

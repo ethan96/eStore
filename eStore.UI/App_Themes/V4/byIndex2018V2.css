@@ -1,0 +1,13 @@
+.eStore_index_Highlight li {
+    width: 19%;
+    float: left;
+    padding: 2px;
+    height: 175px;
+}
+.eStore_index_Product .eStore_index_Highlight a {
+    width: 98%;
+    text-align: center;
+}
+.eStore_index_Product .eStore_index_Highlight a.more {
+    text-align: right;
+}

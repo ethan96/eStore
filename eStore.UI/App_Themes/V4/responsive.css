@@ -1,0 +1,151 @@
+﻿@charset "utf-8";
+@media screen and (max-width: 980px) {
+    .eStore_block980{width:100%;}
+	.eStore_headerTop .eStore_block980,.eStore_breadcrumb.eStore_block980,.eStore_headerBottom .eStore_block980{width:95%;}
+	/**純文字頁面**/
+	.eStore_txtPage_content{width:95%; margin:0 auto;}
+	/**footer**/
+	.eStore_footerArea,.eStore_footerLinks{width:98%; margin:0 auto;}
+	.eStore_footerAreaTop{display:block; margin:0 0 5px 0;}
+	.eStore_footerArea a{margin:3px 5px;}
+}
+@media screen and (max-width: 767px) {
+	.eStore_wrapper{position:relative; overflow:hidden; width:100%;}
+	.eStore_mobileBox{background: #efefef; /* Old browsers */
+background: -moz-linear-gradient(top, #efefef 0%, #fcfcfc 5%, #f7f7f7 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(5%,#fcfcfc), color-stop(100%,#f7f7f7)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #efefef 0%,#fcfcfc 5%,#f7f7f7 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #efefef 0%,#fcfcfc 5%,#f7f7f7 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #efefef 0%,#fcfcfc 5%,#f7f7f7 100%); /* IE10+ */
+background: linear-gradient(to bottom, #efefef 0%,#fcfcfc 5%,#f7f7f7 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#f7f7f7',GradientType=0 ); /* IE6-9 */
+display:block; position:static;}
+	.eStore_chatBox,.eStore_searchBox,.eStore_ShoppingBox, .eStore_footer .eStore_type_form{display:none; position:relative; height:auto; top:0px; left:0px; right:0px; padding:10px;}
+	.eStore_chatBox_txt{width:auto; height:auto; padding:2%; border:none; float:left; background:none;}
+	.eStore_chatBox_txt .float-right{ margin-left:10px;}
+	.eStore_chatBox_txt .float-left{ width:auto;}
+	.eStore_chatBox_txt .float-left li{float:left; padding:0 15px 4px 22px;}
+	.eStore_chatBox .link{display:none;}
+	.eStore_searchBox{position:relative; padding:10px; height:26px;}
+	.eStore_searchBox input{width:78%; height:26px; padding:0 1%; border:1px solid #bebebe; border-right:none; position:absolute; top:10px; left:10px;}
+	.eStore_searchBox a{background:#eee; width:20%; height:26px; border-radius:0 2px 2px 0; border:1px solid #bebebe; position:absolute; top:10px; right:10px;}
+	.eStore_searchBox span{background:url(images/eStore_iconSearch.png) center center no-repeat; background-size:contain; height:20px; width:100%; margin:3px 0; display:inline-block;}
+	.eStore_ShoppingBox li{padding:15px 0; border-bottom:1px solid #bebebe; font-size:13px; line-height:16px; position: relative;}
+	.eStore_ShoppingBox .img,.eStore_ShoppingBox .content{float:left;}
+	.eStore_ShoppingBox .img{width:20%;  border:1px solid #CCC; background:#fff; overflow: hidden;}
+	.eStore_ShoppingBox .content{width:69%; margin:0 20px 0 3%; font-size: 13px;}
+	.eStore_ShoppingBox .content .productTitle{font-weight: bold; font-size: 13px;}
+	.eStore_ShoppingBox .close{position: absolute; top: 15px; right: 0px;}
+	.eStore_ShoppingBox .close img{width: 16px; height: 16px;}
+	.eStore_ShoppingBox .orderTotla {color: #f39800; font-size: 20px; line-height: 22px; text-align:center; margin-top: 5px;}
+	.eStore_ShoppingBox .orderTotla span{margin-right: 10px; font-size: 15px; color: #666;}
+	.eStore_ShoppingBox .orderlistTable{margin: 10px 0; position: relative;}
+	.eStore_ShoppingBox .unitPrice,.eStore_ShoppingBox .qty,.eStore_ShoppingBox .subTotal{text-align: center; padding: 1px;  float: left;}
+	.eStore_ShoppingBox .unitPrice{width: 35%;}
+	.eStore_ShoppingBox .qty{width: 24%;}
+	.eStore_ShoppingBox .subTotal{width: 38%;}
+	.eStore_ShoppingBox .orderlistTable .top{background: #f1f1f1; padding: 2px;}
+	.eStore_ShoppingBox .orderlistTable .bottom{margin-top: 3px;}
+	.eStore_mobileBox .eStore_ShoppingBox .eStore_btn{margin:15px 0 5px;}
+	/**menu**/
+	.eStore_headerTop{position:relative;}
+	.eStore_mobile{display:inline-block; position:absolute; top:0px; right:0px;}	
+	.eStore_mobile img{width:auto; height:16px; padding:18px 10px;}
+	.eStore_mobile img.show{background: #e2e2e2; /* Old browsers */
+background: -moz-linear-gradient(top, #e2e2e2 0%, #e5e5e5 5%, #efefef 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e2e2e2), color-stop(5%,#e5e5e5), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #e2e2e2 0%,#e5e5e5 5%,#efefef 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #e2e2e2 0%,#e5e5e5 5%,#efefef 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #e2e2e2 0%,#e5e5e5 5%,#efefef 100%); /* IE10+ */
+background: linear-gradient(to bottom, #e2e2e2 0%,#e5e5e5 5%,#efefef 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */ display:inline-block;}
+	/**headerBottom**/	
+	.eStore_headerBottom{position:absolute; top:0; right:-251px; z-index:2; width:250px; background:#f2f2f2; border-left:1px solid #ccc;}
+	.eStore_headerBottom .eStore_block980{width:98%; padding:13px 0 3px 0;}
+	.eStore_menuLink{border-bottom:1px solid #e7e7e7;}
+	.eStore_menuLink_searchBlock,.eStore_menuLink_linkBlock,li.eStore_menuLink_link{float:none; margin-left:0px;}
+	li.eStore_menuLink_link,.eStore_menuLink_link a,.eStore_topMsg ol,.eStore_topMsg ol li{display:block;}
+	.eStore_menuLink_searchBlock{width:98%; top:0px; margin-bottom:11px;}
+	.eStore_menuLink_searchBlock input{padding:0 2%; width:76%;}
+	.eStore_menuLink_searchBlock a{width:20%;}
+	.eStore_menuLink_linkBlock{width:100%;}
+	.eStore_menuLink_link{display:block; border-top:1px solid #e3e3e3; background:url(images/arrowBottom.png) 98% 20px no-repeat; margin-left:0;}
+	.eStore_menuLink_link.show{background-image:url(images/arrowTop.png);}
+	.eStore_topMsg{position:static; font-size:13px; line-height:35px; background-color:#fff; width:95%; margin:15px auto; border:1px solid #e1e1e1;}
+	.eStore_topMsg ol li{border-left:none; border-bottom:1px solid #e1e1e1; margin:10px 15px; padding:0px;}
+	.eStore_topMsg .eStore_login li{border-top:1px solid #909090; border-bottom: none; }
+	.eStore_topMsg .select{width:82%; padding:0 0 0 0; border-bottom:1px solid #e1e1e1;}
+	.eStore_topMsg select.styled{width:100%; height:35px;}
+	.eStore_MyAccount{display:inline-block;}
+	.eStore_topMsg li a.eStore_btn_LogOut{margin-left:3%; padding:0 1%; text-align:center; line-height:20px; border:1px solid #ccc;}
+	.eStore_topMsg .eStore_shoppingCart{display:none;}
+	.eStore_wrapper .eStore_btn{margin:10px 15px 10px; line-height:25px;}
+	.eStore_menuLink_linkList{position:static;}
+	.eStore_menuLink_linkList_block{width:100%; padding:0px;}
+	/**純文字頁面**/
+	.eStore_leftBlock,.eStore_rightBlock{width:100%;}
+	.eStore_leftBlock{border-right:none; margin-bottom:20px;}
+	.eStore_leftBlock_link{border:1px solid #ebebeb;}
+	.eStore_leftBlock_link span{display:block;}
+	.eStore_leftBlock_link a{display:none;}	
+	.eStore_leftBlock_link a.on{border:none;}
+	.eStore_leftBlock_link.highlight a{display:block;}
+	.eStore_rightBlock{padding:0px;}
+	.eStore_contactUs_form .eStore_btn{display:inline-block; margin: 0px;}
+	/**footer**/
+	.eStore_footer{position:relative;}
+	.eStore_footerArea,.eStore_footerLinks{width:90%; margin:0 auto;}
+}
+@media screen and (max-width: 480px) {
+	.eStore_chatBox_txt .float-right{display:none;}
+	.eStore_chatBox_txt{width:96%;}
+	.eStore_chatBox_txt .float-left{width:100%;}
+	.eStore_LogIn{ padding:0px;}
+	/**contact Us**/
+	.eStore_contactUs_input .title,.eStore_contactUs_input input[type="text"],.colspan2 .eStore_contactUs_input{display: block;}
+	.eStore_contactUs{padding:40px 0 0 0; min-height: 40px;}
+	.colspan2 .eStore_contactUs_input:first-child{margin-right: 0px;}
+	.eStore_contactUs_input input[type="text"],.eStore_contactUs_input textarea{width: 80%;}
+	.eStore_contactUs_input select.styled{padding: 2px 1%; width: 80%;}
+	.eStore_contactUs_input .select{padding: 2px 5% 2px 1%; width: 70%;}
+	.eStore_contactUs_address{background: url(images/eStore_contactUs_address.png) 0 10px no-repeat;}
+	.eStore_contactUs_form{background: url(images/eStore_contactUs_form.png) 0 10px no-repeat;}
+	/**footer**/
+	.eStore_footerLinks{padding:10px 0 20px;}
+	.eStore_footer .eStore_col_S,.eStore_footer .eStore_col_B{width:100%; margin:20px 0 0 0;}
+	.eStore_footer .eStore_col_S:first-child{margin:0;}
+	.eStore_footer .eStore_col_B ol li{float:left; width:100%;}
+	.eStore_footerArea{text-align:left;}
+	.eStore_footerAreaTop{border:1px solid #d8d8d8; border-radius:3px; margin:0px; background-color:#fff;}
+	.eStore_footerAreaTop .logo{padding:5px;}
+	.eStore_footerAreaNow,.eStore_footerAreaBtn{display:inline-block;}
+	.eStore_footerAreaBottom{display:none;}
+	.show .eStore_footerAreaTop{border-radius:3px 3px 0 0;}
+	.show .eStore_footerAreaBottom{background-color:#fff; border:1px solid #d8d8d8; border-top:0px; display:block; margin-top:0; padding-top:3px;}
+	.show .eStore_footerAreaBottom a{display:block; font-size:13px; line-height:20px;}
+	.eStore_footerAreaBottom a.on,.eStore_footerAreaBottom a.on:hover{color:#4398ef; font-weight:normal;}
+}
+@media only screen and ( -webkit-min-device-pixel-ratio: 1.3 ) and (max-width: 480px),
+       only screen and (    min--moz-device-pixel-ratio: 1.3 ) and (max-width: 480px),
+       only screen and (      -o-min-device-pixel-ratio: 2.6/2 ) and (max-width: 480px), /* returns 1.3, see Dev.Opera */
+       only screen and (         min-device-pixel-ratio: 1.3 ) and (max-width: 480px),
+       only screen and ( min-resolution: 124.8dpi ) and (max-width: 480px),
+       only screen and ( min-resolution: 1.3dppx ) and (max-width: 480px){
+
+		.eStore_menuLink_link,.eStore_leftBlock_link span,.eStore_footerAreaBtn{background-image:url(images/arrowBottom@2x.png); background-size: 10px 5px;}
+		.eStore_menuLink_link.show,.eStore_leftBlock_link.highlight span,.show .eStore_footerAreaBtn{background-image:url(images/arrowTop@2x.png); background-size: 10px 5px;}
+
+}
+
+@media only screen and ( -webkit-min-device-pixel-ratio: 1.3 ),
+       only screen and (    min--moz-device-pixel-ratio: 1.3 ),
+       only screen and (      -o-min-device-pixel-ratio: 2.6/2 ), /* returns 1.3, see Dev.Opera */
+       only screen and (         min-device-pixel-ratio: 1.3 ),
+       only screen and ( min-resolution: 124.8dpi ),
+       only screen and ( min-resolution: 1.3dppx ) {
+
+		.eStore_contactUs_address{background: url(images/eStore_contactUs_address@2x.png) no-repeat; background-size: 38px 38px;}
+		.eStore_contactUs_form{background: url(images/eStore_contactUs_form@2x.png) no-repeat; background-size: 36px 36px;}
+
+
+}

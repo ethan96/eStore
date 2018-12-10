@@ -1,0 +1,189 @@
+﻿
+div#homeBannerheader a:link, div#homeBannerheader a:visited {
+	color : #fff;
+	text-decoration : none;
+}
+div#homeBannerheader a img {
+	border : 0;
+}
+div#homeBannerheader .wrap {
+	width : 980px;
+	margin : 0 auto;
+	text-align : left;
+}
+div#top div#nav {
+	float : left;
+	clear : both;
+	width : 980px;
+	height : 52px;
+	margin : 22px 0 0;
+}
+div#top div#nav ul {
+	float : left;
+	width : 700px;
+	height : 52px;
+	list-style-type : none;
+}
+div#nav ul li {
+	float : left;
+	height : 52px;
+}
+div#nav ul li a {
+	border : 0;
+	height : 52px;
+	display : block;
+	line-height : 52px;
+	text-indent : -9999px;
+}
+div#homeBannerheader {
+	margin : -1px 0 0;
+}
+div#video-header {
+	height : 683px;
+	margin : -1px 0 0;
+}
+div#homeBannerheader div.wrap {
+	height : 280px;
+}
+div#homeBannerheader div#slide-holder {
+	z-index : 40;
+	width : 980px;
+	height : 280px;
+	position : absolute;
+}
+div#homeBannerheader div#slide-holder div#slide-runner {
+	/**/position : absolute;
+	top : 0px;
+	left : 0px;
+	width : 980px;
+	height : 280px;
+	overflow : hidden;
+}
+div#homeBannerheader div#slide-holder img {
+	margin : 0;
+	display : none;
+	position : absolute;
+}
+div#homeBannerheader div#slide-holder div#slide-controls {
+	left : 5px;
+	bottom : 0;
+	height : 46px;
+	display : none;
+	position : absolute;
+}/*选择div 高度*/
+div#homeBannerheader div#slide-holder div#slide-controls p.text {
+	float : left;
+	color : #fff;
+	display : inline;
+	font-size : 10px;
+	line-height : 16px;
+	margin : 15px 0 0 20px;
+	text-transform : uppercase;
+}
+div#homeBannerheader div#slide-holder div#slide-controls p#slide-nav {
+	float : right;
+	height : 24px;
+	display : inline;
+	margin : 11px 15px 0 0;
+}
+div#homeBannerheader div#slide-holder div#slide-controls p#slide-nav a {
+	float : left;
+	width : 24px;
+	height : 24px;
+	display : inline;
+	font-size : 11px;
+	margin : 0 5px 0 0;
+	line-height : 24px;
+	font-weight : bold;
+	text-align : center;
+	text-decoration : none;
+	background-position : 0 0;
+	background-repeat : no-repeat;
+}/*选件按钮 长宽 间隔*/
+div#homeBannerheader div#slide-holder div#slide-controls p#slide-nav a.on {
+	background-position : 0 -24px;
+}
+div#homeBannerheader div#slide-holder div#slide-controls p#slide-nav a {
+	background-image : url(images/silde-nav.png);
+}
+
+div#homeBannerheader div#slide-holder div#slide-controls p#slide-nav {
+	float:left;
+}/*选件按钮靠左*/
+/*在其他地方使用AdRotatorSelect*/
+.SliderBanner780 #homeBannerheader .wrap {
+	width : 780px;
+	margin : 0 auto;
+	text-align : left;
+	height:120px;
+}
+.SliderBanner780 #homeBannerheader #slide-holder {
+	z-index : 40;
+	width : 780px;
+	height : 120px;
+	position : absolute;
+}
+.SliderBanner780 #homeBannerheader #slide-holder #slide-runner {
+	/**/position : absolute;
+	top : 0px;
+	left : 0px;
+	width : 780px;
+	height : 120px;
+	overflow : hidden;
+}
+
+.SliderBanner781 #homeBannerheader .wrap {
+	width : 780px;
+	margin : 0 auto;
+	text-align : left;
+	height:140px;
+}
+.SliderBanner781 #homeBannerheader #slide-holder {
+	z-index : 40;
+	width : 780px;
+	height : 140px;
+	position : absolute;
+}
+.SliderBanner781 #homeBannerheader #slide-holder #slide-runner {
+	/**/position : absolute;
+	top : 0px;
+	left : 0px;
+	width : 780px;
+	height : 140px;
+	overflow : hidden;
+}
+
+.SliderBanner470 #homeBannerheader div#slide-holder div#slide-controls p#slide-nav {
+	float:right;
+}/*选件按钮靠左*/
+/*在其他地方使用AdRotatorSelect*/
+.SliderBanner470 #homeBannerheader .wrap {
+	width : 470px;
+	margin : 0 auto;
+	text-align : left;
+	height:250px;
+	float: left;
+}
+.SliderBanner470 #homeBannerheader #slide-holder {
+	z-index : 40;
+	width : 470px;
+	height : 250px;
+	position : absolute;
+}
+.iot-content .SliderBanner470 #homeBannerheader #slide-holder{ z-index:1;}
+.SliderBanner470 #homeBannerheader #slide-holder #slide-runner {
+	/**/position : absolute;
+	top : 0px;
+	left : 0px;
+	width : 470px;
+	height : 250px;
+	overflow : hidden;
+}
+.SliderBanner470 #homeBannerheader div#slide-holder div#slide-controls {
+	left : 5px;
+	bottom : 0;
+	height : 46px;
+	display : none;
+	position : absolute;
+	width: 470px;
+}

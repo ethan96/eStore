@@ -1,0 +1,25 @@
+﻿<div class="tutorial-myAccount tutorial-pop">
+    <span class="arrowTop"></span><span class="close"></span>
+    <div class="tutorial-animate" id="tutorial-animatemyAccount">
+        <ul>
+            <li>
+                <div class="title">
+                    會員中心好便利，快速管理訂單、報價單及您的收件資訊</div>
+                <div class="img">
+                    <img src="/tutorial/en-US/HomePage/tutorial-myAccount-1.jpg" /></div>
+            </li>
+            <li>
+                <div class="title">
+                    在會員中心管理訂單、報價單及收件資訊<br />
+                    您可在會員中心快速搜尋歷史訂單、重新下單及確認訂單資訊</div>
+                <div class="img">
+                    <img src="/tutorial/en-US/HomePage/tutorial-myAccount-2.jpg" /></div>
+            </li>
+        </ul>
+        <div class="clearfix">
+        </div>
+        <div class="carousel-controlCenter">
+            <span class="pager"></span>
+        </div>
+    </div>
+</div>

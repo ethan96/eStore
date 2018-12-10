@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://tempuri.org/SalesOrder.xsd" />
+      <s:import schemaLocation="http://my.advantech.com/Services/CreateSAPSoForeStore.asmx?schema=SalesOrder" namespace="http://tempuri.org/SalesOrder.xsd" />
+      <s:element name="CreateSO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="refDoc_Number" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="org_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderHeaderDt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SalesOrder.xsd" name="namespace" />
+                <s:attribute fixed="OrderHeaderDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderLineDt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SalesOrder.xsd" name="namespace" />
+                <s:attribute fixed="OrderLinesDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerFuncDT">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SalesOrder.xsd" name="namespace" />
+                <s:attribute fixed="PartnerFuncDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ConditionDT">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SalesOrder.xsd" name="namespace" />
+                <s:attribute fixed="ConditionDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="HeaderTextsDt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SalesOrder.xsd" name="namespace" />
+                <s:attribute fixed="HeaderTextsDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditCardDT">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SalesOrder.xsd" name="namespace" />
+                <s:attribute fixed="CreditCardDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="retDataTableDT">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateSOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateSOResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="refDoc_Number" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="org_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderHeaderDt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SalesOrder.xsd" name="namespace" />
+                <s:attribute fixed="OrderHeaderDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderLineDt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SalesOrder.xsd" name="namespace" />
+                <s:attribute fixed="OrderLinesDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerFuncDT">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SalesOrder.xsd" name="namespace" />
+                <s:attribute fixed="PartnerFuncDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ConditionDT">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SalesOrder.xsd" name="namespace" />
+                <s:attribute fixed="ConditionDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="HeaderTextsDt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SalesOrder.xsd" name="namespace" />
+                <s:attribute fixed="HeaderTextsDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditCardDT">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SalesOrder.xsd" name="namespace" />
+                <s:attribute fixed="CreditCardDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="retDataTableDT">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eStoreSSOLoginAndCalPoint">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="test" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eStoreSSOLoginAndCalPointResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eStoreSSOLoginAndCalPointResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="decimal" type="s:decimal" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateSOSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateSO" />
+  </wsdl:message>
+  <wsdl:message name="CreateSOSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateSOResponse" />
+  </wsdl:message>
+  <wsdl:message name="eStoreSSOLoginAndCalPointSoapIn">
+    <wsdl:part name="parameters" element="tns:eStoreSSOLoginAndCalPoint" />
+  </wsdl:message>
+  <wsdl:message name="eStoreSSOLoginAndCalPointSoapOut">
+    <wsdl:part name="parameters" element="tns:eStoreSSOLoginAndCalPointResponse" />
+  </wsdl:message>
+  <wsdl:message name="eStoreSSOLoginAndCalPointHttpGetIn">
+    <wsdl:part name="userid" type="s:string" />
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="test" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="eStoreSSOLoginAndCalPointHttpGetOut">
+    <wsdl:part name="Body" element="tns:decimal" />
+  </wsdl:message>
+  <wsdl:message name="eStoreSSOLoginAndCalPointHttpPostIn">
+    <wsdl:part name="userid" type="s:string" />
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="test" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="eStoreSSOLoginAndCalPointHttpPostOut">
+    <wsdl:part name="Body" element="tns:decimal" />
+  </wsdl:message>
+  <wsdl:portType name="CreateSAPSoForeStoreSoap">
+    <wsdl:operation name="CreateSO">
+      <wsdl:input message="tns:CreateSOSoapIn" />
+      <wsdl:output message="tns:CreateSOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eStoreSSOLoginAndCalPoint">
+      <wsdl:input message="tns:eStoreSSOLoginAndCalPointSoapIn" />
+      <wsdl:output message="tns:eStoreSSOLoginAndCalPointSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CreateSAPSoForeStoreHttpGet">
+    <wsdl:operation name="eStoreSSOLoginAndCalPoint">
+      <wsdl:input message="tns:eStoreSSOLoginAndCalPointHttpGetIn" />
+      <wsdl:output message="tns:eStoreSSOLoginAndCalPointHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CreateSAPSoForeStoreHttpPost">
+    <wsdl:operation name="eStoreSSOLoginAndCalPoint">
+      <wsdl:input message="tns:eStoreSSOLoginAndCalPointHttpPostIn" />
+      <wsdl:output message="tns:eStoreSSOLoginAndCalPointHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CreateSAPSoForeStoreSoap" type="tns:CreateSAPSoForeStoreSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateSO">
+      <soap:operation soapAction="http://tempuri.org/CreateSO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eStoreSSOLoginAndCalPoint">
+      <soap:operation soapAction="http://tempuri.org/eStoreSSOLoginAndCalPoint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CreateSAPSoForeStoreSoap12" type="tns:CreateSAPSoForeStoreSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateSO">
+      <soap12:operation soapAction="http://tempuri.org/CreateSO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eStoreSSOLoginAndCalPoint">
+      <soap12:operation soapAction="http://tempuri.org/eStoreSSOLoginAndCalPoint" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CreateSAPSoForeStoreHttpGet" type="tns:CreateSAPSoForeStoreHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="eStoreSSOLoginAndCalPoint">
+      <http:operation location="/eStoreSSOLoginAndCalPoint" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CreateSAPSoForeStoreHttpPost" type="tns:CreateSAPSoForeStoreHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="eStoreSSOLoginAndCalPoint">
+      <http:operation location="/eStoreSSOLoginAndCalPoint" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CreateSAPSoForeStore">
+    <wsdl:port name="CreateSAPSoForeStoreSoap" binding="tns:CreateSAPSoForeStoreSoap">
+      <soap:address location="http://my.advantech.com/Services/CreateSAPSoForeStore.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CreateSAPSoForeStoreSoap12" binding="tns:CreateSAPSoForeStoreSoap12">
+      <soap12:address location="http://my.advantech.com/Services/CreateSAPSoForeStore.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CreateSAPSoForeStoreHttpGet" binding="tns:CreateSAPSoForeStoreHttpGet">
+      <http:address location="http://my.advantech.com/Services/CreateSAPSoForeStore.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CreateSAPSoForeStoreHttpPost" binding="tns:CreateSAPSoForeStoreHttpPost">
+      <http:address location="http://my.advantech.com/Services/CreateSAPSoForeStore.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

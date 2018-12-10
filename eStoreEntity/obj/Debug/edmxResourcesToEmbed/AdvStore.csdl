@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AdvStoreModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="AdvStoreEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="es_cbom" EntityType="AdvStoreModel.es_cbom" />
+    <EntitySet Name="es_cbomtree" EntityType="AdvStoreModel.es_cbomtree" />
+    <EntitySet Name="es_sharebomtree" EntityType="AdvStoreModel.es_sharebomtree" />
+    <EntitySet Name="tbProductOfferings" EntityType="AdvStoreModel.tbProductOffering" />
+    <EntitySet Name="tbProducts" EntityType="AdvStoreModel.tbProduct" />
+    <AssociationSet Name="FK_es_cbomtree_es_sharebomtree" Association="AdvStoreModel.FK_es_cbomtree_es_sharebomtree">
+      <End Role="es_sharebomtree" EntitySet="es_sharebomtree" />
+      <End Role="es_cbomtree" EntitySet="es_cbomtree" />
+    </AssociationSet>
+    <EntitySet Name="es_Config_Item_new" EntityType="AdvStoreModel.es_Config_Item_new" />
+    <EntitySet Name="vCTOS" EntityType="AdvStoreModel.vCTO" />
+    <EntitySet Name="CART_Line_DETAIL" EntityType="AdvStoreModel.CART_Line_DETAIL" />
+    <EntitySet Name="CART_MASTER" EntityType="AdvStoreModel.CART_MASTER" />
+    <EntitySet Name="EAPRO_ORDER_DETAIL" EntityType="AdvStoreModel.EAPRO_ORDER_DETAIL" />
+    <EntitySet Name="EAPRO_ORDER_MASTER" EntityType="AdvStoreModel.EAPRO_ORDER_MASTER" />
+    <EntitySet Name="EBIZ_ADDRESS" EntityType="AdvStoreModel.EBIZ_ADDRESS" />
+    <AssociationSet Name="FK_CART_Line_DETAIL_CART_MASTER" Association="AdvStoreModel.FK_CART_Line_DETAIL_CART_MASTER">
+      <End Role="CART_MASTER" EntitySet="CART_MASTER" />
+      <End Role="CART_Line_DETAIL" EntitySet="CART_Line_DETAIL" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="es_cbom">
+    <Key>
+      <PropertyRef Name="cbomid" />
+    </Key>
+    <Property Name="cbomid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cbom_name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="cbom_desc" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="system_id" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="storeid" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="base_list_price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="base_list_price_type" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="eff_date" Type="DateTime" />
+    <Property Name="end_date" Type="DateTime" />
+    <Property Name="createtime" Type="DateTime" />
+    <Property Name="state" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="price_sum" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="pro_msg" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="pro_startdate" Type="DateTime" />
+    <Property Name="pro_enddate" Type="DateTime" />
+    <Property Name="pro_price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="keywords" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="Promotemarkup" Type="Decimal" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityType Name="es_cbomtree">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="cbomid" Type="Int32" Nullable="false" />
+    <Property Name="nodeid" Type="Int32" Nullable="false" />
+    <Property Name="seq" Type="Int32" />
+    <Property Name="defaults" Type="Int32" />
+    <Property Name="exceplist" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="discount" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="input" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="show" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="localPartno" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="insertdate" Type="DateTime" />
+    <Property Name="cost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="message" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="maxquantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="es_sharebomtree" Relationship="AdvStoreModel.FK_es_cbomtree_es_sharebomtree" FromRole="es_cbomtree" ToRole="es_sharebomtree" />
+  </EntityType>
+  <EntityType Name="es_sharebomtree">
+    <Key>
+      <PropertyRef Name="nodeid" />
+    </Key>
+    <Property Name="nodeid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="node_name" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="node_desc" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="node_parentid" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="node_partno_list" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="node_type" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="node_replacepartno_list" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="node_discount" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="node_seq" Type="Int32" />
+    <NavigationProperty Name="es_cbomtree" Relationship="AdvStoreModel.FK_es_cbomtree_es_sharebomtree" FromRole="es_sharebomtree" ToRole="es_cbomtree" />
+  </EntityType>
+  <EntityType Name="tbProductOffering">
+    <Key>
+      <PropertyRef Name="StoreID" />
+      <PropertyRef Name="ProductNo" />
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="StoreID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ProductNo" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="ShowPrice" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="Publish" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="CategoryID" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <Property Name="SAPPrice" Type="Double" Nullable="false" />
+    <Property Name="useSAP" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="created_date" Type="DateTime" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ModelDesc" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="ModelFeatures" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="ProductDesc" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="ProductFeatures" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="Extendeddesc" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="promoteprice" Type="Double" />
+    <Property Name="PromoteStart" Type="DateTime" />
+    <Property Name="PromoteEnd" Type="DateTime" />
+    <Property Name="categoryid2" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="pro_msg" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="PQuantity" Type="Int32" />
+    <Property Name="Promotemarkup" Type="Decimal" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityType Name="tbProduct">
+    <Key>
+      <PropertyRef Name="ProductNo" />
+    </Key>
+    <Property Name="ProductNo" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="ModelNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="PicturePath" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="RelatedPicture" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ProductType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="Features" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="Literature" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="created_date" Type="DateTime" />
+    <Property Name="created_by" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="ProductGroup" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="RohsStatus" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="Siebelstatus" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_es_cbomtree_es_sharebomtree">
+    <End Role="es_sharebomtree" Type="AdvStoreModel.es_sharebomtree" Multiplicity="1" />
+    <End Role="es_cbomtree" Type="AdvStoreModel.es_cbomtree" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="es_sharebomtree">
+        <PropertyRef Name="nodeid" />
+      </Principal>
+      <Dependent Role="es_cbomtree">
+        <PropertyRef Name="nodeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="es_Config_Item_new">
+    <Key>
+      <PropertyRef Name="Con_Item_AutoID" />
+    </Key>
+    <Property Type="Int32" Name="Con_Item_AutoID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Con_Item_Number" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Con_Item_virtual_part" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Con_Item_MBID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Con_Item_Line" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Con_Item_Desc" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Con_Item_Data_Sheet" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Depth_M" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Width_M" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Height_M" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Depth_I" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Width_I" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Height_I" Precision="18" Scale="2" />
+    <Property Type="String" Name="Con_item_features" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="con_item_id" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="short_features" MaxLength="4000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vCTO">
+    <Key>
+      <PropertyRef Name="cbomid" />
+    </Key>
+    <Property Type="String" Name="system_id" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="cbomid" Nullable="false" />
+    <Property Type="String" Name="Con_Item_Number" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Con_Item_virtual_part" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Con_Item_MBID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cbom_name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cbom_desc" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="storeid" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="state" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="base_list_price" Precision="19" Scale="4" />
+    <Property Type="String" Name="base_list_price_type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="eff_date" />
+    <Property Type="DateTime" Name="end_date" />
+    <Property Type="DateTime" Name="createtime" />
+    <Property Type="Decimal" Name="price_sum" Precision="19" Scale="4" />
+    <Property Type="String" Name="pro_msg" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="pro_startdate" />
+    <Property Type="DateTime" Name="pro_enddate" />
+    <Property Type="Decimal" Name="pro_price" Precision="19" Scale="4" />
+    <Property Type="String" Name="keywords" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Con_Item_Line" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Con_Item_Desc" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Con_Item_Data_Sheet" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Depth_M" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Width_M" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Height_M" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Depth_I" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Height_I" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Width_I" Precision="18" Scale="2" />
+    <Property Type="String" Name="con_item_id" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Con_item_features" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="short_features" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Promotemarkup" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityType Name="CART_Line_DETAIL">
+    <Key>
+      <PropertyRef Name="LINE_NO" />
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="String" Name="CART_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="LINE_NO" Nullable="false" />
+    <Property Type="Int32" Name="SEQ" />
+    <Property Type="String" Name="MODEL_NO" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PART_NO" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="QTY" />
+    <Property Type="DateTime" Name="DUE_DATE" />
+    <Property Type="DateTime" Name="REQUIRED_DATE" />
+    <Property Type="Decimal" Name="LIST_PRICE" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="UNIT_PRICE" Precision="19" Scale="4" />
+    <Property Type="String" Name="Line_Detail_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Line_Detail_Type_Ref" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="CART_MASTER" Relationship="AdvStoreModel.FK_CART_Line_DETAIL_CART_MASTER" FromRole="CART_Line_DETAIL" ToRole="CART_MASTER" />
+  </EntityType>
+  <EntityType Name="CART_MASTER">
+    <Key>
+      <PropertyRef Name="CART_ID" />
+    </Key>
+    <Property Type="String" Name="CART_ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DUE_DATE" />
+    <Property Type="DateTime" Name="REQUIRED_DATE" />
+    <Property Type="String" Name="CURRENCY" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="User_Id" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SOLDTO_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BILLTO_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SHIPTO_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PO_NO" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PAYMENT_TYPE" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PAYMENT_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="TOTAL_ATP_DATE" />
+    <Property Type="Decimal" Name="TOTAL_AMOUNT" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="CREATED_DATE" />
+    <Property Type="String" Name="ATTENTION" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SHIPMENT_TERM" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PARTIAL_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="COMBINE_ORDER_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="EARLY_SHIP_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="SHIP_VIA" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SHIP_METHOD" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="REMARK" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="FREIGHT" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="INSURANCE" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="TAX" Precision="19" Scale="4" />
+    <Property Type="String" Name="CUSTOMER_ATTENTION" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AUTO_ORDER_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ORDER_NOTE" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="CART_TOTAL_DISCOUNT" Precision="19" Scale="4" />
+    <Property Type="String" Name="CART_TYPE" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CREATED_BY" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="QUOTE_DATE" />
+    <Property Type="DateTime" Name="QUOTE_EXPIRED_DATE" />
+    <Property Type="String" Name="LAST_UPDATED_BY" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LAST_UPDATED_DATE" />
+    <Property Type="String" Name="STORE_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CART_NUMBER" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CART_DESC" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CONFIRMED_DATE" />
+    <Property Type="String" Name="CONFIRMED_BY" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Version" />
+    <Property Type="String" Name="Ship_Collect" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Reseller_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="VAT_Address" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Lead_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Protect_Due_Date" />
+    <Property Type="String" Name="Protection_Status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="QUOTE_MESSAGE" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CBOM_MESSAGE" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Promote_Code" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Courier" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Courier_account" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Courier_phone" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Division" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CART_Line_DETAIL" Relationship="AdvStoreModel.FK_CART_Line_DETAIL_CART_MASTER" FromRole="CART_MASTER" ToRole="CART_Line_DETAIL" />
+  </EntityType>
+  <EntityType Name="EAPRO_ORDER_DETAIL">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="String" Name="Store_Id" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ORDER_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ORDER_NO" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="LINE_NO" />
+    <Property Type="String" Name="PRODUCT_LINE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PART_NO" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ORDER_LINE_TYPE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="QTY" />
+    <Property Type="Decimal" Name="LIST_PRICE" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="UNIT_PRICE" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="REQUIRED_DATE" />
+    <Property Type="DateTime" Name="DUE_DATE" />
+    <Property Type="String" Name="ERP_SITE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ERP_LOCATION" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AUTO_ORDER_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="AUTO_ORDER_QTY" />
+    <Property Type="DateTime" Name="Supplier_due_date" />
+    <Property Type="Int32" Name="PARENT_LINE_NO" />
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ProductGroup" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="EAPRO_ORDER_MASTER">
+    <Key>
+      <PropertyRef Name="Cart_Total_Discount" />
+    </Key>
+    <Property Type="String" Name="Store_Id" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ORDER_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ORDER_NO" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ORDER_TYPE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PO_NO" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="User_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SOLDTO_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SHIPTO_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BILLTO_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SALES_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ORDER_DATE" />
+    <Property Type="String" Name="PAYMENT_TYPE" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ATTENTION" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PARTIAL_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="COMBINE_ORDER_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="EARLY_SHIP_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="FREIGHT" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="INSURANCE" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="TAX" Precision="19" Scale="4" />
+    <Property Type="String" Name="REMARK" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PRODUCT_SITE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DUE_DATE" />
+    <Property Type="DateTime" Name="REQUIRED_DATE" />
+    <Property Type="String" Name="SHIPMENT_TERM" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SHIP_VIA" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CURRENCY" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ORDER_NOTE" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ORDER_STATUS" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="TOTAL_AMOUNT" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="TOTAL_LINE" />
+    <Property Type="DateTime" Name="LAST_UPDATED" />
+    <Property Type="DateTime" Name="CREATED_DATE" />
+    <Property Type="String" Name="CREATED_BY" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CUSTOMER_ATTENTION" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AUTO_ORDER_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="Payment_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Reseller_ID" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CBOM_MESSAGE" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="VAT_Address" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ChannelID" />
+    <Property Type="String" Name="ChannelName" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CartID" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Courier" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Courier_account" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Courier_phone" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Shippingmethod" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Cart_Total_Discount" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="String" Name="ZM" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Z2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SAP_Sync_by" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="SAP_Sync_date" />
+    <Property Type="String" Name="SAP_Sync_status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="TDS_Cost" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="EBIZ_ADDRESS">
+    <Key>
+      <PropertyRef Name="LAST_UPDATED" />
+      <PropertyRef Name="ROW_ID" />
+    </Key>
+    <Property Type="String" Name="ORG_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Store_Id" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ATTENTION" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ATTENTION_Company_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ADDRESS1" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ADDRESS2" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FAX_NO" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TEL_NO" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TEL_EXT" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Mobile" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CITY" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="STATE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="COUNTRY" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="COUNTY" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="REGION" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ZIP_CODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LAST_UPDATED" Nullable="false" />
+    <Property Type="String" Name="UPDATED_BY" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CREATED_DATE" />
+    <Property Type="String" Name="CREATED_BY" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ROW_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="EXTENTED_DATE" />
+  </EntityType>
+  <Association Name="FK_CART_Line_DETAIL_CART_MASTER">
+    <End Type="AdvStoreModel.CART_MASTER" Role="CART_MASTER" Multiplicity="0..1" />
+    <End Type="AdvStoreModel.CART_Line_DETAIL" Role="CART_Line_DETAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CART_MASTER">
+        <PropertyRef Name="CART_ID" />
+      </Principal>
+      <Dependent Role="CART_Line_DETAIL">
+        <PropertyRef Name="CART_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

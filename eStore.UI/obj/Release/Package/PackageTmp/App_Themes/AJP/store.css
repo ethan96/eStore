@@ -1,0 +1,26 @@
+﻿.eStoreLivePerson-LargerImage .iplanet_online_chat{
+  height:89px; 
+  padding:5px 0 0 10px; 
+  background:url(chat_bg_big.jpg) no-repeat;
+  font-weight:bold; 
+  font-size:12px;
+  line-height:16px;
+  background-repeat: no-repeat;
+  background-position  : right;
+}
+.eStoreLivePerson-SmallImage .iplanet_online_chat{
+  height:83px; 
+  padding:5px 0 0 10px; 
+  background:url(chat_bg.jpg) no-repeat;
+  font-weight:bold; 
+  font-size:12px;
+  line-height:16px;
+  background-repeat: no-repeat;
+  background-position  : right;
+}
+.eStore_productBlock .callforprice,.eStore_index_Solution .eStore_productBlock_price span.callforprice{ font-size:14px;}
+.eStore_index_Solution .eStore_productBlock_txt{ display:none;}
+body {font: 12px/20px "メイリオ", Meiryo, Arial, Helvetica;}
+.eStore_footer ol {font: 12px/20px "メイリオ", Meiryo, Arial, Helvetica;}
+.eStore_index_Solution_contentBlock .eStore_productBlock_att { height: 64px; }
+.eStore_chatBox_txt h3{font-size: 14px !important;font-weight:normal;padding:5px 0;}

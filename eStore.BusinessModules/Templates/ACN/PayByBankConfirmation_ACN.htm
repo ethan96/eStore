@@ -1,0 +1,414 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>产品订购单暨付款通知书(电汇 快递送货)</title>
+<style type="text/css">
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;		   
+}
+table.contact
+{
+	font: bold 13px/normal Arial,Helvetica,sans-serif;
+	border-collapse: collapse;
+	border-color: #ffffff;
+	background: #FFFFFF;
+	color: #333;
+	width: 100%;
+}
+.contact th
+{
+	width: 33%;
+	border-collapse: collapse;
+	background: #EFF4FB;
+}
+.contact td
+{
+	font: 12px/normal Arial,Helvetica,sans-serif;
+	border-collapse: collapse;
+	background: #FFFFFF;
+	color: #333;
+}
+
+table.estoretable
+{
+	font: 13px/normal Arial,Helvetica,sans-serif;
+	border-collapse: collapse;
+	color: #333;
+	width: 100%;
+}
+
+.estoretable th
+{
+	padding: 3px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #E5E5E5;
+	text-align: center;
+	background: #EFF4FB;
+}
+
+.estoretable td
+{
+	padding:3px;  border-style:solid; border-width:1px; border-color:#E5E5E5;
+}
+
+table.estoretable2
+{
+	font: 13px/normal Arial,Helvetica,sans-serif;
+	border-collapse: collapse;
+	color: #333;
+	width: 100%;
+}
+.estoretable2 td
+{
+	padding:3px;
+	text-align: right;
+}
+
+.boder
+{
+	border: 1px solid #E5E5E5;
+}
+
+.estoretable caption
+{
+	padding: 0 0 .5em 0;
+	text-align: left;
+	text-transform: uppercase;
+	color: #333;
+	background: transparent;
+}
+.cartitem p
+{
+	margin: 0;
+	padding: 5px 0;
+}
+.cartitem  label
+{
+	font-weight: bold;
+}
+.style2
+{
+	width: 345px;
+}
+.style4
+{
+	width: 201px;
+}
+.banckInfor p
+{
+    padding: 3px 5px 10px 0;
+    margin: 0px; float:left;width:100%;
+}
+.banckInfor p label 
+{
+    color: black;
+    display: inline-block;
+    float: left;
+    width: 150px;
+    text-align: left;
+    padding-left: 5px;
+}
+</style>
+</head>
+<body>
+<table width="720" border="0" cellspacing="0" cellpadding="0" align="center">
+	<tr>
+		<td align="left"> <img src="http://buy.advantech.com/App_Themes/AUS/logo.gif" alt="Advantech eStore" /> <br />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table width="720" border="0" cellpadding="0" cellspacing="0" height="30">
+				<tr>
+					<td width="8" align="left" height="30"><img src="http://buy.advantech.com/App_Themes/AUS/barleft.jpg" width="8" height="30"></td>
+					<td width="704" bgcolor="#E5E5E5" style="background-color:#E5E5E5" height="30">
+						<a title="Home" href="http://[/STOREURL]" style="text-decoration:none"><font size="2" color="#767677"><b>
+                        首页</b></font></a>
+						&nbsp; &nbsp; &nbsp;
+						<a title="About Us" href="http://[/STOREURL]/AboutUs/" style="text-decoration:none"><font size="2" color="#767677"><b>
+                        关于研华eStore</b></font></a>
+						&nbsp; &nbsp; &nbsp;
+						<a title="Support" href="http://support.advantech.com.cn/support/default.aspx" style="text-decoration:none"><font size="2" color="#767677"><b>
+                        技术支持</b></font></a>
+						&nbsp; &nbsp; &nbsp;
+						<a title="Contact Us" href="http://[/STOREURL]/ContactUs.aspx" style="text-decoration:none"><font size="2" color="#767677"><b>
+                        联系研华</b></font></a>
+		      </td>
+					<td width="8" align="right" height="30"><img src="http://buy.advantech.com/App_Themes/AUS/barright.jpg" width="8" height="30"></td>
+				</tr>
+				<tr>
+					<td colspan="3" height="18" bgcolor="#708AAC" style="background-color:#708AAC; padding:5px 10px">
+						<div style="color:#FFFFFF; font-size:12px">
+							研华公司 | 北京市海淀区上地信息产业基地六街七号 100085
+				            <br />
+				            电话:010-62984346 | 传真:010-62984346-6335 &nbsp; | sales@advantech.com.cn
+						</div>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+<!-- START -->
+			<table width="100%" border="0" cellspacing="0" cellpadding="6" style="border:1px solid #CCCCCC; background-color:#FFFFE6" bgcolor="#FFFFE6" align="center">
+				<tr>
+					<td style="font-size:13px;"> 
+                    <div><b>尊敬的 [/USERNAME],</b></div>
+						<div style="padding-left:10px">
+						    感谢您使用研华在线订购服务: 我们将在24小时内进行您的订单处理,您可以  <a href="http://[/CLICKHERE]">点击这里</a> 
+                            实时确认您的订单处理进度. 建议您打印此页订单数据, 作为您日后查询及确认订单的纪录。
+						<br />
+						<br />
+						<table width="95%" border="0" align="center" cellpadding="5">
+							<tr>
+								<td style="border-left:1px solid #CCC" class="banckInfor">
+                                    [/BANKINFORMATION]
+								</td>
+							</tr>
+                            <tr>
+                                <td>
+                                    <b>注:</b> 电汇付款后，请传真汇款底单，注明购买人姓名以及收件人<br />
+                                    <b>eStore 客服电话:</b> 800-810-0345 (固话) &nbsp;&nbsp;400-810-0345(手机)
+                                    &nbsp;&nbsp;<b>传真:</b> 010-62984341/2 贾冰雪&lt;收&gt;
+                                </td>
+                            </tr>
+						</table>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td bgcolor="#FFFFFF">
+						<table width="100%" border="0" cellspacing="2" cellpadding="0">
+							<tr>
+								<td align="left" colspan="2"><span style="font-size:20px; color:#003D7C"><b>
+                                    产品订购单与付款通知(电汇 快递送货)</b></span></td>
+							</tr>
+							<tr>
+								<td width="40%" style="font-size:14px; padding-left:10px">
+									订单编号 :<b><span style="color:#0033CC">[/ORDERNO]</span></b><br />
+								    <span style="color:#666666">
+									[/PROMOTIONCODE] [/PURCHASENO] [/RESELLERID] [/ERPID]
+									</span>
+								</td>
+								<td width="60%" align="right" style="font-size:13px" valign="top">
+									订单日期: [/ORDERDATE]
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" background="http://buy.advantech.com/App_Themes/AUS/line.gif" height="1"></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+                                    <!-- Contact Info -->
+                                        <table width="100%" class=contact>
+                                            <tr>
+                                                <th>买方信息</th>
+                                                <th>
+                                                    发票地址</th>
+                                                <th>
+                                                    收货信息</th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    姓名: [/SOLDTOATTENTION]
+                                                </td>
+                                                <td>
+                                                    姓名: [/BILLTOATTENTION]
+                                                </td>
+                                                <td>
+                                                    姓名: [/SHIPTOATTENTION]                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    公司: [/SOLDTOCOMPANY]                                                </td>
+                                                <td>
+                                                    公司: [/BILLTOCOMPANY]
+                                                </td>
+                                                <td>
+                                                    公司: [/SHIPTOCOMPANY]
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    地址: [/SOLDTOADDRESS]                                                </td>
+                                                <td>
+                                                    地址: [/BILLTOADDRESS]                                                </td>
+                                                <td>
+                                                    地址: [/SHIPTOADDRESS]
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    电话: [/SOLDTOTEL]
+                                                </td>
+                                                <td>
+                                                    电话: [/BILLTOTEL]
+                                                </td>
+                                                <td>
+                                                    电话: [/SHIPTOTEL]
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    手机: [/SOLDTOMOBILE]
+                                                </td>
+                                                <td>手机: [/BILLTOMOBILE]
+                                                </td>
+                                                <td>
+                                                    手机: [/SHIPTOMOBILE]
+                                                </td>
+                                            </tr>
+                                                                                        <tr>
+                                                <td>&nbsp;
+                                                    
+                                                </td>
+                                                <td>&nbsp;
+                                                     
+                                                </td>
+                                                <td>&nbsp;
+                                                     
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    <!-- Contact Info/ -->
+								</td>
+							</tr>
+							<tr><td colspan="2" height="5"></td></tr>
+							<tr>
+								<td colspan="2">
+                                    <!-- CART DETAIL  -->
+                                    <table class="estoretable" width="100%">
+                                            <tbody>
+                                      <thead>
+                                                    <tr class="carthead">
+                                                        <th>
+                                                            NO.
+                                                        </th>
+                                                        <th width="20%">
+                                                            产品型号</th>
+                                                        <th class="style2">
+                                                            产品描述
+                                                        </th>
+                                                        [/DetailModeTH]<th>
+                                                            单价</th>
+                                                        <th>
+                                                            数量
+                                                        </th>
+                                                        <th>小计</th>
+                                                    </tr>
+                                      </thead>
+                                                [/CARTITEMS]
+                                                <tr class="cartitem">
+                                                    <td colspan="[/colspan]">&nbsp;
+                                                        
+                                                    </td>
+                                                    <td colspan="2">&nbsp;
+                                                        
+                                                    </td>
+                                                    <td colspan="3">&nbsp;
+                                                        
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                  </table>
+                                        <br />
+                                     <table width="100%" class="estoretable2">
+                                            <tr class="cartitem">
+                                                <td align="left" rowspan="5" valign="top" width="45%" class="boder">
+                                                    [/SHIPPINGMETHOD] [/Courier_account] [/PROMOTIONCODE] [/PURCHASENO] [/RESELLERID][/PAYMENTTYPE]
+                                                </td>
+                                                <td>
+                                                    小计:
+                                                </td>
+                                                <td>
+                                                    [/SUBTOTAL]
+                                                </td>
+                                            </tr>
+                                            <tr id="Freight" class="cartitem">
+                                                <td>
+                                                    <font color="red">* </font>运费:
+                                                </td>
+                                                <td>
+                                                    [/FREIGHT]
+                                                </td>
+                                            </tr>
+                                            <tr id="Tax" class="cartitem">
+                                                <td>
+                                                    <font color="red">* </font>税率([/TAXRATE]):
+                                                </td>
+                                                <td>
+                                                    [/TAX]
+                                                </td>
+                                            </tr>
+                                            <tr id="CartDiscount" class="cartitem">
+                                                <td>
+                                                    <font color="red">* </font>折扣:
+                                                </td>
+                                                <td style="color: #FF0000;">
+                                                    [/DISCOUNT]
+                                                </td>
+                                            </tr>
+                                            <tr class="cartitem">
+                                                <td>
+                                                    总价:
+                                                </td>
+                                                <td style="font-weight: bold;color: #FF0000;">
+                                                    [/TOTAL]
+                                                </td>
+                                            </tr>
+                                  </table>
+                                   <!-- CART DETAIL / -->
+                                  <p style="font-size: 13px; font-family: Arial;"><b>意见/建议:</b><br /> 
+                                    &nbsp;&nbsp;&nbsp;[/Comment]</p>
+								</td>
+							</tr>
+						</table>
+						<br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<span style="color:#333; padding-left:10px">
+<p style="font-size:12px;"><span style="color:red">*</span> 
+						此报价单只适合中国大陆地区使用（香港、澳门、台湾除外）。</p>
+						</span>
+					<p style="font-size:12px;"><span style="color:#333; padding-left:10px">* 
+						请提供开票信息(公司名称,开户行,帐号,税号,地址,电话,传真,邮编,邮寄地址),
+						研华将给您提供发票作为保修凭证。请传真上述信息到 010-62984346-6335  贾冰雪 收
+						或者请发致邮箱<a href="mailto:sales@advantech.com.cn">sales@advantech.com.cn</a></span></p>
+						<span style="color:#333; padding-left:10px"><p style="font-size:12px;"><span style="color:red">*</span> 
+						研华有权单方更改价格、产品规格、货期。税金、运费及相应费用不在折扣范围之内。<span style="color:red">*</span> 
+						产品的总结价格包括17个税点价格和运费。研华提供县级城市门到门的免费配送服务，
+						县级以下地区送货上门需要您支付从县级配送中心到送货上门的费用。<br />
+						最终到货时间取决于处理订单、配置产品、产品货期、确认汇款到账时间和出货工作时间，
+						由于天气和自然灾害等因素影响货运时间，研华不承担任何责任。</p>
+						<p style="font-size:12px;"><span style="color:red">*</span> 
+						<strong>报价单的有效期限为10天</strong>.</p>
+						</span></td></tr>
+				<tr>
+					<td><p style="font-size:12px;">再次感谢您使用研华eStore在线订购服务, 我们将以最快的速度进行您的订单处理.<br>
+				      如您有任何不清楚的地方, 欢迎拨打免付费专线800-810-0345, 我们将由专人为您服务.<br>
+					  </p>					  </td>
+				</tr>
+					
+				
+	        <!-- Footer -->
+        <tr>
+          <td height="15" bgcolor="#708AAC" style="background-color: #708AAC; text-align: center;
+                color: #FFFFFF; font-size: 12px" align="center">[buy.advantech.com.cn] / [800-810-0345] </td>
+        </tr>
+        <tr>        
+            
+        </tr>
+        <!-- Footer /-->
+			</table>
+<!-- END -->
+</td>
+</tr>
+</table>
+</body>
+</html>

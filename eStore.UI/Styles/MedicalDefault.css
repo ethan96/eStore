@@ -1,0 +1,112 @@
+.medical-container a {text-decoration: none; color: #666;outline: none; /* for Firefox Google Chrome  */behavior: expression(this.onFocus=this.blur());padding-bottom: 3px;}
+.medical-container  a img, a img:hover {border:none;}
+.medical-container a:hover {color:#626262; text-decoration:underline;}
+.medical-container ul, .medical-container ol, .medical-container li {list-style:none;}
+.medical-container input {outline: none;}
+.medical-container .pull-left {float:left;}
+.medical-container .pull-right {float:right;}
+.medical-container .clearfix {clear:both; height:0px; visibility:inherit;}
+.medical-container .overflow-hidden {overflow:hidden;}
+.medical-container .text-center {text-align:center;}
+.medical-container .text-right{text-align:right;}
+.medical-container .text-left{text-align:left;}
+.medical-container .block-center {margin:0 auto;}
+
+/****************************************************** container ******************************************************/
+.medical-container {margin:0px; padding:0;}
+.medical-content-left{width:780px; float:left;}
+.medical-content-right{width:185px; float:right;}
+
+
+/**** 結束內文的浮動 ****/
+.medical-container:after,.medical-ProCol:after,.medical-home-content:after {content:"."; display:block; height:0px; clear:both; visibility:hidden;}/**** 結束內文的浮動 ****/
+
+.breadcrumbs{width:780px; margin:0 auto; font-size:12px;}
+.breadcrumbs span{font-weight:bold;}
+.breadcrumbs a{text-decoration:none; color:#06C;}
+
+/****************************************************** index banner ******************************************************/
+.medical-home-banner{margin:15px 0; color:#fff; width:780px; height:250px; overflow:hidden; position:relative;}
+.medical-home-banner-img{position:relative; height:250px;}
+.medical-home-banner-img div{position:relative; float:left;}
+.medical-home-banner-img div .title{position:absolute; top:95px; left:50px; font-size:26px; font-weight:bold;}
+.medical-home-banner-img div .content{position:absolute; top:120px; left:50px; font-size:16px;}
+.medical-home-banner-point{position:relative; left:24px; bottom:28px;}
+.medical-home-banner-point span{width:12px; height:12px; margin-right:9px; cursor:pointer; background:url(../images/home-banner-normal.png) no-repeat; display:inline-block;}
+.medical-home-banner-point span.active{background:url(../images/home-banner-over.png) no-repeat;}
+
+/****************************************************** index content ******************************************************/
+.medical-home-content{width:760px; padding:0 10px; margin:0px;}
+.medical-home-col,.medical-home-col2{width:238px; height:243px; border:1px solid #e1e1e1; float:left; margin:0 0 20px 20px; position:relative;}
+.medical-home-col:first-child{margin-left:0px;}
+.medical-home-content a.txt{width:220px; height:225px; padding:9px; display:inline-block; color:#537388; position:absolute;} 
+.medical-home-summary {width:220px;}
+.medical-home-summary .img{position:relative;}
+.medical-home-summary .title{font-size:15px; margin:8px; height:32px;}
+.medical-home-summary .price{color:#ff8400;}
+.medical-home-summary .price span{font-size:21px; padding: 0 15px 0 3px; background:url(../images/arrow.png) right 4px no-repeat;}
+.medical-home-detail{position:absolute; top:9px; right:13px; width:180px; z-index:-2; opacity:0; filter: alpha(opacity=0);}
+.medical-home-detail .content{height:200px; overflow:hidden;}
+
+.medical-home-col2{width:498px; margin-left:0px;}
+.medical-home-col2 a.txt{width:480px;} 
+.medical-home-col2 .medical-home-summary{width:480px;}
+.medical-home-col2 .medical-home-summary .title{font-size:15px; margin:8px; height:32px; width:220px;}
+
+.medical-container .medical-home-content a{text-decoration:none; cursor:pointer;}
+.medical-content-left .medical-col-left a.btn{ position:absolute; top:209px; right:-180px; z-index:-2; opacity:0; filter: alpha(opacity=0);}
+.medical-home-col.medical-col-left:hover,.medical-home-col2.medical-col-left:hover{*left:0px;}/**針對ie7**/
+.medical-home-col2-pro{position:absolute; top:13px; left:273px;}
+
+/****************************************************** 01~05 banner ******************************************************/
+.medical-page-banner{width:780px; height:260px; color:#537388; font-size:24px; line-height:24px; overflow:hidden;}
+.medical-banner_01{background:url(../images/01_banner.jpg) no-repeat;}
+.medical-banner_02{background:url(../images/02_banner.jpg) no-repeat;}
+.medical-banner_03{background:url(../images/03_banner.jpg) no-repeat;}
+.medical-banner_04{background:url(../images/04_banner.jpg) no-repeat;}
+.medical-banner_05{background:url(../images/05_banner.jpg) no-repeat;}
+.medical-banner_01-txt,.medical-banner_02-txt,.medical-banner_03-txt,.medical-banner_04-txt{padding:110px 0 0 60px;}
+.medical-banner_05-txt{padding:110px 0 0 50px;}
+
+/****************************************************** 01~05 content ******************************************************/
+.medical-content{padding:0px 0 25px 0;}
+.medical-content h1{color:#024589; font-size:24px; font-weight:normal;}
+
+/****************************************************** 01~05 pro ******************************************************/
+.medical-ProCol{min-height:160px; width:760px; padding:3px 13px 10px 5px; margin-bottom:20px; border:1px solid #dfeef9; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px;}
+.medical-ProCol-left{float:left; width:160px;}
+.medical-ProCol-left .CateImg{max-width:160px;max-height:160px;}
+.medical-ProCol-right{float:right; width:595px;}
+.medical-ProCol-right-content{min-height:96px;}
+.medical-ProCol-right h2{color:#2b8bc6; font-size:16px; line-height:18px; font-weight:normal; margin:20px 0 10px 0;}
+.medical-ProCol-right-content-col{width:49%; float:left;}
+.medical-ProCol-right-content-col h3{font-size:12px; color:#000; margin:0px;}
+.medical-ProCol-right-content-col a,.medical-ProCol-right-content-col span{font-size:12px; display:block;}
+.medical-ProCol-right-content-col a b,.medical-ProCol-right-content-col span b{color:#90a9b1; font-size:12px; font-weight:normal;}
+.medical-ProCol-right-content table td{padding-right:30px;}
+.CategoryImg{ max-width:160px;}
+
+/*************** 04 ******************/
+.medical-ProCol-right-contentT{min-height:60px;}
+.medical-ProCol-right-contentB{min-height:70px; padding-top:8px; margin-top:8px; border-top:1px solid #e2e2e2;}
+.medical-ProCol-right-contentB .medical-ProCol-left{float:left; width:90px; padding-right:10px;}
+.medical-ProCol-right-contentB .medical-ProCol-right{float:left; width:230px; font-size:12px;}
+.medical-ProCol-right-contentB .medical-ProCol-right h4{font-size:12px; color:#90a9b1; margin:2px 0px; font-weight:normal;}
+.medical-ProCol-right-contentB .medical-ProCol-right a{display:block;}
+.medical-ProCol-right-contentB .medical-ProCol-right-msg{float:right; width:260px;  margin-top:45px;}
+
+/*********** Size ***********/
+.medical-ProCol-right-Size{margin-top:10px;}
+.medical-ProCol-right-Size a{border:1px solid #2b8bc6; color:#2b8bc6; padding:2px 8px; margin-right:5px; display:inline-block;}
+.medical-ProCol-right-Size a.active,.medical-ProCol-right-Size a:hover{background-color:#2b8bc6; color:#fff; text-decoration:none;}
+
+/*********** bottom ***********/
+.medical-ProCol-right-msg {color: #ff8400;font-size: 18px;vertical-align: bottom;padding-top: 10px;}
+.medical-ProCol-right-msg span{font-size:24px; vertical-align:middle; padding-left:3px;}
+
+/****************************************************** btn ******************************************************/
+.medical-content-left a.btn{font-size:13px; color:#fff; border:1px solid #196cc8; padding:2px 5px; margin-left:10px; display:inline-block; background:linear-gradient(top,#2e97e1,#178cd6);background:-moz-linear-gradient(top,#2e97e1,#178cd6);background:-webkit-linear-gradient(top,#2e97e1,#178cd6); background-color:#2e97e1; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; cursor:pointer;}
+.medical-content-left a.btn:hover{text-decoration:none; background:linear-gradient(bottom,#033390,#3494ed);background:-moz-linear-gradient(bottom,#033390,#3494ed);background:-webkit-linear-gradient(bottom,#033390,#3494ed);background-color:#0164de;}
+.medical-content-right a.btn{background:url(../images/rightBtn-normal.jpg) no-repeat; padding:2px 5px; width:175px; height:32px; line-height:30px; color:#2c72ba; overflow:hidden; display:block; margin-bottom:5px;}
+.medical-content-right a.btn:hover{background:url(../images/rightBtn-over.jpg) no-repeat; color:#fff; text-decoration:none;}
+.medical-content-right a.btn img{padding-right:5px; vertical-align:middle;}

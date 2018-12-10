@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C427CB0D-E042-4FC3-9395-5B7ED1F21C09}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>esUtilities</RootNamespace>
+    <AssemblyName>esUtilities</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\QA\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\esUtilities.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Local\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\esUtilities.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'uStore|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\uStore\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\esUtilities.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.IPNetwork, Version=2.1.1.0, Culture=neutral, PublicKeyToken=717343cc2c25edcf, processorArchitecture=MSIL">
+      <HintPath>..\packages\IPNetwork2.2.1.1\lib\net46\System.Net.IPNetwork.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonHelper.cs" />
+    <Compile Include="Converter.cs" />
+    <Compile Include="EMail.cs" />
+    <Compile Include="FileManager.cs" />
+    <Compile Include="eStoreLoger.cs" />
+    <Compile Include="IMailer.cs" />
+    <Compile Include="IPUtility.cs" />
+    <Compile Include="JsonHelper.cs" />
+    <Compile Include="LookupUtil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="StringUtility.cs" />
+    <Compile Include="Validator.cs" />
+    <Compile Include="Web References\USTaxService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="bin\Debug\esUtilities.dll.config" />
+    <None Include="MailRepository\AAU\.svn\all-wcprops" />
+    <None Include="MailRepository\AAU\.svn\entries" />
+    <None Include="MailRepository\ACN\.svn\all-wcprops" />
+    <None Include="MailRepository\ACN\.svn\entries" />
+    <None Include="MailRepository\AEU\.svn\all-wcprops" />
+    <None Include="MailRepository\AEU\.svn\entries" />
+    <None Include="MailRepository\AJP\.svn\all-wcprops" />
+    <None Include="MailRepository\AJP\.svn\entries" />
+    <None Include="MailRepository\AKR\.svn\all-wcprops" />
+    <None Include="MailRepository\AKR\.svn\entries" />
+    <None Include="MailRepository\ATW\.svn\all-wcprops" />
+    <None Include="MailRepository\ATW\.svn\entries" />
+    <None Include="MailRepository\AUS\.svn\all-wcprops" />
+    <None Include="MailRepository\AUS\.svn\entries" />
+    <None Include="MailRepository\SAP\.svn\all-wcprops" />
+    <None Include="MailRepository\SAP\.svn\entries" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\USTaxService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\USTaxService\USTaxService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\esUtilities.dll" />
+    <Content Include="bin\Debug\esUtilities.pdb" />
+    <Content Include="bin\log4net.dll" />
+    <Content Include="bin\log4net.xml" />
+    <None Include="Web References\USTaxService\USTaxService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MailRepository\AAU\.svn\prop-base\" />
+    <Folder Include="MailRepository\AAU\.svn\props\" />
+    <Folder Include="MailRepository\AAU\.svn\text-base\" />
+    <Folder Include="MailRepository\AAU\.svn\tmp\prop-base\" />
+    <Folder Include="MailRepository\AAU\.svn\tmp\props\" />
+    <Folder Include="MailRepository\AAU\.svn\tmp\text-base\" />
+    <Folder Include="MailRepository\ACN\.svn\prop-base\" />
+    <Folder Include="MailRepository\ACN\.svn\props\" />
+    <Folder Include="MailRepository\ACN\.svn\text-base\" />
+    <Folder Include="MailRepository\ACN\.svn\tmp\prop-base\" />
+    <Folder Include="MailRepository\ACN\.svn\tmp\props\" />
+    <Folder Include="MailRepository\ACN\.svn\tmp\text-base\" />
+    <Folder Include="MailRepository\AEU\.svn\prop-base\" />
+    <Folder Include="MailRepository\AEU\.svn\props\" />
+    <Folder Include="MailRepository\AEU\.svn\text-base\" />
+    <Folder Include="MailRepository\AEU\.svn\tmp\prop-base\" />
+    <Folder Include="MailRepository\AEU\.svn\tmp\props\" />
+    <Folder Include="MailRepository\AEU\.svn\tmp\text-base\" />
+    <Folder Include="MailRepository\AJP\.svn\prop-base\" />
+    <Folder Include="MailRepository\AJP\.svn\props\" />
+    <Folder Include="MailRepository\AJP\.svn\text-base\" />
+    <Folder Include="MailRepository\AJP\.svn\tmp\prop-base\" />
+    <Folder Include="MailRepository\AJP\.svn\tmp\props\" />
+    <Folder Include="MailRepository\AJP\.svn\tmp\text-base\" />
+    <Folder Include="MailRepository\AKR\.svn\prop-base\" />
+    <Folder Include="MailRepository\AKR\.svn\props\" />
+    <Folder Include="MailRepository\AKR\.svn\text-base\" />
+    <Folder Include="MailRepository\AKR\.svn\tmp\prop-base\" />
+    <Folder Include="MailRepository\AKR\.svn\tmp\props\" />
+    <Folder Include="MailRepository\AKR\.svn\tmp\text-base\" />
+    <Folder Include="MailRepository\ATW\.svn\prop-base\" />
+    <Folder Include="MailRepository\ATW\.svn\props\" />
+    <Folder Include="MailRepository\ATW\.svn\text-base\" />
+    <Folder Include="MailRepository\ATW\.svn\tmp\prop-base\" />
+    <Folder Include="MailRepository\ATW\.svn\tmp\props\" />
+    <Folder Include="MailRepository\ATW\.svn\tmp\text-base\" />
+    <Folder Include="MailRepository\AUS\.svn\prop-base\" />
+    <Folder Include="MailRepository\AUS\.svn\props\" />
+    <Folder Include="MailRepository\AUS\.svn\text-base\" />
+    <Folder Include="MailRepository\AUS\.svn\tmp\prop-base\" />
+    <Folder Include="MailRepository\AUS\.svn\tmp\props\" />
+    <Folder Include="MailRepository\AUS\.svn\tmp\text-base\" />
+    <Folder Include="MailRepository\SAP\.svn\prop-base\" />
+    <Folder Include="MailRepository\SAP\.svn\props\" />
+    <Folder Include="MailRepository\SAP\.svn\text-base\" />
+    <Folder Include="MailRepository\SAP\.svn\tmp\prop-base\" />
+    <Folder Include="MailRepository\SAP\.svn\tmp\props\" />
+    <Folder Include="MailRepository\SAP\.svn\tmp\text-base\" />
+    <Folder Include="MailRepository\System\" />
+    <Folder Include="MailRepository\Testing\" />
+    <Folder Include="obj\MailRepository\AAU\" />
+    <Folder Include="obj\MailRepository\ACN\" />
+    <Folder Include="obj\MailRepository\AEU\" />
+    <Folder Include="obj\MailRepository\AJP\" />
+    <Folder Include="obj\MailRepository\AKR\" />
+    <Folder Include="obj\MailRepository\ATW\" />
+    <Folder Include="obj\MailRepository\AUS\" />
+    <Folder Include="obj\MailRepository\SAP\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://ags.advantech.com/WebService/USTaxService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\USTaxService\</RelPath>
+      <UpdateFromURL>http://ags.advantech.com/WebService/USTaxService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>esUtilities_USTaxService_USTaxService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

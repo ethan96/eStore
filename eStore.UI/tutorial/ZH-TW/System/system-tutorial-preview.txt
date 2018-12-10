@@ -1,0 +1,9 @@
+﻿<div class="tutorial-systemPreview tutorial-pop">
+    <span class="arrowTop"></span><span class="close"></span>
+    <div class="title">
+        <p>
+            隨時預覽小幫手協助您隨時檢視系統組態</p>
+    </div>
+    <div class="img">
+        <img src="/tutorial/en-US/System/tutorial-system-2.jpg" /></div>
+</div>

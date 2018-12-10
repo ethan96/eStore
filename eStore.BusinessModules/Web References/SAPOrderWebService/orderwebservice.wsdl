@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getOrderslistByStore_Email">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Storeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getOrderslistByStore_EmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getOrderslistByStore_EmailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getOrderDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Storeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strOrderNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getOrderDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getOrderDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getOrderslistByStore_EmailSoapIn">
+    <wsdl:part name="parameters" element="tns:getOrderslistByStore_Email" />
+  </wsdl:message>
+  <wsdl:message name="getOrderslistByStore_EmailSoapOut">
+    <wsdl:part name="parameters" element="tns:getOrderslistByStore_EmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="getOrderDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:getOrderDetail" />
+  </wsdl:message>
+  <wsdl:message name="getOrderDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:getOrderDetailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OrderWebServiceSoap">
+    <wsdl:operation name="getOrderslistByStore_Email">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Order List by storeid,user id</wsdl:documentation>
+      <wsdl:input message="tns:getOrderslistByStore_EmailSoapIn" />
+      <wsdl:output message="tns:getOrderslistByStore_EmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getOrderDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Order Detail by storeid,orderno and user id.</wsdl:documentation>
+      <wsdl:input message="tns:getOrderDetailSoapIn" />
+      <wsdl:output message="tns:getOrderDetailSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OrderWebServiceSoap" type="tns:OrderWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getOrderslistByStore_Email">
+      <soap:operation soapAction="http://tempuri.org/getOrderslistByStore_Email" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrderDetail">
+      <soap:operation soapAction="http://tempuri.org/getOrderDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OrderWebServiceSoap12" type="tns:OrderWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getOrderslistByStore_Email">
+      <soap12:operation soapAction="http://tempuri.org/getOrderslistByStore_Email" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrderDetail">
+      <soap12:operation soapAction="http://tempuri.org/getOrderDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OrderWebService">
+    <wsdl:port name="OrderWebServiceSoap" binding="tns:OrderWebServiceSoap">
+      <soap:address location="http://server1.advantech.com/orderwebservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OrderWebServiceSoap12" binding="tns:OrderWebServiceSoap12">
+      <soap12:address location="http://server1.advantech.com/orderwebservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

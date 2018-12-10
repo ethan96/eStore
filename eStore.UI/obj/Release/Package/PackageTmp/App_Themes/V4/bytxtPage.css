@@ -1,0 +1,128 @@
+﻿@charset "utf-8";
+.eStore_txtPage_content h1{font-size:21px; font-weight:normal; margin-bottom:5px;margin-right: 10px;}
+.eStore_leftBlock{/* width:22%;*/ border-right:1px solid #ebebeb;}
+.eStore_leftBlock_fix { width: 22%; }
+.eStore_leftBlock a{display:block; padding:4px 12px; line-height:20px;}
+.eStore_leftBlock a.on{border:1px solid #ebebeb; border-right:1px solid #fff; margin-right:-1px; color:#4398ef; position:relative;}
+.eStore_leftBlock_link span{display:none; padding:5px 12px; background:#f8f8f8 url(images/arrowBottom.png) 98% center no-repeat;}
+.eStore_leftBlock_link.highlight span{background-image:url(images/arrowTop.png);}
+.eStore_rightBlock{width:73%; padding-left:4%; line-height:20px;}
+.eStore_rightBlock h2{margin-bottom:3px;}
+.eStore_rightBlock a{color:#4398ef;}
+.eStore_rightBlock b{font-weight:600; color:#393939;}
+.eStore_rightBlock p{margin-bottom:8px;}
+/**list style**/
+.eStore_listNumber{margin-bottom:20px;}
+.eStore_listNumber li{list-style-type:decimal; margin:8px 0 0 25px;}
+.eStore_listSquare li{list-style-type:none; background:url(images/eStore_listSquare.jpg) 5px 8px no-repeat; padding-left:15px; margin:3px 0 0 0;}
+.eStore_listLatinS li{list-style-type:lower-latin; margin:3px 0 0 20px;}
+.eStore_listnone li{list-style:none; background:none; margin:20px 10px 10px 20px; padding:0px;}
+.eStore_listNumber li p,.eStore_listSquare li,.eStore_listLatinS li{font-size:13px; line-height:20px; color:#666; font-weight:normal;}
+.eStore_listNumber.fontBold li.big{font-size:14px; line-height:22px; color:#333; font-weight:600;}
+/*contactUs*/
+.eStore_contactUs{padding:0 0 0 55px; min-height: 40px;}
+.eStore_contactUs li{padding: 20px 0px;}
+.eStore_contactUs_address li{border-bottom: 1px dashed #ebebeb;}
+.eStore_contactUs_address li:last-child{border-bottom: 1px solid #ebebeb;}
+.eStore_contactUs_addressTitle{font-size: 16px; color: #333; font-weight: 600;}
+.eStore_contactUs_addressTitle span{font-size: 13px; font-weight: normal; margin-left: 5px;}
+.eStore_contactUs_addressList{display: inline-block; margin-right: 10px;}
+.eStore_contactUs_addressList span{font-weight: 600; letter-spacing: -1px;}
+.eStore_contactUs_input{padding:5px 5px 5px 0px;}
+.colspan2 .eStore_contactUs_input{display: inline-block;}
+.colspan2 .eStore_contactUs_input:first-child{margin-right: 50px;}
+.eStore_contactUs_input input[type="text"]{border: 1px solid #ddd; padding: 0 2px; margin-right: 5px; width: 160px;}
+.eStore_contactUs_input input.shorttext[type="text"]{ width: 40px;} 
+.eStore_contactUs_input input.longtext[type="text"]{ width: 523px;} 
+.eStore_contactUs_input select.styled{padding: 2px; width: 165px;}
+.eStore_contactUs_input .select{border: 1px solid #ddd; padding: 2px 15px 2px 5px; width: 144px; text-align: left; background-color: #fff; height: 16px; line-height: 16px;}
+.eStore_contactUs_input textarea{border: 1px solid #ddd;}
+.eStore_contactUs_input .title{width: 117px; display: inline-block; vertical-align: top;}
+.eStore_contactUs_btnBlock {margin: 20px 0;}
+.eStore_contactUs_btnBlock .eStore_btn{min-width: 120px;}
+.inquiryType .select{background-color: #fff1a1;}
+
+.eStore_contactUs_address{background: url(/images/eStore_contactUs_address.png) 0 20px no-repeat;}
+.eStore_contactUs_form{background: url(/images/eStore_contactUs_form.png) 0 20px no-repeat;}
+
+.bbpayment-message .eStore_listNumber {
+    margin-bottom: 20px;
+}
+
+.bbpayment-message .eStore_listNumber li {
+    list-style-type: decimal;
+    margin: 8px 0 0 25px;
+}
+
+.bbpayment-message .eStore_listSquare li {
+    list-style-type: none;
+    background: url(images/eStore_listSquare.jpg) 5px 8px no-repeat;
+    padding-left: 15px;
+    margin: 3px 0 0 0;
+}
+
+.bbpayment-message .eStore_listLatinS li {
+    list-style-type: lower-latin;
+    margin: 3px 0 0 20px;
+}
+
+.bbpayment-message.eStore_listnone li {
+    list-style: none;
+    background: none;
+    margin: 20px 10px 10px 20px;
+    padding: 0px;
+}
+
+.bbpayment-message .eStore_listNumber li p, .bbpayment-message .eStore_listSquare li, .bbpayment-message .eStore_listLatinS li, 
+.bbpayment-message .eStore_listNumber.fontBold li.big span {
+    font-size: 13px;
+    line-height: 20px;
+    color: #666;
+    font-weight: normal;
+}
+
+.bbpayment-message .eStore_listNumber.fontBold li.big {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #333;
+}
+
+.bbpayment-message .eStore_header {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #333;
+    margin: 3px 0 0 15px;
+}
+.bbpayment-message .eStore_listSquare .eStore_list, .bbpayment-message .eStore_list li {
+    background: none
+}
+.bbpayment-message .eStore_listNumber.fontBold .info {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #333;
+    color: red;
+    margin: 20px 10px 10px 20px;
+    background: none;
+    border: none;
+}
+.completeOffer .eStore_header {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+}
+.completeOffer .eStore_listLatinS li {
+    list-style-type: none;
+}
+.offerdownload {
+    float: left;
+    width: 50%;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+}
+.offerdownload a{
+    color: #0070c0;
+}

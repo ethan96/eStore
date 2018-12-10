@@ -1,0 +1,1500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="MyAdvantech.SAP.DataAccessLayer" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="MyAdvantech.SAP.DataAccessLayer/AbstractTypes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="MyAdvantech.SAP.DataAccessLayer" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="MyAdvantech.SAP.DataAccessLayer">
+      <s:import namespace="http://tempuri.org/SAPDALDS.xsd" />
+      <s:import namespace="http://tempuri.org/SalesOrder.xsd" />
+      <s:import schemaLocation="http://my.advantech.com/Services/MYSAPDAL.asmx?schema=SAPDALDS" namespace="http://tempuri.org/SAPDALDS.xsd" />
+      <s:import schemaLocation="http://my.advantech.com/Services/MYSAPDAL.asmx?schema=SalesOrder" namespace="http://tempuri.org/SalesOrder.xsd" />
+      <s:element name="GetListPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SAPOrg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SiebelOrg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductIn">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductInDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ProductOut">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductOutDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetListPriceResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductOut">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductOutDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPriceV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SoldToId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipToId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Org" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DocOrderType" type="tns:SAPOrderType" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductIn">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductInDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ProductOut">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductOutDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="SAPOrderType">
+        <s:restriction base="s:string">
+          <s:enumeration value="ZOR" />
+          <s:enumeration value="ZOR2" />
+          <s:enumeration value="ZORB" />
+          <s:enumeration value="ZORC" />
+          <s:enumeration value="ZORR" />
+          <s:enumeration value="ZORI" />
+          <s:enumeration value="ZQTR" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetPriceV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPriceV2Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductOut">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductOutDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPriceV4">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SoldToId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipToId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Org" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DocOrderType" type="tns:SAPOrderType" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductIn">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductInDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ProductOut">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductOutDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPriceV4Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPriceV4Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductOut">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductOutDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SoldToId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipToId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Org" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductIn">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductInDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ProductOut">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductOutDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPriceResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductOut">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductOutDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPriceV3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SoldToId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipToId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Org" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductIn">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductInDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ProductOut">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductOutDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPriceV3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPriceV3Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductOut">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductOutDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiPrice_ABR_TAX">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Org" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SoldToId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipToId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductIn">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductInDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ProductOut">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductOut_ABRDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiPrice_ABR_TAXResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMultiPrice_ABR_TAXResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductOut">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductOut_ABRDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiPrice_ABR_TAX_2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Org" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OrderType" type="tns:SAPOrderType" />
+            <s:element minOccurs="0" maxOccurs="1" name="SoldToId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipToId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductIn">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductInDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ProductOut">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductOut_ABRDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiPrice_ABR_TAX_2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMultiPrice_ABR_TAX_2Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductOut">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SAPDALDS.xsd" name="namespace" />
+                <s:attribute fixed="ProductOut_ABRDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductCost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StoreId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductCostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductCostResult" type="tns:ArrayOfPNDetail" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPNDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PNDetail" nillable="true" type="tns:PNDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PNDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StoreId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListPriceCurrency" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ListPrice" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CostCurrency" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cost" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="InventoryQty" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="eStoreFlag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ABCDIndicator" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SAPPlant" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SAPSalesOrg" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCustomerCreditExposure">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Org" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreditLimit" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreditExposure" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Percentage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerCreditExposureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCustomerCreditExposureResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreditLimit" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreditExposure" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Percentage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryLimitQuantity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VK_ORG" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PART_NO" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryLimitQuantityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductCostByOrg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LPNByPlant" type="tns:ArrayOfOrgPN" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOrgPN">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OrgPN" nillable="true" type="tns:OrgPN" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OrgPN">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Org" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Plant" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PN" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetProductCostByOrgResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductCostByOrgResult" type="tns:ArrayOfPNCostInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPNCostInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PNCostInfo" nillable="true" type="tns:PNCostInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PNCostInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Org" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CostCurrency" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cost" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Inventory" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Plant" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSAPCustomerPartnerFunction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Org_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSAPCustomerPartnerFunctionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSAPCustomerPartnerFunctionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSAPCustomerPartnerFunctionByParameters">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Org_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSAPCustomerPartnerFunctionByParametersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSAPCustomerPartnerFunctionByParametersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderListFromSAP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PoNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SoNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrgID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OrderDateFrom" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="OrderDateTo" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderListFromSAPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrderListFromSAPResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderDetailFromSAPByPoNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PoNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderDetailFromSAPByPoNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrderDetailFromSAPByPoNoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloKitty">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloKittyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloKittyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSAPPartnerAddressesTableByKunnr">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ErpID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSAPPartnerAddressesTableByKunnrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSAPPartnerAddressesTableByKunnrResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/SalesOrder.xsd" name="namespace" />
+                <s:attribute fixed="PartnerAddressesDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSAPPNCost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartNos" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrgID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSAPPNCostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSAPPNCostResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="PartnerAddressesDataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+          <s:attribute fixed="http://tempuri.org/SalesOrder.xsd" name="namespace" />
+          <s:attribute fixed="PartnerAddressesDataTable" name="tableTypeName" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema targetNamespace="MyAdvantech.SAP.DataAccessLayer/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetListPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListPrice" />
+  </wsdl:message>
+  <wsdl:message name="GetListPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceV2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetPriceV2" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceV2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetPriceV2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceV4SoapIn">
+    <wsdl:part name="parameters" element="tns:GetPriceV4" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceV4SoapOut">
+    <wsdl:part name="parameters" element="tns:GetPriceV4Response" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrice" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceV3SoapIn">
+    <wsdl:part name="parameters" element="tns:GetPriceV3" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceV3SoapOut">
+    <wsdl:part name="parameters" element="tns:GetPriceV3Response" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiPrice_ABR_TAXSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMultiPrice_ABR_TAX" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiPrice_ABR_TAXSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMultiPrice_ABR_TAXResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiPrice_ABR_TAX_2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetMultiPrice_ABR_TAX_2" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiPrice_ABR_TAX_2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetMultiPrice_ABR_TAX_2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetProductCostSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProductCost" />
+  </wsdl:message>
+  <wsdl:message name="GetProductCostSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductCostResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerCreditExposureSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerCreditExposure" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerCreditExposureSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerCreditExposureResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryLimitQuantitySoapIn">
+    <wsdl:part name="parameters" element="tns:QueryLimitQuantity" />
+  </wsdl:message>
+  <wsdl:message name="QueryLimitQuantitySoapOut">
+    <wsdl:part name="parameters" element="tns:QueryLimitQuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductCostByOrgSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProductCostByOrg" />
+  </wsdl:message>
+  <wsdl:message name="GetProductCostByOrgSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductCostByOrgResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPCustomerPartnerFunctionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSAPCustomerPartnerFunction" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPCustomerPartnerFunctionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSAPCustomerPartnerFunctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPCustomerPartnerFunctionByParametersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSAPCustomerPartnerFunctionByParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPCustomerPartnerFunctionByParametersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSAPCustomerPartnerFunctionByParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderListFromSAPSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderListFromSAP" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderListFromSAPSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderListFromSAPResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDetailFromSAPByPoNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderDetailFromSAPByPoNo" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDetailFromSAPByPoNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderDetailFromSAPByPoNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloKittySoapIn">
+    <wsdl:part name="parameters" element="tns:HelloKitty" />
+  </wsdl:message>
+  <wsdl:message name="HelloKittySoapOut">
+    <wsdl:part name="parameters" element="tns:HelloKittyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPPartnerAddressesTableByKunnrSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSAPPartnerAddressesTableByKunnr" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPPartnerAddressesTableByKunnrSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSAPPartnerAddressesTableByKunnrResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPPNCostSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSAPPNCost" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPPNCostSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSAPPNCostResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPCustomerPartnerFunctionHttpGetIn">
+    <wsdl:part name="ERPID" type="s:string" />
+    <wsdl:part name="Org_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPCustomerPartnerFunctionHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPCustomerPartnerFunctionByParametersHttpGetIn">
+    <wsdl:part name="ERPID" type="s:string" />
+    <wsdl:part name="Org_id" type="s:string" />
+    <wsdl:part name="CompanyName" type="s:string" />
+    <wsdl:part name="Address" type="s:string" />
+    <wsdl:part name="State" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPCustomerPartnerFunctionByParametersHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderListFromSAPHttpGetIn">
+    <wsdl:part name="PoNo" type="s:string" />
+    <wsdl:part name="SoNo" type="s:string" />
+    <wsdl:part name="CompanyID" type="s:string" />
+    <wsdl:part name="OrgID" type="s:string" />
+    <wsdl:part name="OrderDateFrom" type="s:string" />
+    <wsdl:part name="OrderDateTo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderListFromSAPHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDetailFromSAPByPoNoHttpGetIn">
+    <wsdl:part name="PoNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDetailFromSAPByPoNoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="HelloKittyHttpGetIn" />
+  <wsdl:message name="HelloKittyHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPPartnerAddressesTableByKunnrHttpGetIn">
+    <wsdl:part name="ErpID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPPartnerAddressesTableByKunnrHttpGetOut">
+    <wsdl:part name="Body" element="tns:PartnerAddressesDataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPPNCostHttpGetIn">
+    <wsdl:part name="PartNos" type="s1:StringArray" />
+    <wsdl:part name="OrgID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPPNCostHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPCustomerPartnerFunctionHttpPostIn">
+    <wsdl:part name="ERPID" type="s:string" />
+    <wsdl:part name="Org_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPCustomerPartnerFunctionHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPCustomerPartnerFunctionByParametersHttpPostIn">
+    <wsdl:part name="ERPID" type="s:string" />
+    <wsdl:part name="Org_id" type="s:string" />
+    <wsdl:part name="CompanyName" type="s:string" />
+    <wsdl:part name="Address" type="s:string" />
+    <wsdl:part name="State" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPCustomerPartnerFunctionByParametersHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderListFromSAPHttpPostIn">
+    <wsdl:part name="PoNo" type="s:string" />
+    <wsdl:part name="SoNo" type="s:string" />
+    <wsdl:part name="CompanyID" type="s:string" />
+    <wsdl:part name="OrgID" type="s:string" />
+    <wsdl:part name="OrderDateFrom" type="s:string" />
+    <wsdl:part name="OrderDateTo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderListFromSAPHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDetailFromSAPByPoNoHttpPostIn">
+    <wsdl:part name="PoNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDetailFromSAPByPoNoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="HelloKittyHttpPostIn" />
+  <wsdl:message name="HelloKittyHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPPartnerAddressesTableByKunnrHttpPostIn">
+    <wsdl:part name="ErpID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPPartnerAddressesTableByKunnrHttpPostOut">
+    <wsdl:part name="Body" element="tns:PartnerAddressesDataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPPNCostHttpPostIn">
+    <wsdl:part name="PartNos" type="s1:StringArray" />
+    <wsdl:part name="OrgID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSAPPNCostHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:portType name="MYSAPDALSoap">
+    <wsdl:operation name="GetListPrice">
+      <wsdl:input message="tns:GetListPriceSoapIn" />
+      <wsdl:output message="tns:GetListPriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceV2">
+      <wsdl:input message="tns:GetPriceV2SoapIn" />
+      <wsdl:output message="tns:GetPriceV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceV4">
+      <wsdl:input message="tns:GetPriceV4SoapIn" />
+      <wsdl:output message="tns:GetPriceV4SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrice">
+      <wsdl:input message="tns:GetPriceSoapIn" />
+      <wsdl:output message="tns:GetPriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceV3">
+      <wsdl:input message="tns:GetPriceV3SoapIn" />
+      <wsdl:output message="tns:GetPriceV3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice_ABR_TAX">
+      <wsdl:input message="tns:GetMultiPrice_ABR_TAXSoapIn" />
+      <wsdl:output message="tns:GetMultiPrice_ABR_TAXSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice_ABR_TAX_2">
+      <wsdl:input message="tns:GetMultiPrice_ABR_TAX_2SoapIn" />
+      <wsdl:output message="tns:GetMultiPrice_ABR_TAX_2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductCost">
+      <wsdl:input message="tns:GetProductCostSoapIn" />
+      <wsdl:output message="tns:GetProductCostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerCreditExposure">
+      <wsdl:input message="tns:GetCustomerCreditExposureSoapIn" />
+      <wsdl:output message="tns:GetCustomerCreditExposureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryLimitQuantity">
+      <wsdl:input message="tns:QueryLimitQuantitySoapIn" />
+      <wsdl:output message="tns:QueryLimitQuantitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductCostByOrg">
+      <wsdl:input message="tns:GetProductCostByOrgSoapIn" />
+      <wsdl:output message="tns:GetProductCostByOrgSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPCustomerPartnerFunction">
+      <wsdl:input message="tns:GetSAPCustomerPartnerFunctionSoapIn" />
+      <wsdl:output message="tns:GetSAPCustomerPartnerFunctionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPCustomerPartnerFunctionByParameters">
+      <wsdl:input message="tns:GetSAPCustomerPartnerFunctionByParametersSoapIn" />
+      <wsdl:output message="tns:GetSAPCustomerPartnerFunctionByParametersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderListFromSAP">
+      <wsdl:input message="tns:GetOrderListFromSAPSoapIn" />
+      <wsdl:output message="tns:GetOrderListFromSAPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetailFromSAPByPoNo">
+      <wsdl:input message="tns:GetOrderDetailFromSAPByPoNoSoapIn" />
+      <wsdl:output message="tns:GetOrderDetailFromSAPByPoNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloKitty">
+      <wsdl:input message="tns:HelloKittySoapIn" />
+      <wsdl:output message="tns:HelloKittySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPPartnerAddressesTableByKunnr">
+      <wsdl:input message="tns:GetSAPPartnerAddressesTableByKunnrSoapIn" />
+      <wsdl:output message="tns:GetSAPPartnerAddressesTableByKunnrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPPNCost">
+      <wsdl:input message="tns:GetSAPPNCostSoapIn" />
+      <wsdl:output message="tns:GetSAPPNCostSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MYSAPDALHttpGet">
+    <wsdl:operation name="GetSAPCustomerPartnerFunction">
+      <wsdl:input message="tns:GetSAPCustomerPartnerFunctionHttpGetIn" />
+      <wsdl:output message="tns:GetSAPCustomerPartnerFunctionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPCustomerPartnerFunctionByParameters">
+      <wsdl:input message="tns:GetSAPCustomerPartnerFunctionByParametersHttpGetIn" />
+      <wsdl:output message="tns:GetSAPCustomerPartnerFunctionByParametersHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderListFromSAP">
+      <wsdl:input message="tns:GetOrderListFromSAPHttpGetIn" />
+      <wsdl:output message="tns:GetOrderListFromSAPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetailFromSAPByPoNo">
+      <wsdl:input message="tns:GetOrderDetailFromSAPByPoNoHttpGetIn" />
+      <wsdl:output message="tns:GetOrderDetailFromSAPByPoNoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloKitty">
+      <wsdl:input message="tns:HelloKittyHttpGetIn" />
+      <wsdl:output message="tns:HelloKittyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPPartnerAddressesTableByKunnr">
+      <wsdl:input message="tns:GetSAPPartnerAddressesTableByKunnrHttpGetIn" />
+      <wsdl:output message="tns:GetSAPPartnerAddressesTableByKunnrHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPPNCost">
+      <wsdl:input message="tns:GetSAPPNCostHttpGetIn" />
+      <wsdl:output message="tns:GetSAPPNCostHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MYSAPDALHttpPost">
+    <wsdl:operation name="GetSAPCustomerPartnerFunction">
+      <wsdl:input message="tns:GetSAPCustomerPartnerFunctionHttpPostIn" />
+      <wsdl:output message="tns:GetSAPCustomerPartnerFunctionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPCustomerPartnerFunctionByParameters">
+      <wsdl:input message="tns:GetSAPCustomerPartnerFunctionByParametersHttpPostIn" />
+      <wsdl:output message="tns:GetSAPCustomerPartnerFunctionByParametersHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderListFromSAP">
+      <wsdl:input message="tns:GetOrderListFromSAPHttpPostIn" />
+      <wsdl:output message="tns:GetOrderListFromSAPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetailFromSAPByPoNo">
+      <wsdl:input message="tns:GetOrderDetailFromSAPByPoNoHttpPostIn" />
+      <wsdl:output message="tns:GetOrderDetailFromSAPByPoNoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloKitty">
+      <wsdl:input message="tns:HelloKittyHttpPostIn" />
+      <wsdl:output message="tns:HelloKittyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPPartnerAddressesTableByKunnr">
+      <wsdl:input message="tns:GetSAPPartnerAddressesTableByKunnrHttpPostIn" />
+      <wsdl:output message="tns:GetSAPPartnerAddressesTableByKunnrHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPPNCost">
+      <wsdl:input message="tns:GetSAPPNCostHttpPostIn" />
+      <wsdl:output message="tns:GetSAPPNCostHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MYSAPDALSoap" type="tns:MYSAPDALSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetListPrice">
+      <soap:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetListPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceV2">
+      <soap:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetPriceV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceV4">
+      <soap:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetPriceV4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrice">
+      <soap:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceV3">
+      <soap:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetPriceV3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice_ABR_TAX">
+      <soap:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetMultiPrice_ABR_TAX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice_ABR_TAX_2">
+      <soap:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetMultiPrice_ABR_TAX_2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductCost">
+      <soap:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetProductCost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerCreditExposure">
+      <soap:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetCustomerCreditExposure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryLimitQuantity">
+      <soap:operation soapAction="MyAdvantech.SAP.DataAccessLayer/QueryLimitQuantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductCostByOrg">
+      <soap:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetProductCostByOrg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPCustomerPartnerFunction">
+      <soap:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetSAPCustomerPartnerFunction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPCustomerPartnerFunctionByParameters">
+      <soap:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetSAPCustomerPartnerFunctionByParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderListFromSAP">
+      <soap:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetOrderListFromSAP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetailFromSAPByPoNo">
+      <soap:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetOrderDetailFromSAPByPoNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloKitty">
+      <soap:operation soapAction="MyAdvantech.SAP.DataAccessLayer/HelloKitty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPPartnerAddressesTableByKunnr">
+      <soap:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetSAPPartnerAddressesTableByKunnr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPPNCost">
+      <soap:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetSAPPNCost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MYSAPDALSoap12" type="tns:MYSAPDALSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetListPrice">
+      <soap12:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetListPrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceV2">
+      <soap12:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetPriceV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceV4">
+      <soap12:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetPriceV4" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrice">
+      <soap12:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetPrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceV3">
+      <soap12:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetPriceV3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice_ABR_TAX">
+      <soap12:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetMultiPrice_ABR_TAX" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice_ABR_TAX_2">
+      <soap12:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetMultiPrice_ABR_TAX_2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductCost">
+      <soap12:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetProductCost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerCreditExposure">
+      <soap12:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetCustomerCreditExposure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryLimitQuantity">
+      <soap12:operation soapAction="MyAdvantech.SAP.DataAccessLayer/QueryLimitQuantity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductCostByOrg">
+      <soap12:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetProductCostByOrg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPCustomerPartnerFunction">
+      <soap12:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetSAPCustomerPartnerFunction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPCustomerPartnerFunctionByParameters">
+      <soap12:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetSAPCustomerPartnerFunctionByParameters" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderListFromSAP">
+      <soap12:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetOrderListFromSAP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetailFromSAPByPoNo">
+      <soap12:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetOrderDetailFromSAPByPoNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloKitty">
+      <soap12:operation soapAction="MyAdvantech.SAP.DataAccessLayer/HelloKitty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPPartnerAddressesTableByKunnr">
+      <soap12:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetSAPPartnerAddressesTableByKunnr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPPNCost">
+      <soap12:operation soapAction="MyAdvantech.SAP.DataAccessLayer/GetSAPPNCost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MYSAPDALHttpGet" type="tns:MYSAPDALHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetSAPCustomerPartnerFunction">
+      <http:operation location="/GetSAPCustomerPartnerFunction" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPCustomerPartnerFunctionByParameters">
+      <http:operation location="/GetSAPCustomerPartnerFunctionByParameters" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderListFromSAP">
+      <http:operation location="/GetOrderListFromSAP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetailFromSAPByPoNo">
+      <http:operation location="/GetOrderDetailFromSAPByPoNo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloKitty">
+      <http:operation location="/HelloKitty" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPPartnerAddressesTableByKunnr">
+      <http:operation location="/GetSAPPartnerAddressesTableByKunnr" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPPNCost">
+      <http:operation location="/GetSAPPNCost" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MYSAPDALHttpPost" type="tns:MYSAPDALHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetSAPCustomerPartnerFunction">
+      <http:operation location="/GetSAPCustomerPartnerFunction" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPCustomerPartnerFunctionByParameters">
+      <http:operation location="/GetSAPCustomerPartnerFunctionByParameters" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderListFromSAP">
+      <http:operation location="/GetOrderListFromSAP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetailFromSAPByPoNo">
+      <http:operation location="/GetOrderDetailFromSAPByPoNo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloKitty">
+      <http:operation location="/HelloKitty" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPPartnerAddressesTableByKunnr">
+      <http:operation location="/GetSAPPartnerAddressesTableByKunnr" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSAPPNCost">
+      <http:operation location="/GetSAPPNCost" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MYSAPDAL">
+    <wsdl:port name="MYSAPDALSoap" binding="tns:MYSAPDALSoap">
+      <soap:address location="http://my.advantech.com/Services/MYSAPDAL.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MYSAPDALSoap12" binding="tns:MYSAPDALSoap12">
+      <soap12:address location="http://my.advantech.com/Services/MYSAPDAL.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MYSAPDALHttpGet" binding="tns:MYSAPDALHttpGet">
+      <http:address location="http://my.advantech.com/Services/MYSAPDAL.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MYSAPDALHttpPost" binding="tns:MYSAPDALHttpPost">
+      <http:address location="http://my.advantech.com/Services/MYSAPDAL.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

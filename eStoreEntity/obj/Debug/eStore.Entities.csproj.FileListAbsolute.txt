@@ -1,0 +1,5 @@
+D:\eStore4.5_Git\eStore\eStoreEntity\bin\Debug\eStoreEntity.dll.config
+D:\eStore4.5_Git\eStore\eStoreEntity\bin\Debug\eStoreEntity.dll
+D:\eStore4.5_Git\eStore\eStoreEntity\bin\Debug\eStoreEntity.pdb
+D:\eStore4.5_Git\eStore\eStoreEntity\obj\Debug\eStoreEntity.dll
+D:\eStore4.5_Git\eStore\eStoreEntity\obj\Debug\eStoreEntity.pdb

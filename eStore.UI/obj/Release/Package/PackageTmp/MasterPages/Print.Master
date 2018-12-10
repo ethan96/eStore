@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Print.master.cs" Inherits="eStore.UI.MasterPages.Print" %>
+
+<%@ Register Src="../Modules/ProductSharetoFriends.ascx" TagName="ProductSharetoFriends"
+    TagPrefix="eStore" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="../Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+    <link href="../Styles/printer.css" rel="stylesheet" type="text/css" media="print" />
+    <script type="text/javascript">
+        function printPage() {
+            window.print()
+        }
+    </script>
+</head>
+<body onload="javascript:printPage()">
+    <form id="eStoreMainForm" runat="server">
+    <asp:ScriptManager ID="eStoreScriptManager" runat="server">
+    </asp:ScriptManager>
+    <div class="master-wrapper-page">
+        <div class="master-wrapper-header">
+            <div>
+                <table cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <asp:Image ID="imgLogo" runat="server" ImageUrl="~/images/eStore_logo_top.png" />
+                        </td>
+                        <td style="float: right;">
+                            <div style="float: right; display: block;" class="printlink">
+                                <ul style="margin-top: 10px;">
+                                    <li class="ui-helper-reset ui-icon-container" style="height: 15px; line-height: 15px;">
+                                        <span class="ui-icon ui-icon-print"></span><a href="#" onclick="printPage()">
+                                        <%=eStore.Presentation.eStoreLocalization.Tanslation(eStore.POCOS.Store.TranslationKey.Product_PrintableVersion)%></a> </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="header">
+                <ul>
+                    <li class="liLeft">&nbsp;</li>
+                    <li><asp:HyperLink ID="hlHome" runat="server" NavigateUrl="~/Default.htm">
+                        <%=eStore.Presentation.eStoreLocalization.Tanslation(eStore.POCOS.Store.TranslationKey.eStore_Home)%>
+                    </asp:HyperLink></li>
+                    <li><asp:HyperLink ID="hlAboutUs" runat="server" NavigateUrl="~/AboutUs/Default.htm">
+                        <%=eStore.Presentation.eStoreLocalization.Tanslation(eStore.POCOS.Store.TranslationKey.eStore_About_Us)%>
+                    </asp:HyperLink></li>
+                    <li><a href="http://support.advantech.com.tw/"><%=eStore.Presentation.eStoreLocalization.Tanslation(eStore.POCOS.Store.TranslationKey.eStore_Support)%></a></li>
+                    <li><asp:HyperLink ID="hlContactUs" runat="server" NavigateUrl="~/ContactUs.aspx">
+                        <%=eStore.Presentation.eStoreLocalization.Tanslation(eStore.POCOS.Store.TranslationKey.eStore_Contact_Us)%>
+                    </asp:HyperLink></li>
+                    <li class="liRight">&nbsp;</li>
+                </ul>
+            </div>
+            <div class="ourAddress">
+                <%=eStore.Presentation.eStoreLocalization.Tanslation(eStore.POCOS.Store.TranslationKey.eStore_Advantech_Corporation_eStore_Division)%>
+                <%--<asp:Label ID="lblOurAddress" runat="server" Text=""></asp:Label>
+                Advantech Corporation | eStore Division | 380 Fairview Way, Milpitas, CA 95035,
+                U.S.A. <br />Tel: 888-576-9668 | Fax: 408-519-3899 | buy@advantech.com--%>
+
+
+            </div>
+        </div>
+        <div class="master-wrapper-content">
+            <asp:ContentPlaceHolder ID="eStoreMainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+            <div class="clear">
+            </div>
+        <div class="footer">
+            <div class="footer-Contact">
+                <%=eStore.Presentation.eStoreLocalization.Tanslation(eStore.POCOS.Store.TranslationKey.eStore_EST)%></div>
+            <br />
+            <font style="color: #555555;">
+            <%= string.Format("<a href='/resource/{1}/terms_and_conditions_{1}.pdf'>{0}</a>", eStore.Presentation.eStoreLocalization.Tanslation(eStore.POCOS.Store.TranslationKey.eStore_Terms_and_Conditions), eStore.Presentation.eStoreContext.Current.Store.storeID)%>
+             &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/Info/ReturnPolicy.htm">
+                    <%=eStore.Presentation.eStoreLocalization.Tanslation(eStore.POCOS.Store.TranslationKey.eStore_Return_Policy)%></a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/Info/PrivacyPolicy.htm">
+                        <%=eStore.Presentation.eStoreLocalization.Tanslation(eStore.POCOS.Store.TranslationKey.eStore_Privacy_Policy)%></a> </font>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

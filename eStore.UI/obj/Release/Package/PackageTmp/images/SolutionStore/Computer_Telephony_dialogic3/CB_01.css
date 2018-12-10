@@ -1,0 +1,48 @@
+BODY {
+	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif;  
+}
+TD {
+	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TH {
+	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.DV_01 {
+	MARGIN-LEFT: 65px; WIDTH: 500px
+}
+.CB_01BK_sub {
+	FONT-WEIGHT: bold; FONT-SIZE: 11pt; COLOR: #003366; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.Part_Number {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #3399ff; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.CB_List_feature {
+	FONT-SIZE: 8pt; COLOR: #000000; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.CB_PartNumber {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #2453a2; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+CB_money {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #ff9900; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.style3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #ff6600
+}
+.style23 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.CB_VerWhiteTxt10 {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: #ffffff; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.CB_MiniTEXT {
+	FONT: 9pt Arial, Helvetica, sans-serif; COLOR: #333333
+}
+.CB_White_9pBold {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.CB_Price {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #ff6600; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.DV_02 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; MARGIN-LEFT: 170px; WIDTH: 500px; COLOR: #0954b2; FONT-FAMILY: Arial, Helvetica, sans-serif
+}

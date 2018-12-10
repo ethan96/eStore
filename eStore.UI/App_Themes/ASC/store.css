@@ -1,0 +1,50 @@
+﻿.accountInfo .divMargin{ width:160px;}
+
+
+.new-eStoreLivePerson-LargerImage .iplanet_online_chat,.new-eStoreLivePerson-SmallImage .iplanet_online_chat
+{
+    list-style:none;
+    margin-bottom:7px;
+    border-top: 2px solid #CCC;
+    border-bottom: 2px solid #CCC;
+    background-image: url(chat_bg_big.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.new-eStoreLivePerson-LargerImage ul.iplanet_online_chat li a,.new-eStoreLivePerson-SmallImage ul.iplanet_online_chat li a {
+    font-size: 12px;
+    display: block;
+    padding-left: 22px;
+    color: #004280;
+    height: 16px;
+}
+.new-eStoreLivePerson-LargerImage .iplanet_online_chat li,.new-eStoreLivePerson-SmallImage .iplanet_online_chat li
+{
+    list-style: none;
+    margin: 0 5px 5px 5px;
+    line-height: 16px;
+}
+.new-eStoreLivePerson-LargerImage li.askexpert-title {
+    margin: 0px 0px 10px 0px;
+    font-weight: bold;
+    background: #F3F3F3;
+    text-align: center;
+    padding: 5px;
+    line-height: 27px;
+}
+.new-eStoreLivePerson-LargerImage li.askexpert-chat,.new-eStoreLivePerson-SmallImage li.askexpert-chat{background: url(askexpert-chat.gif) no-repeat;}
+.new-eStoreLivePerson-LargerImage li.askexpert-quote,.new-eStoreLivePerson-SmallImage li.askexpert-quote {background: url(askexpert-quote.gif) no-repeat;margin-right: 45px;}
+.new-eStoreLivePerson-LargerImage li.askexpert-more,.new-eStoreLivePerson-SmallImage li.askexpert-more{background: url(askexpert-more.gif) no-repeat;margin-right: 45px;}
+.new-eStoreLivePerson-LargerImage li.askexpert-tollfree,.new-eStoreLivePerson-SmallImage li.askexpert-tollfree{padding-top: 5px;margin-bottom: 0px;}
+
+.new-eStoreLivePerson-SmallImage .iplanet_online_chat{background-image: url(chat_bg.jpg);}
+.new-eStoreLivePerson-SmallImage li.askexpert-title {
+    /*margin: 0px 0px 10px 0px;
+    line-height: 27px;*/
+    font-weight: bold;
+    background: #F3F3F3;
+    text-align: center;
+    padding: 5px;
+    margin-right: 0px;
+    margin-left: 0px;
+}

@@ -1,0 +1,698 @@
+@charset "UTF-8";
+/* CSS Document */
+.eStoreLogo {
+background:url(iautomation/logo.jpg) no-repeat top left;
+}
+  #floatbtospanel,
+.master-wrapper-side { float:left; margin-right:10px;}
+#mainconfigpanel{ float:right;}
+ul, li {
+	list-style:none;
+	margin:0px 0px;
+	padding:0px 0px;
+}
+.FontGary {
+	color:#afbfc7;
+}
+
+#Container {
+	width:980px;
+	margin:0px auto;
+}
+
+  
+ #ServiceNumber {
+	 
+	width:100%;
+	display:block;
+	text-align:left;
+	font-size:12px;
+	line-height:29px;
+}
+
+ #CategoryGroup {
+	width:100%;
+	height:44px;
+}
+
+  #CategoryGroup li {
+	float:left;
+	font-size:13px;
+	line-height:18px;
+	width:84px;
+	background-color:#f1f1f1;
+	padding:3px 5px;
+	cursor:pointer;
+	cursor:hand;
+	height:38px;
+}
+
+#CategoryGroup li:hover {
+	background-color:#f29600;
+	color:#FFF;
+}
+
+#CategoryGroup li.select {
+	background-color:#017ccb;
+	border:1px #0f648b solid;
+	width:84px;
+	height:36px;
+	color:#FFF;
+	cursor:default;
+}
+
+#CategoryGroup li.select:hover {
+	background-color:#017ccb;
+}
+
+#CategoryItem {
+	width:188px;
+	border:1px #cccccc solid;
+}
+
+#CategoryItem li {
+ 
+	font-size:13px;
+	line-height:30px;
+	padding-left:10px;
+	border-bottom:1px #c5c7ca dotted;
+	cursor:pointer;
+	cursor:hand;
+}
+
+#CategoryItem li:last-child {
+	border-bottom:none;
+}
+#CategoryItem li:hover  a,
+#CategoryItem li:hover 
+{
+
+	background-color:#f39700;
+	 
+	 
+}
+.homepagepopuptriger a{  color:#000!important;}
+#SaleArea {
+	margin-top:12px;
+}
+
+#SaleHeader {
+	height:40px;
+	width:188px;
+	border:1px #d2e3f5 solid;
+	font-size:18px;
+	font-weight:bold;
+	color:#017ccb;
+	display:block;
+	text-align:center;
+	line-height:40px;
+}
+
+ #SaleProduct {
+	margin-top:5px;
+	width:188px;
+	 
+}
+
+#SaleProduct li {
+	 
+}
+
+#SaleProduct li:last-child {
+	border-bottom:none;
+}
+
+#SaleProduct li .title {
+	height:30px;
+	width:188px;
+	display:block;
+	text-align:center;
+	margin:0px 10px;
+	font-size:13px;
+	line-height:30px;
+	border-bottom:1px #d8d7d7 solid;
+}
+
+#SaleProduct li .photo {
+	float:left;
+	padding-top:13px;
+	width:80px;
+	height:80px;
+	text-align:center;
+}
+#SaleProduct li .photo img{
+	width:60px;
+	height:60px;
+}
+#SaleProduct li .info {
+	float:right;
+	width:108px;
+}
+
+#SaleProduct li .info .sno a {
+	color:#f4a421;
+	font-size:13px;
+	line-height:30px;
+	text-align:left;
+	font-weight:bold;
+	height:36px;
+}
+
+#SaleProduct li .info .desc {
+	font-size:12px;
+	line-height:16px;
+}
+
+#SaleProduct li .info .price {
+	font-size:13px;
+	line-height:20px;
+	color:#F00;
+}
+
+
+
+#SaleProduct li .info .bushop a {
+ 
+}
+
+
+#FunBar {
+	width:780px;
+	height:53px;
+	background-image:url(iautomation/funbar.jpg);
+	background-repeat:no-repeat;
+	overflow:hidden
+}
+ #SearchArea {
+	margin:10px 20px;
+	float:left;
+}
+#SearchArea .storeSearchButton {
+	background-color:#017ccb;
+	border:1px #0f648b solid;
+	font-size:12px;
+	color:#FFF;
+	width:auto;
+	text-align:center;
+	padding:2px 3px;
+}
+#FunBar #SearchArea #storekeyworddispay {
+	line-height:20px;
+	font-size:13px;
+	height:20px;
+	width:330px;
+	color:#c0c0c0;
+}
+
+
+
+#MemberArea {
+	float:right;
+ 
+}
+
+#MemberArea li {
+	float:left;
+	margin:6px 10px;
+	border-left:1px #d4d3d3 solid;
+	background-repeat:no-repeat;
+}
+#MemberArea li a{
+	 
+	height:33px;
+ padding:0px 5px 0px 5px;
+	color:#666262;
+	font-size:12px;
+	line-height:33px;
+}
+#MemberArea li.login a,#MemberArea li.register a ,#MemberArea li.forget a 
+{
+  padding:0px 0px 0px 30px;  
+    }
+#MemberArea li.login {
+	background-image:url(iautomation/memfun_1.png);
+	background-position:10px 8px;
+}
+
+#MemberArea li.register {
+	background-image:url(iautomation/memfun_2.png);
+	background-position:10px 9px;
+}
+
+#MemberArea li.forget {
+	background-image:url(iautomation/memfun_3.png);
+	background-position:10px 10px;
+}
+
+#PromoArea {
+	clear:both;
+	height:283px;
+	width:100%;
+}
+
+#PromoArea #SliderArea {
+	float:left;
+	width:562px; 
+	 height:280px; display:block;
+	position:relative;
+}
+
+#PromoArea #SliderItem {
+	width:560px;
+	height:39px;
+	border:1px #cccccc solid; 
+}
+
+#SliderArea .ls-wrapper .ls-nav
+{ position:absolute;
+  left:0;
+  bottom:0;
+    
+    	height:31px;	
+	width:100%;
+	overflow:hidden;
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjciLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjciLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.7)), color-stop(100%,rgba(255,255,255,0.7))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3ffffff', endColorstr='#b3ffffff',GradientType=0 ); /* IE6-8 */
+
+	}
+	
+#SliderArea .ls-wrapper .ls-nav a {
+	 
+	height:31px;
+	float:left;
+	line-height:18px;
+	font-size:12px;
+	color:#004b85;
+	text-align:center;
+	cursor:pointer;
+	cursor:hand;
+	background-image:url(iautomation/v-line.png);
+	background-position:top right;
+	background-repeat:no-repeat;
+	background-color:transparent;
+	padding:0px 10px; line-height:31px;
+}
+#SliderArea .ls-wrapper .ls-nav a:hover {
+color:#d20101;background-color:transparent;
+}
+#SliderArea .ls-wrapper .ls-nav .current {
+	color:#d20101;background-color:transparent;
+}
+ 
+
+#SliderArea .ls-wrapper .ls-nav .current:hover {
+cursor:default;
+	color:#d20101;background-color:transparent;
+}
+#SliderArea  .ls-wrapper .ls-nav li:last-child  a{
+	background-image:url();
+}
+#PromoArea #Banner {
+	float:right;
+	width:208px;
+	height:283px;
+	overflow:hidden;
+}
+
+#WizardArea {
+	margin-top:7px;
+	clear:both;
+	height:106px;
+	width:100%;
+	background-color:#f39700;
+}
+
+#WizardArea #icon {
+	float:left;
+	width:128px;
+	height:100%;
+	background-image:url(iautomation/wizard.png);
+	background-position:10px 7px;
+	background-repeat:no-repeat;
+}
+
+#WizardArea #QArea {
+	width:600px;
+	height:86px;
+	float:left;
+	position:relative;
+	margin:10px 0px;
+	border-left:2px #fbe3ba solid;
+}
+
+#WizardArea #QArea #imgQ {
+	width:558px;
+	height:25px;
+	background-image:url(iautomation/q.png);
+	background-repeat:no-repeat;
+	padding-bottom:7px;
+	border-bottom:1px #fbe3ba dotted;
+	position:absolute;
+	left:20px;
+	top:0px;
+}
+
+#WizardArea #QArea #textQ {
+	width:390px;
+	position:absolute;
+	top:40px;
+	left:20px;
+	font-size:15px;
+	line-height:20px;
+	font-weight:bold;
+	color:#004b85;
+}
+
+#WizardArea #QArea #busearch {
+	position:absolute;
+	right:20px;
+	bottom:0px;
+	height:33px;
+	width:140px;
+	background-color:#004b85;
+	border:1px #0f648b solid;
+	background-image:url(iautomation/arrow.png);
+	background-repeat:no-repeat;
+	background-position:130px 5px;
+	font-size:15px;
+	color:#FFF;
+	padding-left:25px;
+	line-height:33px;
+	cursor:pointer;
+	cursor:hand;
+}
+
+#WizardArea #QArea #busearch:hover {
+	text-decoration:none;
+	background-color:#017ccb;
+}
+
+#WizardArea .ls-nav-num
+{
+display:none;
+}
+
+#ProductArea {
+	clear:both;
+	margin-top:10px;
+}
+
+#ProductArea .AreaTitle {
+	width:100%;
+	height:30px;
+	border-top:2px #004b85 solid;
+	border-left:1px #cccccc solid;
+	border-right:1px #cccccc solid;
+	border-bottom:1px #cccccc solid;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 63%, #e3e4ea 95%, #b8b9bc 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(63%,#ffffff), color-stop(95%,#e3e4ea), color-stop(99%,#b8b9bc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 63%,#e3e4ea 95%,#b8b9bc 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 63%,#e3e4ea 95%,#b8b9bc 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 63%,#e3e4ea 95%,#b8b9bc 99%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 63%,#e3e4ea 95%,#b8b9bc 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b8b9bc',GradientType=0 ); /* IE6-9 */
+}
+
+#ProductArea .AreaTitle p {
+	margin:6px 0px 0px 10px;
+	padding:0px 0px 0px 10px;
+	height:16px;
+	border-left:3px #f4a421 solid;
+	font-size:16px;
+	line-height:16px;
+}
+
+#ProductArea #NewArea {
+	clear:both;
+	margin-top:15px;
+}
+
+
+#ProductArea li {
+	float:left;
+	margin:8px 5px;
+	width:248px;
+	height:254px;
+	border:1px #cccccc solid;
+	overflow:hidden;
+	position:relative;
+}
+
+#ProductArea li .prodimg {
+	width:230px;
+	height:176px;
+	display:table-cell;
+	text-align:center;
+	vertical-align:middle;
+	overflow:hidden;
+}
+#ProductArea li .info .sno{ float:left;}
+#ProductArea li .info .sno a{
+	 
+	font-size:15px;
+	color:#0178c8;
+	float:left;
+	font-weight:bold;
+	padding-left:10px;
+	line-height:16px;
+	height:20px;
+}
+
+#ProductArea li .price {
+float:right;
+	 
+color:#F00;
+text-align:right;
+padding-right:5px;
+font-size:14px;
+line-height:16px;
+position:absolute;
+bottom:62px;
+right:0px;
+}
+#ProductArea li  .price .productprice{ font-size:12px;}
+#ProductArea li  .price .productprice .specialprice { font-size:12px; color:Black;}
+#ProductArea li  .price .productpriceLarge{ font-size:12px;}
+#ProductArea li  .price .productpriceLarge .specialprice { font-size:12px; color:Black;}
+
+#ProductArea li .info .desc {
+	clear:both;
+	color:#8e8d8d;
+	font-size:12px;
+	line-height:15px;
+	padding:0px 10px;
+	height:32px;
+	display:block;
+	overflow:hidden;
+}
+
+#ProductArea li .info .bushop a {
+  float:right;
+}
+
+.bushop a {
+	height:23px;
+	width:83px;
+	background-color:#017ccb;
+	border:1px #0f648b solid;
+	background-image:url(iautomation/cart.png);
+	background-repeat:no-repeat;
+	background-position:10px 2px;
+	font-size:13px;
+	color:#FFF;
+	padding-left:33px;
+	line-height:23px;
+}
+
+.bushop a:hover {
+	text-decoration:none;
+	background-color:#f4a421;
+	border:1px #f4a421 solid;
+}
+#Banners{ float:right;}
+
+
+
+ #MainProdArea {
+	width:560px;
+	float:left;
+	border-bottom:1px #cccccc dotted;
+	padding-bottom:15px;
+	margin-bottom:15px;
+}
+
+#AreaTitle {
+	width:100%;
+	height:30px;
+	border-top:2px #004b85 solid;
+	border-left:1px #cccccc solid;
+	border-right:1px #cccccc solid;
+	border-bottom:1px #cccccc solid;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 63%, #e3e4ea 95%, #b8b9bc 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(63%,#ffffff), color-stop(95%,#e3e4ea), color-stop(99%,#b8b9bc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 63%,#e3e4ea 95%,#b8b9bc 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 63%,#e3e4ea 95%,#b8b9bc 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 63%,#e3e4ea 95%,#b8b9bc 99%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 63%,#e3e4ea 95%,#b8b9bc 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b8b9bc',GradientType=0 ); /* IE6-9 */
+}
+
+#AreaTitle p {
+	margin:6px 0px 0px 10px;
+	padding:0px 0px 0px 10px;
+	height:16px;
+	border-left:3px #f4a421 solid;
+	font-size:16px;
+	line-height:16px;
+}
+
+#info {
+	margin-top:10px;
+}
+
+#info #photo {
+    float: left;
+    height: 200px;
+    width: 200px;
+	overflow:hidden;
+	border:1px #cecece solid;
+}
+
+#info #descArea {
+	float:right;
+	width:325px;
+}
+
+#info #descArea #feature {
+	font-size:13px;
+	color:#0178c8;
+	line-height:20px;
+}
+
+#info #descArea #list {
+	margin-top:10px;
+	color:#3b3f4a;
+	font-size:12px;
+	line-height:20px;
+}
+
+#info #descArea ul {
+	margin-left:15px;
+}
+
+#info #descArea ul li {
+	list-style-type:square;
+}
+
+
+/*overwrite estore style*/
+.homepagepopuptitle{ display:none;}
+#JT_copy {   background-color:#f5f6f7;}
+#JT_copy  .homepopup a{  color:#017ccb;
+	font-size:15px;
+	line-height:30px;
+	text-align:left;
+	font-weight:bold;
+	height:36px;}
+	#JT_copy  .arrow{ float:right; height:100%;}
+	#JT_copy  .arrow img{ width:auto; height:auto; border:0px; vertical-align:middle;}
+	
+/*ChinaServicePartner.aspx start*/
+#PromoArea #SliderArea #AreaTitle .smallP{font-size:14px;}
+#PromoArea #SliderArea #MapInfo
+{
+    margin-top: 10px;
+    position: relative;
+}
+#PromoArea #SliderArea #MapInfo #flashDiv {
+	width:562px;
+	top:0px;
+	left:0px;
+	z-index:1;
+}
+#PromoArea #SliderArea #MapInfo #boxContainer {
+	display:none;
+}
+#PromoArea #SliderArea #MapInfo #boxContainer #maskDiv {
+	width:560px;
+	height:534px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:99;
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-8 */
+}
+#PromoArea #SliderArea #MapInfo #boxContainer #boxDiv {
+	width:517px;
+	background-color:#FFF;
+	border:3px #ccc solid;
+	z-index:100;
+	top:30px;
+	left:9px;
+	position:absolute;
+	font-size:13px;
+	padding:10px 10px 
+}
+
+#PromoArea #SliderArea #MapInfo #boxContainer #boxDiv #BU-Close {
+	width:20px;
+	height:20px;
+	position:absolute;
+	z-index:101;
+	right:0px;
+	top:0px;
+	background-color:#ccc;
+	color:#FFF;
+	text-align:center;
+	font-size:16px;
+	font-weight:bold;
+	cursor:pointer;
+	cursor:hand;
+}
+
+#PromoArea #SliderArea #MapInfo #boxContainer #boxDiv #BU-Close:hover {
+	color:#f29600;
+}
+
+#PromoArea #SliderArea #MapInfo #boxContainer #boxDiv #DetailDiv .DetailList {
+	margin-top:10px;
+}
+
+#PromoArea #SliderArea #MapInfo #boxContainer #boxDiv #DetailDiv .DetailList {
+	border:1px #ccc solid;
+	border-top:10px #ccc solid;
+}
+
+#PromoArea #SliderArea #MapInfo #boxContainer #boxDiv #DetailDiv .DetailList .LeftBlock {
+	float:left;
+	width:170px;
+	padding:2px 2px;
+}
+#PromoArea #SliderArea #MapInfo #boxContainer #boxDiv #DetailDiv .DetailList .RightBlock {
+	float:right;
+	width:315px;
+	border-left:1px #ccc solid;
+	padding:2px 2px;	
+}
+#PromoArea #SliderArea #MapInfo #boxContainer #boxDiv #DetailDiv .DetailList .RightBlock a{
+	color: Blue;
+    text-decoration: underline;
+}
+/*ChinaServicePartner.aspx end*/

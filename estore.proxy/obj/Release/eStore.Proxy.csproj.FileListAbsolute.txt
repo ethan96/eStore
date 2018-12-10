@@ -1,0 +1,14 @@
+D:\eStore4.5_Git\eStore\estore.proxy\bin\Release\estore.proxy.dll.config
+D:\eStore4.5_Git\eStore\estore.proxy\bin\Release\estore.proxy.dll
+D:\eStore4.5_Git\eStore\estore.proxy\bin\Release\estore.proxy.XmlSerializers.dll
+D:\eStore4.5_Git\eStore\estore.proxy\bin\Release\estore.proxy.pdb
+D:\eStore4.5_Git\eStore\estore.proxy\bin\Release\esUtilities.dll
+D:\eStore4.5_Git\eStore\estore.proxy\bin\Release\log4net.dll
+D:\eStore4.5_Git\eStore\estore.proxy\bin\Release\System.Net.IPNetwork.dll
+D:\eStore4.5_Git\eStore\estore.proxy\bin\Release\esUtilities.pdb
+D:\eStore4.5_Git\eStore\estore.proxy\bin\Release\log4net.xml
+D:\eStore4.5_Git\eStore\estore.proxy\bin\Release\esUtilities.XmlSerializers.dll
+D:\eStore4.5_Git\eStore\estore.proxy\obj\Release\eStore.Proxy.csprojResolveAssemblyReference.cache
+D:\eStore4.5_Git\eStore\estore.proxy\obj\Release\estore.proxy.dll
+D:\eStore4.5_Git\eStore\estore.proxy\obj\Release\estore.proxy.pdb
+D:\eStore4.5_Git\eStore\estore.proxy\obj\Release\estore.proxy.XmlSerializers.dll

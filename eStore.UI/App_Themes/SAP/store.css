@@ -1,0 +1,52 @@
+
+.toplivechatIcon {
+    height: 24px;
+}
+.toplivechatIcon img {
+    margin-top: -4px;
+}
+.toplivechatIcon:hover #a_mobile_pop {
+    display: block;
+}
+
+.toplivechatIcon #a_mobile_pop {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: -62px;
+    border: 1px solid #ebebeb;
+    height: auto;
+    z-index: 710;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+}
+
+.toplivechatIcon #a_mobile_pop img {
+    height: auto;
+}
+.toplivechatIcon #a_mobile_pop a {
+    float: right;
+    bottom: 8px;
+    position: absolute;
+    right: 8px;
+    color: #4398ef;
+}
+
+.mobile_pop:before, .mobile_pop:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -5px;
+    left: 65%;
+    margin-left: -5px;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    border-width: 0 5px 5px 5px;
+    border-style: solid;
+    border-color: #f6f6f6 #f6f6f6 #4398ef;
+}

@@ -1,0 +1,5 @@
+D:\eStore4.5_Git\eStore\SmartThreadPool\bin\Debug\Windows\SmartThreadPool.dll
+D:\eStore4.5_Git\eStore\SmartThreadPool\bin\Debug\Windows\SmartThreadPool.pdb
+D:\eStore4.5_Git\eStore\SmartThreadPool\obj\Debug\SmartThreadPool.dll
+D:\eStore4.5_Git\eStore\SmartThreadPool\obj\Debug\SmartThreadPool.pdb
+D:\eStore4.5_Git\eStore\SmartThreadPool\obj\Debug\SmartThreadPool.csprojResolveAssemblyReference.cache

@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+/*-----default.css 呼叫所有的CSS-----*/
+@import url(reset.css); /* 樣式歸零 */
+@import url(template.css); /* 版型與框架 */
+@import url(base.css); /* 標籤 */
+/*@import url(bypage.css); /* 單頁 */
+/*@import url(component.css); /* 元件 */
+/*@import url(ie78.css); /* 專門寫給 IE7、IE8 */
+/*@import url(iphone4.css); /* 寫給Retina螢幕 */

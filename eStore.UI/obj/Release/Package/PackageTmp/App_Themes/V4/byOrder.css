@@ -1,0 +1,201 @@
+﻿@charset "utf-8";
+.eStore_table_order a,.eStore_customersBought a,.eStore_orderStep3_moreInfo a,.eStore_order_radioList_content a{color:#4398ef;}
+.eStore_order_radioList{margin-bottom:15px;}
+.eStore_order_content input[type="text"]{border:1px solid #ddd; padding:0 2px; color: #545454;}
+.eStore_order_content .select{border:1px solid #ddd; padding:2px 15px 2px 5px; background-color:#fff;}
+.eStore_order_content select.styled{padding:2px;}
+/****************** order steps  ******************/
+.eStore_order_stepsBlock{background-color:#ededed; color:#666; font-size:14px; line-height:40px; min-height:40px; margin-top:20px; width:980px; overflow:hidden; *position: relative;}
+.eStore_order_stepsBlock li{width:20%; float:left; vertical-align:middle; text-align:center; background:url(images/eStore_order_stepsBG.png) no-repeat;}
+.eStore_order_stepsBlock li:first-child{background:none;}
+.eStore_order_stepsBlock li.on{color:#fff; font-size:16px; position:relative; background:#0070c0 url(images/eStore_order_stepsBG_on.png) no-repeat;}
+.eStore_order_stepsBlock li.on:first-child{background-image:none;}
+.eStore_order_stepsBlock li.on span{background:url(images/eStore_order_stepsBG_on.png) no-repeat; width:15px; height:40px; position:absolute; right:-15px; top:0px;}
+
+/****************** btn ******************/
+.eStore_order_btnBlock{text-align:right;}
+.eStore_order_btnBlock a{min-width:120px; margin:0 3px;}
+ .CartActionArea input
+ {float:right; margin:0 10px 0 5px;}   
+/****************** table ******************/
+.eStore_table_order td.forAuthor{color:#f39800;}
+.eStore_table_order {border-bottom:1px solid #dddddd; margin:5px 0;}
+.eStore_table_order th,.eStore_table_order td{padding:3px 8px; vertical-align:middle; text-align:center;}
+.eStore_table_order td{padding:5px;}
+.eStore_table_order th{font-weight:normal; background-color:#999; color:#fff; border-left:1px solid #fff;}
+.eStore_table_order th:first-child{border:none;}
+.eStore_table_order tr.odd td{background-color:#f8f8f8;}
+
+/****************** table sub Total ( Step1 Step3 Step53 )******************/
+.eStore_orderStep_subTotal{width:270px; text-align:right; float:right;}
+.eStore_orderStep_subTotal span{width:130px; display:inline-block; *display:inline; *zoom:1; margin-bottom:5px;}
+
+/****************** table order Item ( Step1 Step3 )******************/
+.eStore_table_order.eStore_orderItem input[type="text"]{text-align:right; width:94%; padding:0 2%; text-align:center;}
+/**order System List**/
+.eStore_table_order .eStore_orderSystemList_borderTop td{border-top:1px dotted #ddd; padding:0px;}
+.eStore_table_order tr.eStore_orderSystemList td{background-color:#f6fcff;}
+.eStore_table_order .eStore_orderSystemList td{}
+.eStore_table_order .eStore_orderSystemList li{padding:5px 20px 5px 45px; color:#777;}
+.eStore_table_order .eStore_orderSystemList li b{font-weight:normal; color:#333; padding-right:3px; width:145px; float:left;}
+
+/****************** table order radio List ( Step2 Step4 )******************/
+.eStore_order_radioList.special{color:#164d85;}
+.eStore_order_radioList_content {margin:10px 10px 0 20px;}
+.eStore_order_radioList.show .eStore_order_radioList_content{display:block;}
+
+/**--------------------------Step1--------------------------**/
+/**Sub Total**/
+.eStore_orderStep_subTotal.SubTotal_step1{width:400px;}
+/**VAT Number**/
+.eStore_order_VATNumber .eStore_order_radioList{position:relative;}
+.eStore_order_VATNumber input[type="radio"]{margin:0 5px 0 0;}
+.VATNumber_content{display:inline-block; *display:inline; *zoom:1;}
+.Registration_number {
+    display: inline-block;
+    margin-left: 45px;
+}
+.VATNumber_att {border:1px solid #ddd; background:#f8f8f8; padding:8px; position:absolute; top:0px; right:0px; font-size:12px; display:none;}
+.VATNumber_att b{font-weight:normal; color:#000;}
+.VATNumber_att span{width:12px; height:12px; background:url(images/VATNumber_attBG.png) no-repeat;  position:absolute; top:5px; left:-12px;}
+.eStore_order_content textarea{ width:960px; padding:5px 9px;height: 120px;}
+/**eStore_customersBought**/
+.eStore_customersBought{width:930px; padding:0 25px;}
+.eStore_customersBought li{width:310px; padding:30px 0 0;}
+.eStore_customersBought .carousel-control .prev,.eStore_customersBought .carousel-control .next{background:url(images/eStore_icon_all.png) 0 -200px no-repeat; width:10px; height:22px; left:5px;}
+.eStore_customersBought .carousel-control .next{background:url(images/eStore_icon_all.png) 0 -225px no-repeat; right:5px; left:auto;}
+.eStore_customersBought .carousel-control a:hover{background-position-x:-20px;}
+.eStore_customersBought .pic{width:115px; height:115px; margin-right:10px; display:inline-block; *display:inline; *zoom:1; overflow:hidden;}
+.eStore_customersBought .pic img{width:auto; height:auto; max-width:115px; max-height:115px;}
+.eStore_customersBought .txt{width:165px; display:inline-block; *display:inline; *zoom:1; vertical-align:top;}
+.eStore_customersBought .txt .action{margin-top:5px;}
+.eStore_customersBought .txt .action a{width:150px;}
+.eStore_customersBought .txt .content{height:48px; overflow:hidden; margin:5px 0;}
+.eStore_customersBought .txt .title{color:#4398ef; font-size:15px;}
+.eStore_customersBought .txt .priceOrange a{float:left;}
+.eStore_container .eStore_orderStep_AddParts {width: 500px;float: left;}
+.deleteButton {color: #4398EF;border: 0px;background: white;border: 1px solid #fff;}
+.deleteButtonGrey {color: #4398EF;border: 0px;background: white;border: 1px solid #fff;background-color: #f8f8f8;border: 1px solid #f8f8f8;}
+.deleteButton:hover,.deleteButtonGrey:hover {background-color: #EAF4FF;border: 1px solid #4398EF;border-radius: 3px;}
+.padding3 {padding: 3px;}
+ol.cartItemChangedMessage{ list-style:decimal; padding:5px 40px; }
+ol.cartItemChangedMessage li{ list-style:decimal;}
+/**--------------------------Step2--------------------------**/
+.eStore_table_order.eStore_orderStep2 td{padding:15px 5px 0;}
+.eStore_ShippingStyle,.eStore_information,.eStore_ShippingCompany,.eStore_ShippingPersonal{float:left;}
+.eStore_ShippingStyle{width:135px; margin:3px 5px 3px 0; font-weight:600;}
+.eStore_information{width:830px;}
+.eStore_ShippingCompany{width:120px; margin:0 5px;}
+.eStore_ShippingCompany .select{width:100px; text-align:left;}
+.eStore_ShippingCompany select.styled{width:120px;}
+.eStore_ShippingPersonal{width:680px; margin-left:20px;}
+.eStore_ShippingPersonal *,.eStore_sameAddress{text-align:left;}
+.eStore_ShippingPersonal_msg{margin-bottom:15px; border-radius: 5px;}
+.eStore_ShippingPersonal_msg .radio,.eStore_ShippingPersonal_msg .info,.eStore_ShippingPersonal_msg .action{float:left;}
+.eStore_ShippingPersonal_msg .radio{width:25px;}
+.eStore_ShippingPersonal_msg .info{width:510px;background: #fff;border: 0px solid #fff; cursor:pointer;}
+.eStore_ShippingPersonal_msg .bg {background-color: #f8f8f8;}
+.eStore_ShippingPersonal_msg .info p{color:#999; font-size:12px; margin:2px 0;}
+.eStore_ShippingPersonal_msg .action{display:none;}
+.eStore_ShippingPersonal_msg.show .action{display:block;}
+.eStore_ShippingPersonal_msg .action a{margin:0 15px;}
+.eStore_sameAddress{padding:0 5px 15px; margin-bottom:15px; font-weight:600; border-bottom:1px dashed #ddd;}
+.eStore_sameAddress.small{border:none; padding:0 5px 0;}
+.eStore_sameAddress input[type="radio"]{margin-left:15px;}
+/**eStore_addReceiverBlock**/
+.eStore_addReceiver{text-align:left; width:680px; margin-top:3px;}
+.eStore_addReceiver span.btn{color:#4398ef; background:url(images/eStore_icon_all.png) 0 -400px no-repeat; padding-left:20px; margin-bottom:15px; display:block; cursor:pointer;}
+.eStore_addReceiverBlock{padding:20px 20px 20px 40px; text-align:left; display:none;}
+.eStore_orderStep2 .eStore_addReceiverBlock table tr td{background:none; text-align:left; padding:5px 5px 5px 0px;}
+.eStore_addReceiverBlock .title{color:#f39800; font-size:16px; margin-bottom:10px;}
+.eStore_addReceiverBlock .store_country .title {font-size:12px;color:#666;}
+.eStore_addReceiverBlock span.select{color:#666;}
+.eStore_addReceiverBlock .select{width:142px; text-align:left;}
+.eStore_addReceiverBlock select.styled{width:162px;}
+.eStore_addReceiverBlock input{width:158px;}
+.eStore_addReceiverBlock .eStore_order_btnBlock input{width:152px;margin-right: 10px;}
+.eStore_addReceiverBlock input.big{width:442px;}
+.eStore_addReceiverBlock input.small{width:80px;}
+.eStore_addReceiverBlock a{margin:0 5px;}
+.eStore_addReceiverBlock .eStore_order_btnBlock{text-align:left; margin-top:20px;}
+.eStore_addReceiverBlock .eStore_order_btnBlock a{margin:0 10px 0 0;} 
+.AddressBook_personal .odd .title {font: 14px/20px 'Open Sans', Arial, "新細明體", sans-serif;color: #666;}
+
+
+/**shippingService**/
+.eStore_order_shippingService p{margin-bottom:20px;}
+.eStore_order_shippingService .eStore_order_radioList_content span{display:inline-block; *display:inline; *zoom:1; padding:2px 0;}
+/**content 1**/
+.eStore_order_shippingService .eStore_order_radioList_content.content1 span{width:45%;}
+/**content 2**/
+.eStore_order_shippingService .eStore_order_radioList_content.content2 .select{width:100px;}
+.eStore_order_shippingService .eStore_order_radioList_content.content2 select.styled{width:120px;}
+/**#inline1**/
+#inline1 table{border-bottom:1px solid #dddddd; font-size:13px;}
+#inline1 th,#inline1 td{padding:5px 8px; vertical-align:middle; font-weight:normal;}
+#inline1 .content th{background-color:#e4e4e4; text-align:left;}
+#inline1 .content tr td:first-child{text-align:center;}
+#inline1 .content tr.odd td{background-color:#f4f4f4;}
+#inline1 .title th{font-weight:normal; background-color:#999; color:#fff; border-left:1px solid #fff; text-align:center;}
+#inline1 .title th:first-child{border:none;}
+
+/**--------------------------Step3--------------------------**/
+.eStore_orderStep3_moreInfo{float:left;}
+.eStore_orderStep3_moreInfo{width:680px; margin-right:30px;}
+.eStore_orderStep3_moreInfo input[type="text"]{margin:0 5px;}
+.eStore_orderStep3_moreInfo .eStore_order_radioList_content{display:block; line-height:1.5em;}
+.eStore_orderStep3_moreInfo .eStore_order_radioList_content p{margin:10px 0;}
+.eStore_table_orderTO.eStore_orderStep3{margin:10px 0;}
+
+/**--------------------------Step4--------------------------**/
+.eStore_order_step4 .bgGray{background-color:#999; color:#fff; padding:5px 15px; margin:5px 0 20px 0;}
+.eStore_order_step4 h4{margin:20px auto 0; width:960px;}
+.eStore_order_orderingRule{border:1px solid #ddd; background-color:#fffdf3; width:918px; padding:0px 30px 0px 10px; width:908px \9; padding:0px 30px 0px 20px \9; height:400px; overflow-y:scroll; margin:0px auto;}
+.eStore_order_iaAgree{text-align:right; width:960px; margin:10px;}
+.eStore_order_payWay .content1{border:1px solid #ddd; font-size:12px;}
+.eStore_order_payWay .eStore_order_byCreditCard_left{padding:10px 15px; width:285px; float:left;}
+.eStore_order_payWay .eStore_order_byCreditCard_left td{padding:2px 0; text-align:left;}
+.eStore_order_payWay .eStore_order_byCreditCard_left td:first-child{text-align:left;}
+.eStore_order_payWay .eStore_order_byCreditCard_left input[type="text"]{border:1px solid #ddd; padding:0 2px; width:150px;}
+.eStore_order_payWay .eStore_order_byCreditCard_left .small input[type="text"]{width:64px;}
+.eStore_order_payWay .eStore_order_byCreditCard_left .select{width:133px; text-align:left;}
+.eStore_order_payWay .eStore_order_byCreditCard_left select.styled{width:156px;}
+.eStore_order_payWay .eStore_order_byCreditCard_left .small .select{width:49px; text-align:left;}
+.eStore_order_payWay .eStore_order_byCreditCard_left .small select.styled{width:70px;}
+.eStore_order_payWay .eStore_order_byCreditCard_left .CreditCardType .cardBG{background:url(images/eStore_order_step4_cardBG.jpg) 2px 2px no-repeat; width:26px; height:22px; position:absolute; z-index:2;}
+.eStore_order_payWay .eStore_order_byCreditCard_left .CreditCardType .select{width:108px; text-align:left; padding-left:30px;}
+.eStore_order_payWay .eStore_order_byCreditCard_left .CreditCardType select.styled{width:156px;}
+.eStore_order_payWay .eStore_order_byCreditCard_right{background-color:#f8f8f8; width:633px; min-height:188px; float:left;}
+.eStore_order_payWay .eStore_order_byCreditCard_right table{width:580px; margin:30px auto; color:#888;}
+.eStore_order_payWay .eStore_order_byCreditCard_right table .blue{color:#164d85; padding-right:5px;}
+.eStore_order_payWay .eStore_order_byCreditCard_right input[type="text"]{border:1px solid #ddd; padding:0 2px; width:150px;}
+/**--------------------------Step5--------------------------**/
+.eStore_order_thankU{padding:20px 10px; font-size:14px; line-height:22px;}
+.eStore_order_thankU .top{font-size:16px; margin-bottom:8px;}
+.eStore_order_thankU a{color:#f39800;}
+.eStore_order_thankU li{background:url(images/eStore_listSquare.jpg) 8px 12px no-repeat; padding:2px 0 2px 18px;}
+.eStore_order_thankU li b{font-weight:normal; color:#222; padding-right:3px;}
+.eStore_order_orderDetails{border:1px solid #ddd;}
+.eStore_order_orderDetails .eStore_table_orderTO{margin:0px; border:none;}
+.eStore_order_orderDetails .eStore_orderItem{margin:0px;}
+.eStore_order_orderDetails .eStore_orderStep_subTotal{padding:15px 8px 8px 0;}
+.eStore_order_payWay .paymentcontent {margin-left: 20px; line-height: 25px;}
+.eStore_order_payWay .paymentheader {font-weight: bold;}
+.eStore_order_payWay .paymentcontent .paymentbody label {  display: inline-block;  float: left;  width: 175px;  text-align: left;  padding-left: 5px;}
+.bankRBlis{float: left;padding-right: 5px;}
+#bankList .bankselectImg {	border: 2px solid #C93;}
+#bankList ul, #bankList li {list-style-image: none;	list-style-type: none;margin: 0px;padding: 0px;}
+#bankList ul li {float: left;width: 180px;padding: 3px;}
+#bankList ul li img{border: 2px solid #FFF;}
+
+/**--------------------------order By No--------------------------**/
+.eStore_orderByNo h2{margin-bottom:30px;}
+.eStore_orderByNo .eStore_table_order.eStore_orderItem td{padding:8px 5px; height:30px;}
+.eStore_orderByNo .eStore_table_order.eStore_orderItem .addMore{text-align:left; background:#fff; padding-left:17px;}
+.eStore_orderByNo .eStore_table_order.eStore_orderItem .addMore a{background:url(images/eStore_icon_all.png) 0 -400px no-repeat; padding-left:38px;}
+.eStore_table_order td.right {text-align: right;}
+.eStore_table_order td.left { text-align:left;}
+.eStoreShippingTable { width:100%;}
+.eStoreShippingTable td { width: 45%;}
+.eStoreOrderServingParty{float: right; margin-right: 300px;}
+.eStore_orderSystemList .left ul li { padding-left:0px;}

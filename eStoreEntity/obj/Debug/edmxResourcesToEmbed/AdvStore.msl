@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AdvStoreModelStoreContainer" CdmEntityContainer="AdvStoreEntities">
+    <EntitySetMapping Name="es_cbom">
+      <EntityTypeMapping TypeName="AdvStoreModel.es_cbom">
+        <MappingFragment StoreEntitySet="es_cbom">
+          <ScalarProperty Name="cbomid" ColumnName="cbomid" />
+          <ScalarProperty Name="cbom_name" ColumnName="cbom_name" />
+          <ScalarProperty Name="cbom_desc" ColumnName="cbom_desc" />
+          <ScalarProperty Name="system_id" ColumnName="system_id" />
+          <ScalarProperty Name="storeid" ColumnName="storeid" />
+          <ScalarProperty Name="base_list_price" ColumnName="base_list_price" />
+          <ScalarProperty Name="base_list_price_type" ColumnName="base_list_price_type" />
+          <ScalarProperty Name="eff_date" ColumnName="eff_date" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+          <ScalarProperty Name="createtime" ColumnName="createtime" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="price_sum" ColumnName="price_sum" />
+          <ScalarProperty Name="pro_msg" ColumnName="pro_msg" />
+          <ScalarProperty Name="pro_startdate" ColumnName="pro_startdate" />
+          <ScalarProperty Name="pro_enddate" ColumnName="pro_enddate" />
+          <ScalarProperty Name="pro_price" ColumnName="pro_price" />
+          <ScalarProperty Name="keywords" ColumnName="keywords" />
+          <ScalarProperty Name="Promotemarkup" ColumnName="Promotemarkup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="es_cbomtree">
+      <EntityTypeMapping TypeName="AdvStoreModel.es_cbomtree">
+        <MappingFragment StoreEntitySet="es_cbomtree">
+          <ScalarProperty Name="cbomid" ColumnName="cbomid" />
+          <ScalarProperty Name="nodeid" ColumnName="nodeid" />
+          <ScalarProperty Name="seq" ColumnName="seq" />
+          <ScalarProperty Name="defaults" ColumnName="defaults" />
+          <ScalarProperty Name="exceplist" ColumnName="exceplist" />
+          <ScalarProperty Name="discount" ColumnName="discount" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="input" ColumnName="input" />
+          <ScalarProperty Name="show" ColumnName="show" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="localPartno" ColumnName="localPartno" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="insertdate" ColumnName="insertdate" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="maxquantity" ColumnName="maxquantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="es_sharebomtree">
+      <EntityTypeMapping TypeName="AdvStoreModel.es_sharebomtree">
+        <MappingFragment StoreEntitySet="es_sharebomtree">
+          <ScalarProperty Name="nodeid" ColumnName="nodeid" />
+          <ScalarProperty Name="node_name" ColumnName="node_name" />
+          <ScalarProperty Name="node_desc" ColumnName="node_desc" />
+          <ScalarProperty Name="node_parentid" ColumnName="node_parentid" />
+          <ScalarProperty Name="node_partno_list" ColumnName="node_partno_list" />
+          <ScalarProperty Name="node_type" ColumnName="node_type" />
+          <ScalarProperty Name="node_replacepartno_list" ColumnName="node_replacepartno_list" />
+          <ScalarProperty Name="node_discount" ColumnName="node_discount" />
+          <ScalarProperty Name="node_seq" ColumnName="node_seq" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbProductOfferings">
+      <EntityTypeMapping TypeName="AdvStoreModel.tbProductOffering">
+        <MappingFragment StoreEntitySet="tbProductOffering">
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="ProductNo" ColumnName="ProductNo" />
+          <ScalarProperty Name="ShowPrice" ColumnName="ShowPrice" />
+          <ScalarProperty Name="Publish" ColumnName="Publish" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="SAPPrice" ColumnName="SAPPrice" />
+          <ScalarProperty Name="useSAP" ColumnName="useSAP" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="ModelDesc" ColumnName="ModelDesc" />
+          <ScalarProperty Name="ModelFeatures" ColumnName="ModelFeatures" />
+          <ScalarProperty Name="ProductDesc" ColumnName="ProductDesc" />
+          <ScalarProperty Name="ProductFeatures" ColumnName="ProductFeatures" />
+          <ScalarProperty Name="Extendeddesc" ColumnName="Extendeddesc" />
+          <ScalarProperty Name="promoteprice" ColumnName="promoteprice" />
+          <ScalarProperty Name="PromoteStart" ColumnName="PromoteStart" />
+          <ScalarProperty Name="PromoteEnd" ColumnName="PromoteEnd" />
+          <ScalarProperty Name="categoryid2" ColumnName="categoryid2" />
+          <ScalarProperty Name="pro_msg" ColumnName="pro_msg" />
+          <ScalarProperty Name="PQuantity" ColumnName="PQuantity" />
+          <ScalarProperty Name="Promotemarkup" ColumnName="Promotemarkup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbProducts">
+      <EntityTypeMapping TypeName="AdvStoreModel.tbProduct">
+        <MappingFragment StoreEntitySet="tbProducts">
+          <ScalarProperty Name="ProductNo" ColumnName="ProductNo" />
+          <ScalarProperty Name="ModelNo" ColumnName="ModelNo" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="PicturePath" ColumnName="PicturePath" />
+          <ScalarProperty Name="RelatedPicture" ColumnName="RelatedPicture" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Features" ColumnName="Features" />
+          <ScalarProperty Name="Literature" ColumnName="Literature" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="ProductGroup" ColumnName="ProductGroup" />
+          <ScalarProperty Name="RohsStatus" ColumnName="RohsStatus" />
+          <ScalarProperty Name="Siebelstatus" ColumnName="Siebelstatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="es_Config_Item_new">
+      <EntityTypeMapping TypeName="AdvStoreModel.es_Config_Item_new">
+        <MappingFragment StoreEntitySet="es_Config_Item_new">
+          <ScalarProperty Name="short_features" ColumnName="short_features" />
+          <ScalarProperty Name="con_item_id" ColumnName="con_item_id" />
+          <ScalarProperty Name="Con_item_features" ColumnName="Con_item_features" />
+          <ScalarProperty Name="Height_I" ColumnName="Height_I" />
+          <ScalarProperty Name="Width_I" ColumnName="Width_I" />
+          <ScalarProperty Name="Depth_I" ColumnName="Depth_I" />
+          <ScalarProperty Name="Height_M" ColumnName="Height_M" />
+          <ScalarProperty Name="Width_M" ColumnName="Width_M" />
+          <ScalarProperty Name="Depth_M" ColumnName="Depth_M" />
+          <ScalarProperty Name="Con_Item_Data_Sheet" ColumnName="Con_Item_Data_Sheet" />
+          <ScalarProperty Name="Con_Item_Desc" ColumnName="Con_Item_Desc" />
+          <ScalarProperty Name="Con_Item_Line" ColumnName="Con_Item_Line" />
+          <ScalarProperty Name="Con_Item_MBID" ColumnName="Con_Item_MBID" />
+          <ScalarProperty Name="Con_Item_virtual_part" ColumnName="Con_Item_virtual_part" />
+          <ScalarProperty Name="Con_Item_Number" ColumnName="Con_Item_Number" />
+          <ScalarProperty Name="Con_Item_AutoID" ColumnName="Con_Item_AutoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vCTOS">
+      <EntityTypeMapping TypeName="AdvStoreModel.vCTO">
+        <MappingFragment StoreEntitySet="vCTOS">
+          <ScalarProperty Name="Promotemarkup" ColumnName="Promotemarkup" />
+          <ScalarProperty Name="short_features" ColumnName="short_features" />
+          <ScalarProperty Name="Con_item_features" ColumnName="Con_item_features" />
+          <ScalarProperty Name="con_item_id" ColumnName="con_item_id" />
+          <ScalarProperty Name="Width_I" ColumnName="Width_I" />
+          <ScalarProperty Name="Height_I" ColumnName="Height_I" />
+          <ScalarProperty Name="Depth_I" ColumnName="Depth_I" />
+          <ScalarProperty Name="Height_M" ColumnName="Height_M" />
+          <ScalarProperty Name="Width_M" ColumnName="Width_M" />
+          <ScalarProperty Name="Depth_M" ColumnName="Depth_M" />
+          <ScalarProperty Name="Con_Item_Data_Sheet" ColumnName="Con_Item_Data_Sheet" />
+          <ScalarProperty Name="Con_Item_Desc" ColumnName="Con_Item_Desc" />
+          <ScalarProperty Name="Con_Item_Line" ColumnName="Con_Item_Line" />
+          <ScalarProperty Name="keywords" ColumnName="keywords" />
+          <ScalarProperty Name="pro_price" ColumnName="pro_price" />
+          <ScalarProperty Name="pro_enddate" ColumnName="pro_enddate" />
+          <ScalarProperty Name="pro_startdate" ColumnName="pro_startdate" />
+          <ScalarProperty Name="pro_msg" ColumnName="pro_msg" />
+          <ScalarProperty Name="price_sum" ColumnName="price_sum" />
+          <ScalarProperty Name="createtime" ColumnName="createtime" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+          <ScalarProperty Name="eff_date" ColumnName="eff_date" />
+          <ScalarProperty Name="base_list_price_type" ColumnName="base_list_price_type" />
+          <ScalarProperty Name="base_list_price" ColumnName="base_list_price" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="storeid" ColumnName="storeid" />
+          <ScalarProperty Name="cbom_desc" ColumnName="cbom_desc" />
+          <ScalarProperty Name="cbom_name" ColumnName="cbom_name" />
+          <ScalarProperty Name="Con_Item_MBID" ColumnName="Con_Item_MBID" />
+          <ScalarProperty Name="Con_Item_virtual_part" ColumnName="Con_Item_virtual_part" />
+          <ScalarProperty Name="Con_Item_Number" ColumnName="Con_Item_Number" />
+          <ScalarProperty Name="cbomid" ColumnName="cbomid" />
+          <ScalarProperty Name="system_id" ColumnName="system_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CART_Line_DETAIL">
+      <EntityTypeMapping TypeName="AdvStoreModel.CART_Line_DETAIL">
+        <MappingFragment StoreEntitySet="CART_Line_DETAIL">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Line_Detail_Type_Ref" ColumnName="Line_Detail_Type_Ref" />
+          <ScalarProperty Name="Line_Detail_Type" ColumnName="Line_Detail_Type" />
+          <ScalarProperty Name="UNIT_PRICE" ColumnName="UNIT_PRICE" />
+          <ScalarProperty Name="LIST_PRICE" ColumnName="LIST_PRICE" />
+          <ScalarProperty Name="REQUIRED_DATE" ColumnName="REQUIRED_DATE" />
+          <ScalarProperty Name="DUE_DATE" ColumnName="DUE_DATE" />
+          <ScalarProperty Name="QTY" ColumnName="QTY" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PART_NO" ColumnName="PART_NO" />
+          <ScalarProperty Name="MODEL_NO" ColumnName="MODEL_NO" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+          <ScalarProperty Name="LINE_NO" ColumnName="LINE_NO" />
+          <ScalarProperty Name="CART_ID" ColumnName="CART_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CART_MASTER">
+      <EntityTypeMapping TypeName="AdvStoreModel.CART_MASTER">
+        <MappingFragment StoreEntitySet="CART_MASTER">
+          <ScalarProperty Name="Division" ColumnName="Division" />
+          <ScalarProperty Name="Courier_phone" ColumnName="Courier_phone" />
+          <ScalarProperty Name="Courier_account" ColumnName="Courier_account" />
+          <ScalarProperty Name="Courier" ColumnName="Courier" />
+          <ScalarProperty Name="Promote_Code" ColumnName="Promote_Code" />
+          <ScalarProperty Name="CBOM_MESSAGE" ColumnName="CBOM_MESSAGE" />
+          <ScalarProperty Name="QUOTE_MESSAGE" ColumnName="QUOTE_MESSAGE" />
+          <ScalarProperty Name="Protection_Status" ColumnName="Protection_Status" />
+          <ScalarProperty Name="Protect_Due_Date" ColumnName="Protect_Due_Date" />
+          <ScalarProperty Name="Lead_ID" ColumnName="Lead_ID" />
+          <ScalarProperty Name="VAT_Address" ColumnName="VAT_Address" />
+          <ScalarProperty Name="Reseller_ID" ColumnName="Reseller_ID" />
+          <ScalarProperty Name="Ship_Collect" ColumnName="Ship_Collect" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CONFIRMED_BY" ColumnName="CONFIRMED_BY" />
+          <ScalarProperty Name="CONFIRMED_DATE" ColumnName="CONFIRMED_DATE" />
+          <ScalarProperty Name="CART_DESC" ColumnName="CART_DESC" />
+          <ScalarProperty Name="CART_NUMBER" ColumnName="CART_NUMBER" />
+          <ScalarProperty Name="STORE_ID" ColumnName="STORE_ID" />
+          <ScalarProperty Name="LAST_UPDATED_DATE" ColumnName="LAST_UPDATED_DATE" />
+          <ScalarProperty Name="LAST_UPDATED_BY" ColumnName="LAST_UPDATED_BY" />
+          <ScalarProperty Name="QUOTE_EXPIRED_DATE" ColumnName="QUOTE_EXPIRED_DATE" />
+          <ScalarProperty Name="QUOTE_DATE" ColumnName="QUOTE_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="CART_TYPE" ColumnName="CART_TYPE" />
+          <ScalarProperty Name="CART_TOTAL_DISCOUNT" ColumnName="CART_TOTAL_DISCOUNT" />
+          <ScalarProperty Name="ORDER_NOTE" ColumnName="ORDER_NOTE" />
+          <ScalarProperty Name="AUTO_ORDER_FLAG" ColumnName="AUTO_ORDER_FLAG" />
+          <ScalarProperty Name="CUSTOMER_ATTENTION" ColumnName="CUSTOMER_ATTENTION" />
+          <ScalarProperty Name="TAX" ColumnName="TAX" />
+          <ScalarProperty Name="INSURANCE" ColumnName="INSURANCE" />
+          <ScalarProperty Name="FREIGHT" ColumnName="FREIGHT" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="SHIP_METHOD" ColumnName="SHIP_METHOD" />
+          <ScalarProperty Name="SHIP_VIA" ColumnName="SHIP_VIA" />
+          <ScalarProperty Name="EARLY_SHIP_FLAG" ColumnName="EARLY_SHIP_FLAG" />
+          <ScalarProperty Name="COMBINE_ORDER_FLAG" ColumnName="COMBINE_ORDER_FLAG" />
+          <ScalarProperty Name="PARTIAL_FLAG" ColumnName="PARTIAL_FLAG" />
+          <ScalarProperty Name="SHIPMENT_TERM" ColumnName="SHIPMENT_TERM" />
+          <ScalarProperty Name="ATTENTION" ColumnName="ATTENTION" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="TOTAL_AMOUNT" ColumnName="TOTAL_AMOUNT" />
+          <ScalarProperty Name="TOTAL_ATP_DATE" ColumnName="TOTAL_ATP_DATE" />
+          <ScalarProperty Name="PAYMENT_ID" ColumnName="PAYMENT_ID" />
+          <ScalarProperty Name="PAYMENT_TYPE" ColumnName="PAYMENT_TYPE" />
+          <ScalarProperty Name="PO_NO" ColumnName="PO_NO" />
+          <ScalarProperty Name="SHIPTO_ID" ColumnName="SHIPTO_ID" />
+          <ScalarProperty Name="BILLTO_ID" ColumnName="BILLTO_ID" />
+          <ScalarProperty Name="SOLDTO_ID" ColumnName="SOLDTO_ID" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="CURRENCY" ColumnName="CURRENCY" />
+          <ScalarProperty Name="REQUIRED_DATE" ColumnName="REQUIRED_DATE" />
+          <ScalarProperty Name="DUE_DATE" ColumnName="DUE_DATE" />
+          <ScalarProperty Name="CART_ID" ColumnName="CART_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EAPRO_ORDER_DETAIL">
+      <EntityTypeMapping TypeName="AdvStoreModel.EAPRO_ORDER_DETAIL">
+        <MappingFragment StoreEntitySet="EAPRO_ORDER_DETAIL">
+          <ScalarProperty Name="ProductGroup" ColumnName="ProductGroup" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="PARENT_LINE_NO" ColumnName="PARENT_LINE_NO" />
+          <ScalarProperty Name="Supplier_due_date" ColumnName="Supplier_due_date" />
+          <ScalarProperty Name="AUTO_ORDER_QTY" ColumnName="AUTO_ORDER_QTY" />
+          <ScalarProperty Name="AUTO_ORDER_FLAG" ColumnName="AUTO_ORDER_FLAG" />
+          <ScalarProperty Name="ERP_LOCATION" ColumnName="ERP_LOCATION" />
+          <ScalarProperty Name="ERP_SITE" ColumnName="ERP_SITE" />
+          <ScalarProperty Name="DUE_DATE" ColumnName="DUE_DATE" />
+          <ScalarProperty Name="REQUIRED_DATE" ColumnName="REQUIRED_DATE" />
+          <ScalarProperty Name="UNIT_PRICE" ColumnName="UNIT_PRICE" />
+          <ScalarProperty Name="LIST_PRICE" ColumnName="LIST_PRICE" />
+          <ScalarProperty Name="QTY" ColumnName="QTY" />
+          <ScalarProperty Name="ORDER_LINE_TYPE" ColumnName="ORDER_LINE_TYPE" />
+          <ScalarProperty Name="PART_NO" ColumnName="PART_NO" />
+          <ScalarProperty Name="PRODUCT_LINE" ColumnName="PRODUCT_LINE" />
+          <ScalarProperty Name="LINE_NO" ColumnName="LINE_NO" />
+          <ScalarProperty Name="ORDER_NO" ColumnName="ORDER_NO" />
+          <ScalarProperty Name="ORDER_ID" ColumnName="ORDER_ID" />
+          <ScalarProperty Name="Store_Id" ColumnName="Store_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EAPRO_ORDER_MASTER">
+      <EntityTypeMapping TypeName="AdvStoreModel.EAPRO_ORDER_MASTER">
+        <MappingFragment StoreEntitySet="EAPRO_ORDER_MASTER">
+          <ScalarProperty Name="TDS_Cost" ColumnName="TDS_Cost" />
+          <ScalarProperty Name="SAP_Sync_status" ColumnName="SAP_Sync_status" />
+          <ScalarProperty Name="SAP_Sync_date" ColumnName="SAP_Sync_date" />
+          <ScalarProperty Name="SAP_Sync_by" ColumnName="SAP_Sync_by" />
+          <ScalarProperty Name="Z2" ColumnName="Z2" />
+          <ScalarProperty Name="ZM" ColumnName="ZM" />
+          <ScalarProperty Name="Cart_Total_Discount" ColumnName="Cart_Total_Discount" />
+          <ScalarProperty Name="Shippingmethod" ColumnName="Shippingmethod" />
+          <ScalarProperty Name="Courier_phone" ColumnName="Courier_phone" />
+          <ScalarProperty Name="Courier_account" ColumnName="Courier_account" />
+          <ScalarProperty Name="Courier" ColumnName="Courier" />
+          <ScalarProperty Name="CartID" ColumnName="CartID" />
+          <ScalarProperty Name="ChannelName" ColumnName="ChannelName" />
+          <ScalarProperty Name="ChannelID" ColumnName="ChannelID" />
+          <ScalarProperty Name="VAT_Address" ColumnName="VAT_Address" />
+          <ScalarProperty Name="CBOM_MESSAGE" ColumnName="CBOM_MESSAGE" />
+          <ScalarProperty Name="Reseller_ID" ColumnName="Reseller_ID" />
+          <ScalarProperty Name="Payment_ID" ColumnName="Payment_ID" />
+          <ScalarProperty Name="AUTO_ORDER_FLAG" ColumnName="AUTO_ORDER_FLAG" />
+          <ScalarProperty Name="CUSTOMER_ATTENTION" ColumnName="CUSTOMER_ATTENTION" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="LAST_UPDATED" ColumnName="LAST_UPDATED" />
+          <ScalarProperty Name="TOTAL_LINE" ColumnName="TOTAL_LINE" />
+          <ScalarProperty Name="TOTAL_AMOUNT" ColumnName="TOTAL_AMOUNT" />
+          <ScalarProperty Name="ORDER_STATUS" ColumnName="ORDER_STATUS" />
+          <ScalarProperty Name="ORDER_NOTE" ColumnName="ORDER_NOTE" />
+          <ScalarProperty Name="CURRENCY" ColumnName="CURRENCY" />
+          <ScalarProperty Name="SHIP_VIA" ColumnName="SHIP_VIA" />
+          <ScalarProperty Name="SHIPMENT_TERM" ColumnName="SHIPMENT_TERM" />
+          <ScalarProperty Name="REQUIRED_DATE" ColumnName="REQUIRED_DATE" />
+          <ScalarProperty Name="DUE_DATE" ColumnName="DUE_DATE" />
+          <ScalarProperty Name="PRODUCT_SITE" ColumnName="PRODUCT_SITE" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="TAX" ColumnName="TAX" />
+          <ScalarProperty Name="INSURANCE" ColumnName="INSURANCE" />
+          <ScalarProperty Name="FREIGHT" ColumnName="FREIGHT" />
+          <ScalarProperty Name="EARLY_SHIP_FLAG" ColumnName="EARLY_SHIP_FLAG" />
+          <ScalarProperty Name="COMBINE_ORDER_FLAG" ColumnName="COMBINE_ORDER_FLAG" />
+          <ScalarProperty Name="PARTIAL_FLAG" ColumnName="PARTIAL_FLAG" />
+          <ScalarProperty Name="ATTENTION" ColumnName="ATTENTION" />
+          <ScalarProperty Name="PAYMENT_TYPE" ColumnName="PAYMENT_TYPE" />
+          <ScalarProperty Name="ORDER_DATE" ColumnName="ORDER_DATE" />
+          <ScalarProperty Name="SALES_ID" ColumnName="SALES_ID" />
+          <ScalarProperty Name="BILLTO_ID" ColumnName="BILLTO_ID" />
+          <ScalarProperty Name="SHIPTO_ID" ColumnName="SHIPTO_ID" />
+          <ScalarProperty Name="SOLDTO_ID" ColumnName="SOLDTO_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="PO_NO" ColumnName="PO_NO" />
+          <ScalarProperty Name="ORDER_TYPE" ColumnName="ORDER_TYPE" />
+          <ScalarProperty Name="ORDER_NO" ColumnName="ORDER_NO" />
+          <ScalarProperty Name="ORDER_ID" ColumnName="ORDER_ID" />
+          <ScalarProperty Name="Store_Id" ColumnName="Store_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EBIZ_ADDRESS">
+      <EntityTypeMapping TypeName="AdvStoreModel.EBIZ_ADDRESS">
+        <MappingFragment StoreEntitySet="EBIZ_ADDRESS">
+          <ScalarProperty Name="EXTENTED_DATE" ColumnName="EXTENTED_DATE" />
+          <ScalarProperty Name="ROW_ID" ColumnName="ROW_ID" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="LAST_UPDATED" ColumnName="LAST_UPDATED" />
+          <ScalarProperty Name="ZIP_CODE" ColumnName="ZIP_CODE" />
+          <ScalarProperty Name="REGION" ColumnName="REGION" />
+          <ScalarProperty Name="COUNTY" ColumnName="COUNTY" />
+          <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="TEL_EXT" ColumnName="TEL_EXT" />
+          <ScalarProperty Name="TEL_NO" ColumnName="TEL_NO" />
+          <ScalarProperty Name="FAX_NO" ColumnName="FAX_NO" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+          <ScalarProperty Name="ATTENTION_Company_Name" ColumnName="ATTENTION_Company_Name" />
+          <ScalarProperty Name="ATTENTION" ColumnName="ATTENTION" />
+          <ScalarProperty Name="Address_Type" ColumnName="Address_Type" />
+          <ScalarProperty Name="Address_ID" ColumnName="Address_ID" />
+          <ScalarProperty Name="Store_Id" ColumnName="Store_Id" />
+          <ScalarProperty Name="ORG_ID" ColumnName="ORG_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

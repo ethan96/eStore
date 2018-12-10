@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLiteratureInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="literatureID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLiteratureInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLiteratureInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPhysicalDownloadURL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="literatureID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPhysicalDownloadURLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPhysicalDownloadURLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLiteratureInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLiteratureInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLiteratureInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLiteratureInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPhysicalDownloadURLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPhysicalDownloadURL" />
+  </wsdl:message>
+  <wsdl:message name="GetPhysicalDownloadURLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPhysicalDownloadURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpGetIn" />
+  <wsdl:message name="HelloWorldHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLiteratureInfoHttpGetIn">
+    <wsdl:part name="literatureID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLiteratureInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetPhysicalDownloadURLHttpGetIn">
+    <wsdl:part name="literatureID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPhysicalDownloadURLHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpPostIn" />
+  <wsdl:message name="HelloWorldHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLiteratureInfoHttpPostIn">
+    <wsdl:part name="literatureID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLiteratureInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetPhysicalDownloadURLHttpPostIn">
+    <wsdl:part name="literatureID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPhysicalDownloadURLHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="PISProductWSSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLiteratureInfo">
+      <wsdl:input message="tns:GetLiteratureInfoSoapIn" />
+      <wsdl:output message="tns:GetLiteratureInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysicalDownloadURL">
+      <wsdl:input message="tns:GetPhysicalDownloadURLSoapIn" />
+      <wsdl:output message="tns:GetPhysicalDownloadURLSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PISProductWSHttpGet">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpGetIn" />
+      <wsdl:output message="tns:HelloWorldHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLiteratureInfo">
+      <wsdl:input message="tns:GetLiteratureInfoHttpGetIn" />
+      <wsdl:output message="tns:GetLiteratureInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysicalDownloadURL">
+      <wsdl:input message="tns:GetPhysicalDownloadURLHttpGetIn" />
+      <wsdl:output message="tns:GetPhysicalDownloadURLHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PISProductWSHttpPost">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpPostIn" />
+      <wsdl:output message="tns:HelloWorldHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLiteratureInfo">
+      <wsdl:input message="tns:GetLiteratureInfoHttpPostIn" />
+      <wsdl:output message="tns:GetLiteratureInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysicalDownloadURL">
+      <wsdl:input message="tns:GetPhysicalDownloadURLHttpPostIn" />
+      <wsdl:output message="tns:GetPhysicalDownloadURLHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PISProductWSSoap" type="tns:PISProductWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLiteratureInfo">
+      <soap:operation soapAction="http://tempuri.org/GetLiteratureInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysicalDownloadURL">
+      <soap:operation soapAction="http://tempuri.org/GetPhysicalDownloadURL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PISProductWSSoap12" type="tns:PISProductWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLiteratureInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetLiteratureInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysicalDownloadURL">
+      <soap12:operation soapAction="http://tempuri.org/GetPhysicalDownloadURL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PISProductWSHttpGet" type="tns:PISProductWSHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLiteratureInfo">
+      <http:operation location="/GetLiteratureInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysicalDownloadURL">
+      <http:operation location="/GetPhysicalDownloadURL" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PISProductWSHttpPost" type="tns:PISProductWSHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLiteratureInfo">
+      <http:operation location="/GetLiteratureInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysicalDownloadURL">
+      <http:operation location="/GetPhysicalDownloadURL" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PISProductWS">
+    <wsdl:port name="PISProductWSSoap" binding="tns:PISProductWSSoap">
+      <soap:address location="http://pis.advantech.com/WS/PISProductWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PISProductWSSoap12" binding="tns:PISProductWSSoap12">
+      <soap12:address location="http://pis.advantech.com/WS/PISProductWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PISProductWSHttpGet" binding="tns:PISProductWSHttpGet">
+      <http:address location="http://pis.advantech.com/WS/PISProductWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PISProductWSHttpPost" binding="tns:PISProductWSHttpPost">
+      <http:address location="http://pis.advantech.com/WS/PISProductWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

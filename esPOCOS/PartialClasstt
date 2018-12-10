@@ -1,0 +1,47 @@
+﻿<#@ template debug="true" hostSpecific="true" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core.dll" #>
+<#@ Assembly Name="System.Xml.dll" #>
+<#@ Assembly Name="System.Xml.Linq.dll" #>
+<#@ Assembly Name="System.Windows.Forms.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Xml.Linq" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #> 
+<#@ import namespace="System.Reflection" #> 
+
+<#   
+Assembly asm = Assembly.LoadFrom("D:/advwork3/eStore3C_6152/eStore3C_6152/esPOCOS/bin/Debug/esPOCOS.dll"); 
+     string templateDirectory = "D:/advwork3/eStore3C_6152/eStore3C_6152/esPOCOS/PocoDAL/";
+   
+   
+
+#>
+	  
+<#
+ foreach (Type t in asm.GetTypes() ) 
+{ 
+if (t.Name.EndsWith("Helper") ==false ) {
+ System.Text.StringBuilder sb = new System.Text.StringBuilder();
+   string outputFilePath = Path.Combine(templateDirectory, t.Name +"DAL.cs");
+   
+sb.Append("using System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Text;\nusing eStore.POCOS.DAL;\n");
+sb.Append( "\n namespace eStore.POCOS{ \n\n");
+sb.Append( "public partial class " + t.Name + "{ \n");
+
+sb.Append("  public int save() \n        { \n \t\t    return " + t.Name +"Helper.save(this);\n        }\n");
+sb.Append("  public int delete() \n        { \n \t\t    return " + t.Name +"Helper.delete(this);\n        }\n");
+	
+sb.Append("\t} \n }");
+	
+	
+  File.WriteAllText( outputFilePath, sb.ToString()); 
+}
+}
+  
+
+ #>
+ 

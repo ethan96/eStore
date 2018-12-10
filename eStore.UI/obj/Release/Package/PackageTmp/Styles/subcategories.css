@@ -1,0 +1,89 @@
+@charset "utf-8";
+/*---------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------*/
+#iPlanet-main li { list-style-type:none;}
+#iPlanet-desc {margin-bottom:30px;}
+#iPlanet-desc h2 {font-size:18px;}
+#iPlanet-desc p {line-height:18px;}
+
+#iPlanet-main {padding-bottom:24px;}
+#iPlanet-main:after {
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+	}
+* html #iPlanet-main             { zoom: 1; } /* IE6 */
+*:first-child+html #iPlanet-main { zoom: 1; } /* IE7 */
+#iPlanet-content {float:left;width:780px;}
+#iPlanet-sider {float:right;width:182px;}
+
+/*---------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------*/
+.iPlanet-tabox {background:url('subcategories/content_repeat.gif') repeat-y center;}
+.iPlanet-tabox2 {background:url('subcategories/content_top.gif') center top no-repeat}
+.iPlanet-tabox3 {background:url('subcategories/content_bottom.gif') center bottom no-repeat;}
+
+.iPlanet-tabNav {margin-bottom:-9px;}
+.iPlanet-tabNav:after {
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html .iPlanet-tabNav          { zoom: 1; } /* IE6 */
+*:first-child+html .iPlanet-tabNav { zoom: 1; } /* IE7 */
+.iPlanet-tabNav li {float:left; text-align:center;font-size:16px;padding-bottom:9px; list-style:none;margin-right: 2px;}
+.iPlanet-tabNav li a {color:#fff;display:block;background:#9a9a9a;height:35px;line-height:35px; text-decoration:none; padding:0px 15px;}
+.iPlanet-tabNav li.active {background:url('subcategories/arrow_down2.gif') bottom center no-repeat;}
+.iPlanet-tabNav li.active a{color:#fff;background:#004889;}
+.iPlanet-box {padding:20px;}
+.iPlanet-boxContent {background:#fff;border:1px solid #e6e6e6;padding:25px 17px 0px 17px;}
+.iPlanet-tabContent:after {
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html .iPlanet-tabContent             { zoom: 1; } /* IE6 */
+*:first-child+html .iPlanet-tabContent { zoom: 1; } /* IE7 */
+.iPlanet-tabContent table td{width:166px;}
+.iPlanet-item {margin:0 17px 15px 17px;}
+.iPlanet-item h3 {color:#004986;font-size:16px;font-weight:normal; padding:0 0 8px 0;}
+.iPlanet-item .iPlanet-img {margin-bottom:5px;}
+.iPlanet-item .iPlanet-img img{ width:120px;}
+.iPlanet-item .iPlanet-itemContent {color:#666; font-size:11px;}
+.iPlanet-item .iPlanet-more {background:url('subcategories/more_btn.gif') left top no-repeat;height:24px;line-height:24px;display:block;color:#fff;text-shadow: #000 0px 0px 3px;padding-left:15px; text-decoration:none;margin-bottom:12px;}
+.iPlanet-item .iPlanet-more:hover {color:#a0d9ff;}
+.iPlanet-item .iPlanet-price {color:#990000;font-size:14px;}
+.iPlanet-item .iPlanet-price span {font-size:16px;font-weight:bold;}
+
+/*---------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------*/
+#iPlanet-ask {border:3px solid #b3b3b3;border-width:3px 0px;background:url('subcategories/ask_bg.jpg') right bottom no-repeat;color:#7a7a7a;margin-bottom:30px;}
+#iPlanet-ask h3 {font-size:13px;margin-bottom:14px;}
+#iPlanet-ask ul {margin-bottom:12px;}
+#iPlanet-ask li {line-height:20px;background:url('subcategories/icon_ask.gif') 0 0 no-repeat;padding-left:20px;}
+#iPlanet-ask li a {color:#004889;}
+#iPlanet-ask li a:hover {color:#007df3;}
+#iPlanet-ask li.iPlanet-askList-1 {}
+#iPlanet-ask li.iPlanet-askList-2 {background-position:0px -20px;}
+#iPlanet-ask li.iPlanet-askList-3 {background-position:0px -40px;}
+#iPlanet-ask li.iPlanet-askList-4 {background-position:0px -60px;}
+#iPlanet-ask p {margin-bottom:14px;}
+/*---------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------*/
+#iPlanet-search {border:1px solid #b3b3b3;border-width:1px 0px;background:#f5f5f5;padding:0 0 0px 0;}
+.iPlanet-section {margin-bottom:30px;}
+#iPlanet-search h3 {background:#e9e7e7 url('subcategories/search_title.gif');font-size:16px;padding:7px 10px;margin-bottom:15px;color:#333;}
+#iPlanet-search h4 {font-weight:normal;color:#004889;font-size:16px;background:url(subcategories/arrow_down.gif) 0 10px no-repeat;padding:0 0 0 20px;margin:0 10px 8px;}
+#iPlanet-search ul {padding:0 30px;}
+#iPlanet-search li {line-height:25px;}
+#iPlanet-search li {}

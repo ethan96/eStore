@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="eStore.POCOS.ShippingCarier">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>MAAABoAAAACAUEACAAAAAQAAAEgYAAACFAAQAAAAAAA=</HashCode>
+      <FileName>ShippingCarier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.ShippingCarierType">
+    <Position X="0.5" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAACgAEACAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ShippingCarierType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.PackagingBox">
+    <Position X="2.75" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="eStore.POCOS.PackagingBox.shippingCostBase" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\PackagingBox.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>oBCAAMAARAAAAACSBCAAhEjAgLQQAAkgAAEEAUAADAQ=</HashCode>
+      <FileName>PackagingBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.PackingBoxDetail">
+    <Position X="5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QACAAIgAYAAAgAgSEkKABAAAgBAAjAAAAAAAAAAACAA=</HashCode>
+      <FileName>PackingBoxDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.PackingList">
+    <Position X="7" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAsgAAECAAAASAEABJQAAgBwAAAAgAgAAIAABDCA=</HashCode>
+      <FileName>PackingList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.DHLRate">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAIAAAQCAAACCAAAAEABAABBAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DHLRate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.Box">
+    <Position X="9" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAgAAABACAAAAIAACIBAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Box.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.RelatedProduct">
+    <Position X="2.75" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAQAAAAAQSAACAAAAAALAAAAAAAwAhAIAABQI=</HashCode>
+      <FileName>RelatedProduct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

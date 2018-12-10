@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://my.advantech.com/Services/MYSAPDAL.asmx?schema=SalesOrder" filename="SalesOrder.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://my.advantech.com/Services/MYSAPDAL.asmx?schema=SAPDALDS" filename="SAPDALDS.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://my.advantech.com/Services/MYSAPDAL.asmx?disco" filename="MYSAPDAL.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://my.advantech.com/Services/MYSAPDAL.asmx?wsdl" filename="MYSAPDAL.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

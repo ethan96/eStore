@@ -1,0 +1,109 @@
+﻿<#@ template debug="true" hostSpecific="true" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core.dll" #>
+<#@ Assembly Name="System.Xml.dll" #>
+<#@ Assembly Name="System.Xml.Linq.dll" #>
+<#@ Assembly Name="System.Windows.Forms.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Xml.Linq" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #> 
+<#@ import namespace="System.Reflection" #> 
+ 
+<#
+
+	Assembly asm = Assembly.LoadFrom("D:/advwork3/eStore3C_6152/eStore3C_6152/esPOCOS/bin/Debug/esPOCOS.dll"); 
+     string templateDirectory = "D:/advwork3/eStore3C_6152/eStore3C_6152/esPOCOS/Helper/";
+   
+
+
+	 
+
+ foreach (Type t in asm.GetTypes() ) 
+{ 
+ if (t.Name.EndsWith("Helper") ==false ) {
+ System.Text.StringBuilder sb = new System.Text.StringBuilder();
+   string outputFilePath = Path.Combine(templateDirectory, t.Name +"Helper.cs");
+   
+	sb.Append("using System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Text;\nusing eStore.POCOS.DAL;\nusing eStore.Utilities;");
+	sb.Append( "\n namespace eStore.POCOS.DAL{ \n\n");
+	sb.Append( "public partial class " + t.Name + "Helper : Helper { \n");
+	
+	sb.Append("\n#region Business Read");
+	sb.Append("\n#endregion \n");
+	
+	sb.Append("\n #region Creat Update Delete ");
+      
+   sb.Append("\n     public static int save(" + t.Name + " _" + t.Name.ToLower() + ") \n" ) ;
+   sb.Append("\n     {");
+    sb.Append("\n          eStoreLoger eloger = eStoreLoger.getInstance(myclassname());");
+
+   sb.Append("\n          //if parameter is null or validation is false, then return  -1");
+    sb.Append(" \n      if (_" +  t.Name.ToLower() + " == null || _" + t.Name.ToLower()+ ".validate() == false) return 1;");
+
+   sb.Append("\n          //Try to retrieve object from DB");
+   sb.Append("\n          "+ t.Name + "  _exist_" +  t.Name.ToLower() +"=null;");
+   sb.Append("\n          try");
+   sb.Append("\n          {");
+   sb.Append("\n          if ( _exist_" +  t.Name.ToLower() +" == null)  //object not exist ");
+    sb.Append("\n              {");
+    sb.Append("\n                  //Insert");
+    sb.Append("\n               //  context." + t.Name+ "s.AddObject("+" _" + t.Name.ToLower()+");");
+    sb.Append("\n                 context.SaveChanges();");
+    sb.Append("\n                 return 0;");
+    sb.Append("\n             }");
+    sb.Append("\n             else  \n  ");
+    sb.Append("\n             {");
+     sb.Append("\n                 //Update");    
+	 sb.Append("\n               // context." + t.Name+ "s.ApplyCurrentValues("+" _" + t.Name.ToLower()+");");
+     sb.Append("\n                context.SaveChanges();");
+     sb.Append("\n               return 0;");
+     sb.Append("\n           }");
+     sb.Append("\n      }");
+      sb.Append("\n       catch (Exception ex)");
+      sb.Append("\n      {");
+      sb.Append("\n         eloger.Fatal(ex.Message, \"\", \"\", \"\", ex);");
+      sb.Append("\n         return -5000;");
+      sb.Append("\n     }");
+	  sb.Append("\n   }\n\n");
+	
+	
+	
+	sb.Append("     public static int delete(" + t.Name + " _" + t.Name.ToLower() + ") \n" ) ;
+    sb.Append("{ \n " );
+ 
+    sb.Append("\n\t     eStoreLoger eloger = eStoreLoger.getInstance(myclassname());");
+    sb.Append(" \n      if (_" +  t.Name.ToLower() + " == null || _" + t.Name.ToLower()+ ".validate() == false) return 1;");
+    sb.Append("\n  try    { ");
+    sb.Append(" \n           context.DeleteObject(_"+ t.Name.ToLower()+");");
+    sb.Append(" \n           context.SaveChanges();");
+    sb.Append(" \n           return 0;");
+    sb.Append("\n        }");
+    sb.Append("\n        catch (Exception ex)");
+    sb.Append("\n        {");
+    sb.Append("\n           eloger.Fatal(ex.Message, \"\", \"\", \"\", ex); ");
+    sb.Append("\n           return -5000;");
+    sb.Append("\n        }");
+    sb.Append("\n    }");
+    sb.Append(" \n#endregion \n");
+	
+	sb.Append(" \n#region Others\n");
+	sb.Append( "\n	private static string myclassname()");
+  	sb.Append( "\n        {");
+ 	sb.Append( "\n           return typeof(" + t.Name + "Helper).ToString();");
+ 	sb.Append( "\n       }");
+	 sb.Append(" \n#endregion \n");
+	
+	
+	sb.Append("\t} \n }");
+		
+	 File.WriteAllText( outputFilePath, sb.ToString()); 
+}
+}
+  
+
+ #>
+ 

@@ -1,0 +1,23 @@
+﻿<div class="tutorial-indexTab tutorial-pop">
+    <span class="arrowLeft"></span><span class="close"></span>
+    <div class="title">
+        Select product category shortly.<br />
+        All sub-categories are obvious at a glance.<span>Click category to see sub-categories</div>
+    <div class="tutorial-animate" id="tutorial-animateIndexTab">
+        <ul>
+            <li>
+                <div class="img">
+                    <img src="/tutorial/en-US/HomePage/tutorial-indexTab-1.jpg" /></div>
+            </li>
+            <li>
+                <div class="img">
+                    <img src="/tutorial/en-US/HomePage/tutorial-indexTab-2.jpg" /></div>
+            </li>
+        </ul>
+        <div class="clearfix">
+        </div>
+        <div class="carousel-controlCenter">
+            <span class="pager"></span>
+        </div>
+    </div>
+</div>

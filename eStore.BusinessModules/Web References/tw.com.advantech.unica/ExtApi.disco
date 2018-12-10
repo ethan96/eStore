@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://unica.advantech.com.tw/Services/ExtApi.asmx?wsdl" docRef="http://unica.advantech.com.tw/Services/ExtApi.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://unica.advantech.com.tw/Services/ExtApi.asmx" xmlns:q1="Prospect db" binding="q1:ExtApiSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://unica.advantech.com.tw/Services/ExtApi.asmx" xmlns:q2="Prospect db" binding="q2:ExtApiSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetOrdTrk">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VKORG" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DATEB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DATEE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KUNNR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MATNR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BSTNK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VBELN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrdTrkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetOrdTrkResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strADONETXMLout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrdTrkSpeed">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VKORG" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DATEB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DATEE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KUNNR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MATNR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BSTNK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VBELN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrdTrkSpeedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetOrdTrkSpeedResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strADONETXMLout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrdTrkSpeed2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VKORG" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DATEB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DATEE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KUNNR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MATNR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BSTNK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VBELN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrdTrkSpeed2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetOrdTrkSpeed2Result" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strADONETXMLout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrdTrkSpeedByMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VKORG" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DATEB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DATEE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MATNR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BSTNK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VBELN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrdTrkSpeedByMailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetOrdTrkSpeedByMailResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strADONETXMLout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSerNoSAPInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SERNOCommaSeperated" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSerNoSAPInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSerNoSAPInfoResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strADONETXMLout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSerNoByPO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PONbr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSerNoByPOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSerNoByPOResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strADONETXMLout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSerNoByInvoice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceNbr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSerNoByInvoiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSerNoByInvoiceResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strADONETXMLout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSerNoBySO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SONbr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSerNoBySOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSerNoBySOResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strADONETXMLout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEXRate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FCurr_cod" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Gdatu_inv" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Kurst" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TCurr_cod" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEXRateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetEXRateResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strADONETXMLout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerSalesText">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pERP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerSalesTextResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCustomerSalesTextResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strADONETXMLout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetARDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VKORG" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Channel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Div" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DATEDueB" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DATEDueE" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DATEShipB" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DATEShipE" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetARDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetARDetailResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strADONETXMLout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVenderInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LIFNR" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVenderInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetVenderInfoResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strADONETXMLout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetOrdTrkSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrdTrk" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdTrkSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrdTrkResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdTrkSpeedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrdTrkSpeed" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdTrkSpeedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrdTrkSpeedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdTrkSpeed2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrdTrkSpeed2" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdTrkSpeed2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrdTrkSpeed2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdTrkSpeedByMailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrdTrkSpeedByMail" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdTrkSpeedByMailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrdTrkSpeedByMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSerNoSAPInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSerNoSAPInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetSerNoSAPInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSerNoSAPInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSerNoByPOSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSerNoByPO" />
+  </wsdl:message>
+  <wsdl:message name="GetSerNoByPOSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSerNoByPOResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSerNoByInvoiceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSerNoByInvoice" />
+  </wsdl:message>
+  <wsdl:message name="GetSerNoByInvoiceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSerNoByInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSerNoBySOSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSerNoBySO" />
+  </wsdl:message>
+  <wsdl:message name="GetSerNoBySOSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSerNoBySOResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEXRateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEXRate" />
+  </wsdl:message>
+  <wsdl:message name="GetEXRateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEXRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerSalesTextSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerSalesText" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerSalesTextSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerSalesTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetARDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetARDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetARDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetARDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVenderInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVenderInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetVenderInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVenderInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="USAdvOrdTrkSoap">
+    <wsdl:operation name="GetOrdTrk">
+      <wsdl:input message="tns:GetOrdTrkSoapIn" />
+      <wsdl:output message="tns:GetOrdTrkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdTrkSpeed">
+      <wsdl:input message="tns:GetOrdTrkSpeedSoapIn" />
+      <wsdl:output message="tns:GetOrdTrkSpeedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdTrkSpeed2">
+      <wsdl:input message="tns:GetOrdTrkSpeed2SoapIn" />
+      <wsdl:output message="tns:GetOrdTrkSpeed2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdTrkSpeedByMail">
+      <wsdl:input message="tns:GetOrdTrkSpeedByMailSoapIn" />
+      <wsdl:output message="tns:GetOrdTrkSpeedByMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSerNoSAPInfo">
+      <wsdl:input message="tns:GetSerNoSAPInfoSoapIn" />
+      <wsdl:output message="tns:GetSerNoSAPInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSerNoByPO">
+      <wsdl:input message="tns:GetSerNoByPOSoapIn" />
+      <wsdl:output message="tns:GetSerNoByPOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSerNoByInvoice">
+      <wsdl:input message="tns:GetSerNoByInvoiceSoapIn" />
+      <wsdl:output message="tns:GetSerNoByInvoiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSerNoBySO">
+      <wsdl:input message="tns:GetSerNoBySOSoapIn" />
+      <wsdl:output message="tns:GetSerNoBySOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEXRate">
+      <wsdl:input message="tns:GetEXRateSoapIn" />
+      <wsdl:output message="tns:GetEXRateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerSalesText">
+      <wsdl:input message="tns:GetCustomerSalesTextSoapIn" />
+      <wsdl:output message="tns:GetCustomerSalesTextSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetARDetail">
+      <wsdl:input message="tns:GetARDetailSoapIn" />
+      <wsdl:output message="tns:GetARDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVenderInfo">
+      <wsdl:input message="tns:GetVenderInfoSoapIn" />
+      <wsdl:output message="tns:GetVenderInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="USAdvOrdTrkSoap" type="tns:USAdvOrdTrkSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetOrdTrk">
+      <soap:operation soapAction="http://tempuri.org/GetOrdTrk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdTrkSpeed">
+      <soap:operation soapAction="http://tempuri.org/GetOrdTrkSpeed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdTrkSpeed2">
+      <soap:operation soapAction="http://tempuri.org/GetOrdTrkSpeed2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdTrkSpeedByMail">
+      <soap:operation soapAction="http://tempuri.org/GetOrdTrkSpeedByMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSerNoSAPInfo">
+      <soap:operation soapAction="http://tempuri.org/GetSerNoSAPInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSerNoByPO">
+      <soap:operation soapAction="http://tempuri.org/GetSerNoByPO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSerNoByInvoice">
+      <soap:operation soapAction="http://tempuri.org/GetSerNoByInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSerNoBySO">
+      <soap:operation soapAction="http://tempuri.org/GetSerNoBySO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEXRate">
+      <soap:operation soapAction="http://tempuri.org/GetEXRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerSalesText">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerSalesText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetARDetail">
+      <soap:operation soapAction="http://tempuri.org/GetARDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVenderInfo">
+      <soap:operation soapAction="http://tempuri.org/GetVenderInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="USAdvOrdTrk">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="USAdvOrdTrkSoap" binding="tns:USAdvOrdTrkSoap">
+      <soap:address location="http://172.21.1.93/USAdvOdrTrk/USAdvOrdTrk.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

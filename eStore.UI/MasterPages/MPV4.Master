@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MPV4.master.cs" Inherits="eStore.UI.MasterPages.MPV4" %>
+
+<%@ Register Src="~/Modules/V4/livepersonV4.ascx" TagName="livepersonV4" TagPrefix="eStoreV4" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400"
+        rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="headBase" runat="server">
+        <!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+        <base href="<%= BaseUrl %>" />
+        <%= System.Web.Optimization.Styles.Render("~/App_Themes/V4/eStoreCSS")%>
+        <%= System.Web.Optimization.Scripts.Render("~/Scripts/V4/eStoreScripts")%>
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="eStoreMainForm" runat="server">
+        <input id="HfMobile" name="HfMobile" type="hidden" />
+        <asp:ScriptManager ID="eStoreScriptManager" runat="server">
+            <Services>
+                <asp:ServiceReference Path="~/eStoreScripts.asmx" />
+            </Services>
+        </asp:ScriptManager>
+        <div class="eStore_wrapper ctrlGDPR">
+            <eStore.V4:Header ID="Header1" runat="server" />
+            <asp:ContentPlaceHolder ID="eStoreHeaderFullSizeContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="eStore_container eStore_block980">
+                <asp:ContentPlaceHolder ID="eStoreMainContent" runat="server">
+                </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="eStoreRightContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <!--wrapper-->
+        <eStore.V4:Footer ID="Footer1" runat="server" />
+        <eStoreV4:livepersonV4 ID="livepersonV4" runat="server" EnableViewState="false" />
+    </form>
+    <div id="eStore_analyzingBrowser" class="eStore_analyzingBrowser" style="display: none">
+        <div class="eStore_block980">
+            <img src="/images/orderlistTable_close.png" onclick="CloseAnalyzingBrowser();" class="analyzingBrowser_close" alt="Close Out Dated IE Warning" />
+            <p><%=eStore.Presentation.eStoreLocalization.Tanslation(eStore.POCOS.Store.TranslationKey.eStore_Out_Dated_IE_Warning)%></p>
+        </div>
+    </div>
+    <%if (eStore.Presentation.eStoreContext.Current.Store.profile.getBooleanSetting("GDPR", false) == true)
+        { %>
+    <div id="eStore_gdpr" class="eStore_analyzingBrowser" style="display: none">
+        <div class="eStore_block980">
+            <img src="/images/orderlistTable_close.png" onclick="closeGDPR();" class="analyzingBrowser_close" alt="" />
+            <b><%=eStore.Presentation.eStoreLocalization.Tanslation(eStore.POCOS.Store.TranslationKey.eStore_GDPR_PrivacyAndCookie)%></b><br />
+            <p><%=eStore.Presentation.eStoreLocalization.Tanslation(eStore.POCOS.Store.TranslationKey.eStore_GDPR_Message)%></p>
+            <input type="checkbox" id="cb_gdpr" /><%=eStore.Presentation.eStoreLocalization.Tanslation(eStore.POCOS.Store.TranslationKey.eStore_GDPR_AllowCookie)%>
+        </div>
+    </div>
+    <%} %>
+</body>
+</html>

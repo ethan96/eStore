@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="eBizAEU_GetKRMultiPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mandt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Vkorg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Kunnr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strADONETXMLin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eBizAEU_GetKRMultiPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eBizAEU_GetKRMultiPriceResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strADONETXMLOut" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eBizAEU_GetMultiPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mandt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Vkorg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Kunnr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strADONETXMLin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eBizAEU_GetMultiPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eBizAEU_GetMultiPriceResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strADONETXMLOut" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="eBizAEU_GetKRMultiPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:eBizAEU_GetKRMultiPrice" />
+  </wsdl:message>
+  <wsdl:message name="eBizAEU_GetKRMultiPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:eBizAEU_GetKRMultiPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="eBizAEU_GetMultiPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:eBizAEU_GetMultiPrice" />
+  </wsdl:message>
+  <wsdl:message name="eBizAEU_GetMultiPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:eBizAEU_GetMultiPriceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="eBizAEU_WSSoap">
+    <wsdl:operation name="eBizAEU_GetKRMultiPrice">
+      <wsdl:input message="tns:eBizAEU_GetKRMultiPriceSoapIn" />
+      <wsdl:output message="tns:eBizAEU_GetKRMultiPriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eBizAEU_GetMultiPrice">
+      <wsdl:input message="tns:eBizAEU_GetMultiPriceSoapIn" />
+      <wsdl:output message="tns:eBizAEU_GetMultiPriceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="eBizAEU_WSSoap" type="tns:eBizAEU_WSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="eBizAEU_GetKRMultiPrice">
+      <soap:operation soapAction="http://tempuri.org/eBizAEU_GetKRMultiPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eBizAEU_GetMultiPrice">
+      <soap:operation soapAction="http://tempuri.org/eBizAEU_GetMultiPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="eBizAEU_WS">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="eBizAEU_WSSoap" binding="tns:eBizAEU_WSSoap">
+      <soap:address location="http://172.21.1.93/USADVPrice/eBizAEU_WS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

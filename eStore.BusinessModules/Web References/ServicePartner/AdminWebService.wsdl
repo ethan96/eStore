@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://admin.advantech.com.tw/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://admin.advantech.com.tw/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://admin.advantech.com.tw/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="Get_EDM_Source_File_By_CMD_ID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cmsid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_EDM_Source_File_By_CMD_IDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_EDM_Source_File_By_CMD_IDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCmsBy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCMSType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRBU" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="list_Attribute" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="list_ProductCategory" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="list_Tag" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="strContactLocation" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intReturnRow" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCmsByResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCmsByResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCmsBySpecial1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCMSType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRBU" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="listCategoryID" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCmsBySpecial1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCmsBySpecial1Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLDRLDM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Productline" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLDRLDMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLDRLDMResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLDRLDMV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Productline" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BU" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLDRLDMV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLDRLDMV2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLDRLDMV3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Productline" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BU" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="allLDR" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLDRLDMV3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLDRLDMV3Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="allLDR" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLDRsByOrg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Org" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLDRsByOrgResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLDRsByOrgResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsProductlineByCountry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsProductlineByCountryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsProductlineByCountryResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegistrationProfileOfThatEvent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegistrationProfileOfThatEventResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRegistrationProfileOfThatEventResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListOfAllOnlineEvents">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sDt" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eDt" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListOfAllOnlineEventsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListOfAllOnlineEventsResult" type="tns:ArrayOfEduAgendaMaster" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEduAgendaMaster">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="eduAgendaMaster" nillable="true" type="tns:eduAgendaMaster" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="eduAgendaMaster">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:EntityObject">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="aid" type="s1:guid" />
+              <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SubDesc" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="sDateTime" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="eDateTime" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="Req_Start" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="Req_End" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="City" nillable="true" type="s1:guid" />
+              <s:element minOccurs="1" maxOccurs="1" name="Country" nillable="true" type="s1:guid" />
+              <s:element minOccurs="1" maxOccurs="1" name="seq" type="s:short" />
+              <s:element minOccurs="0" maxOccurs="1" name="PromotionCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Fee" nillable="true" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="EduType" nillable="true" type="s1:guid" />
+              <s:element minOccurs="0" maxOccurs="1" name="NoticeUser" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DetailsPage" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Enable" nillable="true" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ModifyBy" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ModifyDate" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="FieldPage" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="hid" nillable="true" type="s1:guid" />
+              <s:element minOccurs="1" maxOccurs="1" name="Reg_Limit" nillable="true" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="webinarUrl" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Agenda" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="EduSubType" nillable="true" type="s1:guid" />
+              <s:element minOccurs="0" maxOccurs="1" name="Featuring" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="TimeZone" nillable="true" type="s1:guid" />
+              <s:element minOccurs="1" maxOccurs="1" name="Lang" nillable="true" type="s1:guid" />
+              <s:element minOccurs="0" maxOccurs="1" name="Fb_og_url" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Fb_og_title" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Fb_og_image" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Fb_og_description" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LendingPage" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="InterestedProduct" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="EntityObject" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:StructuralObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="EntityKey" type="tns:EntityKey" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="StructuralObject" abstract="true" />
+      <s:complexType name="EntityKey">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EntitySetName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntityContainerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntityKeyValues" type="tns:ArrayOfEntityKeyMember" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEntityKeyMember">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EntityKeyMember" nillable="true" type="tns:EntityKeyMember" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EntityKeyMember">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPartnerCountries">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StrWebSite" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPartnerCountriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPartnerCountriesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPartnerState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StrCountry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StrWebSite" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPartnerStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPartnerStateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPartnerList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCountry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strState" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strWebSite" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSolutions_Company_VIEW">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Solutions_Company_VIEW" nillable="true" type="tns:Solutions_Company_VIEW" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Solutions_Company_VIEW">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:EntityObject">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="COMPANY_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RBU" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ACCOUNTROWID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="COMPANY_NAME" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SITE" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ACCOUNTPRINARYOWNER" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="WEB_ADDR" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TEL_NO" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="COMPANY_ADDRESS" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CITY" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="COUNTRY" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="BUSINESS_APPLICATION_AREA" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PRODUCT_INTERESTS" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="COMPANY_LOGO" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="COMPANY_INTRO_PIC" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="COMPANY_INTRO" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="COMPANY_TYPE" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PROD_INTRO" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MARKET_INTRO" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="APPLICATION_INTRO" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="APPLICATION_LINK" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SERVICE_INTRO" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SERVICE_SOLUTION_PIC" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SERVICE_SOLUTION_OVERVIEW" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Parent_Company_Name" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Stock_Symbol" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Office_Location" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="STATE" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Province" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Main_Contact_Email" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Main_Contact" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Contact_List" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Online_status" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Company_status" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Approve_status" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Last_update" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Last_update_user" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Approve_date" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Approve_admin" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Partner_Type" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Preview" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ONLINE_ESTORE_STATUS" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ESTORE_STATUS" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CORPORATE_WEBSITE" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Third_Contact_Email" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Secondary_Email" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProductIntro" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ADDRESS2" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChannelSalesEmail" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Zip_Code" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FAX_NO" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ExpireDate" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Certificate" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Agreement" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ApproveAgreement" nillable="true" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="ApproveBy" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ApproveDate" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Symbol" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetPartnerListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPartnerListResult" type="tns:ArrayOfSolutions_Company_VIEW" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPartnerServiceArea">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strWebSite" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSolutions_Company_ServiceArea">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Solutions_Company_ServiceArea" nillable="true" type="tns:Solutions_Company_ServiceArea" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Solutions_Company_ServiceArea">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:EntityObject">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="solutions_company_id" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="abbreviation" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="states" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShowWebSite" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetPartnerServiceAreaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPartnerServiceAreaResult" type="tns:ArrayOfSolutions_Company_ServiceArea" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOnlineForumLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sDt" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eDt" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOnlineForumLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOnlineForumLogResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BannerCountByLang">
+        <s:complexType />
+      </s:element>
+      <s:element name="BannerCountByLangResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ChangeBannerState">
+        <s:complexType />
+      </s:element>
+      <s:element name="ChangeBannerStateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="PurgeModel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="modelID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PurgeModelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PurgeModelResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PurgeCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="categoryID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PurgeCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PurgeCategoryResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTotalUniqueVisitor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTotalUniqueVisitorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTotalUniqueVisitorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTotalBounceRate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTotalBounceRateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTotalBounceRateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_EDM_Source_File_By_CMD_IDSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_EDM_Source_File_By_CMD_ID" />
+  </wsdl:message>
+  <wsdl:message name="Get_EDM_Source_File_By_CMD_IDSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_EDM_Source_File_By_CMD_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCmsBySoapIn">
+    <wsdl:part name="parameters" element="tns:GetCmsBy" />
+  </wsdl:message>
+  <wsdl:message name="GetCmsBySoapOut">
+    <wsdl:part name="parameters" element="tns:GetCmsByResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCmsBySpecial1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCmsBySpecial1" />
+  </wsdl:message>
+  <wsdl:message name="GetCmsBySpecial1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCmsBySpecial1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetLDRLDMSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLDRLDM" />
+  </wsdl:message>
+  <wsdl:message name="GetLDRLDMSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLDRLDMResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLDRLDMV2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetLDRLDMV2" />
+  </wsdl:message>
+  <wsdl:message name="GetLDRLDMV2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetLDRLDMV2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetLDRLDMV3SoapIn">
+    <wsdl:part name="parameters" element="tns:GetLDRLDMV3" />
+  </wsdl:message>
+  <wsdl:message name="GetLDRLDMV3SoapOut">
+    <wsdl:part name="parameters" element="tns:GetLDRLDMV3Response" />
+  </wsdl:message>
+  <wsdl:message name="GetLDRsByOrgSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLDRsByOrg" />
+  </wsdl:message>
+  <wsdl:message name="GetLDRsByOrgSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLDRsByOrgResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsProductlineByCountrySoapIn">
+    <wsdl:part name="parameters" element="tns:IsProductlineByCountry" />
+  </wsdl:message>
+  <wsdl:message name="IsProductlineByCountrySoapOut">
+    <wsdl:part name="parameters" element="tns:IsProductlineByCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegistrationProfileOfThatEventSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRegistrationProfileOfThatEvent" />
+  </wsdl:message>
+  <wsdl:message name="GetRegistrationProfileOfThatEventSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRegistrationProfileOfThatEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListOfAllOnlineEventsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListOfAllOnlineEvents" />
+  </wsdl:message>
+  <wsdl:message name="GetListOfAllOnlineEventsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListOfAllOnlineEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPartnerCountriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPartnerCountries" />
+  </wsdl:message>
+  <wsdl:message name="GetPartnerCountriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPartnerCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPartnerStateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPartnerState" />
+  </wsdl:message>
+  <wsdl:message name="GetPartnerStateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPartnerStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPartnerListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPartnerList" />
+  </wsdl:message>
+  <wsdl:message name="GetPartnerListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPartnerListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPartnerServiceAreaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPartnerServiceArea" />
+  </wsdl:message>
+  <wsdl:message name="GetPartnerServiceAreaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPartnerServiceAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOnlineForumLogSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOnlineForumLog" />
+  </wsdl:message>
+  <wsdl:message name="GetOnlineForumLogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOnlineForumLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="BannerCountByLangSoapIn">
+    <wsdl:part name="parameters" element="tns:BannerCountByLang" />
+  </wsdl:message>
+  <wsdl:message name="BannerCountByLangSoapOut">
+    <wsdl:part name="parameters" element="tns:BannerCountByLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeBannerStateSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeBannerState" />
+  </wsdl:message>
+  <wsdl:message name="ChangeBannerStateSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeBannerStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="PurgeModelSoapIn">
+    <wsdl:part name="parameters" element="tns:PurgeModel" />
+  </wsdl:message>
+  <wsdl:message name="PurgeModelSoapOut">
+    <wsdl:part name="parameters" element="tns:PurgeModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="PurgeCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:PurgeCategory" />
+  </wsdl:message>
+  <wsdl:message name="PurgeCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:PurgeCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalUniqueVisitorSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTotalUniqueVisitor" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalUniqueVisitorSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTotalUniqueVisitorResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalBounceRateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTotalBounceRate" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalBounceRateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTotalBounceRateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AdminWebServiceSoap">
+    <wsdl:operation name="Get_EDM_Source_File_By_CMD_ID">
+      <wsdl:input message="tns:Get_EDM_Source_File_By_CMD_IDSoapIn" />
+      <wsdl:output message="tns:Get_EDM_Source_File_By_CMD_IDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCmsBy">
+      <wsdl:input message="tns:GetCmsBySoapIn" />
+      <wsdl:output message="tns:GetCmsBySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCmsBySpecial1">
+      <wsdl:input message="tns:GetCmsBySpecial1SoapIn" />
+      <wsdl:output message="tns:GetCmsBySpecial1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLDRLDM">
+      <wsdl:input message="tns:GetLDRLDMSoapIn" />
+      <wsdl:output message="tns:GetLDRLDMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLDRLDMV2">
+      <wsdl:input message="tns:GetLDRLDMV2SoapIn" />
+      <wsdl:output message="tns:GetLDRLDMV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLDRLDMV3">
+      <wsdl:input message="tns:GetLDRLDMV3SoapIn" />
+      <wsdl:output message="tns:GetLDRLDMV3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLDRsByOrg">
+      <wsdl:input message="tns:GetLDRsByOrgSoapIn" />
+      <wsdl:output message="tns:GetLDRsByOrgSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsProductlineByCountry">
+      <wsdl:input message="tns:IsProductlineByCountrySoapIn" />
+      <wsdl:output message="tns:IsProductlineByCountrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistrationProfileOfThatEvent">
+      <wsdl:input message="tns:GetRegistrationProfileOfThatEventSoapIn" />
+      <wsdl:output message="tns:GetRegistrationProfileOfThatEventSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListOfAllOnlineEvents">
+      <wsdl:input message="tns:GetListOfAllOnlineEventsSoapIn" />
+      <wsdl:output message="tns:GetListOfAllOnlineEventsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPartnerCountries">
+      <wsdl:input message="tns:GetPartnerCountriesSoapIn" />
+      <wsdl:output message="tns:GetPartnerCountriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPartnerState">
+      <wsdl:input message="tns:GetPartnerStateSoapIn" />
+      <wsdl:output message="tns:GetPartnerStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPartnerList">
+      <wsdl:input message="tns:GetPartnerListSoapIn" />
+      <wsdl:output message="tns:GetPartnerListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPartnerServiceArea">
+      <wsdl:input message="tns:GetPartnerServiceAreaSoapIn" />
+      <wsdl:output message="tns:GetPartnerServiceAreaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineForumLog">
+      <wsdl:input message="tns:GetOnlineForumLogSoapIn" />
+      <wsdl:output message="tns:GetOnlineForumLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BannerCountByLang">
+      <wsdl:input message="tns:BannerCountByLangSoapIn" />
+      <wsdl:output message="tns:BannerCountByLangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeBannerState">
+      <wsdl:input message="tns:ChangeBannerStateSoapIn" />
+      <wsdl:output message="tns:ChangeBannerStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PurgeModel">
+      <wsdl:input message="tns:PurgeModelSoapIn" />
+      <wsdl:output message="tns:PurgeModelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PurgeCategory">
+      <wsdl:input message="tns:PurgeCategorySoapIn" />
+      <wsdl:output message="tns:PurgeCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalUniqueVisitor">
+      <wsdl:input message="tns:GetTotalUniqueVisitorSoapIn" />
+      <wsdl:output message="tns:GetTotalUniqueVisitorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalBounceRate">
+      <wsdl:input message="tns:GetTotalBounceRateSoapIn" />
+      <wsdl:output message="tns:GetTotalBounceRateSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AdminWebServiceSoap" type="tns:AdminWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_EDM_Source_File_By_CMD_ID">
+      <soap:operation soapAction="http://admin.advantech.com.tw/Get_EDM_Source_File_By_CMD_ID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCmsBy">
+      <soap:operation soapAction="http://admin.advantech.com.tw/GetCmsBy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCmsBySpecial1">
+      <soap:operation soapAction="http://admin.advantech.com.tw/GetCmsBySpecial1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLDRLDM">
+      <soap:operation soapAction="http://admin.advantech.com.tw/GetLDRLDM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLDRLDMV2">
+      <soap:operation soapAction="http://admin.advantech.com.tw/GetLDRLDMV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLDRLDMV3">
+      <soap:operation soapAction="http://admin.advantech.com.tw/GetLDRLDMV3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLDRsByOrg">
+      <soap:operation soapAction="http://admin.advantech.com.tw/GetLDRsByOrg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsProductlineByCountry">
+      <soap:operation soapAction="http://admin.advantech.com.tw/IsProductlineByCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistrationProfileOfThatEvent">
+      <soap:operation soapAction="http://admin.advantech.com.tw/GetRegistrationProfileOfThatEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListOfAllOnlineEvents">
+      <soap:operation soapAction="http://admin.advantech.com.tw/GetListOfAllOnlineEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartnerCountries">
+      <soap:operation soapAction="http://admin.advantech.com.tw/GetPartnerCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartnerState">
+      <soap:operation soapAction="http://admin.advantech.com.tw/GetPartnerState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartnerList">
+      <soap:operation soapAction="http://admin.advantech.com.tw/GetPartnerList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartnerServiceArea">
+      <soap:operation soapAction="http://admin.advantech.com.tw/GetPartnerServiceArea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineForumLog">
+      <soap:operation soapAction="http://admin.advantech.com.tw/GetOnlineForumLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BannerCountByLang">
+      <soap:operation soapAction="http://admin.advantech.com.tw/BannerCountByLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeBannerState">
+      <soap:operation soapAction="http://admin.advantech.com.tw/ChangeBannerState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurgeModel">
+      <soap:operation soapAction="http://admin.advantech.com.tw/PurgeModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurgeCategory">
+      <soap:operation soapAction="http://admin.advantech.com.tw/PurgeCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalUniqueVisitor">
+      <soap:operation soapAction="http://admin.advantech.com.tw/GetTotalUniqueVisitor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalBounceRate">
+      <soap:operation soapAction="http://admin.advantech.com.tw/GetTotalBounceRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AdminWebServiceSoap12" type="tns:AdminWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_EDM_Source_File_By_CMD_ID">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/Get_EDM_Source_File_By_CMD_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCmsBy">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/GetCmsBy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCmsBySpecial1">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/GetCmsBySpecial1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLDRLDM">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/GetLDRLDM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLDRLDMV2">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/GetLDRLDMV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLDRLDMV3">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/GetLDRLDMV3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLDRsByOrg">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/GetLDRsByOrg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsProductlineByCountry">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/IsProductlineByCountry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistrationProfileOfThatEvent">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/GetRegistrationProfileOfThatEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListOfAllOnlineEvents">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/GetListOfAllOnlineEvents" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartnerCountries">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/GetPartnerCountries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartnerState">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/GetPartnerState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartnerList">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/GetPartnerList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartnerServiceArea">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/GetPartnerServiceArea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineForumLog">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/GetOnlineForumLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BannerCountByLang">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/BannerCountByLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeBannerState">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/ChangeBannerState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurgeModel">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/PurgeModel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurgeCategory">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/PurgeCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalUniqueVisitor">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/GetTotalUniqueVisitor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalBounceRate">
+      <soap12:operation soapAction="http://admin.advantech.com.tw/GetTotalBounceRate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AdminWebService">
+    <wsdl:port name="AdminWebServiceSoap" binding="tns:AdminWebServiceSoap">
+      <soap:address location="http://admin.advantech.com.tw/ws/AdminWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AdminWebServiceSoap12" binding="tns:AdminWebServiceSoap12">
+      <soap12:address location="http://admin.advantech.com.tw/ws/AdminWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

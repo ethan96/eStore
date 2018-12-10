@@ -1,0 +1,496 @@
+﻿@charset "UTF-8";
+
+/* CSS Document */
+
+#marketplace {
+	width: 100%;
+	background-color: #f9f9f9;
+}
+.eStore_container eStore_block980 {
+	width: 980px;
+}
+.h1 {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-style: italic;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: left;
+	font-size: 48px;
+}
+.h2 {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-style: italic;
+	font-weight: 400;
+	color: #ffffff;
+	font-size: 23px;
+	text-align: left;
+}
+.h2-title {
+	padding-bottom: 10px;
+}
+.h3 {
+	margin: 0;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	padding: 20px 10px 5px 20px;
+	border-top: 1px solid #bfbfbf;
+	color: #565656;
+	width: 90%;
+	border-bottom: none;
+	text-align: left;
+}
+h4{margin-top: 20px;}
+element.style {
+    width: 100%;
+    height: auto;
+}
+
+.waitlist {
+	text-align: center;
+	border-top: 10px solid #5fc1ce;
+}
+.monitoring {
+	text-align: center;
+	border-top: 10px solid #ffca05;
+}
+.emenu {
+	text-align: center;
+	border-top: 10px solid #904097;
+}
+.traffic {
+	text-align: center;
+	border-top: 10px solid #488ec1;
+}
+.signage {
+	text-align: center;
+	border-top: 10px solid #e06544;
+}
+.heat {
+	text-align: center;
+	border-top: 10px solid #49ea8e;
+}
+p {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	color: #666666;
+	line-height: 21px;
+	margin: 0;
+	text-align: left;
+}
+.descr {
+	font-size: 14px;
+	line-height: 18px;
+	padding: 10px;
+	width: 85%;
+	margin: 0 auto;
+	text-align: left;
+}
+.intro {
+	width: 90%;
+	margin: 0 auto;
+	padding: 30px 0px;
+	padding-bottom: 60px;
+}
+.banner {
+	position: relative;
+}
+.top {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.title {
+	position: absolute;
+	top: 20%;
+	text-align: right;
+	width: 100%;
+	padding: 1em;
+	float: right;
+	margin-left: 57%;
+}
+.column {
+	box-shadow: 4px 4px 5px #f4f4f4;
+	float: left;
+	margin-bottom: 50px;
+	width: 30%;
+	overflow: hidden;
+	height: 310px;
+	background-color: #ffffff;
+	margin-right: 3%;
+}
+.column:hover {
+	box-shadow: 0px 0px 20px #b0b0b0;
+}
+.cards {
+	width: 100%;
+}
+.description {
+	text-align: center;
+}
+.links {
+	width: 90%;
+	text-align: left;
+	padding: 20px 0px 40px 20px;
+}
+.left-link {
+	width: 50%;
+	float: left;
+}
+.right-link {
+	width: 50%;
+	float: right;
+}
+.demo {
+	text-decoration: none;
+	color: #4498f0;
+	font-size: 14px;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+.waitlist {
+	padding: 10px;
+	text-align: center;
+}
+img.logo {
+	padding: 10px;
+}
+.product {
+	padding: 20px 0px;
+}
+
+/*product css*/
+
+.productPic {
+	float: left;
+	position: relative;
+	width: 20%;
+}
+.productDescription {
+	position: relative;
+	float: left;
+	width: 75%;
+	margin-left: 5%;
+	padding-bottom: 60px;
+	
+}
+.subscriptionPrice {
+	width: 50%;
+	float: left;
+	position: relative;
+}
+.subscriptionPrice  .regularprice span {
+ font-size:24px;
+}
+.manual {
+	width: 50%;
+	float: left;
+	position: relative;
+	padding-top: 20px;
+}
+.marketplace-info {
+	width: 50%;
+}
+.manual {
+	color: #4599f0;
+	font-size: 14px;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	padding-top: 17px;
+}
+.manual a:hover {
+	color: #2284e8;
+	text-decoration: underline;
+}
+.subscription {
+	color: #f39800;
+	font-size: 24px;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+.h5 {
+	color: #666666;
+	font-size: 12px;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	text-align: left;
+}
+.buttons {
+	clear: both;
+	padding-top: 20px;
+}
+.cart, .ghost {
+	width: 20%;
+	float: left;
+}
+.eStore_btn1 {
+	border: 1px solid #4398ef;
+	color: #4398ef;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	border-radius: 3px;
+	padding: 5px 8px;
+	text-align: center;
+	min-width: 120px;
+}
+.eStore_btn1:hover {
+	background-color: #2284e8;
+	border: 1px solid #2284e8;
+	color: #ffffff;
+}
+.eSote_btn {
+	border: 1px solid #4398ef;
+}
+.eStore_btn {
+	border: 1px solid #2284e8;
+}
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border-bottom: 1px solid #efefef;
+    background-color: #ffffff;
+	clear: both;
+}
+
+/* Style the buttons inside the tab */
+div.tab div.tablinks {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	font-size: 14px;
+	color: #666666;
+}
+div.tab div.tablinks:hover, div.tab div.tablinks:active {
+   	color: #4599f0;
+	border-bottom: 1px solid #4599f0;
+}
+
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 50px;
+    border-top: none;
+}
+.benefits{
+	width: 30%;
+	position: relative; 
+	display: block;
+	float: left;
+	text-align: center;
+	margin-bottom: 40px;
+	margin-left: 3%;
+	margin-top: 20px;
+	}
+.video{
+	margin: 0 auto;
+	width: 90%;
+	margin-top: 50px;
+	padding-top: 50px; clear: both;
+	}
+.videodescription, .videpic{
+		width: 50%;
+		float: left; 
+		position: relative;
+		}
+.videopic{
+	text-align: center;}
+.h4{
+	font-size: 17px; 
+	font-weight: 600;
+	margin-top: 10px;}
+
+
+@media screen and (max-width: 980px) {
+	.cards {
+		width: 98%;
+		margin: 0 auto;
+	}
+	.column {
+		width: 46%;
+		margin-left: 1%;
+		height: 280px;
+	}
+	.h1 {
+		font-size: 30px;
+	}
+	.h2 {
+		display: none;
+	}
+	.title {
+		top: 20%;
+	}
+	.productPic {
+		width: 25%;
+	}
+	.productDescription {
+		width: 70%;
+		margin: 0;
+		padding-bottom: 60px;
+	}
+}
+.productPic {
+	text-align: center;
+}
+.subscriptionPrice{
+        margin-top  :20px;
+	width: 48%;
+}
+.marketplace-info {
+	width: 100%;
+}
+.esotre_btn, .estore_btn1 {
+	width: 45%;
+}
+.videodescription, .videopic{
+		width: 50%;
+		float: left; 
+		position: relative;
+		}
+@media screen and (max-width: 767px) {
+	.cards {
+		width: 96%;
+		margin: 0 auto;
+	}
+	.column {
+		width: 100%;
+		margin-left: 1%;
+		margin-bottom: 40px;
+		height: auto;
+	}
+	.h1 {
+		font-size: 22px;
+	}
+	.title {
+		top: 5%;
+	}
+	.h2 {
+		font-size: 17px;
+	}
+	.h3 {
+		padding-left: 30px;
+	}
+	.links {
+		padding-left: 30px;
+	}
+	.productPic {
+		width: 40%;
+	}
+	.productDescription {
+		width: 60%;
+		margin: 0;
+	}
+	.productPic {
+		text-align: center;
+	}
+	.subscriptionPrice, .cart, .ghost {
+		width: 48%;
+	}
+	.eStore_btn1 {
+		margin: 10px 15px 10px;
+		display: block;
+		line-height: 25px;
+	}
+	.marketplace-info {
+		width: 100%:
+	}
+	.benefits{
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 50px;}
+	
+.videodescription, .videopic{
+		width: 95%;
+		float: left; 
+		position: relative;
+		}
+}
+@media screen and (max-width: 480px) {
+	.cards {
+		width: 96%;
+		margin: 0 auto;
+	}
+	.column {
+		width: 100%;
+		position: relative;
+		margin: 0 auto;
+		margin-bottom: 40px;
+		height: auto;
+	}
+	.h1 {
+		font-size: 19px;
+	}
+	.title {
+		top: 10%;
+	}
+	.h2 {
+		font-size: 14px;
+	}
+	.h3 {
+		padding-left: 30px;
+	}
+	.links {
+		padding-left: 30px;
+	}
+	.productPic, .productDescription {
+		width: 95%;
+	}
+	.productPic {
+		text-align: center;
+	}
+	.subscriptionPrice, .cart, .ghost {
+		width: 100%;
+		text-align: center;
+	}
+	.estore_btn1 {
+		margin: 10px 15px 10px;
+		display: block;
+		line-height: 25px;
+	}
+	p {
+		margin: 0 20px;
+	}
+	.h2-title, .h5 .subscription {
+		margin-left: 20px;
+	}
+	.marketplace-info {
+		width: 100%:
+	}
+	.productDescription {
+		margin-top: 20px;
+	}
+	.productDescription {
+		margin-top: 20px;
+	}
+	.manual{    margin: 0 20px;}
+	.h5{
+		margin-left: 20px;
+	}
+	.benefits{
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 50px;}
+.videodescription, .videopic{
+		width: 95%;
+		float: left; 
+		position: relative;
+		}
+img {
+    width: 100%;
+    height: auto;
+}
+.subscription{
+	padding-left: 20px;}
+.tabcontent{
+	padding: 5px;}
+}

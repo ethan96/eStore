@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="eBizAEU" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="eBizAEU" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="eBizAEU">
+      <s:element name="HelloKitty">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloKittyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloKittyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrdTrkSpeedByMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VKORG" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DATEB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DATEE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MATNR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BSTNK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VBELN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strADONETXMLout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrdTrkSpeedByMailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetOrdTrkSpeedByMailResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strADONETXMLout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Org" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Products">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMultiPriceResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiPrice_Old_20110907">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Org" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Products">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiPrice_Old_20110907Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMultiPrice_Old_20110907Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiPrice_Old">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Org" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Products">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiPrice_OldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMultiPrice_OldResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiPrice2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Org" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Products">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="PricingDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiPrice2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMultiPrice2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloKittySoapIn">
+    <wsdl:part name="parameters" element="tns:HelloKitty" />
+  </wsdl:message>
+  <wsdl:message name="HelloKittySoapOut">
+    <wsdl:part name="parameters" element="tns:HelloKittyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdTrkSpeedByMailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrdTrkSpeedByMail" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdTrkSpeedByMailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrdTrkSpeedByMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMultiPrice" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMultiPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiPrice_Old_20110907SoapIn">
+    <wsdl:part name="parameters" element="tns:GetMultiPrice_Old_20110907" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiPrice_Old_20110907SoapOut">
+    <wsdl:part name="parameters" element="tns:GetMultiPrice_Old_20110907Response" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiPrice_OldSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMultiPrice_Old" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiPrice_OldSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMultiPrice_OldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiPrice2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetMultiPrice2" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiPrice2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetMultiPrice2Response" />
+  </wsdl:message>
+  <wsdl:message name="HelloKittyHttpGetIn" />
+  <wsdl:message name="HelloKittyHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="HelloKittyHttpPostIn" />
+  <wsdl:message name="HelloKittyHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="eBizAEU_WSSoap">
+    <wsdl:operation name="HelloKitty">
+      <wsdl:input message="tns:HelloKittySoapIn" />
+      <wsdl:output message="tns:HelloKittySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdTrkSpeedByMail">
+      <wsdl:input message="tns:GetOrdTrkSpeedByMailSoapIn" />
+      <wsdl:output message="tns:GetOrdTrkSpeedByMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice">
+      <wsdl:input message="tns:GetMultiPriceSoapIn" />
+      <wsdl:output message="tns:GetMultiPriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice_Old_20110907">
+      <wsdl:input message="tns:GetMultiPrice_Old_20110907SoapIn" />
+      <wsdl:output message="tns:GetMultiPrice_Old_20110907SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice_Old">
+      <wsdl:input message="tns:GetMultiPrice_OldSoapIn" />
+      <wsdl:output message="tns:GetMultiPrice_OldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice2">
+      <wsdl:input message="tns:GetMultiPrice2SoapIn" />
+      <wsdl:output message="tns:GetMultiPrice2SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="eBizAEU_WSHttpGet">
+    <wsdl:operation name="HelloKitty">
+      <wsdl:input message="tns:HelloKittyHttpGetIn" />
+      <wsdl:output message="tns:HelloKittyHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="eBizAEU_WSHttpPost">
+    <wsdl:operation name="HelloKitty">
+      <wsdl:input message="tns:HelloKittyHttpPostIn" />
+      <wsdl:output message="tns:HelloKittyHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="eBizAEU_WSSoap" type="tns:eBizAEU_WSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloKitty">
+      <soap:operation soapAction="eBizAEU/HelloKitty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdTrkSpeedByMail">
+      <soap:operation soapAction="eBizAEU/GetOrdTrkSpeedByMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice">
+      <soap:operation soapAction="eBizAEU/GetMultiPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice_Old_20110907">
+      <soap:operation soapAction="eBizAEU/GetMultiPrice_Old_20110907" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice_Old">
+      <soap:operation soapAction="eBizAEU/GetMultiPrice_Old" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice2">
+      <soap:operation soapAction="eBizAEU/GetMultiPrice2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="eBizAEU_WSSoap12" type="tns:eBizAEU_WSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloKitty">
+      <soap12:operation soapAction="eBizAEU/HelloKitty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdTrkSpeedByMail">
+      <soap12:operation soapAction="eBizAEU/GetOrdTrkSpeedByMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice">
+      <soap12:operation soapAction="eBizAEU/GetMultiPrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice_Old_20110907">
+      <soap12:operation soapAction="eBizAEU/GetMultiPrice_Old_20110907" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice_Old">
+      <soap12:operation soapAction="eBizAEU/GetMultiPrice_Old" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPrice2">
+      <soap12:operation soapAction="eBizAEU/GetMultiPrice2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="eBizAEU_WSHttpGet" type="tns:eBizAEU_WSHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="HelloKitty">
+      <http:operation location="/HelloKitty" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="eBizAEU_WSHttpPost" type="tns:eBizAEU_WSHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="HelloKitty">
+      <http:operation location="/HelloKitty" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="eBizAEU_WS">
+    <wsdl:port name="eBizAEU_WSSoap" binding="tns:eBizAEU_WSSoap">
+      <soap:address location="http://my.advantech.com/services/eBizAEU_WS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="eBizAEU_WSSoap12" binding="tns:eBizAEU_WSSoap12">
+      <soap12:address location="http://my.advantech.com/services/eBizAEU_WS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="eBizAEU_WSHttpGet" binding="tns:eBizAEU_WSHttpGet">
+      <http:address location="http://my.advantech.com/services/eBizAEU_WS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="eBizAEU_WSHttpPost" binding="tns:eBizAEU_WSHttpPost">
+      <http:address location="http://my.advantech.com/services/eBizAEU_WS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,6 @@
+D:\eStore4.5_Git\eStore\eStoreEntity\bin\Release\eStoreEntity.dll.config
+D:\eStore4.5_Git\eStore\eStoreEntity\bin\Release\eStoreEntity.dll
+D:\eStore4.5_Git\eStore\eStoreEntity\bin\Release\eStoreEntity.pdb
+D:\eStore4.5_Git\eStore\eStoreEntity\obj\Release\eStore.Entities.csprojResolveAssemblyReference.cache
+D:\eStore4.5_Git\eStore\eStoreEntity\obj\Release\eStoreEntity.dll
+D:\eStore4.5_Git\eStore\eStoreEntity\obj\Release\eStoreEntity.pdb

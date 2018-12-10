@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Advantech Online Quotation Information</title>
+    <link href="../pdf.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div>
+        <!--splitflag-->
+        <table class="title">
+            <tr class="quotationTitle">
+                <td colspan="3">
+                    ADVANTECH&nbsp;&nbsp;&nbsp; QUOTATION
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">&nbsp;
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="corpAddress">
+                </td>
+                <td class="customerAddressTitle">
+                    Quote No :
+                </td>
+                <td class="customerAddressValue">
+                    [/QuoteNO]
+                </td>
+            </tr>
+            <tr>
+                <td class="corpAddress">
+                </td>
+                <td class="customerAddressTitle">
+                    Quote Date :
+                </td>
+                <td class="customerAddressValue">
+                    [/QuoteDate]
+                </td>
+            </tr>
+            <tr>
+                <td class="corpAddress"><span id="CPH1_ctl00_lblAddress">Ekkersrijt 5708 Science Park</span></td>
+                <td class="customerAddressTitle">
+                    Quote Exp. Date:
+                </td>
+                <td class="customerAddressValue">
+                    [/QUOTEEXPDATE]</td>
+            </tr>
+            <tr>
+                <td class="corpAddress">
+                    &nbsp;<span id="CPH1_ctl00_lblAddress">Eindhoven 5692 ER Son, The Netherlands</span><br />
+                    <br /></td>
+                <td class="customerAddressTitle">
+                    Sales Person :
+                </td>
+                <td class="customerAddressValue">
+                    [/SalesPerson]
+                </td>
+            </tr>
+            <tr>
+                <td class="corpAddress">
+                    PHONE <span id="CPH1_ctl00_lblTel">+49-89-12599-0</span> FAX <span id="CPH1_ctl00_lblFax">+49-89-12599-1220</span> </td>
+                <td class="customerAddressTitle">
+                    Expected Ship :
+                </td>
+                <td class="customerAddressValue">
+                    [/ExpectedShip]
+                </td>
+            </tr>
+            <tr>
+                <td class="corpAddress">
+                    WEB:www.advantech.eu </td>
+                <td class="customerAddressTitle">
+                    Version :
+                </td>
+                <td class="customerAddressValue">
+                    [/Version ]
+                </td>
+            </tr>
+        </table>
+        <br />
+        <!--splitflag-->
+        <table>
+            <tr>
+                <td rowspan="6" valign="top" class="customerAddressTitle title">
+                    SOLD TO:
+                </td>
+                <td>
+                    [/SOLDTOCOMPANYNAME]
+                </td>
+                <td rowspan="6" valign="top" class="customerAddressTitle title">
+                    SHIP TO:
+                </td>
+                <td>
+                    [/SHIPTOCOMPANYNAME]
+                </td>
+            </tr>
+            <tr>
+                <td class="customerAddressValue">
+                    ATTN:[/SOLDTOATTENTION]
+                </td>
+                <td class="customerAddressValue">
+                    ATTN:[/SHIPTOATTENTION]
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    [/SOLDTOADDRESS]
+                </td>
+                <td>
+                    [/SHIPTOADDRESS]
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    [/SOLDTOSTATE]</td>
+                <td>
+                    [/SHIPTOSTATE]</td>
+            </tr>
+            <tr>
+                <td>
+                    PHONE:[/SOLDTOPHONE]
+                </td>
+                <td>
+                    PHONE:[/SHIPTOPHONE]
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    FAX:[/SOLDTOFAX]
+                </td>
+                <td>
+                    FAX:[/SHIPTOFAX]
+                </td>
+            </tr>
+        </table>
+        <br />
+        <!--splitflag-->
+        <table>
+            <tr>
+                <th colspan="2" class="custmerid">
+                    CUSTMER ID
+                </th>
+                <th class="shipvia">
+                    SHIP VIA
+                </th>
+                <th class="fob">
+                    FOB
+                </th>
+                <th class="terms">
+                    TERMS
+                </th>
+                <th class="customerpo">
+                    CCUSTOMER PO
+                </th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    [/ERPID]
+                </td>
+                <td>
+                    [/SHIPMATHOD]
+                </td>
+                <td>
+                    FOB AESC</td>
+                <td>
+                    Credit Card
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th class="line">
+                    LINE
+                </th>
+                <th class="temnumber">
+                    TEM NUMBER
+                </th>
+                <th class="description">
+                    DESCRIPTION
+                </th>
+                <th class="quantity">
+                    PRICE
+                </th>
+                <th class="price">
+                    QUANTITY
+                </th>
+                <th class="extendedprice">
+                    EXTENDED PRICE
+                </th>
+            </tr>
+        </table>
+        <!--splitflag-->
+        <table align="center">
+            <tbody>
+                <!--   <tr>
+                    <td class="line">
+                        100
+                    </td>
+                    <td class="temnumber">
+                        ACP-4000-BTO
+                    </td>
+                    <td class="description">
+                        System Consisting of the Following
+                    </td>
+                    <td class="quantity">
+                        2
+                    </td>
+                    <td class="price">
+                        &nbsp;
+                    </td>
+                    <td class="extendedprice">
+                        3,555.00
+                    </td>
+                </tr>
+                <%For i As Integer = 0 To 15%>
+                <tr>
+                    <td class="lineDetailIndex">
+                        101
+                    </td>
+                    <td class="temnumber">
+                        ACP-4000BP-00XE
+                    </td>
+                    <td class="description">
+                        AACP-4000BP Bare Chassis RoHSACP-4000BP Bare Chassis RoHSACP-4000BP Bare Chassis
+                        RoHS
+                    </td>
+                    <td class="quantity">
+                        &nbsp;</td>
+                    <td class="price">
+                    </td>
+                    <td class="extendedprice">
+                    </td>
+                </tr>
+                <%Next%>-->
+                [/QUOTECONTENT]
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="line">
+                    </td>
+                    <td class="temnumber">
+                    </td>
+                    <td class="description">
+                    </td>
+                    <td class="quantity">
+                    </td>
+                    <th class="price">
+                        SUBTOTAL
+                    </th>
+                    <th class="extendedprice">
+                        [/SUBTOTAL] </th>
+                </tr>
+            </tfoot>
+        </table>
+        <br />
+        <table class="title" style="page-break-inside: avoid">
+            <tr>
+                <td colspan="5">&nbsp;
+                    
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">&nbsp;
+                    
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 48%;">
+                    Thank you for considering our products
+                </td>
+                <td class="style3">
+                </td>
+                <td class="custmerid">&nbsp;
+                    
+                </td>
+                <td>
+                    Freight/Recycle fee
+                </td>
+                <td>
+                    [/FREIGHT]
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td class="style3">
+                </td>
+                <td>&nbsp;
+                    
+                </td>
+                <td>
+                    &nbsp;TAX
+                </td>
+                <td>
+                    [/TAX]
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>&nbsp;
+                    
+                </td>
+                <th>
+                    TOTAL
+                </th>
+                <th>
+                    [/TATAL]
+                </th>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td colspan="4">
+                    Accepted and Confirmed by:
+                </td>
+            </tr>
+            <tr>
+                <th>
+                </th>
+                <td align='center' class="style3">
+                    X
+                </td>
+                <th>&nbsp;
+                     
+                </th>
+                <th colspan="2">
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    [/SalesPerson]
+                </td>
+                <td class="style3">&nbsp;
+                    
+                </td>
+                <td class="style2" colspan="3">
+                    &nbsp;Signature
+                </td>
+            </tr>
+        </table>
+        <!--splitflag-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,272 @@
+.register-container {
+    font-family: 'Open Sans', Tahoma, Arial, sans-serif;
+    color: #666666;
+}
+.register-container .left {
+    float: left;
+    width: 25%;
+}
+
+.register-container .right {
+    float: right;
+    width: 60%;
+}
+
+.register-container .spacing {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.register-container select {
+    border: 1px solid #c8d6e0;
+    border-radius: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.register-container input {
+    border-radius: 3px;
+    border: 1px solid #c8d6e0;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    padding: 3px 5px;
+    width: 350px;
+}
+.register-container input:hover,.register-container input:focus, .register-container select:focus {
+    border: 1px solid #009b20;
+}
+
+.register-container input,.register-container select {
+    color: #666;
+}
+
+.register-container label {
+    margin-top: 20px;
+    font-family: 'Open Sans', Tahoma, Arial, non-serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.register-container input.zip {
+    width: 100px;
+}
+
+.register-container .container {
+    margin: 0 auto;
+    display: block;
+    clear: both;
+    margin-top: 20px;
+    clear: both;
+    margin-bottom: 50px;
+    width: 980px;
+}
+
+.register-container .container2 {
+    width: 980px;
+    margin: 0 auto;
+    display: block;
+    clear: both;
+    margin-top: 20px;
+    clear: both;
+}
+
+.register-container .left-column {
+    margin-top: 20px;
+    float: left;
+    width: 45%;
+    padding-bottom: 25px;
+    padding-left: 30px;
+}
+
+.register-container .right-column {
+    margin-top: 20px;
+    float: right;
+    width: 50%;
+    padding-bottom: 25px;
+    position: relative !important;
+}
+
+.right-column .mask {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 80%;
+    padding: 5%;
+    height: 80%;
+    zoom: 1;
+}
+.register-container .marginbottom5 {
+    margin-bottom: 5px;
+}
+
+.register-container .left-column2 {
+    margin-top: 20px;
+    float: left;
+    width: 45%;
+    padding-bottom: 25px;
+    padding-left: 30px;
+}
+
+.register-container .right-column2 {
+    margin-top: 20px;
+    float: right;
+    width: 50%;
+    padding-bottom: 25px;
+}
+
+.register-container h4 {
+    width: 950px;
+    background-color: rgba(35, 89, 131, 0.25);
+    color: #235983;
+    padding-left: 30px;
+    font-family: 'Open Sans', Tahoma, Arial, sans-serif;
+    font-size: 19px;
+    margin-top: 20px;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.register-container #btsubmit {
+    font-family: 'Open Sans', Tahoma, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 17px;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 35px;
+    background-color: #e55523;
+    box-shadow: 0px 2px 1px #a5381b;
+    border-radius: 3px;
+    text-decoration: none;
+    margin-bottom: 60px;
+    width: auto;
+    border: none;
+}
+.register-container #btsubmit.ds {
+    background-color: #bbb;
+    box-shadow: none;
+    background-image:url(/images/Loading.gif);
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+.register-container #btsubmit.ds:hover {
+    background-color: #bbb;
+}
+.register-container #btsubmit.ds:active {
+    box-shadow: 0px 0px 0px 0px;
+}
+.register-container #btsubmit {
+    border-radius: 3px;
+}
+
+.register-container #btsubmit:hover {
+    background-color: #f95300;
+}
+
+.register-container #btsubmit:active {
+    background-color: #d8390e;
+    box-shadow: 0px -2px 1px #972e12;
+    padding-bottom: 12px;
+}
+
+.register-container .thank {
+    font-family: 'Open Sans', Tahoma, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    color: #666666;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.register-container option {
+    font-family: 'Open Sans', Tahoma, Arial, sans-serif;
+    color: #666666;
+}
+
+.register-container .state {
+    width: 60px;
+}
+.register-container input.error,.register-container select.error {
+    border: solid 1px #e22;
+}
+.register-container em.error {
+    padding-left: 5px;
+    color: #e22;
+}
+#tbEmail.error,#tbPassword.error,#tbConfirm_Password.error {
+    margin-bottom: 0px;
+}
+#tbEmail-error,#tbPassword-error,#tbConfirm_Password-error {
+    white-space: nowrap;
+    height: 41px;
+    display: inline-block;
+}
+.register-container label.error {
+    display: block;
+    margin-top: 0px;
+    color: #e22;    
+}
+.register-container label.error span {
+    background-image: url(../../images/icon.png);
+    background-repeat: no-repeat;
+    background-position: -17px 3px;
+    width: 16px;
+    height: 19px;
+    display: inline-block;
+    margin-right: 5px;
+}
+.register-container .ma-signinTitle {
+    padding: 10px;
+}
+.register-container .ma-emailcontext {
+    padding: 15px;
+}
+.register-container .ma-emailcontext label, .eStore_contactUs_input label {
+    width: 150px;
+    text-align: right;
+    display: inline-block;
+    margin-top: 0px;
+}
+.register-container .ma-emailcontext label.error, .eStore_contactUs_input label.error {
+    width: auto;
+}
+.register-container .ma-emailcontext input.error {
+    margin-bottom: 20px;
+}
+/*--update password---*/
+.register-container .container .fw-context {
+	padding: 10px;
+	border: solid 1px #cccccc;
+	background-color: #eeeeee;
+ 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#eeeeee');
+	background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#eeeeee));
+}
+.register-container .formRow
+{
+	padding-left: 80px;
+}
+.register-container .formRow label {
+	width: 150px;
+	display: inline-block;
+	text-align: right;
+}
+.register-container .formRow em {
+    font-size: 12px;
+    color: Red;
+}
+.register-container .formRow label.error {
+	width: 250px;
+    text-align: left;
+    padding-left: 10px;
+}
+.register-container .width250 {
+    width: 250px;
+}
+.register-container input.noneborder {
+    border: 0px;
+}
+.register-container input.widthauto {
+    width: auto;
+}

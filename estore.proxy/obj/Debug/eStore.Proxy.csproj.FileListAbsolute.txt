@@ -1,0 +1,11 @@
+D:\eStore4.5_Git\eStore\estore.proxy\bin\Debug\estore.proxy.dll.config
+D:\eStore4.5_Git\eStore\estore.proxy\bin\Debug\estore.proxy.dll
+D:\eStore4.5_Git\eStore\estore.proxy\bin\Debug\estore.proxy.pdb
+D:\eStore4.5_Git\eStore\estore.proxy\bin\Debug\esUtilities.dll
+D:\eStore4.5_Git\eStore\estore.proxy\bin\Debug\log4net.dll
+D:\eStore4.5_Git\eStore\estore.proxy\bin\Debug\System.Net.IPNetwork.dll
+D:\eStore4.5_Git\eStore\estore.proxy\bin\Debug\esUtilities.pdb
+D:\eStore4.5_Git\eStore\estore.proxy\bin\Debug\log4net.xml
+D:\eStore4.5_Git\eStore\estore.proxy\obj\Debug\eStore.Proxy.csprojResolveAssemblyReference.cache
+D:\eStore4.5_Git\eStore\estore.proxy\obj\Debug\estore.proxy.dll
+D:\eStore4.5_Git\eStore\estore.proxy\obj\Debug\estore.proxy.pdb

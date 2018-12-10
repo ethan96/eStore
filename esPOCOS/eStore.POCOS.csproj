@@ -1,0 +1,1882 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7F65428-E52C-481C-A7D7-B5216170A028}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eStore.POCOS</RootNamespace>
+    <AssemblyName>esPOCOS</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>BasicDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\eStore.OM\bin\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AddressValidate.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAuth.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRole.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Advertisement.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Affiliate.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AffiliateTransaction.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Application.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationSpot.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Box.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BTOSConfig.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BTOSConfigDetail.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BTOSystem.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Bundle.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BundleItem.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Campaign.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CampaignCode.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CampaignMailLog.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CampaignMailLogByEDM.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CampaignStrategy.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CartContact.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CartItem.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoriesGlobalResource.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryMapping.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeLog.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Country.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CountryAddress.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CountryCurrency.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CountryLanguage.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CountryParameter.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CountryState.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CrossSellProduct.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTOSAttribute.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTOSAttributelang.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTOSAttributeValue.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTOSAttributeValuelang.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTOSBOM.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTOSComparision.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTOSComponent.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTOSComponentDetail.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTOSComponentMapping.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTOSSpec.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTOSSpecMask.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Currency.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DHLRate.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DMF.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DMFTerrority.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ECOIndustry.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ECOPartner.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ECOPartnerIndustry.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ECOPartnerServiceCoverage.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ECOPartnerSpecialty.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ECOSpecialty.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMCampaign.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMCampaignScheduler.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMCodeMapping.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="eObject.cs" />
+    <Compile Include="eStore.Context.cs">
+      <DependentUpon>eStore.Context.tt</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="eStore1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="eStoreOrderableProductsByModelCollection.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="eStoreSystemsByOptionModeCollection.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EUUPSPrice.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EUUPSZone.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExportCBOM_Result.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExportToExcel\ExportToExcel.cs" />
+    <Compile Include="ExtendedCategory.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedWaranty.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EZCatalogAttribute.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FTSParserResult.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getDashBoard_Result.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getHierarchyTree_Result.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getOnlineRevenueBySector_Result.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getSpecCategoryTree_Result.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GiftActivity.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GiftLog.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\AbandonedCartHelper.cs" />
+    <Compile Include="Helper\AccessRightHelper.cs" />
+    <Compile Include="Helper\AddressHelper.cs" />
+    <Compile Include="Helper\AddressValidateHelper.cs" />
+    <Compile Include="Helper\AdvertisementHelper.cs" />
+    <Compile Include="Helper\AffiliateHelper.cs" />
+    <Compile Include="Helper\AffiliateTransactionHelper.cs" />
+    <Compile Include="Helper\ApplicationSpotHelper.cs" />
+    <Compile Include="Helper\BTOSConfigHelper.cs" />
+    <Compile Include="Helper\CampaignCodeHelper.cs" />
+    <Compile Include="Helper\CampaignHelper.cs" />
+    <Compile Include="Helper\CampaignMailLogByEDM_Helper.cs" />
+    <Compile Include="Helper\CampaignMailLogHelper.cs" />
+    <Compile Include="Helper\CartHelper.cs" />
+    <Compile Include="Helper\CategoryMappingHelper.cs" />
+    <Compile Include="Helper\ChannelPartnerHelper.cs" />
+    <Compile Include="Helper\CMSHelper.cs" />
+    <Compile Include="Helper\ContactHelper.cs" />
+    <Compile Include="Helper\BoxHelper.cs" />
+    <Compile Include="Helper\AllSequenceHelper.cs" />
+    <Compile Include="Helper\CartContactHelper.cs" />
+    <Compile Include="Helper\AdminAuthHelper.cs" />
+    <Compile Include="Helper\AdminRoleHelper.cs" />
+    <Compile Include="Helper\ChangeLogHelper.cs" />
+    <Compile Include="Helper\BundelItemHelper.cs" />
+    <Compile Include="Helper\CategoriesGlobalResourceHelper.cs" />
+    <Compile Include="Helper\EDMCodeMappingHelper.cs" />
+    <Compile Include="Helper\EquotationHelper.cs" />
+    <Compile Include="Helper\HierarchyTreeHelper.cs" />
+    <Compile Include="Helper\KitThemeHelper.cs" />
+    <Compile Include="Helper\KitThemeMappingDetailHelper.cs" />
+    <Compile Include="Helper\KitThemeMappingHelper.cs" />
+    <Compile Include="Helper\KitThemeTypeHelper.cs" />
+    <Compile Include="Helper\LocationIpHelper.cs" />
+    <Compile Include="Helper\MarketingResourceHelper.cs" />
+    <Compile Include="Helper\OnlineRevenueBySectorHelper.cs" />
+    <Compile Include="Helper\PartnerInfoHelper.cs" />
+    <Compile Include="Helper\PolicyCategoryGlobalResourceHelper.cs" />
+    <Compile Include="Helper\PolicyCategoryHelper.cs" />
+    <Compile Include="Helper\PolicyGlobalResourceHelper.cs" />
+    <Compile Include="Helper\PolicyHelper.cs" />
+    <Compile Include="Helper\PostFormLogHelper.cs" />
+    <Compile Include="Helper\ProductBatchStatusHelper.cs" />
+    <Compile Include="Helper\ProductBatchStatusMappingHelper.cs" />
+    <Compile Include="Helper\ProductWidgetMappingHelper.cs" />
+    <Compile Include="Helper\PStoreHelper.cs" />
+    <Compile Include="Helper\RelatedProductHelper.cs" />
+    <Compile Include="Helper\RewardActivityHelper.cs" />
+    <Compile Include="Helper\RewardRecordHelper.cs" />
+    <Compile Include="Helper\SAPProductWarrantyHelper.cs" />
+    <Compile Include="Helper\ShortcutHelper.cs" />
+    <Compile Include="Helper\SAPProductHelper.cs" />
+    <Compile Include="Helper\EZCatalogAttributeHelper.cs" />
+    <Compile Include="Helper\LanguagePackHelper.cs" />
+    <Compile Include="Helper\MBCPUMemorySpecHelper.cs" />
+    <Compile Include="Helper\MBPeripherialBlackListHelper.cs" />
+    <Compile Include="Helper\Part_Spec_V3Helper.cs" />
+    <Compile Include="Helper\ProductCategoryMetadataGroupHelper.cs" />
+    <Compile Include="Helper\ProductCategoryMetadataHelper.cs" />
+    <Compile Include="Helper\ProductCategoryMetadataValueHelper.cs" />
+    <Compile Include="Helper\PStoreProductCategoryHelper.cs" />
+    <Compile Include="Helper\PStoreProductHelper.cs" />
+    <Compile Include="Helper\SiebelContactBAAHelper.cs" />
+    <Compile Include="Helper\SiteBuilderHelper.cs" />
+    <Compile Include="Helper\SolutionGlobalResourceHelper.cs" />
+    <Compile Include="Helper\SolutionHelper.cs" />
+    <Compile Include="Helper\SolutionsAssosociateItemHelper.cs" />
+    <Compile Include="Helper\Spec_CategoryHelper.cs" />
+    <Compile Include="Helper\Spec_Category_LangHelper.cs" />
+    <Compile Include="Helper\spGetSpecByCategoryHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helper\StoreDealHelper.cs" />
+    <Compile Include="Helper\StoreEDMInfoHelper.cs" />
+    <Compile Include="Helper\StoreErrorCodeGlobalResourceHelper.cs" />
+    <Compile Include="Helper\LanguageHelper.cs" />
+    <Compile Include="Helper\MenuGlobalResourceHelper.cs" />
+    <Compile Include="Helper\PopularModelConvertHistoryHelper.cs" />
+    <Compile Include="Helper\PopularModelLogHelper.cs" />
+    <Compile Include="Helper\PopularModelHelper.cs" />
+    <Compile Include="Helper\GiftActivityHelper.cs" />
+    <Compile Include="Helper\GiftLogHelper.cs" />
+    <Compile Include="Helper\IDKAttributeHelper.cs" />
+    <Compile Include="Helper\MemberClassChangeLogHelper.cs" />
+    <Compile Include="Helper\PeripheralAddOnHelper.cs" />
+    <Compile Include="Helper\RewardConditionHelper.cs" />
+    <Compile Include="Helper\RewardGiftItemHelper.cs" />
+    <Compile Include="Helper\RewardLogHelper.cs" />
+    <Compile Include="Helper\ECOPartnerIndustryHelper.cs" />
+    <Compile Include="Helper\ECOPartnerSpecialtyHelper.cs" />
+    <Compile Include="Helper\ECOPartnerServiceCoverageHelper.cs" />
+    <Compile Include="Helper\CountryAddressHelper.cs" />
+    <Compile Include="Helper\ECOIndustryHelper.cs" />
+    <Compile Include="Helper\ECOPartnerHelper.cs" />
+    <Compile Include="Helper\ECOSpecialtyHelper.cs" />
+    <Compile Include="Helper\ReplicationCategoryProductsMappingHelper.cs" />
+    <Compile Include="Helper\SAP_EMPLOYEEHelper.cs" />
+    <Compile Include="Helper\ScenarioCategoryHelper.cs" />
+    <Compile Include="Helper\ScenarioProductCategoryMappingHelper.cs" />
+    <Compile Include="Helper\ScenarioSpotMappingHelper.cs" />
+    <Compile Include="Helper\StoreParameterHelper.cs" />
+    <Compile Include="Helper\StoreProductAssociateHelper.cs" />
+    <Compile Include="Helper\StoreProductBundleHelper.cs" />
+    <Compile Include="Helper\StoreProductBundleListHelper.cs" />
+    <Compile Include="Helper\StoreProductHelper.cs" />
+    <Compile Include="Helper\StoreProductYouMayAlsoBuyHelper.cs" />
+    <Compile Include="Helper\TagHelper.cs" />
+    <Compile Include="Helper\TagMappingHelper.cs" />
+    <Compile Include="Helper\TranslationGlobalResourceHelper.cs" />
+    <Compile Include="Helper\USPSPackageHelper.cs" />
+    <Compile Include="Helper\WidgetRequestHelper.cs" />
+    <Compile Include="Helper\XRuleSetHelper.cs" />
+    <Compile Include="Helper\EDMCampaignHelper.cs" />
+    <Compile Include="Helper\EDMCampaignSchedulerHelper.cs" />
+    <Compile Include="Helper\PISCategoryHelper.cs" />
+    <Compile Include="Helper\SAPCompanySalesareaHelper.cs" />
+    <Compile Include="Helper\CrossSellProductHelper.cs" />
+    <Compile Include="Helper\CTOSComponentMappingHelper.cs" />
+    <Compile Include="Helper\EUUPSPrice.cs" />
+    <Compile Include="Helper\EUUPSPriceHelper.cs" />
+    <Compile Include="Helper\EUUPSZoneHelper.cs" />
+    <Compile Include="Helper\ExtendedCategoryHelper.cs" />
+    <Compile Include="Helper\ExtendedWarantyHelper.cs" />
+    <Compile Include="Helper\SpecialProductPriceHelper.cs" />
+    <Compile Include="Helper\StoreAddressHelper.cs" />
+    <Compile Include="Helper\ProductDependencyHelper.cs" />
+    <Compile Include="Helper\DashBoardHelper.cs" />
+    <Compile Include="Helper\LimitedResourceHelper.cs" />
+    <Compile Include="Helper\MemberHelper.cs" />
+    <Compile Include="Helper\PISHelper.cs" />
+    <Compile Include="Helper\ProductLimitedResourceHelper.cs" />
+    <Compile Include="Helper\SpecAttributeValueHelper.cs" />
+    <Compile Include="Helper\SpecAttributeValuelangHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helper\TaskHelper.cs" />
+    <Compile Include="Helper\UserActivityHelper.cs" />
+    <Compile Include="Helper\CTOSAttributeLangHelper.cs" />
+    <Compile Include="Helper\ServiceRequestHelper.cs" />
+    <Compile Include="Helper\CTOSSpecMaskHelper.cs" />
+    <Compile Include="Helper\SAPCompanyHelper.cs" />
+    <Compile Include="Helper\SpecMaskHelper.cs" />
+    <Compile Include="Helper\CTOSComparisionHelper.cs" />
+    <Compile Include="Helper\DateHelper.cs" />
+    <Compile Include="Helper\PeripheralHelper.cs" />
+    <Compile Include="Helper\StoreErrorCodeHelper.cs" />
+    <Compile Include="Helper\TrackingLogHelper.cs" />
+    <Compile Include="Helper\ViewLogHelper.cs" />
+    <Compile Include="Helper\ProductSpecsHelper.cs" />
+    <Compile Include="Helper\RuleSetHelper.cs" />
+    <Compile Include="Helper\WidgetHelper.cs" />
+    <Compile Include="Helper\WWWCMSHelper.cs" />
+    <Compile Include="Helper\ZTSD_106Helper.cs" />
+    <Compile Include="Holiday.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IDKAttribute.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KitTheme.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KitThemeMapping.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KitThemeMappingDetail.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KitThemeType.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Language.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LanguagePack.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LimitedResource.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LocationIp.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MarketingResourceResult.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MBCPUMemorySpec.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MBPeripherialBlackList.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Member.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MemberClassChangeLog.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdvertisement.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MenuGlobalResource.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MiniSite.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OMCTOSSpec.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OMMenu.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OM\OMMenuHelper.cs" />
+    <Compile Include="Helper\UserShortCutHelper.cs" />
+    <Compile Include="Helper\WidgetPageHelper.cs" />
+    <Compile Include="Helper\PromotionAppliedLogHelper.cs" />
+    <Compile Include="Helper\UserRequestHelper.cs" />
+    <Compile Include="Helper\ProductCategoryHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helper\SpecHelper.cs" />
+    <Compile Include="Helper\QuotationHelper.cs" />
+    <Compile Include="Helper\OrderHelper.cs" />
+    <Compile Include="Helper\StateZipHelper.cs" />
+    <Compile Include="Helper\DHLRateHelper.cs" />
+    <Compile Include="Helper\PartsHelper.cs" />
+    <Compile Include="Helper\ProductBoxHelper.cs" />
+    <Compile Include="Helper\ProductBoxRuleHelper.cs" />
+    <Compile Include="Helper\CountryHelper.cs" />
+    <Compile Include="Helper\CountryStateHelper.cs" />
+    <Compile Include="Helper\CTOSBOMHelper.cs" />
+    <Compile Include="Helper\CTOSComponentDetailHelper.cs" />
+    <Compile Include="Helper\CTOSComponentHelper.cs" />
+    <Compile Include="Helper\CurrencyHelper.cs" />
+    <Compile Include="Helper\DMFHelper.cs" />
+    <Compile Include="Helper\DMFTerrorityHelper.cs" />
+    <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Helper\MenuHelper.cs" />
+    <Compile Include="Helper\PackingListHelper.cs" />
+    <Compile Include="Helper\PaymentHelper.cs" />
+    <Compile Include="Helper\ProductCategroyMappingHelper.cs" />
+    <Compile Include="Helper\ProductResourceHelper.cs" />
+    <Compile Include="Helper\ShippingCarierHelper.cs" />
+    <Compile Include="Helper\ShippingCarierTypeHelper.cs" />
+    <Compile Include="Helper\StoreConfigHelper.cs" />
+    <Compile Include="Helper\StoreConfigKeyHelper.cs" />
+    <Compile Include="Helper\StoreFreightRateHelper.cs" />
+    <Compile Include="Helper\StoreHelper.cs" />
+    <Compile Include="Helper\TaxConfigHelper.cs" />
+    <Compile Include="Helper\TranslationHelper.cs" />
+    <Compile Include="Helper\UserHelper.cs" />
+    <Compile Include="Helper\VendorHelper.cs" />
+    <Compile Include="Enumerations\eStoreEnumeration.cs" />
+    <Compile Include="Order.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderByPartnoExcludeRule.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSyncedRecord.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSyncParameter.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PackagingBox.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PackingBoxDetail.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PackingList.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Part.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PartGradePrice.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PartnersInfo.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Part_Spec_V3.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentAccount.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PeripheralAddOn.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PeripheralAddOnBundleItem.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PeripheralCatagory.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PeripheralCompatible.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PeripheralProduct.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PeripheralsubCatagory.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PocoDAL\AccessRightDAL.cs" />
+    <Compile Include="PocoDAL\AffiliateDAL.cs" />
+    <Compile Include="PocoDAL\AffiliateTransactionDAL.cs" />
+    <Compile Include="PocoDAL\ApplicationSpotDAL.cs" />
+    <Compile Include="PocoDAL\BoxDAL.cs" />
+    <Compile Include="PocoDAL\BundleItemDAL.cs" />
+    <Compile Include="PocoDAL\CampaignCodeDAL.cs" />
+    <Compile Include="PocoDAL\CampaignDAL.cs" />
+    <Compile Include="PocoDAL\AdminAuthDAL.cs" />
+    <Compile Include="PocoDAL\AdminRoleDAL.cs" />
+    <Compile Include="PocoDAL\CampaignMailLogByEDMDAL.cs" />
+    <Compile Include="PocoDAL\CampaignMailLogDAL.cs" />
+    <Compile Include="PocoDAL\CategoryMappingDAL.cs" />
+    <Compile Include="PocoDAL\ChangeLogDAL.cs" />
+    <Compile Include="PocoDAL\AddressValidateDAL.cs" />
+    <Compile Include="PocoDAL\CategoriesGlobalResourceDAL.cs" />
+    <Compile Include="PocoDAL\EDMCodeMappingDAL.cs" />
+    <Compile Include="PocoDAL\KitThemeDAL.cs" />
+    <Compile Include="PocoDAL\KitThemeMappingDAL.cs" />
+    <Compile Include="PocoDAL\KitThemeMappingDetailDAL.cs" />
+    <Compile Include="PocoDAL\KitThemeTypeDAL.cs" />
+    <Compile Include="PocoDAL\LocationIpDAL.cs" />
+    <Compile Include="PocoDAL\PartnerInfoDAL.cs" />
+    <Compile Include="PocoDAL\Part_Spec_V3.cs" />
+    <Compile Include="PocoDAL\PeculiarCategoryDAL.cs" />
+    <Compile Include="PocoDAL\PolicyCategoryDAL.cs" />
+    <Compile Include="PocoDAL\PolicyCategoryGlobalResourceDAL.cs" />
+    <Compile Include="PocoDAL\PolicyDAL.cs" />
+    <Compile Include="PocoDAL\PolicyGlobalResourceDAL.cs" />
+    <Compile Include="PocoDAL\PostFormLogDal.cs" />
+    <Compile Include="PocoDAL\ProductBatchStatusDal.cs" />
+    <Compile Include="PocoDAL\ProductBatchStatusMappingDal.cs" />
+    <Compile Include="PocoDAL\ProductWidgetMappingDAL.cs" />
+    <Compile Include="PocoDAL\RelatedProductDAL.cs" />
+    <Compile Include="PocoDAL\ShortcutDAL.cs" />
+    <Compile Include="PocoDAL\SAPProductDAL.cs" />
+    <Compile Include="PocoDAL\LanguagePackDAL.cs" />
+    <Compile Include="PocoDAL\MBCPUMemorySpecDAL.cs" />
+    <Compile Include="PocoDAL\MBPeripherialBlackListDAL.cs" />
+    <Compile Include="PocoDAL\SiebelContactBAADAL.cs" />
+    <Compile Include="PocoDAL\SiteBuilderDAL.cs" />
+    <Compile Include="PocoDAL\SolutionDAL.cs" />
+    <Compile Include="PocoDAL\solutionGlobalResourceDAL.cs" />
+    <Compile Include="PocoDAL\SolutionsAssosociateItemDAL.cs" />
+    <Compile Include="PocoDAL\Spec_Category_LangDAL.cs" />
+    <Compile Include="PocoDAL\StoreEDMInfoDAL.cs" />
+    <Compile Include="PocoDAL\StoreErrorCodeGlobalResourceDAL.cs" />
+    <Compile Include="PocoDAL\MenuGlobalResourceDAL.cs" />
+    <Compile Include="PocoDAL\PopularModelConvertHistoryDAL.cs" />
+    <Compile Include="PocoDAL\PopularModelLogDAL.cs" />
+    <Compile Include="PocoDAL\GiftLogDAL.cs" />
+    <Compile Include="PocoDAL\IDKAttributeADL.cs" />
+    <Compile Include="PocoDAL\MemberClassChangeLogDAL.cs" />
+    <Compile Include="PocoDAL\MemberDAL.cs" />
+    <Compile Include="PocoDAL\PeripheralAddOnDAL.cs" />
+    <Compile Include="PocoDAL\RewardGiftItemDAL.cs" />
+    <Compile Include="PocoDAL\RewardLogDAL.cs" />
+    <Compile Include="PocoDAL\CountryAddressDAL.cs" />
+    <Compile Include="PocoDAL\ECOPartnerIndustryDAL.cs" />
+    <Compile Include="PocoDAL\ECOPartnerSpecialtyDAL.cs" />
+    <Compile Include="PocoDAL\ECOPartnerServiceCoverageDAL.cs" />
+    <Compile Include="PocoDAL\ECOIndustryDAL.cs" />
+    <Compile Include="PocoDAL\ECOPartnerDAL.cs" />
+    <Compile Include="PocoDAL\ECOSpecialtyDAL.cs" />
+    <Compile Include="PocoDAL\ReplicationCategoryProductsMappingDAL.cs" />
+    <Compile Include="PocoDAL\ScenarioCategoryDAL.cs" />
+    <Compile Include="PocoDAL\ScenarioProductCategoryMappingDAL.cs" />
+    <Compile Include="PocoDAL\ScenarioSpotMappingDAL.cs" />
+    <Compile Include="PocoDAL\StoreProductAssociateDAL.cs" />
+    <Compile Include="PocoDAL\StoreProductBundleDAL.cs" />
+    <Compile Include="PocoDAL\StoreProductBundleListDAL.cs" />
+    <Compile Include="PocoDAL\StoreProductDAL.cs" />
+    <Compile Include="PocoDAL\StoreProductYouMayAlsoBuyDAL.cs" />
+    <Compile Include="PocoDAL\TagDAL.cs" />
+    <Compile Include="PocoDAL\TagMappingDAL.cs" />
+    <Compile Include="PocoDAL\TranslationGlobalResourceDAL.cs" />
+    <Compile Include="PocoDAL\USPSPackageDAL.cs" />
+    <Compile Include="PocoDAL\WidgetRequestDal.cs" />
+    <Compile Include="PocoDAL\XRuleSetDAL.cs" />
+    <Compile Include="PocoDAL\EDMCampaign.cs" />
+    <Compile Include="PocoDAL\EDMCampaignSchedulerDAL.cs" />
+    <Compile Include="PocoDAL\SAPCompanySalesareaDAL.cs" />
+    <Compile Include="PocoDAL\CTOSComponentMappingHelperDAL.cs" />
+    <Compile Include="PocoDAL\PeripheralsubCatagoryDAL.cs" />
+    <Compile Include="PocoDAL\CrossSellProductDAL.cs" />
+    <Compile Include="PocoDAL\EUUPSPriceDAL.cs" />
+    <Compile Include="PocoDAL\EUUPSZoneDAL.cs" />
+    <Compile Include="PocoDAL\ExtendedCategoryDAL.cs" />
+    <Compile Include="PocoDAL\OMMenuDAL.cs" />
+    <Compile Include="PocoDAL\SpecialProductPriceDAL.cs" />
+    <Compile Include="PocoDAL\StoreAddressDAL.cs" />
+    <Compile Include="PocoDAL\ProductDependencyDAL.cs" />
+    <Compile Include="PocoDAL\LimitedResourceDAL.cs" />
+    <Compile Include="PocoDAL\ProductLimitedResourceDAL.cs" />
+    <Compile Include="PocoDAL\SpecAttributeValueDAL.cs" />
+    <Compile Include="PocoDAL\SpecAttributeValuelangDAL.cs" />
+    <Compile Include="PocoDAL\TaskDAL.cs" />
+    <Compile Include="PocoDAL\UserActivityLogDAL.cs" />
+    <Compile Include="PocoDAL\CTOSSpecAttributesDAL.cs" />
+    <Compile Include="PocoDAL\PeripheralCategoryDAL.cs" />
+    <Compile Include="PocoDAL\CTOSSpecMaskDAL.cs" />
+    <Compile Include="PocoDAL\SAPCompanyDAL.cs" />
+    <Compile Include="PocoDAL\SpecMaskDAL.cs" />
+    <Compile Include="PocoDAL\CTOSComparisionDAL.cs" />
+    <Compile Include="PocoDAL\SpecAttributeCatDAL.cs" />
+    <Compile Include="PocoDAL\CTOSAttributeDAL.cs" />
+    <Compile Include="PocoDAL\PeripheralCompatibleDAL.cs" />
+    <Compile Include="PocoDAL\PeripheralProductDAL.cs" />
+    <Compile Include="PocoDAL\StoreErrorCodeDAL.cs" />
+    <Compile Include="PocoDAL\TrackingLogDAL.cs" />
+    <Compile Include="PocoDAL\ViewLogDAL.cs" />
+    <Compile Include="PocoDAL\ProductDAL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PocoDAL\ProductSpecsDAL.cs" />
+    <Compile Include="PocoDAL\RuleSetDAL.cs" />
+    <Compile Include="PocoDAL\WidgetDAL.cs" />
+    <Compile Include="PocoDAL\ZTSD_106DAL.cs" />
+    <Compile Include="PocoXOM\CTOMBOM_OM.cs" />
+    <Compile Include="PocoXOM\GetPISFullCategory_ResultX.cs" />
+    <Compile Include="PocoXOM\LanguageResource.cs" />
+    <Compile Include="PocoXOM\WidgetPageOM.cs" />
+    <Compile Include="PocoXOM\OrderSyncParameterOM.cs" />
+    <Compile Include="PocoXOM\ProductCategoryOM.cs" />
+    <Compile Include="PocoXOM\UserOM.cs" />
+    <Compile Include="PocoX\AddressX.cs" />
+    <Compile Include="PocoX\AffiliateX.cs" />
+    <Compile Include="PocoX\AperzaX.cs" />
+    <Compile Include="PocoX\Application.cs" />
+    <Compile Include="PocoX\ApplicationSpotX.cs" />
+    <Compile Include="PocoX\BTOSConfigDetailX.cs" />
+    <Compile Include="PocoX\BundleItemX.cs" />
+    <Compile Include="PocoX\BundleX.cs" />
+    <Compile Include="PocoX\CampaignMailLogByEDMX.cs" />
+    <Compile Include="PocoX\CampaignStrategyXRule.cs" />
+    <Compile Include="PocoX\CampaignX.cs" />
+    <Compile Include="PocoX\CategoriesGlobalResourceX.cs" />
+    <Compile Include="PocoX\Certificates.cs" />
+    <Compile Include="PocoX\ChangeLogX.cs" />
+    <Compile Include="PocoX\CMS.cs" />
+    <Compile Include="PocoX\CampaignMailLogX.cs" />
+    <Compile Include="PocoX\CTOSAttributeValueX.cs" />
+    <Compile Include="PocoX\CTOSComponentDetailX.cs" />
+    <Compile Include="PocoX\EasyUITreeNodeX.cs" />
+    <Compile Include="PocoX\getHierarchyTree_ResultX.cs" />
+    <Compile Include="PocoX\getOnlineRevenueBySector_ResultX.cs" />
+    <Compile Include="PocoX\GiftLogX.cs" />
+    <Compile Include="PocoX\KitThemeX.cs" />
+    <Compile Include="PocoX\LanguageX.cs" />
+    <Compile Include="PocoX\MenuGlobalResourceX.cs" />
+    <Compile Include="PocoX\MISUMIX.cs" />
+    <Compile Include="PocoX\Part_Spec_V3X.cs" />
+    <Compile Include="PocoX\PeripheralCatagoryX.cs" />
+    <Compile Include="PocoX\ProductBatchStatuX.cs" />
+    <Compile Include="PocoX\ProductCategoryItem.cs" />
+    <Compile Include="PocoX\PStore.cs" />
+    <Compile Include="PocoX\PStoreProduct.cs" />
+    <Compile Include="PocoX\PStoreProductCategory.cs" />
+    <Compile Include="PocoX\RewardLogX.cs" />
+    <Compile Include="PocoX\CTOSComponentX.cs" />
+    <Compile Include="PocoX\CTOSSpecMask.cs" />
+    <Compile Include="PocoX\DashBoardHelperX.cs" />
+    <Compile Include="PocoX\DashBoardReport.cs" />
+    <Compile Include="PocoX\ECOPartnerX.cs" />
+    <Compile Include="PocoX\EUUPSZoneX.cs" />
+    <Compile Include="PocoX\Events.cs" />
+    <Compile Include="PocoX\ExtendedCategoryX.cs" />
+    <Compile Include="PocoX\ExtendedWarantyX.cs" />
+    <Compile Include="PocoX\MiniSite.cs" />
+    <Compile Include="PocoX\OrderSyncedRecord.cs" />
+    <Compile Include="PocoX\PeripheralAddOnX.cs" />
+    <Compile Include="PocoX\PeripheralProduct.cs" />
+    <Compile Include="PocoX\ProductBundleItemX.cs" />
+    <Compile Include="PocoX\ProductLimitedResourceX.cs" />
+    <Compile Include="PocoX\Product_BundleX.cs" />
+    <Compile Include="PocoX\PromotionAppliedLogX.cs" />
+    <Compile Include="PocoX\ReplicationCategoryProductsMappingX.cs" />
+    <Compile Include="PocoX\ScenarioCategory.cs" />
+    <Compile Include="PocoX\SimpleProduct.cs" />
+    <Compile Include="PocoX\SiteBuilder.cs" />
+    <Compile Include="PocoX\SiteBuilderParameter.cs" />
+    <Compile Include="PocoX\SolutionsAssosociateItem.cs" />
+    <Compile Include="PocoX\Solutionx.cs" />
+    <Compile Include="PocoX\SpecAttributeValueX.cs" />
+    <Compile Include="PocoX\SpecialProductPriceX.cs" />
+    <Compile Include="PocoX\SpecMaskX.cs" />
+    <Compile Include="PocoX\Spec_CategoryX.cs" />
+    <Compile Include="PocoX\sp_getDashBoard_Detail_Result.cs" />
+    <Compile Include="PocoX\sp_getUserActivityDashBoard_Result.cs" />
+    <Compile Include="PocoX\StoreDeal.cs" />
+    <Compile Include="PocoX\StoreErrorCodeGlobalResourceX.cs" />
+    <Compile Include="PocoX\StoreErrorCodeX.cs" />
+    <Compile Include="PocoX\StoreProductBundle.cs" />
+    <Compile Include="PocoX\StoreProductBundleList.cs" />
+    <Compile Include="PocoX\TaggingEnabled.cs" />
+    <Compile Include="PocoX\TaggingManagement.cs" />
+    <Compile Include="PocoX\TranslationGlobalResourceX.cs" />
+    <Compile Include="PocoX\VServiceRequestX.cs" />
+    <Compile Include="PocoX\CTOSAttributeX.cs" />
+    <Compile Include="PocoX\CTOSBOMComponentDetail.cs" />
+    <Compile Include="PocoX\FollowUpable.cs" />
+    <Compile Include="PocoX\MemberX.cs" />
+    <Compile Include="PocoX\NameValuePair.cs" />
+    <Compile Include="PocoX\TrackingLogX.cs" />
+    <Compile Include="PocoX\VSAPCompanyX.cs" />
+    <Compile Include="PocoX\XRuleMatcher.cs" />
+    <Compile Include="PocoX\XRuleSet.cs" />
+    <Compile Include="Policy.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyCategory.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyCategoryGlobalResource.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyGlobalResource.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PopularModel.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PopularModelConvertHistory.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PopularModelLog.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostFormLog.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PriceAdjustRule.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductBatchStatu.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductBatchStatusMapping.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductBox.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductBoxRule.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductBundleItem.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCategory.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCategoryMetadata.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCategoryMetadataGroup.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCategoryMetadataValue.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCategroyMapping.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDependency.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductLimitedResource.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductResource.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSearchOptimizedResult.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSpec.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductStatu.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Products_inventory.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductWidgetMapping.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product_Bundle.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product_Ctos.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PromotionAppliedLog.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PStore.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PStoreProduct.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PStoreProductCategory.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PTDProduct.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quotation.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RateServiceMessageLang.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RateServiceName.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RelatedProduct.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReplaceProduct.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReplicationCategoryProductsMapping.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RewardActivity.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RewardCondition.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RewardGiftItem.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RewardLog.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RewardRecord.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RuleSet.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RuleSetDetail.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesPerson.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SAPCompany.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SAPCompanySalesarea.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SAPProduct.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SAP_COMPANY_PARTNERS.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SAP_EMPLOYEE.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SAP_Product_Warranty.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ScenarioCategory.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ScenarioProductCategoryMapping.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ScenarioSpotMapping.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceRequestTracking.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShippingCarier.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShippingCarierType.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shortcut.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SiebelContactBAA.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleProduct.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SiteBuilder.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SiteBuilderParameter.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SiteParameter.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Solution.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SolutionGlobalResource.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SolutionsAssosociateItem.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SolutionStoreItem.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SolutionStoreTab.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpecAttribute.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpecAttributeCat.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpecAttributeCatlang.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpecAttributelang.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpecAttributeValue.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpecAttributeValuelang.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpecCount.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialProductPrice.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpecMask.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Spec_Category.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Spec_Category_Lang.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetSpecByCategory_Result.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetSpecCount_Result.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spLink2eStoreRawResult.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spProductSearch_Result.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spSearchCtosWithDefaultPartNo_Result.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spSearchDiffSiteCategory_Result.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Add_Spec_Category_Result.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_ConverProductToPart_Result.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_getConversionDetail_Result.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetHotDeals_Result.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_getRegisterConversion_Result.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetTreeByNode_Result.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_getUserActivityDashBoard_Result.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Update_Spec_Category_Result.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StateZip.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Store.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreAddress.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreCarier.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreConfig.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreConfigKey.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreCurrency.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreDeal.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreEDMInfo.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreErrorCode.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreErrorCodeGlobalResource.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreFreightRate.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreLanguage.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreParameter.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StorePayment.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreProduct.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreProductAssociate.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreProductBundle.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreProductBundleList.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreProductCategory.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreProductYouMayAlsoBuy.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreSolution.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\AdvantechSync.cs" />
+    <Compile Include="Sync\AdvStore.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdvStore.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\BBSync.cs" />
+    <Compile Include="Sync\CART_Line_DETAIL.cs">
+      <DependentUpon>AdvStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\CART_MASTER.cs">
+      <DependentUpon>AdvStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\CTOSComponentSync.cs" />
+    <Compile Include="Sync\EAPRO_ORDER_DETAIL.cs">
+      <DependentUpon>AdvStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\EAPRO_ORDER_MASTER.cs">
+      <DependentUpon>AdvStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\EBIZ_ADDRESS.cs">
+      <DependentUpon>AdvStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\es_cbom.cs">
+      <DependentUpon>AdvStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\es_cbomtree.cs">
+      <DependentUpon>AdvStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\es_Config_Item_new.cs">
+      <DependentUpon>AdvStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\es_sharebomtree.cs">
+      <DependentUpon>AdvStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\GetPISFullCategory_Result.cs">
+      <DependentUpon>PIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\getPublishedModelByDate_Result.cs">
+      <DependentUpon>PIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\IPisSync.cs" />
+    <Compile Include="Sync\MySAPDALPriceAdapter.cs" />
+    <Compile Include="Sync\OrderImport.cs" />
+    <Compile Include="Sync\PAP.cs">
+      <DependentUpon>PIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\PAPS.cs" />
+    <Compile Include="Sync\PAPSSync.cs" />
+    <Compile Include="Sync\PIS.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PIS.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PocoDAL\AddressDAL.cs" />
+    <Compile Include="PocoDAL\BTOSConfigDAL.cs" />
+    <Compile Include="PocoDAL\BTOSConfigDetailDAL.cs" />
+    <Compile Include="PocoDAL\CartDAL.cs" />
+    <Compile Include="PocoDAL\ContactDAL.cs" />
+    <Compile Include="PocoDAL\CartContactDAL.cs" />
+    <Compile Include="PocoDAL\AdvertisementDAL.cs" />
+    <Compile Include="PocoDAL\UserShortCutDAL.cs" />
+    <Compile Include="PocoDAL\ProductCategoryDAL.cs" />
+    <Compile Include="PocoDAL\PromotionAppliedlogDAL.cs" />
+    <Compile Include="PocoDAL\QuotationDAL.cs" />
+    <Compile Include="PocoDAL\OrderDAL.cs" />
+    <Compile Include="PocoDAL\ProductBoxRuleDAL.cs" />
+    <Compile Include="PocoDAL\CountryDAL.cs" />
+    <Compile Include="PocoDAL\CountryStateDAL.cs" />
+    <Compile Include="PocoDAL\CTOSBOMDAL.cs" />
+    <Compile Include="PocoDAL\CTOSComponentDAL.cs" />
+    <Compile Include="PocoDAL\CTOSComponentDetailDAL.cs" />
+    <Compile Include="PocoDAL\CurrencyDAL.cs" />
+    <Compile Include="PocoDAL\DMFDAL.cs" />
+    <Compile Include="PocoDAL\DMFTerrorityDAL.cs" />
+    <Compile Include="PocoDAL\MenuDAL.cs" />
+    <Compile Include="PocoDAL\PackingListDAL.cs" />
+    <Compile Include="PocoDAL\PaymentAccountDAL.cs" />
+    <Compile Include="PocoDAL\PaymentDAL.cs" />
+    <Compile Include="PocoDAL\ProductCategroyMappingDAL.cs" />
+    <Compile Include="PocoDAL\ProductResourceDAL.cs" />
+    <Compile Include="PocoDAL\UserRequestDAL.cs" />
+    <Compile Include="PocoDAL\ShippingCarierDAL.cs" />
+    <Compile Include="PocoDAL\ShippingCarierTypeDAL.cs" />
+    <Compile Include="PocoDAL\StoreConfigDAL.cs" />
+    <Compile Include="PocoDAL\StoreConfigKeyDAL.cs" />
+    <Compile Include="PocoDAL\StoreDAL.cs" />
+    <Compile Include="PocoDAL\StoreFreightRateDAL.cs" />
+    <Compile Include="PocoDAL\StoreSolutionDAL.cs" />
+    <Compile Include="PocoDAL\TaxConfigDAL.cs" />
+    <Compile Include="PocoDAL\TranslationDAL.cs" />
+    <Compile Include="PocoDAL\UserDAL.cs" />
+    <Compile Include="PocoDAL\VendorDAL.cs" />
+    <Compile Include="PocoDAL\WidgetPageDAL.cs" />
+    <Compile Include="PocoX\AccountX.cs" />
+    <Compile Include="PocoX\AdminAccessX.cs" />
+    <Compile Include="PocoX\Admin_ModuleX.cs" />
+    <Compile Include="PocoX\AdvertisementX.cs" />
+    <Compile Include="PocoX\ATP.cs" />
+    <Compile Include="PocoX\BoxX.cs" />
+    <Compile Include="PocoX\BTOSConfigX.cs" />
+    <Compile Include="PocoX\BTOSystemX.cs" />
+    <Compile Include="PocoX\CachePool.cs" />
+    <Compile Include="PocoX\CampaignManager.cs" />
+    <Compile Include="PocoX\CampaignStrategyX.cs" />
+    <Compile Include="PocoX\CartContactX.cs" />
+    <Compile Include="PocoX\CartItemX.cs" />
+    <Compile Include="PocoX\CartX.cs" />
+    <Compile Include="PocoX\ChannelPartner.cs" />
+    <Compile Include="PocoX\ContactX.cs" />
+    <Compile Include="PocoX\AllSequencesX.cs" />
+    <Compile Include="PocoX\CountryStateX.cs" />
+    <Compile Include="PocoX\CountryX.cs" />
+    <Compile Include="PocoX\CTOSBOMX.cs" />
+    <Compile Include="PocoX\CurrencyX.cs" />
+    <Compile Include="PocoX\ErrorMessage.cs" />
+    <Compile Include="PocoX\DMFTerrorityX.cs" />
+    <Compile Include="PocoX\DMFX.cs" />
+    <Compile Include="PocoX\MeasureUnit.cs" />
+    <Compile Include="PocoX\MenuX.cs" />
+    <Compile Include="PocoX\OrderX.cs" />
+    <Compile Include="PocoX\PackagingBoxX.cs" />
+    <Compile Include="PocoX\PackingBoxDetailX.cs" />
+    <Compile Include="PocoX\PackingList.cs" />
+    <Compile Include="PocoX\PackingListX.cs" />
+    <Compile Include="PocoX\PartX.cs" />
+    <Compile Include="PocoX\PaymentX.cs" />
+    <Compile Include="PocoX\Price.cs" />
+    <Compile Include="PocoX\ProductAttributeX.cs" />
+    <Compile Include="PocoX\ProductBoxX.cs" />
+    <Compile Include="PocoX\ProductCategoryX.cs" />
+    <Compile Include="PocoX\ProductCategroyMappingX.cs" />
+    <Compile Include="PocoX\ProductOfferingX.cs" />
+    <Compile Include="PocoX\ProductResourceX.cs" />
+    <Compile Include="PocoX\ProductSpecRulesX.cs" />
+    <Compile Include="PocoX\Products_inventoryX.cs" />
+    <Compile Include="PocoX\ProductX.cs" />
+    <Compile Include="PocoX\Product_CtosX.cs" />
+    <Compile Include="PocoX\PromotionCodeEnabled.cs" />
+    <Compile Include="PocoX\PromotionPolicy.cs" />
+    <Compile Include="PocoX\QuotationX.cs" />
+    <Compile Include="PocoX\UserRequestX.cs" />
+    <Compile Include="PocoX\ResourceTypeX.cs" />
+    <Compile Include="PocoX\RoleX.cs" />
+    <Compile Include="PocoX\Shipment.cs" />
+    <Compile Include="PocoX\ShippingCarierTypeX.cs" />
+    <Compile Include="PocoX\ShippingCarierX.cs" />
+    <Compile Include="PocoX\StoreConfigKeyX.cs" />
+    <Compile Include="PocoX\StoreConfigX.cs" />
+    <Compile Include="PocoX\StoreParameterX.cs" />
+    <Compile Include="PocoX\StoreSolutionX.cs" />
+    <Compile Include="PocoX\StoreX.cs" />
+    <Compile Include="PocoX\TaxConfigX.cs" />
+    <Compile Include="PocoX\TranslationComponentX.cs" />
+    <Compile Include="PocoX\TranslationX.cs" />
+    <Compile Include="PocoX\UserX.cs" />
+    <Compile Include="PocoX\VendorProductX.cs" />
+    <Compile Include="PocoX\VendorX.cs" />
+    <Compile Include="PocoX\VProductMatrixX.cs" />
+    <Compile Include="PocoX\VSAPComopanyX.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\PIS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\PISSetting.cs" />
+    <Compile Include="Sync\PRODUCT.cs">
+      <DependentUpon>PIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\ProductSpec.cs" />
+    <Compile Include="Sync\SAP_PRODUCT.cs">
+      <DependentUpon>PIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\SAP_PRODUCT_STATUS.cs">
+      <DependentUpon>PIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\spGetModelByPN_estore_Result.cs">
+      <DependentUpon>PIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\sp_GetBBAllPartNo_Result.cs">
+      <DependentUpon>PIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\sp_GetCertificateByModelID_Result.cs">
+      <DependentUpon>PIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\sp_GetLiteratureInfo_Result.cs">
+      <DependentUpon>PIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\sp_GetLiteratureTableByLANG_Result.cs">
+      <DependentUpon>PIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\sp_GetLiteratureTable_Result.cs">
+      <DependentUpon>PIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\sp_GetModelInfo_estore_Result.cs">
+      <DependentUpon>PIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\sp_GetProductFeature_Result.cs">
+      <DependentUpon>PIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\sp_GetRelatedProducts_Result.cs">
+      <DependentUpon>PIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PocoX\TranslationEnum.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TranslationEnum.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\PISSync.cs" />
+    <Compile Include="Sync\tbProduct.cs">
+      <DependentUpon>AdvStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\tbProductOffering.cs">
+      <DependentUpon>AdvStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\vCTO.cs">
+      <DependentUpon>AdvStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\VPisInfo.cs" />
+    <Compile Include="Sync\V_Spec_V2.cs">
+      <DependentUpon>PIS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tag.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TagMapping.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Task.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxConfig.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TrackingLog.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Translation.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TranslationGlobalResource.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserActivityLog.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserGrade.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRequest.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserShortCut.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USPSPackage.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vALLCategory.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VBaseType.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VDashboard.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewLog.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vproductcategory.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VProductMatrix.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vRootCategory.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VRule.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSAPCompany.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VServiceRequest.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSpec.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSpecRule.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vStoreExchangeRate.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VStoreProductMapping.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Intel_Product.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\AdvantechPAPS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\AdvantechPartner\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\AdvantechPIS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\AdvantechSAPPriceMy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\AdvantechSAPPrice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Equotation\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EZWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MyDataMining\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MySAPDAL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WWWCMSNew\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WWWCMS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Widget.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WidgetPage.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WidgetRequest.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WidgetRequestDetail.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XRuleSet.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ZTSD_106A.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ZTSD_106C.cs">
+      <DependentUpon>eStore.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Enumerations\bin\Debug\esPOCOS.dll.config" />
+    <None Include="Campaign and strategy ClassDiagram.cd" />
+    <None Include="eStore.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>eStore.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Payment related class diagram.cd" />
+    <None Include="Sync\AdvStore.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdvStore.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Sync\AdvStore.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdvStore.cs</LastGenOutput>
+    </None>
+    <None Include="Sync\PIS.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PIS.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Sync\PIS.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PIS.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Shipping Classes Diagram.cd" />
+    <None Include="Product, CTOS ClassDiagram.cd" />
+    <None Include="CTOS, SCart, Quotation and Order ClassDiagram.cd" />
+    <None Include="Cart and BTOS ClassDiagram.cd" />
+    <None Include="Enumerations\EnumerationGenerator.tt" />
+    <None Include="eStore.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>eStore1.cs</LastGenOutput>
+    </None>
+    <None Include="Helper\HelperClassDiagram.cd" />
+    <None Include="PocoX\TranslationEnum.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TranslationEnum.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\AdvantechPAPS\PAPSProduct.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AdvantechPAPS\PAPSService.wsdl" />
+    <None Include="Web References\AdvantechPAPS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\AdvantechPartner\advantechwebservice.wsdl" />
+    <None Include="Web References\AdvantechPartner\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\AdvantechPIS\PISProductWS.wsdl" />
+    <None Include="Web References\AdvantechPIS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\AdvantechSAPPriceMy\eBizAEU_WS.wsdl" />
+    <None Include="Web References\AdvantechSAPPriceMy\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\AdvantechSAPPrice\eBizAEU_WS.wsdl" />
+    <None Include="Web References\AdvantechSAPPrice\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Equotation\ForeStore.wsdl" />
+    <None Include="Web References\Equotation\Quote1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Equotation\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EZWS\ez_ws.wsdl" />
+    <None Include="Web References\EZWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MyDataMining\MyDataMining.wsdl" />
+    <None Include="Web References\MyDataMining\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MySAPDAL\MySAPDAL.wsdl" />
+    <None Include="Web References\MySAPDAL\PNCostInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MySAPDAL\PNDetail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MySAPDAL\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MySAPDAL\SalesOrder.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MySAPDAL\SalesOrder.xsd" />
+    <None Include="Web References\MySAPDAL\SAPDALDS.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MySAPDAL\SAPDALDS.xsd" />
+    <None Include="Web References\WWWCMSNew\AdminWebService.wsdl" />
+    <None Include="Web References\WWWCMSNew\eduAgendaMaster.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WWWCMSNew\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WWWCMSNew\Solutions_Company_ServiceArea.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WWWCMSNew\Solutions_Company_VIEW.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WWWCMS\AdvantechWebServiceLocal.wsdl" />
+    <None Include="Web References\WWWCMS\ModelCategoryIDList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WWWCMS\ModelDataList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WWWCMS\ModelDetail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WWWCMS\ProductInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WWWCMS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\estore.proxy\eStore.Proxy.csproj">
+      <Project>{990A7A56-F875-431B-BAF2-0DC5F906AC60}</Project>
+      <Name>eStore.Proxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\esUtilities\eStore.Utilities.csproj">
+      <Project>{C427CB0D-E042-4FC3-9395-5B7ED1F21C09}</Project>
+      <Name>eStore.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Enumerations\bin\Debug\esPOCOS.dll" />
+    <Content Include="Enumerations\bin\Debug\esPOCOS.pdb" />
+    <Content Include="Enumerations\bin\Debug\esUtilities.dll" />
+    <Content Include="Enumerations\bin\Debug\esUtilities.pdb" />
+    <None Include="Web References\Equotation\ForeStore.disco" />
+    <None Include="Web References\WWWCMS\AdvantechWebServiceLocal.disco" />
+    <None Include="Web References\WWWCMSNew\AdminWebService.disco" />
+    <None Include="Web References\MySAPDAL\MySAPDAL.disco">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\AdvantechPartner\advantechwebservice.disco" />
+    <None Include="Web References\MyDataMining\MyDataMining.disco" />
+    <None Include="Web References\EZWS\ez_ws.disco" />
+    <None Include="Web References\AdvantechSAPPriceMy\eBizAEU_WS.disco" />
+    <None Include="Web References\AdvantechSAPPrice\eBizAEU_WS.disco" />
+    <None Include="Web References\AdvantechPIS\PISProductWS.disco" />
+    <None Include="Web References\AdvantechPAPS\PAPSService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Enumerations\bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://172.20.1.102/USADVPrice/eBizAEU_WS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AdvantechSAPPrice\</RelPath>
+      <UpdateFromURL>http://172.20.1.102/USADVPrice/eBizAEU_WS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>esPOCOS_AdvantechSAPPrice_USAdvPrice</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.20.1.201/webservice/advantechwebservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AdvantechPartner\</RelPath>
+      <UpdateFromURL>http://172.20.1.201/webservice/advantechwebservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>esPOCOS_AdvantechPartner_AdvantechWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.20.1.215:2009/ez_ws.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EZWS\</RelPath>
+      <UpdateFromURL>http://172.20.1.215:2009/ez_ws.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>esPOCOS_EZWS_EZ_WS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://admin.advantech.com.tw/ws/AdminWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WWWCMSNew\</RelPath>
+      <UpdateFromURL>http://admin.advantech.com.tw/ws/AdminWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>esPOCOS_WWWCMSNew_AdminWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://ags.advantech.com/WebService/PAPSService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AdvantechPAPS\</RelPath>
+      <UpdateFromURL>http://ags.advantech.com/WebService/PAPSService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>esPOCOS_AdvantechPAPS_PAPSService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://eq.advantech.com:8300/Services/ForeStore.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Equotation\</RelPath>
+      <UpdateFromURL>http://eq.advantech.com:8300/Services/ForeStore.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>esPOCOS_EQ_ForeStore</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://my.advantech.com.tw/Services/MyDataMining.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MyDataMining\</RelPath>
+      <UpdateFromURL>http://my.advantech.com.tw/Services/MyDataMining.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>esPOCOS_MyDataMining_MyDataMining</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://my.advantech.com/Services/MYSAPDAL.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MySAPDAL\</RelPath>
+      <UpdateFromURL>http://my.advantech.com/Services/MYSAPDAL.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>esPOCOS_MySAPDAL_MYSAPDAL</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://my.advantech.com/services/eBizAEU_WS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AdvantechSAPPriceMy\</RelPath>
+      <UpdateFromURL>http://my.advantech.com/services/eBizAEU_WS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>esPOCOS_AdvantechSAPPriceMy_eBizAEU_WS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://pis.advantech.com/WS/PISProductWS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AdvantechPIS\</RelPath>
+      <UpdateFromURL>http://pis.advantech.com/WS/PISProductWS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>esPOCOS_AdvantechPIS_PISProductWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www2.advantech.com/webservice/AdvantechWebServiceLocal.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WWWCMS\</RelPath>
+      <UpdateFromURL>http://www2.advantech.com/webservice/AdvantechWebServiceLocal.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>esPOCOS_WWWCMS_AdvantechWebServiceLocal</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

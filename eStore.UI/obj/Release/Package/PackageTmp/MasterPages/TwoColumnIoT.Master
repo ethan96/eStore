@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TwoColumnIoT.master.cs"
+    Inherits="eStore.UI.MasterPages.TwoColumnIoT" %>
+
+<%@ Register Src="../Modules/IoTMart/HeaderIoT.ascx" TagName="HeaderIoT" TagPrefix="uc2" %>
+<%@ Register Src="../Modules/IoTMart/Categories.ascx" TagName="Categories" TagPrefix="uc1" %>
+<%@ Register Src="../Modules/IoTMart/LiveChat.ascx" TagName="LiveChat" TagPrefix="uc3" %>
+<%@ Register Src="../Modules/IoTMart/Footer.ascx" TagName="Footer" TagPrefix="uc4" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <base href="<%= BaseUrl %>" />
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="eStoreMainForm" runat="server">
+    <asp:ScriptManager ID="eStoreScriptManager" runat="server">
+        <Services>
+            <asp:ServiceReference Path="~/eStoreScripts.asmx" />
+        </Services>
+    </asp:ScriptManager>
+    <!-- Head -->
+    <uc2:HeaderIoT ID="HeaderIoT1" runat="server" />
+    <!-- Head End -->
+    <!-- big banner -->
+    <!-- big banner End -->
+    <div class="iot-Wrapper">
+        <div class="iot-container">
+            <div class="iot-nav">
+                <uc1:Categories ID="Categories1" runat="server" />
+                <asp:ContentPlaceHolder ID="eStoreLeftContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <!--right top -->
+            <div class="iot-content">
+                <asp:ContentPlaceHolder ID="eStoreMainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <!-- right top End -->
+        </div>
+        <div class="iot-container">
+            <!-- right center -->
+            <asp:ContentPlaceHolder ID="eStoreRightContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <!-- right center End -->
+        </div>
+        <!-- foot -->
+        <uc4:Footer ID="Footer1" runat="server" />
+        <div class="iot-footerMsg">
+            Copyright © 1983 - 2015 Advantech Co., Ltd. All Rights Reserved</div>
+        <!-- footer end -->
+    </div>
+    <!--start Contact Panel -->
+    <uc3:LiveChat ID="LiveChat1" runat="server" />
+    <!-- end Contact Panel -->
+    </form>
+</body>
+</html>

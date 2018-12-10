@@ -1,0 +1,1470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CheckECO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="model_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckECOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckECOResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckUIDResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FogetPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FogetPasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FogetPasswordResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEmplEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEmplEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEmplEmailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEmployeeInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fullname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="birthday" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mPhone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEmployeeInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getEmployeeInfoResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fullname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="birthday" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mPhone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EurPriceGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Material" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EurPriceGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EurPriceGetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPDATE_WEB_SOC_STATUS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="so" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="version" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPDATE_WEB_SOC_STATUSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="B2B_INS_SOC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sales_org" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="B2B_INS_SOCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="B2B_INS_SOCResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PLM_2_CLP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="workflow" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="part_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="manufacture" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mpn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="replaced_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dead_line" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PLM_2_CLPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PLM_2_CLPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GET_WHERE_USE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eolpart" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="finishgood" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="werks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="return_xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GET_WHERE_USEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GET_WHERE_USEResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="return_xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryDB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSQL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="conn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryDBResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSQL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="conn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDBResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryMySQLDB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSQL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="conn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryMySQLDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryMySQLDBResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMySQLDB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSQL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="conn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMySQLDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateMySQLDBResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckPort">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckPortResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckPortResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckDailyPort">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckDailyPortResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckDailyPortResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckPort_Org">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="org" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckPort_OrgResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckPort_OrgResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckDailyPort_Org">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="org" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckDailyPort_OrgResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckDailyPort_OrgResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="outlook_calender">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="location" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Attention" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="outlook_calenderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="outlook_calenderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="outlook_calender_org">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="location" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Attention" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="org" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="outlook_calender_orgResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="outlook_calender_orgResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatePasswordResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePassword_TEST">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePassword_TESTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatePassword_TESTResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CaculateGP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Material" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sellPrice" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CaculateGPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CaculateGPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEurEquipment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEurEquipmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEurEquipmentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssetLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="location" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssetLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAssetLocationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssetStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssetStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAssetStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssetOwner">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Owner" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssetOwnerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAssetOwnerResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateEX_Ext">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDivname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sourceCompany" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateEX_ExtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateEX_ExtResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContactInfobyCompnay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContactInfobyCompnayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ContactInfobyCompnayResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContactInfobyPerson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContactInfobyPersonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ContactInfobyPersonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPDInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPDInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPDInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CheckECOSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckECO" />
+  </wsdl:message>
+  <wsdl:message name="CheckECOSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckECOResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckUIDSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckUID" />
+  </wsdl:message>
+  <wsdl:message name="CheckUIDSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckUIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckNameSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckName" />
+  </wsdl:message>
+  <wsdl:message name="CheckNameSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="FogetPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:FogetPassword" />
+  </wsdl:message>
+  <wsdl:message name="FogetPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:FogetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEmplEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:getEmplEmail" />
+  </wsdl:message>
+  <wsdl:message name="getEmplEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:getEmplEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEmployeeInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getEmployeeInfo" />
+  </wsdl:message>
+  <wsdl:message name="getEmployeeInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getEmployeeInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EurPriceGetSoapIn">
+    <wsdl:part name="parameters" element="tns:EurPriceGet" />
+  </wsdl:message>
+  <wsdl:message name="EurPriceGetSoapOut">
+    <wsdl:part name="parameters" element="tns:EurPriceGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="UPDATE_WEB_SOC_STATUSSoapIn">
+    <wsdl:part name="parameters" element="tns:UPDATE_WEB_SOC_STATUS" />
+  </wsdl:message>
+  <wsdl:message name="UPDATE_WEB_SOC_STATUSSoapOut">
+    <wsdl:part name="parameters" element="tns:UPDATE_WEB_SOC_STATUSResponse" />
+  </wsdl:message>
+  <wsdl:message name="B2B_INS_SOCSoapIn">
+    <wsdl:part name="parameters" element="tns:B2B_INS_SOC" />
+  </wsdl:message>
+  <wsdl:message name="B2B_INS_SOCSoapOut">
+    <wsdl:part name="parameters" element="tns:B2B_INS_SOCResponse" />
+  </wsdl:message>
+  <wsdl:message name="PLM_2_CLPSoapIn">
+    <wsdl:part name="parameters" element="tns:PLM_2_CLP" />
+  </wsdl:message>
+  <wsdl:message name="PLM_2_CLPSoapOut">
+    <wsdl:part name="parameters" element="tns:PLM_2_CLPResponse" />
+  </wsdl:message>
+  <wsdl:message name="GET_WHERE_USESoapIn">
+    <wsdl:part name="parameters" element="tns:GET_WHERE_USE" />
+  </wsdl:message>
+  <wsdl:message name="GET_WHERE_USESoapOut">
+    <wsdl:part name="parameters" element="tns:GET_WHERE_USEResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryDBSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryDB" />
+  </wsdl:message>
+  <wsdl:message name="QueryDBSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDBSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDB" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDBSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryMySQLDBSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryMySQLDB" />
+  </wsdl:message>
+  <wsdl:message name="QueryMySQLDBSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryMySQLDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMySQLDBSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateMySQLDB" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMySQLDBSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateMySQLDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckPortSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckPort" />
+  </wsdl:message>
+  <wsdl:message name="CheckPortSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckPortResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckDailyPortSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckDailyPort" />
+  </wsdl:message>
+  <wsdl:message name="CheckDailyPortSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckDailyPortResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckPort_OrgSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckPort_Org" />
+  </wsdl:message>
+  <wsdl:message name="CheckPort_OrgSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckPort_OrgResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckDailyPort_OrgSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckDailyPort_Org" />
+  </wsdl:message>
+  <wsdl:message name="CheckDailyPort_OrgSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckDailyPort_OrgResponse" />
+  </wsdl:message>
+  <wsdl:message name="outlook_calenderSoapIn">
+    <wsdl:part name="parameters" element="tns:outlook_calender" />
+  </wsdl:message>
+  <wsdl:message name="outlook_calenderSoapOut">
+    <wsdl:part name="parameters" element="tns:outlook_calenderResponse" />
+  </wsdl:message>
+  <wsdl:message name="outlook_calender_orgSoapIn">
+    <wsdl:part name="parameters" element="tns:outlook_calender_org" />
+  </wsdl:message>
+  <wsdl:message name="outlook_calender_orgSoapOut">
+    <wsdl:part name="parameters" element="tns:outlook_calender_orgResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePassword" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePassword_TESTSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePassword_TEST" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePassword_TESTSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePassword_TESTResponse" />
+  </wsdl:message>
+  <wsdl:message name="CaculateGPSoapIn">
+    <wsdl:part name="parameters" element="tns:CaculateGP" />
+  </wsdl:message>
+  <wsdl:message name="CaculateGPSoapOut">
+    <wsdl:part name="parameters" element="tns:CaculateGPResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEurEquipmentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEurEquipment" />
+  </wsdl:message>
+  <wsdl:message name="GetEurEquipmentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEurEquipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssetLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAssetLocation" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssetLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAssetLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssetStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAssetStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssetStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAssetStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssetOwnerSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAssetOwner" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssetOwnerSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAssetOwnerResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEX_ExtSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateEX_Ext" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEX_ExtSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateEX_ExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="ContactInfobyCompnaySoapIn">
+    <wsdl:part name="parameters" element="tns:ContactInfobyCompnay" />
+  </wsdl:message>
+  <wsdl:message name="ContactInfobyCompnaySoapOut">
+    <wsdl:part name="parameters" element="tns:ContactInfobyCompnayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ContactInfobyPersonSoapIn">
+    <wsdl:part name="parameters" element="tns:ContactInfobyPerson" />
+  </wsdl:message>
+  <wsdl:message name="ContactInfobyPersonSoapOut">
+    <wsdl:part name="parameters" element="tns:ContactInfobyPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPDInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getPDInfo" />
+  </wsdl:message>
+  <wsdl:message name="getPDInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getPDInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EZ_WSSoap">
+    <wsdl:operation name="CheckECO">
+      <wsdl:input message="tns:CheckECOSoapIn" />
+      <wsdl:output message="tns:CheckECOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUID">
+      <wsdl:input message="tns:CheckUIDSoapIn" />
+      <wsdl:output message="tns:CheckUIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckName">
+      <wsdl:input message="tns:CheckNameSoapIn" />
+      <wsdl:output message="tns:CheckNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FogetPassword">
+      <wsdl:input message="tns:FogetPasswordSoapIn" />
+      <wsdl:output message="tns:FogetPasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEmplEmail">
+      <wsdl:input message="tns:getEmplEmailSoapIn" />
+      <wsdl:output message="tns:getEmplEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEmployeeInfo">
+      <wsdl:input message="tns:getEmployeeInfoSoapIn" />
+      <wsdl:output message="tns:getEmployeeInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EurPriceGet">
+      <wsdl:input message="tns:EurPriceGetSoapIn" />
+      <wsdl:output message="tns:EurPriceGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE_WEB_SOC_STATUS">
+      <wsdl:input message="tns:UPDATE_WEB_SOC_STATUSSoapIn" />
+      <wsdl:output message="tns:UPDATE_WEB_SOC_STATUSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="B2B_INS_SOC">
+      <wsdl:input message="tns:B2B_INS_SOCSoapIn" />
+      <wsdl:output message="tns:B2B_INS_SOCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PLM_2_CLP">
+      <wsdl:input message="tns:PLM_2_CLPSoapIn" />
+      <wsdl:output message="tns:PLM_2_CLPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_WHERE_USE">
+      <wsdl:input message="tns:GET_WHERE_USESoapIn" />
+      <wsdl:output message="tns:GET_WHERE_USESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryDB">
+      <wsdl:input message="tns:QueryDBSoapIn" />
+      <wsdl:output message="tns:QueryDBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDB">
+      <wsdl:input message="tns:UpdateDBSoapIn" />
+      <wsdl:output message="tns:UpdateDBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryMySQLDB">
+      <wsdl:input message="tns:QueryMySQLDBSoapIn" />
+      <wsdl:output message="tns:QueryMySQLDBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMySQLDB">
+      <wsdl:input message="tns:UpdateMySQLDBSoapIn" />
+      <wsdl:output message="tns:UpdateMySQLDBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPort">
+      <wsdl:input message="tns:CheckPortSoapIn" />
+      <wsdl:output message="tns:CheckPortSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDailyPort">
+      <wsdl:input message="tns:CheckDailyPortSoapIn" />
+      <wsdl:output message="tns:CheckDailyPortSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPort_Org">
+      <wsdl:input message="tns:CheckPort_OrgSoapIn" />
+      <wsdl:output message="tns:CheckPort_OrgSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDailyPort_Org">
+      <wsdl:input message="tns:CheckDailyPort_OrgSoapIn" />
+      <wsdl:output message="tns:CheckDailyPort_OrgSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="outlook_calender">
+      <wsdl:input message="tns:outlook_calenderSoapIn" />
+      <wsdl:output message="tns:outlook_calenderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="outlook_calender_org">
+      <wsdl:input message="tns:outlook_calender_orgSoapIn" />
+      <wsdl:output message="tns:outlook_calender_orgSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <wsdl:input message="tns:UpdatePasswordSoapIn" />
+      <wsdl:output message="tns:UpdatePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword_TEST">
+      <wsdl:input message="tns:UpdatePassword_TESTSoapIn" />
+      <wsdl:output message="tns:UpdatePassword_TESTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CaculateGP">
+      <wsdl:input message="tns:CaculateGPSoapIn" />
+      <wsdl:output message="tns:CaculateGPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEurEquipment">
+      <wsdl:input message="tns:GetEurEquipmentSoapIn" />
+      <wsdl:output message="tns:GetEurEquipmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetLocation">
+      <wsdl:input message="tns:UpdateAssetLocationSoapIn" />
+      <wsdl:output message="tns:UpdateAssetLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetStatus">
+      <wsdl:input message="tns:UpdateAssetStatusSoapIn" />
+      <wsdl:output message="tns:UpdateAssetStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetOwner">
+      <wsdl:input message="tns:UpdateAssetOwnerSoapIn" />
+      <wsdl:output message="tns:UpdateAssetOwnerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEX_Ext">
+      <wsdl:input message="tns:UpdateEX_ExtSoapIn" />
+      <wsdl:output message="tns:UpdateEX_ExtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ContactInfobyCompnay">
+      <wsdl:input message="tns:ContactInfobyCompnaySoapIn" />
+      <wsdl:output message="tns:ContactInfobyCompnaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ContactInfobyPerson">
+      <wsdl:input message="tns:ContactInfobyPersonSoapIn" />
+      <wsdl:output message="tns:ContactInfobyPersonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPDInfo">
+      <wsdl:input message="tns:getPDInfoSoapIn" />
+      <wsdl:output message="tns:getPDInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EZ_WSSoap" type="tns:EZ_WSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckECO">
+      <soap:operation soapAction="http://tempuri.org/CheckECO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUID">
+      <soap:operation soapAction="http://tempuri.org/CheckUID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckName">
+      <soap:operation soapAction="http://tempuri.org/CheckName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FogetPassword">
+      <soap:operation soapAction="http://tempuri.org/FogetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmplEmail">
+      <soap:operation soapAction="http://tempuri.org/getEmplEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmployeeInfo">
+      <soap:operation soapAction="http://tempuri.org/getEmployeeInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EurPriceGet">
+      <soap:operation soapAction="http://tempuri.org/EurPriceGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE_WEB_SOC_STATUS">
+      <soap:operation soapAction="http://tempuri.org/UPDATE_WEB_SOC_STATUS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="B2B_INS_SOC">
+      <soap:operation soapAction="http://tempuri.org/B2B_INS_SOC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PLM_2_CLP">
+      <soap:operation soapAction="http://tempuri.org/PLM_2_CLP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_WHERE_USE">
+      <soap:operation soapAction="http://tempuri.org/GET_WHERE_USE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryDB">
+      <soap:operation soapAction="http://tempuri.org/QueryDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDB">
+      <soap:operation soapAction="http://tempuri.org/UpdateDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryMySQLDB">
+      <soap:operation soapAction="http://tempuri.org/QueryMySQLDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMySQLDB">
+      <soap:operation soapAction="http://tempuri.org/UpdateMySQLDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPort">
+      <soap:operation soapAction="http://tempuri.org/CheckPort" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDailyPort">
+      <soap:operation soapAction="http://tempuri.org/CheckDailyPort" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPort_Org">
+      <soap:operation soapAction="http://tempuri.org/CheckPort_Org" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDailyPort_Org">
+      <soap:operation soapAction="http://tempuri.org/CheckDailyPort_Org" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="outlook_calender">
+      <soap:operation soapAction="http://tempuri.org/outlook_calender" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="outlook_calender_org">
+      <soap:operation soapAction="http://tempuri.org/outlook_calender_org" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <soap:operation soapAction="http://tempuri.org/UpdatePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword_TEST">
+      <soap:operation soapAction="http://tempuri.org/UpdatePassword_TEST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CaculateGP">
+      <soap:operation soapAction="http://tempuri.org/CaculateGP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEurEquipment">
+      <soap:operation soapAction="http://tempuri.org/GetEurEquipment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetLocation">
+      <soap:operation soapAction="http://tempuri.org/UpdateAssetLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateAssetStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetOwner">
+      <soap:operation soapAction="http://tempuri.org/UpdateAssetOwner" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEX_Ext">
+      <soap:operation soapAction="http://tempuri.org/UpdateEX_Ext" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactInfobyCompnay">
+      <soap:operation soapAction="http://tempuri.org/ContactInfobyCompnay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactInfobyPerson">
+      <soap:operation soapAction="http://tempuri.org/ContactInfobyPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPDInfo">
+      <soap:operation soapAction="http://tempuri.org/getPDInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EZ_WSSoap12" type="tns:EZ_WSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckECO">
+      <soap12:operation soapAction="http://tempuri.org/CheckECO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUID">
+      <soap12:operation soapAction="http://tempuri.org/CheckUID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckName">
+      <soap12:operation soapAction="http://tempuri.org/CheckName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FogetPassword">
+      <soap12:operation soapAction="http://tempuri.org/FogetPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmplEmail">
+      <soap12:operation soapAction="http://tempuri.org/getEmplEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmployeeInfo">
+      <soap12:operation soapAction="http://tempuri.org/getEmployeeInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EurPriceGet">
+      <soap12:operation soapAction="http://tempuri.org/EurPriceGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE_WEB_SOC_STATUS">
+      <soap12:operation soapAction="http://tempuri.org/UPDATE_WEB_SOC_STATUS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="B2B_INS_SOC">
+      <soap12:operation soapAction="http://tempuri.org/B2B_INS_SOC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PLM_2_CLP">
+      <soap12:operation soapAction="http://tempuri.org/PLM_2_CLP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_WHERE_USE">
+      <soap12:operation soapAction="http://tempuri.org/GET_WHERE_USE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryDB">
+      <soap12:operation soapAction="http://tempuri.org/QueryDB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDB">
+      <soap12:operation soapAction="http://tempuri.org/UpdateDB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryMySQLDB">
+      <soap12:operation soapAction="http://tempuri.org/QueryMySQLDB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMySQLDB">
+      <soap12:operation soapAction="http://tempuri.org/UpdateMySQLDB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPort">
+      <soap12:operation soapAction="http://tempuri.org/CheckPort" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDailyPort">
+      <soap12:operation soapAction="http://tempuri.org/CheckDailyPort" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPort_Org">
+      <soap12:operation soapAction="http://tempuri.org/CheckPort_Org" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDailyPort_Org">
+      <soap12:operation soapAction="http://tempuri.org/CheckDailyPort_Org" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="outlook_calender">
+      <soap12:operation soapAction="http://tempuri.org/outlook_calender" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="outlook_calender_org">
+      <soap12:operation soapAction="http://tempuri.org/outlook_calender_org" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword_TEST">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePassword_TEST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CaculateGP">
+      <soap12:operation soapAction="http://tempuri.org/CaculateGP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEurEquipment">
+      <soap12:operation soapAction="http://tempuri.org/GetEurEquipment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetLocation">
+      <soap12:operation soapAction="http://tempuri.org/UpdateAssetLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateAssetStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetOwner">
+      <soap12:operation soapAction="http://tempuri.org/UpdateAssetOwner" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEX_Ext">
+      <soap12:operation soapAction="http://tempuri.org/UpdateEX_Ext" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactInfobyCompnay">
+      <soap12:operation soapAction="http://tempuri.org/ContactInfobyCompnay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactInfobyPerson">
+      <soap12:operation soapAction="http://tempuri.org/ContactInfobyPerson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPDInfo">
+      <soap12:operation soapAction="http://tempuri.org/getPDInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EZ_WS">
+    <wsdl:port name="EZ_WSSoap" binding="tns:EZ_WSSoap">
+      <soap:address location="http://172.20.1.215:2009/ez_ws.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EZ_WSSoap12" binding="tns:EZ_WSSoap12">
+      <soap12:address location="http://172.20.1.215:2009/ez_ws.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

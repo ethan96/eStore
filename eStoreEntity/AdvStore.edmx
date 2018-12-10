@@ -1,0 +1,1466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AdvStoreModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="AdvStoreModelStoreContainer">
+          <EntitySet Name="CART_Line_DETAIL" EntityType="AdvStoreModel.Store.CART_Line_DETAIL" store:Type="Tables" store:Schema="dbo" store:Name="CART_Line_DETAIL">
+            <DefiningQuery>SELECT 
+      [CART_Line_DETAIL].[CART_ID] AS [CART_ID], 
+      [CART_Line_DETAIL].[LINE_NO] AS [LINE_NO], 
+      [CART_Line_DETAIL].[SEQ] AS [SEQ], 
+      [CART_Line_DETAIL].[MODEL_NO] AS [MODEL_NO], 
+      [CART_Line_DETAIL].[PART_NO] AS [PART_NO], 
+      [CART_Line_DETAIL].[Description] AS [Description], 
+      [CART_Line_DETAIL].[QTY] AS [QTY], 
+      [CART_Line_DETAIL].[DUE_DATE] AS [DUE_DATE], 
+      [CART_Line_DETAIL].[REQUIRED_DATE] AS [REQUIRED_DATE], 
+      [CART_Line_DETAIL].[LIST_PRICE] AS [LIST_PRICE], 
+      [CART_Line_DETAIL].[UNIT_PRICE] AS [UNIT_PRICE], 
+      [CART_Line_DETAIL].[Line_Detail_Type] AS [Line_Detail_Type], 
+      [CART_Line_DETAIL].[Line_Detail_Type_Ref] AS [Line_Detail_Type_Ref], 
+      [CART_Line_DETAIL].[id] AS [id]
+      FROM [dbo].[CART_Line_DETAIL] AS [CART_Line_DETAIL]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CART_MASTER" EntityType="AdvStoreModel.Store.CART_MASTER" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EAPRO_ORDER_DETAIL" EntityType="AdvStoreModel.Store.EAPRO_ORDER_DETAIL" store:Type="Tables" store:Schema="dbo" store:Name="EAPRO_ORDER_DETAIL">
+            <DefiningQuery>SELECT 
+      [EAPRO_ORDER_DETAIL].[Store_Id] AS [Store_Id], 
+      [EAPRO_ORDER_DETAIL].[ORDER_ID] AS [ORDER_ID], 
+      [EAPRO_ORDER_DETAIL].[ORDER_NO] AS [ORDER_NO], 
+      [EAPRO_ORDER_DETAIL].[LINE_NO] AS [LINE_NO], 
+      [EAPRO_ORDER_DETAIL].[PRODUCT_LINE] AS [PRODUCT_LINE], 
+      [EAPRO_ORDER_DETAIL].[PART_NO] AS [PART_NO], 
+      [EAPRO_ORDER_DETAIL].[ORDER_LINE_TYPE] AS [ORDER_LINE_TYPE], 
+      [EAPRO_ORDER_DETAIL].[QTY] AS [QTY], 
+      [EAPRO_ORDER_DETAIL].[LIST_PRICE] AS [LIST_PRICE], 
+      [EAPRO_ORDER_DETAIL].[UNIT_PRICE] AS [UNIT_PRICE], 
+      [EAPRO_ORDER_DETAIL].[REQUIRED_DATE] AS [REQUIRED_DATE], 
+      [EAPRO_ORDER_DETAIL].[DUE_DATE] AS [DUE_DATE], 
+      [EAPRO_ORDER_DETAIL].[ERP_SITE] AS [ERP_SITE], 
+      [EAPRO_ORDER_DETAIL].[ERP_LOCATION] AS [ERP_LOCATION], 
+      [EAPRO_ORDER_DETAIL].[AUTO_ORDER_FLAG] AS [AUTO_ORDER_FLAG], 
+      [EAPRO_ORDER_DETAIL].[AUTO_ORDER_QTY] AS [AUTO_ORDER_QTY], 
+      [EAPRO_ORDER_DETAIL].[Supplier_due_date] AS [Supplier_due_date], 
+      [EAPRO_ORDER_DETAIL].[PARENT_LINE_NO] AS [PARENT_LINE_NO], 
+      [EAPRO_ORDER_DETAIL].[id] AS [id], 
+      [EAPRO_ORDER_DETAIL].[ProductGroup] AS [ProductGroup]
+      FROM [dbo].[EAPRO_ORDER_DETAIL] AS [EAPRO_ORDER_DETAIL]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EAPRO_ORDER_MASTER" EntityType="AdvStoreModel.Store.EAPRO_ORDER_MASTER" store:Type="Tables" store:Schema="dbo" store:Name="EAPRO_ORDER_MASTER">
+            <DefiningQuery>SELECT 
+      [EAPRO_ORDER_MASTER].[Store_Id] AS [Store_Id], 
+      [EAPRO_ORDER_MASTER].[ORDER_ID] AS [ORDER_ID], 
+      [EAPRO_ORDER_MASTER].[ORDER_NO] AS [ORDER_NO], 
+      [EAPRO_ORDER_MASTER].[ORDER_TYPE] AS [ORDER_TYPE], 
+      [EAPRO_ORDER_MASTER].[PO_NO] AS [PO_NO], 
+      [EAPRO_ORDER_MASTER].[User_ID] AS [User_ID], 
+      [EAPRO_ORDER_MASTER].[SOLDTO_ID] AS [SOLDTO_ID], 
+      [EAPRO_ORDER_MASTER].[SHIPTO_ID] AS [SHIPTO_ID], 
+      [EAPRO_ORDER_MASTER].[BILLTO_ID] AS [BILLTO_ID], 
+      [EAPRO_ORDER_MASTER].[SALES_ID] AS [SALES_ID], 
+      [EAPRO_ORDER_MASTER].[ORDER_DATE] AS [ORDER_DATE], 
+      [EAPRO_ORDER_MASTER].[PAYMENT_TYPE] AS [PAYMENT_TYPE], 
+      [EAPRO_ORDER_MASTER].[ATTENTION] AS [ATTENTION], 
+      [EAPRO_ORDER_MASTER].[PARTIAL_FLAG] AS [PARTIAL_FLAG], 
+      [EAPRO_ORDER_MASTER].[COMBINE_ORDER_FLAG] AS [COMBINE_ORDER_FLAG], 
+      [EAPRO_ORDER_MASTER].[EARLY_SHIP_FLAG] AS [EARLY_SHIP_FLAG], 
+      [EAPRO_ORDER_MASTER].[FREIGHT] AS [FREIGHT], 
+      [EAPRO_ORDER_MASTER].[INSURANCE] AS [INSURANCE], 
+      [EAPRO_ORDER_MASTER].[TAX] AS [TAX], 
+      [EAPRO_ORDER_MASTER].[REMARK] AS [REMARK], 
+      [EAPRO_ORDER_MASTER].[PRODUCT_SITE] AS [PRODUCT_SITE], 
+      [EAPRO_ORDER_MASTER].[DUE_DATE] AS [DUE_DATE], 
+      [EAPRO_ORDER_MASTER].[REQUIRED_DATE] AS [REQUIRED_DATE], 
+      [EAPRO_ORDER_MASTER].[SHIPMENT_TERM] AS [SHIPMENT_TERM], 
+      [EAPRO_ORDER_MASTER].[SHIP_VIA] AS [SHIP_VIA], 
+      [EAPRO_ORDER_MASTER].[CURRENCY] AS [CURRENCY], 
+      [EAPRO_ORDER_MASTER].[ORDER_NOTE] AS [ORDER_NOTE], 
+      [EAPRO_ORDER_MASTER].[ORDER_STATUS] AS [ORDER_STATUS], 
+      [EAPRO_ORDER_MASTER].[TOTAL_AMOUNT] AS [TOTAL_AMOUNT], 
+      [EAPRO_ORDER_MASTER].[TOTAL_LINE] AS [TOTAL_LINE], 
+      [EAPRO_ORDER_MASTER].[LAST_UPDATED] AS [LAST_UPDATED], 
+      [EAPRO_ORDER_MASTER].[CREATED_DATE] AS [CREATED_DATE], 
+      [EAPRO_ORDER_MASTER].[CREATED_BY] AS [CREATED_BY], 
+      [EAPRO_ORDER_MASTER].[CUSTOMER_ATTENTION] AS [CUSTOMER_ATTENTION], 
+      [EAPRO_ORDER_MASTER].[AUTO_ORDER_FLAG] AS [AUTO_ORDER_FLAG], 
+      [EAPRO_ORDER_MASTER].[Payment_ID] AS [Payment_ID], 
+      [EAPRO_ORDER_MASTER].[Reseller_ID] AS [Reseller_ID], 
+      [EAPRO_ORDER_MASTER].[CBOM_MESSAGE] AS [CBOM_MESSAGE], 
+      [EAPRO_ORDER_MASTER].[VAT_Address] AS [VAT_Address], 
+      [EAPRO_ORDER_MASTER].[ChannelID] AS [ChannelID], 
+      [EAPRO_ORDER_MASTER].[ChannelName] AS [ChannelName], 
+      [EAPRO_ORDER_MASTER].[CartID] AS [CartID], 
+      [EAPRO_ORDER_MASTER].[Courier] AS [Courier], 
+      [EAPRO_ORDER_MASTER].[Courier_account] AS [Courier_account], 
+      [EAPRO_ORDER_MASTER].[Courier_phone] AS [Courier_phone], 
+      [EAPRO_ORDER_MASTER].[Shippingmethod] AS [Shippingmethod], 
+      [EAPRO_ORDER_MASTER].[Cart_Total_Discount] AS [Cart_Total_Discount], 
+      [EAPRO_ORDER_MASTER].[ZM] AS [ZM], 
+      [EAPRO_ORDER_MASTER].[Z2] AS [Z2], 
+      [EAPRO_ORDER_MASTER].[SAP_Sync_by] AS [SAP_Sync_by], 
+      [EAPRO_ORDER_MASTER].[SAP_Sync_date] AS [SAP_Sync_date], 
+      [EAPRO_ORDER_MASTER].[SAP_Sync_status] AS [SAP_Sync_status], 
+      [EAPRO_ORDER_MASTER].[TDS_Cost] AS [TDS_Cost]
+      FROM [dbo].[EAPRO_ORDER_MASTER] AS [EAPRO_ORDER_MASTER]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EBIZ_ADDRESS" EntityType="AdvStoreModel.Store.EBIZ_ADDRESS" store:Type="Tables" store:Schema="dbo" store:Name="EBIZ_ADDRESS">
+            <DefiningQuery>SELECT 
+      [EBIZ_ADDRESS].[ORG_ID] AS [ORG_ID], 
+      [EBIZ_ADDRESS].[Store_Id] AS [Store_Id], 
+      [EBIZ_ADDRESS].[Address_ID] AS [Address_ID], 
+      [EBIZ_ADDRESS].[Address_Type] AS [Address_Type], 
+      [EBIZ_ADDRESS].[ATTENTION] AS [ATTENTION], 
+      [EBIZ_ADDRESS].[ATTENTION_Company_Name] AS [ATTENTION_Company_Name], 
+      [EBIZ_ADDRESS].[ADDRESS1] AS [ADDRESS1], 
+      [EBIZ_ADDRESS].[ADDRESS2] AS [ADDRESS2], 
+      [EBIZ_ADDRESS].[FAX_NO] AS [FAX_NO], 
+      [EBIZ_ADDRESS].[TEL_NO] AS [TEL_NO], 
+      [EBIZ_ADDRESS].[TEL_EXT] AS [TEL_EXT], 
+      [EBIZ_ADDRESS].[Mobile] AS [Mobile], 
+      [EBIZ_ADDRESS].[CITY] AS [CITY], 
+      [EBIZ_ADDRESS].[STATE] AS [STATE], 
+      [EBIZ_ADDRESS].[COUNTRY] AS [COUNTRY], 
+      [EBIZ_ADDRESS].[COUNTY] AS [COUNTY], 
+      [EBIZ_ADDRESS].[REGION] AS [REGION], 
+      [EBIZ_ADDRESS].[ZIP_CODE] AS [ZIP_CODE], 
+      [EBIZ_ADDRESS].[LAST_UPDATED] AS [LAST_UPDATED], 
+      [EBIZ_ADDRESS].[UPDATED_BY] AS [UPDATED_BY], 
+      [EBIZ_ADDRESS].[CREATED_DATE] AS [CREATED_DATE], 
+      [EBIZ_ADDRESS].[CREATED_BY] AS [CREATED_BY], 
+      [EBIZ_ADDRESS].[ROW_ID] AS [ROW_ID], 
+      [EBIZ_ADDRESS].[EXTENTED_DATE] AS [EXTENTED_DATE]
+      FROM [dbo].[EBIZ_ADDRESS] AS [EBIZ_ADDRESS]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="es_cbom" EntityType="AdvStoreModel.Store.es_cbom" store:Type="Tables" store:Schema="dbo" store:Name="es_cbom">
+            <DefiningQuery>SELECT 
+      [es_cbom].[cbomid] AS [cbomid], 
+      [es_cbom].[cbom_name] AS [cbom_name], 
+      [es_cbom].[cbom_desc] AS [cbom_desc], 
+      [es_cbom].[system_id] AS [system_id], 
+      [es_cbom].[storeid] AS [storeid], 
+      [es_cbom].[base_list_price] AS [base_list_price], 
+      [es_cbom].[base_list_price_type] AS [base_list_price_type], 
+      [es_cbom].[eff_date] AS [eff_date], 
+      [es_cbom].[end_date] AS [end_date], 
+      [es_cbom].[createtime] AS [createtime], 
+      [es_cbom].[state] AS [state], 
+      [es_cbom].[price_sum] AS [price_sum], 
+      [es_cbom].[pro_msg] AS [pro_msg], 
+      [es_cbom].[pro_startdate] AS [pro_startdate], 
+      [es_cbom].[pro_enddate] AS [pro_enddate], 
+      [es_cbom].[pro_price] AS [pro_price], 
+      [es_cbom].[keywords] AS [keywords], 
+      [es_cbom].[Promotemarkup] AS [Promotemarkup]
+      FROM [dbo].[es_cbom] AS [es_cbom]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="es_cbomtree" EntityType="AdvStoreModel.Store.es_cbomtree" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="es_Config_Item_new" EntityType="AdvStoreModel.Store.es_Config_Item_new" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="es_sharebomtree" EntityType="AdvStoreModel.Store.es_sharebomtree" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbProductOffering" EntityType="AdvStoreModel.Store.tbProductOffering" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbProducts" EntityType="AdvStoreModel.Store.tbProducts" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="vCTOS" EntityType="AdvStoreModel.Store.vCTOS" store:Type="Views" store:Schema="dbo" store:Name="vCTOS">
+            <DefiningQuery>SELECT 
+      [vCTOS].[system_id] AS [system_id], 
+      [vCTOS].[cbomid] AS [cbomid], 
+      [vCTOS].[Con_Item_Number] AS [Con_Item_Number], 
+      [vCTOS].[Con_Item_virtual_part] AS [Con_Item_virtual_part], 
+      [vCTOS].[Con_Item_MBID] AS [Con_Item_MBID], 
+      [vCTOS].[cbom_name] AS [cbom_name], 
+      [vCTOS].[cbom_desc] AS [cbom_desc], 
+      [vCTOS].[storeid] AS [storeid], 
+      [vCTOS].[state] AS [state], 
+      [vCTOS].[base_list_price] AS [base_list_price], 
+      [vCTOS].[base_list_price_type] AS [base_list_price_type], 
+      [vCTOS].[eff_date] AS [eff_date], 
+      [vCTOS].[end_date] AS [end_date], 
+      [vCTOS].[createtime] AS [createtime], 
+      [vCTOS].[price_sum] AS [price_sum], 
+      [vCTOS].[pro_msg] AS [pro_msg], 
+      [vCTOS].[pro_startdate] AS [pro_startdate], 
+      [vCTOS].[pro_enddate] AS [pro_enddate], 
+      [vCTOS].[pro_price] AS [pro_price], 
+      [vCTOS].[keywords] AS [keywords], 
+      [vCTOS].[Con_Item_Line] AS [Con_Item_Line], 
+      [vCTOS].[Con_Item_Desc] AS [Con_Item_Desc], 
+      [vCTOS].[Con_Item_Data_Sheet] AS [Con_Item_Data_Sheet], 
+      [vCTOS].[Depth_M] AS [Depth_M], 
+      [vCTOS].[Width_M] AS [Width_M], 
+      [vCTOS].[Height_M] AS [Height_M], 
+      [vCTOS].[Depth_I] AS [Depth_I], 
+      [vCTOS].[Height_I] AS [Height_I], 
+      [vCTOS].[Width_I] AS [Width_I], 
+      [vCTOS].[con_item_id] AS [con_item_id], 
+      [vCTOS].[Con_item_features] AS [Con_item_features], 
+      [vCTOS].[short_features] AS [short_features], 
+      [vCTOS].[Promotemarkup] AS [Promotemarkup]
+      FROM [dbo].[vCTOS] AS [vCTOS]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_CART_Line_DETAIL_CART_MASTER" Association="AdvStoreModel.Store.FK_CART_Line_DETAIL_CART_MASTER">
+            <End Role="CART_MASTER" EntitySet="CART_MASTER" />
+            <End Role="CART_Line_DETAIL" EntitySet="CART_Line_DETAIL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_es_cbomtree_es_sharebomtree" Association="AdvStoreModel.Store.FK_es_cbomtree_es_sharebomtree">
+            <End Role="es_sharebomtree" EntitySet="es_sharebomtree" />
+            <End Role="es_cbomtree" EntitySet="es_cbomtree" />
+          </AssociationSet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'AdvStore.dbo.CART_Line_DETAIL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="CART_Line_DETAIL">
+          <Key>
+            <PropertyRef Name="LINE_NO" />
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="CART_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="LINE_NO" Type="int" Nullable="false" />
+          <Property Name="SEQ" Type="int" />
+          <Property Name="MODEL_NO" Type="nvarchar" MaxLength="50" />
+          <Property Name="PART_NO" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="QTY" Type="int" />
+          <Property Name="DUE_DATE" Type="datetime" />
+          <Property Name="REQUIRED_DATE" Type="datetime" />
+          <Property Name="LIST_PRICE" Type="money" />
+          <Property Name="UNIT_PRICE" Type="money" />
+          <Property Name="Line_Detail_Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Line_Detail_Type_Ref" Type="nvarchar" MaxLength="50" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="CART_MASTER">
+          <Key>
+            <PropertyRef Name="CART_ID" />
+          </Key>
+          <Property Name="CART_ID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DUE_DATE" Type="datetime" />
+          <Property Name="REQUIRED_DATE" Type="datetime" />
+          <Property Name="CURRENCY" Type="nvarchar" MaxLength="50" />
+          <Property Name="User_Id" Type="nvarchar" MaxLength="50" />
+          <Property Name="SOLDTO_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="BILLTO_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="SHIPTO_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="PO_NO" Type="nvarchar" MaxLength="50" />
+          <Property Name="PAYMENT_TYPE" Type="nvarchar" MaxLength="100" />
+          <Property Name="PAYMENT_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="TOTAL_ATP_DATE" Type="datetime" />
+          <Property Name="TOTAL_AMOUNT" Type="money" />
+          <Property Name="CREATED_DATE" Type="datetime" />
+          <Property Name="ATTENTION" Type="nvarchar" MaxLength="100" />
+          <Property Name="SHIPMENT_TERM" Type="nvarchar" MaxLength="50" />
+          <Property Name="PARTIAL_FLAG" Type="char" MaxLength="1" />
+          <Property Name="COMBINE_ORDER_FLAG" Type="char" MaxLength="1" />
+          <Property Name="EARLY_SHIP_FLAG" Type="char" MaxLength="1" />
+          <Property Name="SHIP_VIA" Type="nvarchar" MaxLength="50" />
+          <Property Name="SHIP_METHOD" Type="nvarchar" MaxLength="50" />
+          <Property Name="REMARK" Type="nvarchar" MaxLength="100" />
+          <Property Name="FREIGHT" Type="money" />
+          <Property Name="INSURANCE" Type="money" />
+          <Property Name="TAX" Type="money" />
+          <Property Name="CUSTOMER_ATTENTION" Type="nvarchar" MaxLength="100" />
+          <Property Name="AUTO_ORDER_FLAG" Type="char" MaxLength="1" />
+          <Property Name="ORDER_NOTE" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CART_TOTAL_DISCOUNT" Type="money" />
+          <Property Name="CART_TYPE" Type="nvarchar" MaxLength="30" />
+          <Property Name="CREATED_BY" Type="nvarchar" MaxLength="50" />
+          <Property Name="QUOTE_DATE" Type="datetime" />
+          <Property Name="QUOTE_EXPIRED_DATE" Type="datetime" />
+          <Property Name="LAST_UPDATED_BY" Type="nvarchar" MaxLength="50" />
+          <Property Name="LAST_UPDATED_DATE" Type="datetime" />
+          <Property Name="STORE_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="CART_NUMBER" Type="nvarchar" MaxLength="50" />
+          <Property Name="CART_DESC" Type="nvarchar" MaxLength="200" />
+          <Property Name="CONFIRMED_DATE" Type="datetime" />
+          <Property Name="CONFIRMED_BY" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Version" Type="int" />
+          <Property Name="Ship_Collect" Type="nvarchar" MaxLength="50" />
+          <Property Name="Reseller_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="VAT_Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="Lead_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Protect_Due_Date" Type="datetime" />
+          <Property Name="Protection_Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="QUOTE_MESSAGE" Type="nvarchar" MaxLength="2000" />
+          <Property Name="CBOM_MESSAGE" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Promote_Code" Type="varchar" MaxLength="25" />
+          <Property Name="Courier" Type="varchar" MaxLength="100" />
+          <Property Name="Courier_account" Type="varchar" MaxLength="100" />
+          <Property Name="Courier_phone" Type="varchar" MaxLength="100" />
+          <Property Name="Division" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'AdvStore.dbo.EAPRO_ORDER_DETAIL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="EAPRO_ORDER_DETAIL">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Store_Id" Type="nvarchar" MaxLength="50" />
+          <Property Name="ORDER_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="ORDER_NO" Type="nvarchar" MaxLength="50" />
+          <Property Name="LINE_NO" Type="int" />
+          <Property Name="PRODUCT_LINE" Type="nvarchar" MaxLength="50" />
+          <Property Name="PART_NO" Type="nvarchar" MaxLength="50" />
+          <Property Name="ORDER_LINE_TYPE" Type="nvarchar" MaxLength="50" />
+          <Property Name="QTY" Type="int" />
+          <Property Name="LIST_PRICE" Type="money" />
+          <Property Name="UNIT_PRICE" Type="money" />
+          <Property Name="REQUIRED_DATE" Type="datetime" />
+          <Property Name="DUE_DATE" Type="datetime" />
+          <Property Name="ERP_SITE" Type="nvarchar" MaxLength="50" />
+          <Property Name="ERP_LOCATION" Type="nvarchar" MaxLength="50" />
+          <Property Name="AUTO_ORDER_FLAG" Type="char" MaxLength="1" />
+          <Property Name="AUTO_ORDER_QTY" Type="int" />
+          <Property Name="Supplier_due_date" Type="datetime" />
+          <Property Name="PARENT_LINE_NO" Type="int" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductGroup" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'AdvStore.dbo.EAPRO_ORDER_MASTER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="EAPRO_ORDER_MASTER">
+          <Key>
+            <PropertyRef Name="Cart_Total_Discount" />
+          </Key>
+          <Property Name="Store_Id" Type="nvarchar" MaxLength="50" />
+          <Property Name="ORDER_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="ORDER_NO" Type="nvarchar" MaxLength="50" />
+          <Property Name="ORDER_TYPE" Type="nvarchar" MaxLength="50" />
+          <Property Name="PO_NO" Type="nvarchar" MaxLength="500" />
+          <Property Name="User_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="SOLDTO_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="SHIPTO_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="BILLTO_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="SALES_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="ORDER_DATE" Type="datetime" />
+          <Property Name="PAYMENT_TYPE" Type="nvarchar" MaxLength="100" />
+          <Property Name="ATTENTION" Type="nvarchar" MaxLength="500" />
+          <Property Name="PARTIAL_FLAG" Type="char" MaxLength="1" />
+          <Property Name="COMBINE_ORDER_FLAG" Type="char" MaxLength="1" />
+          <Property Name="EARLY_SHIP_FLAG" Type="char" MaxLength="1" />
+          <Property Name="FREIGHT" Type="money" />
+          <Property Name="INSURANCE" Type="money" />
+          <Property Name="TAX" Type="money" />
+          <Property Name="REMARK" Type="nvarchar" MaxLength="1000" />
+          <Property Name="PRODUCT_SITE" Type="nvarchar" MaxLength="50" />
+          <Property Name="DUE_DATE" Type="datetime" />
+          <Property Name="REQUIRED_DATE" Type="datetime" />
+          <Property Name="SHIPMENT_TERM" Type="nvarchar" MaxLength="500" />
+          <Property Name="SHIP_VIA" Type="nvarchar" MaxLength="500" />
+          <Property Name="CURRENCY" Type="nvarchar" MaxLength="50" />
+          <Property Name="ORDER_NOTE" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ORDER_STATUS" Type="nvarchar" MaxLength="50" />
+          <Property Name="TOTAL_AMOUNT" Type="money" />
+          <Property Name="TOTAL_LINE" Type="int" />
+          <Property Name="LAST_UPDATED" Type="datetime" />
+          <Property Name="CREATED_DATE" Type="datetime" />
+          <Property Name="CREATED_BY" Type="nvarchar" MaxLength="100" />
+          <Property Name="CUSTOMER_ATTENTION" Type="nvarchar" MaxLength="100" />
+          <Property Name="AUTO_ORDER_FLAG" Type="char" MaxLength="1" />
+          <Property Name="Payment_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Reseller_ID" Type="nvarchar" MaxLength="500" />
+          <Property Name="CBOM_MESSAGE" Type="nvarchar" MaxLength="2000" />
+          <Property Name="VAT_Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="ChannelID" Type="int" />
+          <Property Name="ChannelName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CartID" Type="nvarchar" MaxLength="100" />
+          <Property Name="Courier" Type="nvarchar" MaxLength="500" />
+          <Property Name="Courier_account" Type="nvarchar" MaxLength="500" />
+          <Property Name="Courier_phone" Type="nvarchar" MaxLength="500" />
+          <Property Name="Shippingmethod" Type="nvarchar" MaxLength="500" />
+          <Property Name="Cart_Total_Discount" Type="money" Nullable="false" />
+          <Property Name="ZM" Type="varchar" MaxLength="50" />
+          <Property Name="Z2" Type="varchar" MaxLength="50" />
+          <Property Name="SAP_Sync_by" Type="varchar" MaxLength="50" />
+          <Property Name="SAP_Sync_date" Type="datetime" />
+          <Property Name="SAP_Sync_status" Type="nvarchar" MaxLength="50" />
+          <Property Name="TDS_Cost" Type="money" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'AdvStore.dbo.EBIZ_ADDRESS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="EBIZ_ADDRESS">
+          <Key>
+            <PropertyRef Name="LAST_UPDATED" />
+            <PropertyRef Name="ROW_ID" />
+          </Key>
+          <Property Name="ORG_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Store_Id" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address_Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="ATTENTION" Type="nvarchar" MaxLength="100" />
+          <Property Name="ATTENTION_Company_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="ADDRESS1" Type="nvarchar" MaxLength="250" />
+          <Property Name="ADDRESS2" Type="nvarchar" MaxLength="250" />
+          <Property Name="FAX_NO" Type="nvarchar" MaxLength="50" />
+          <Property Name="TEL_NO" Type="nvarchar" MaxLength="50" />
+          <Property Name="TEL_EXT" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="CITY" Type="nvarchar" MaxLength="50" />
+          <Property Name="STATE" Type="nvarchar" MaxLength="50" />
+          <Property Name="COUNTRY" Type="nvarchar" MaxLength="50" />
+          <Property Name="COUNTY" Type="nvarchar" MaxLength="50" />
+          <Property Name="REGION" Type="nvarchar" MaxLength="50" />
+          <Property Name="ZIP_CODE" Type="nvarchar" MaxLength="50" />
+          <Property Name="LAST_UPDATED" Type="datetime" Nullable="false" />
+          <Property Name="UPDATED_BY" Type="nvarchar" MaxLength="100" />
+          <Property Name="CREATED_DATE" Type="datetime" />
+          <Property Name="CREATED_BY" Type="nvarchar" MaxLength="100" />
+          <Property Name="ROW_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EXTENTED_DATE" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'AdvStore.dbo.es_cbom' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="es_cbom">
+          <Key>
+            <PropertyRef Name="cbomid" />
+          </Key>
+          <Property Name="cbomid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="cbom_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="cbom_desc" Type="nvarchar" MaxLength="500" />
+          <Property Name="system_id" Type="nvarchar" MaxLength="100" />
+          <Property Name="storeid" Type="nvarchar" MaxLength="20" />
+          <Property Name="base_list_price" Type="money" />
+          <Property Name="base_list_price_type" Type="nvarchar" MaxLength="100" />
+          <Property Name="eff_date" Type="datetime" />
+          <Property Name="end_date" Type="datetime" />
+          <Property Name="createtime" Type="datetime" />
+          <Property Name="state" Type="nvarchar" MaxLength="50" />
+          <Property Name="price_sum" Type="money" />
+          <Property Name="pro_msg" Type="nvarchar" />
+          <Property Name="pro_startdate" Type="datetime" />
+          <Property Name="pro_enddate" Type="datetime" />
+          <Property Name="pro_price" Type="money" />
+          <Property Name="keywords" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Promotemarkup" Type="decimal" Precision="10" />
+        </EntityType>
+        <EntityType Name="es_cbomtree">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="cbomid" Type="int" Nullable="false" />
+          <Property Name="nodeid" Type="int" Nullable="false" />
+          <Property Name="seq" Type="int" />
+          <Property Name="defaults" Type="int" />
+          <Property Name="exceplist" Type="nvarchar" MaxLength="500" />
+          <Property Name="discount" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="price" Type="money" />
+          <Property Name="input" Type="nvarchar" MaxLength="100" />
+          <Property Name="show" Type="nvarchar" MaxLength="100" />
+          <Property Name="quantity" Type="int" />
+          <Property Name="localPartno" Type="nvarchar" MaxLength="500" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="insertdate" Type="datetime" />
+          <Property Name="cost" Type="decimal" Scale="2" />
+          <Property Name="message" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="maxquantity" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="es_Config_Item_new">
+          <Key>
+            <PropertyRef Name="Con_Item_AutoID" />
+          </Key>
+          <Property Name="Con_Item_AutoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Con_Item_Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Con_Item_virtual_part" Type="nvarchar" MaxLength="50" />
+          <Property Name="Con_Item_MBID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Con_Item_Line" Type="nvarchar" MaxLength="50" />
+          <Property Name="Con_Item_Desc" Type="nvarchar" />
+          <Property Name="Con_Item_Data_Sheet" Type="nvarchar" MaxLength="50" />
+          <Property Name="Depth_M" Type="numeric" Scale="2" />
+          <Property Name="Width_M" Type="numeric" Scale="2" />
+          <Property Name="Height_M" Type="numeric" Scale="2" />
+          <Property Name="Depth_I" Type="numeric" Scale="2" />
+          <Property Name="Width_I" Type="numeric" Scale="2" />
+          <Property Name="Height_I" Type="numeric" Scale="2" />
+          <Property Name="Con_item_features" Type="nvarchar" />
+          <Property Name="con_item_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="short_features" Type="nvarchar" />
+        </EntityType>
+        <EntityType Name="es_sharebomtree">
+          <Key>
+            <PropertyRef Name="nodeid" />
+          </Key>
+          <Property Name="nodeid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="node_name" Type="nvarchar" MaxLength="1000" />
+          <Property Name="node_desc" Type="nvarchar" MaxLength="1000" />
+          <Property Name="node_parentid" Type="nvarchar" MaxLength="500" />
+          <Property Name="node_partno_list" Type="nvarchar" MaxLength="1000" />
+          <Property Name="node_type" Type="nvarchar" MaxLength="500" />
+          <Property Name="node_replacepartno_list" Type="nvarchar" MaxLength="500" />
+          <Property Name="node_discount" Type="numeric" Precision="3" Scale="2" />
+          <Property Name="node_seq" Type="int" />
+        </EntityType>
+        <EntityType Name="tbProductOffering">
+          <Key>
+            <PropertyRef Name="StoreID" />
+            <PropertyRef Name="ProductNo" />
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="StoreID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProductNo" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="ShowPrice" Type="char" MaxLength="1" />
+          <Property Name="Publish" Type="char" MaxLength="1" />
+          <Property Name="CategoryID" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Price" Type="float" Nullable="false" />
+          <Property Name="SAPPrice" Type="float" Nullable="false" />
+          <Property Name="useSAP" Type="char" MaxLength="1" />
+          <Property Name="created_date" Type="datetime" Nullable="false" />
+          <Property Name="status" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModelDesc" Type="nvarchar" />
+          <Property Name="ModelFeatures" Type="nvarchar" />
+          <Property Name="ProductDesc" Type="nvarchar" />
+          <Property Name="ProductFeatures" Type="nvarchar" />
+          <Property Name="Extendeddesc" Type="nvarchar" />
+          <Property Name="promoteprice" Type="float" />
+          <Property Name="PromoteStart" Type="datetime" />
+          <Property Name="PromoteEnd" Type="datetime" />
+          <Property Name="categoryid2" Type="nvarchar" MaxLength="100" />
+          <Property Name="pro_msg" Type="nvarchar" />
+          <Property Name="PQuantity" Type="int" />
+          <Property Name="Promotemarkup" Type="decimal" Precision="10" />
+        </EntityType>
+        <EntityType Name="tbProducts">
+          <Key>
+            <PropertyRef Name="ProductNo" />
+          </Key>
+          <Property Name="ProductNo" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="ModelNo" Type="varchar" MaxLength="50" />
+          <Property Name="Picture" Type="image" />
+          <Property Name="PicturePath" Type="nvarchar" MaxLength="500" />
+          <Property Name="RelatedPicture" Type="varchar" MaxLength="50" />
+          <Property Name="ProductType" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" />
+          <Property Name="Features" Type="nvarchar" />
+          <Property Name="Literature" Type="nvarchar" />
+          <Property Name="created_date" Type="datetime" />
+          <Property Name="created_by" Type="nvarchar" MaxLength="100" />
+          <Property Name="ProductGroup" Type="nvarchar" MaxLength="50" />
+          <Property Name="RohsStatus" Type="nvarchar" MaxLength="1" />
+          <Property Name="Siebelstatus" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'AdvStore.dbo.vCTOS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vCTOS">
+          <Key>
+            <PropertyRef Name="cbomid" />
+          </Key>
+          <Property Name="system_id" Type="nvarchar" MaxLength="100" />
+          <Property Name="cbomid" Type="int" Nullable="false" />
+          <Property Name="Con_Item_Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Con_Item_virtual_part" Type="nvarchar" MaxLength="50" />
+          <Property Name="Con_Item_MBID" Type="nvarchar" MaxLength="50" />
+          <Property Name="cbom_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="cbom_desc" Type="nvarchar" MaxLength="500" />
+          <Property Name="storeid" Type="nvarchar" MaxLength="20" />
+          <Property Name="state" Type="nvarchar" MaxLength="50" />
+          <Property Name="base_list_price" Type="money" />
+          <Property Name="base_list_price_type" Type="nvarchar" MaxLength="100" />
+          <Property Name="eff_date" Type="datetime" />
+          <Property Name="end_date" Type="datetime" />
+          <Property Name="createtime" Type="datetime" />
+          <Property Name="price_sum" Type="money" />
+          <Property Name="pro_msg" Type="nvarchar" />
+          <Property Name="pro_startdate" Type="datetime" />
+          <Property Name="pro_enddate" Type="datetime" />
+          <Property Name="pro_price" Type="money" />
+          <Property Name="keywords" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Con_Item_Line" Type="nvarchar" MaxLength="50" />
+          <Property Name="Con_Item_Desc" Type="nvarchar" />
+          <Property Name="Con_Item_Data_Sheet" Type="nvarchar" MaxLength="50" />
+          <Property Name="Depth_M" Type="numeric" Scale="2" />
+          <Property Name="Width_M" Type="numeric" Scale="2" />
+          <Property Name="Height_M" Type="numeric" Scale="2" />
+          <Property Name="Depth_I" Type="numeric" Scale="2" />
+          <Property Name="Height_I" Type="numeric" Scale="2" />
+          <Property Name="Width_I" Type="numeric" Scale="2" />
+          <Property Name="con_item_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="Con_item_features" Type="nvarchar" />
+          <Property Name="short_features" Type="nvarchar" />
+          <Property Name="Promotemarkup" Type="decimal" Precision="10" />
+        </EntityType>
+        <Association Name="FK_CART_Line_DETAIL_CART_MASTER">
+          <End Role="CART_MASTER" Type="AdvStoreModel.Store.CART_MASTER" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CART_Line_DETAIL" Type="AdvStoreModel.Store.CART_Line_DETAIL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CART_MASTER">
+              <PropertyRef Name="CART_ID" />
+            </Principal>
+            <Dependent Role="CART_Line_DETAIL">
+              <PropertyRef Name="CART_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_es_cbomtree_es_sharebomtree">
+          <End Role="es_sharebomtree" Type="AdvStoreModel.Store.es_sharebomtree" Multiplicity="1" />
+          <End Role="es_cbomtree" Type="AdvStoreModel.Store.es_cbomtree" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="es_sharebomtree">
+              <PropertyRef Name="nodeid" />
+            </Principal>
+            <Dependent Role="es_cbomtree">
+              <PropertyRef Name="nodeid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'AdvStore.dbo.View_Order_Summary' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="View_Order_Summary">
+        <Property Name="PriceSum" Type="money" />
+        <Property Name="Store_Id" Type="nvarchar" MaxLength="50" />
+        <Property Name="ORDER_ID" Type="nvarchar" MaxLength="50" />
+        <Property Name="ORDER_NO" Type="nvarchar" MaxLength="50" />
+        <Property Name="ORDER_TYPE" Type="nvarchar" MaxLength="50" />
+        <Property Name="PO_NO" Type="nvarchar" MaxLength="50" />
+        <Property Name="User_ID" Type="nvarchar" MaxLength="50" />
+        <Property Name="SOLDTO_ID" Type="nvarchar" MaxLength="50" />
+        <Property Name="SHIPTO_ID" Type="nvarchar" MaxLength="50" />
+        <Property Name="BILLTO_ID" Type="nvarchar" MaxLength="50" />
+        <Property Name="SALES_ID" Type="nvarchar" MaxLength="50" />
+        <Property Name="ORDER_DATE" Type="datetime" />
+        <Property Name="PAYMENT_TYPE" Type="nvarchar" MaxLength="100" />
+        <Property Name="ATTENTION" Type="nvarchar" MaxLength="100" />
+        <Property Name="PARTIAL_FLAG" Type="char" MaxLength="1" />
+        <Property Name="COMBINE_ORDER_FLAG" Type="char" MaxLength="1" />
+        <Property Name="EARLY_SHIP_FLAG" Type="char" MaxLength="1" />
+        <Property Name="FREIGHT" Type="money" />
+        <Property Name="INSURANCE" Type="money" />
+        <Property Name="TAX" Type="money" />
+        <Property Name="REMARK" Type="nvarchar" MaxLength="100" />
+        <Property Name="PRODUCT_SITE" Type="nvarchar" MaxLength="50" />
+        <Property Name="DUE_DATE" Type="datetime" />
+        <Property Name="REQUIRED_DATE" Type="datetime" />
+        <Property Name="SHIPMENT_TERM" Type="nvarchar" MaxLength="50" />
+        <Property Name="SHIP_VIA" Type="nvarchar" MaxLength="50" />
+        <Property Name="CURRENCY" Type="nvarchar" MaxLength="50" />
+        <Property Name="ORDER_NOTE" Type="nvarchar" MaxLength="1000" />
+        <Property Name="ORDER_STATUS" Type="nvarchar" MaxLength="50" />
+        <Property Name="TOTAL_AMOUNT" Type="money" />
+        <Property Name="TOTAL_LINE" Type="int" />
+        <Property Name="LAST_UPDATED" Type="datetime" />
+        <Property Name="CREATED_DATE" Type="datetime" />
+        <Property Name="CREATED_BY" Type="nvarchar" MaxLength="100" />
+        <Property Name="CUSTOMER_ATTENTION" Type="nvarchar" MaxLength="100" />
+        <Property Name="AUTO_ORDER_FLAG" Type="char" MaxLength="1" />
+        <Property Name="Payment_ID" Type="nvarchar" MaxLength="50" />
+        <Property Name="Reseller_ID" Type="nvarchar" MaxLength="50" />
+        <Property Name="CBOM_MESSAGE" Type="nvarchar" MaxLength="2000" />
+        <Property Name="ChannelName" Type="nvarchar" MaxLength="255" />
+        <Property Name="CartID" Type="nvarchar" MaxLength="100" />
+      </EntityType>-->
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AdvStoreModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="AdvStoreEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="es_cbom" EntityType="AdvStoreModel.es_cbom" />
+          <EntitySet Name="es_cbomtree" EntityType="AdvStoreModel.es_cbomtree" />
+          <EntitySet Name="es_sharebomtree" EntityType="AdvStoreModel.es_sharebomtree" />
+          <EntitySet Name="tbProductOfferings" EntityType="AdvStoreModel.tbProductOffering" />
+          <EntitySet Name="tbProducts" EntityType="AdvStoreModel.tbProduct" />
+          <AssociationSet Name="FK_es_cbomtree_es_sharebomtree" Association="AdvStoreModel.FK_es_cbomtree_es_sharebomtree">
+            <End Role="es_sharebomtree" EntitySet="es_sharebomtree" />
+            <End Role="es_cbomtree" EntitySet="es_cbomtree" />
+          </AssociationSet>
+          <EntitySet Name="es_Config_Item_new" EntityType="AdvStoreModel.es_Config_Item_new" />
+          <EntitySet Name="vCTOS" EntityType="AdvStoreModel.vCTO" />
+          <EntitySet Name="CART_Line_DETAIL" EntityType="AdvStoreModel.CART_Line_DETAIL" />
+          <EntitySet Name="CART_MASTER" EntityType="AdvStoreModel.CART_MASTER" />
+          <EntitySet Name="EAPRO_ORDER_DETAIL" EntityType="AdvStoreModel.EAPRO_ORDER_DETAIL" />
+          <EntitySet Name="EAPRO_ORDER_MASTER" EntityType="AdvStoreModel.EAPRO_ORDER_MASTER" />
+          <EntitySet Name="EBIZ_ADDRESS" EntityType="AdvStoreModel.EBIZ_ADDRESS" />
+          <AssociationSet Name="FK_CART_Line_DETAIL_CART_MASTER" Association="AdvStoreModel.FK_CART_Line_DETAIL_CART_MASTER">
+            <End Role="CART_MASTER" EntitySet="CART_MASTER" />
+            <End Role="CART_Line_DETAIL" EntitySet="CART_Line_DETAIL" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="es_cbom">
+          <Key>
+            <PropertyRef Name="cbomid" />
+          </Key>
+          <Property Name="cbomid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cbom_name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="cbom_desc" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="system_id" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="storeid" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="base_list_price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="base_list_price_type" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="eff_date" Type="DateTime" />
+          <Property Name="end_date" Type="DateTime" />
+          <Property Name="createtime" Type="DateTime" />
+          <Property Name="state" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="price_sum" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="pro_msg" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="pro_startdate" Type="DateTime" />
+          <Property Name="pro_enddate" Type="DateTime" />
+          <Property Name="pro_price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="keywords" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="Promotemarkup" Type="Decimal" Precision="10" Scale="0" />
+        </EntityType>
+        <EntityType Name="es_cbomtree">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="cbomid" Type="Int32" Nullable="false" />
+          <Property Name="nodeid" Type="Int32" Nullable="false" />
+          <Property Name="seq" Type="Int32" />
+          <Property Name="defaults" Type="Int32" />
+          <Property Name="exceplist" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="discount" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="input" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="show" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="quantity" Type="Int32" />
+          <Property Name="localPartno" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="insertdate" Type="DateTime" />
+          <Property Name="cost" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="message" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="maxquantity" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="es_sharebomtree" Relationship="AdvStoreModel.FK_es_cbomtree_es_sharebomtree" FromRole="es_cbomtree" ToRole="es_sharebomtree" />
+        </EntityType>
+        <EntityType Name="es_sharebomtree">
+          <Key>
+            <PropertyRef Name="nodeid" />
+          </Key>
+          <Property Name="nodeid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="node_name" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="node_desc" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="node_parentid" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="node_partno_list" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="node_type" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="node_replacepartno_list" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="node_discount" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="node_seq" Type="Int32" />
+          <NavigationProperty Name="es_cbomtree" Relationship="AdvStoreModel.FK_es_cbomtree_es_sharebomtree" FromRole="es_sharebomtree" ToRole="es_cbomtree" />
+        </EntityType>
+        <EntityType Name="tbProductOffering">
+          <Key>
+            <PropertyRef Name="StoreID" />
+            <PropertyRef Name="ProductNo" />
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="StoreID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ProductNo" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ShowPrice" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="Publish" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="CategoryID" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Price" Type="Double" Nullable="false" />
+          <Property Name="SAPPrice" Type="Double" Nullable="false" />
+          <Property Name="useSAP" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="created_date" Type="DateTime" Nullable="false" />
+          <Property Name="status" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ModelDesc" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="ModelFeatures" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="ProductDesc" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="ProductFeatures" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="Extendeddesc" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="promoteprice" Type="Double" />
+          <Property Name="PromoteStart" Type="DateTime" />
+          <Property Name="PromoteEnd" Type="DateTime" />
+          <Property Name="categoryid2" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="pro_msg" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="PQuantity" Type="Int32" />
+          <Property Name="Promotemarkup" Type="Decimal" Precision="10" Scale="0" />
+        </EntityType>
+        <EntityType Name="tbProduct">
+          <Key>
+            <PropertyRef Name="ProductNo" />
+          </Key>
+          <Property Name="ProductNo" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ModelNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="PicturePath" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="RelatedPicture" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProductType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="Features" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="Literature" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="created_date" Type="DateTime" />
+          <Property Name="created_by" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ProductGroup" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RohsStatus" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="Siebelstatus" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_es_cbomtree_es_sharebomtree">
+          <End Role="es_sharebomtree" Type="AdvStoreModel.es_sharebomtree" Multiplicity="1" />
+          <End Role="es_cbomtree" Type="AdvStoreModel.es_cbomtree" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="es_sharebomtree">
+              <PropertyRef Name="nodeid" />
+            </Principal>
+            <Dependent Role="es_cbomtree">
+              <PropertyRef Name="nodeid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="es_Config_Item_new">
+          <Key>
+            <PropertyRef Name="Con_Item_AutoID" />
+          </Key>
+          <Property Type="Int32" Name="Con_Item_AutoID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Con_Item_Number" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Con_Item_virtual_part" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Con_Item_MBID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Con_Item_Line" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Con_Item_Desc" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Con_Item_Data_Sheet" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Depth_M" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Width_M" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Height_M" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Depth_I" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Width_I" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Height_I" Precision="18" Scale="2" />
+          <Property Type="String" Name="Con_item_features" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="con_item_id" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="short_features" MaxLength="4000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="vCTO">
+          <Key>
+            <PropertyRef Name="cbomid" />
+          </Key>
+          <Property Type="String" Name="system_id" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="cbomid" Nullable="false" />
+          <Property Type="String" Name="Con_Item_Number" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Con_Item_virtual_part" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Con_Item_MBID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="cbom_name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="cbom_desc" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="storeid" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="state" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="base_list_price" Precision="19" Scale="4" />
+          <Property Type="String" Name="base_list_price_type" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="eff_date" />
+          <Property Type="DateTime" Name="end_date" />
+          <Property Type="DateTime" Name="createtime" />
+          <Property Type="Decimal" Name="price_sum" Precision="19" Scale="4" />
+          <Property Type="String" Name="pro_msg" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="pro_startdate" />
+          <Property Type="DateTime" Name="pro_enddate" />
+          <Property Type="Decimal" Name="pro_price" Precision="19" Scale="4" />
+          <Property Type="String" Name="keywords" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Con_Item_Line" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Con_Item_Desc" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Con_Item_Data_Sheet" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Depth_M" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Width_M" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Height_M" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Depth_I" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Height_I" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Width_I" Precision="18" Scale="2" />
+          <Property Type="String" Name="con_item_id" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Con_item_features" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="short_features" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Promotemarkup" Precision="10" Scale="0" />
+        </EntityType>
+        <EntityType Name="CART_Line_DETAIL">
+          <Key>
+            <PropertyRef Name="LINE_NO" />
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="String" Name="CART_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="LINE_NO" Nullable="false" />
+          <Property Type="Int32" Name="SEQ" />
+          <Property Type="String" Name="MODEL_NO" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PART_NO" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="QTY" />
+          <Property Type="DateTime" Name="DUE_DATE" />
+          <Property Type="DateTime" Name="REQUIRED_DATE" />
+          <Property Type="Decimal" Name="LIST_PRICE" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="UNIT_PRICE" Precision="19" Scale="4" />
+          <Property Type="String" Name="Line_Detail_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Line_Detail_Type_Ref" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="CART_MASTER" Relationship="AdvStoreModel.FK_CART_Line_DETAIL_CART_MASTER" FromRole="CART_Line_DETAIL" ToRole="CART_MASTER" />
+        </EntityType>
+        <EntityType Name="CART_MASTER">
+          <Key>
+            <PropertyRef Name="CART_ID" />
+          </Key>
+          <Property Type="String" Name="CART_ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="DUE_DATE" />
+          <Property Type="DateTime" Name="REQUIRED_DATE" />
+          <Property Type="String" Name="CURRENCY" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="User_Id" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SOLDTO_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BILLTO_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SHIPTO_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PO_NO" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PAYMENT_TYPE" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PAYMENT_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="TOTAL_ATP_DATE" />
+          <Property Type="Decimal" Name="TOTAL_AMOUNT" Precision="19" Scale="4" />
+          <Property Type="DateTime" Name="CREATED_DATE" />
+          <Property Type="String" Name="ATTENTION" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SHIPMENT_TERM" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PARTIAL_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="COMBINE_ORDER_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="EARLY_SHIP_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="SHIP_VIA" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SHIP_METHOD" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="REMARK" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="FREIGHT" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="INSURANCE" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="TAX" Precision="19" Scale="4" />
+          <Property Type="String" Name="CUSTOMER_ATTENTION" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AUTO_ORDER_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="ORDER_NOTE" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="CART_TOTAL_DISCOUNT" Precision="19" Scale="4" />
+          <Property Type="String" Name="CART_TYPE" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CREATED_BY" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="QUOTE_DATE" />
+          <Property Type="DateTime" Name="QUOTE_EXPIRED_DATE" />
+          <Property Type="String" Name="LAST_UPDATED_BY" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LAST_UPDATED_DATE" />
+          <Property Type="String" Name="STORE_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CART_NUMBER" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CART_DESC" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CONFIRMED_DATE" />
+          <Property Type="String" Name="CONFIRMED_BY" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Version" />
+          <Property Type="String" Name="Ship_Collect" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Reseller_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VAT_Address" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Lead_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Protect_Due_Date" />
+          <Property Type="String" Name="Protection_Status" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="QUOTE_MESSAGE" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CBOM_MESSAGE" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Promote_Code" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Courier" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Courier_account" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Courier_phone" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Division" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CART_Line_DETAIL" Relationship="AdvStoreModel.FK_CART_Line_DETAIL_CART_MASTER" FromRole="CART_MASTER" ToRole="CART_Line_DETAIL" />
+        </EntityType>
+        <EntityType Name="EAPRO_ORDER_DETAIL">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="String" Name="Store_Id" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ORDER_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ORDER_NO" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="LINE_NO" />
+          <Property Type="String" Name="PRODUCT_LINE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PART_NO" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ORDER_LINE_TYPE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="QTY" />
+          <Property Type="Decimal" Name="LIST_PRICE" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="UNIT_PRICE" Precision="19" Scale="4" />
+          <Property Type="DateTime" Name="REQUIRED_DATE" />
+          <Property Type="DateTime" Name="DUE_DATE" />
+          <Property Type="String" Name="ERP_SITE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ERP_LOCATION" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AUTO_ORDER_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="AUTO_ORDER_QTY" />
+          <Property Type="DateTime" Name="Supplier_due_date" />
+          <Property Type="Int32" Name="PARENT_LINE_NO" />
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ProductGroup" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EAPRO_ORDER_MASTER">
+          <Key>
+            <PropertyRef Name="Cart_Total_Discount" />
+          </Key>
+          <Property Type="String" Name="Store_Id" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ORDER_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ORDER_NO" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ORDER_TYPE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PO_NO" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="User_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SOLDTO_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SHIPTO_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BILLTO_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SALES_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="ORDER_DATE" />
+          <Property Type="String" Name="PAYMENT_TYPE" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ATTENTION" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PARTIAL_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="COMBINE_ORDER_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="EARLY_SHIP_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Decimal" Name="FREIGHT" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="INSURANCE" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="TAX" Precision="19" Scale="4" />
+          <Property Type="String" Name="REMARK" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PRODUCT_SITE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="DUE_DATE" />
+          <Property Type="DateTime" Name="REQUIRED_DATE" />
+          <Property Type="String" Name="SHIPMENT_TERM" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SHIP_VIA" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CURRENCY" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ORDER_NOTE" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ORDER_STATUS" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="TOTAL_AMOUNT" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="TOTAL_LINE" />
+          <Property Type="DateTime" Name="LAST_UPDATED" />
+          <Property Type="DateTime" Name="CREATED_DATE" />
+          <Property Type="String" Name="CREATED_BY" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CUSTOMER_ATTENTION" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AUTO_ORDER_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="Payment_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Reseller_ID" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CBOM_MESSAGE" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VAT_Address" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ChannelID" />
+          <Property Type="String" Name="ChannelName" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CartID" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Courier" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Courier_account" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Courier_phone" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Shippingmethod" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Cart_Total_Discount" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="String" Name="ZM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Z2" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SAP_Sync_by" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SAP_Sync_date" />
+          <Property Type="String" Name="SAP_Sync_status" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="TDS_Cost" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="EBIZ_ADDRESS">
+          <Key>
+            <PropertyRef Name="LAST_UPDATED" />
+            <PropertyRef Name="ROW_ID" />
+          </Key>
+          <Property Type="String" Name="ORG_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Store_Id" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ATTENTION" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ATTENTION_Company_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ADDRESS1" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ADDRESS2" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FAX_NO" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TEL_NO" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TEL_EXT" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobile" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CITY" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="STATE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="COUNTRY" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="COUNTY" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="REGION" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ZIP_CODE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LAST_UPDATED" Nullable="false" />
+          <Property Type="String" Name="UPDATED_BY" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CREATED_DATE" />
+          <Property Type="String" Name="CREATED_BY" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ROW_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="EXTENTED_DATE" />
+        </EntityType>
+        <Association Name="FK_CART_Line_DETAIL_CART_MASTER">
+          <End Type="AdvStoreModel.CART_MASTER" Role="CART_MASTER" Multiplicity="0..1" />
+          <End Type="AdvStoreModel.CART_Line_DETAIL" Role="CART_Line_DETAIL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CART_MASTER">
+              <PropertyRef Name="CART_ID" />
+            </Principal>
+            <Dependent Role="CART_Line_DETAIL">
+              <PropertyRef Name="CART_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AdvStoreModelStoreContainer" CdmEntityContainer="AdvStoreEntities">
+          <EntitySetMapping Name="es_cbom"><EntityTypeMapping TypeName="AdvStoreModel.es_cbom"><MappingFragment StoreEntitySet="es_cbom">
+            <ScalarProperty Name="cbomid" ColumnName="cbomid" />
+            <ScalarProperty Name="cbom_name" ColumnName="cbom_name" />
+            <ScalarProperty Name="cbom_desc" ColumnName="cbom_desc" />
+            <ScalarProperty Name="system_id" ColumnName="system_id" />
+            <ScalarProperty Name="storeid" ColumnName="storeid" />
+            <ScalarProperty Name="base_list_price" ColumnName="base_list_price" />
+            <ScalarProperty Name="base_list_price_type" ColumnName="base_list_price_type" />
+            <ScalarProperty Name="eff_date" ColumnName="eff_date" />
+            <ScalarProperty Name="end_date" ColumnName="end_date" />
+            <ScalarProperty Name="createtime" ColumnName="createtime" />
+            <ScalarProperty Name="state" ColumnName="state" />
+            <ScalarProperty Name="price_sum" ColumnName="price_sum" />
+            <ScalarProperty Name="pro_msg" ColumnName="pro_msg" />
+            <ScalarProperty Name="pro_startdate" ColumnName="pro_startdate" />
+            <ScalarProperty Name="pro_enddate" ColumnName="pro_enddate" />
+            <ScalarProperty Name="pro_price" ColumnName="pro_price" />
+            <ScalarProperty Name="keywords" ColumnName="keywords" />
+            <ScalarProperty Name="Promotemarkup" ColumnName="Promotemarkup" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="es_cbomtree"><EntityTypeMapping TypeName="AdvStoreModel.es_cbomtree"><MappingFragment StoreEntitySet="es_cbomtree">
+            <ScalarProperty Name="cbomid" ColumnName="cbomid" />
+            <ScalarProperty Name="nodeid" ColumnName="nodeid" />
+            <ScalarProperty Name="seq" ColumnName="seq" />
+            <ScalarProperty Name="defaults" ColumnName="defaults" />
+            <ScalarProperty Name="exceplist" ColumnName="exceplist" />
+            <ScalarProperty Name="discount" ColumnName="discount" />
+            <ScalarProperty Name="price" ColumnName="price" />
+            <ScalarProperty Name="input" ColumnName="input" />
+            <ScalarProperty Name="show" ColumnName="show" />
+            <ScalarProperty Name="quantity" ColumnName="quantity" />
+            <ScalarProperty Name="localPartno" ColumnName="localPartno" />
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="insertdate" ColumnName="insertdate" />
+            <ScalarProperty Name="cost" ColumnName="cost" />
+            <ScalarProperty Name="message" ColumnName="message" />
+            <ScalarProperty Name="maxquantity" ColumnName="maxquantity" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="es_sharebomtree"><EntityTypeMapping TypeName="AdvStoreModel.es_sharebomtree"><MappingFragment StoreEntitySet="es_sharebomtree">
+            <ScalarProperty Name="nodeid" ColumnName="nodeid" />
+            <ScalarProperty Name="node_name" ColumnName="node_name" />
+            <ScalarProperty Name="node_desc" ColumnName="node_desc" />
+            <ScalarProperty Name="node_parentid" ColumnName="node_parentid" />
+            <ScalarProperty Name="node_partno_list" ColumnName="node_partno_list" />
+            <ScalarProperty Name="node_type" ColumnName="node_type" />
+            <ScalarProperty Name="node_replacepartno_list" ColumnName="node_replacepartno_list" />
+            <ScalarProperty Name="node_discount" ColumnName="node_discount" />
+            <ScalarProperty Name="node_seq" ColumnName="node_seq" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbProductOfferings"><EntityTypeMapping TypeName="AdvStoreModel.tbProductOffering"><MappingFragment StoreEntitySet="tbProductOffering">
+            <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+            <ScalarProperty Name="ProductNo" ColumnName="ProductNo" />
+            <ScalarProperty Name="ShowPrice" ColumnName="ShowPrice" />
+            <ScalarProperty Name="Publish" ColumnName="Publish" />
+            <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+            <ScalarProperty Name="Price" ColumnName="Price" />
+            <ScalarProperty Name="SAPPrice" ColumnName="SAPPrice" />
+            <ScalarProperty Name="useSAP" ColumnName="useSAP" />
+            <ScalarProperty Name="created_date" ColumnName="created_date" />
+            <ScalarProperty Name="status" ColumnName="status" />
+            <ScalarProperty Name="ModelDesc" ColumnName="ModelDesc" />
+            <ScalarProperty Name="ModelFeatures" ColumnName="ModelFeatures" />
+            <ScalarProperty Name="ProductDesc" ColumnName="ProductDesc" />
+            <ScalarProperty Name="ProductFeatures" ColumnName="ProductFeatures" />
+            <ScalarProperty Name="Extendeddesc" ColumnName="Extendeddesc" />
+            <ScalarProperty Name="promoteprice" ColumnName="promoteprice" />
+            <ScalarProperty Name="PromoteStart" ColumnName="PromoteStart" />
+            <ScalarProperty Name="PromoteEnd" ColumnName="PromoteEnd" />
+            <ScalarProperty Name="categoryid2" ColumnName="categoryid2" />
+            <ScalarProperty Name="pro_msg" ColumnName="pro_msg" />
+            <ScalarProperty Name="PQuantity" ColumnName="PQuantity" />
+            <ScalarProperty Name="Promotemarkup" ColumnName="Promotemarkup" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbProducts"><EntityTypeMapping TypeName="AdvStoreModel.tbProduct"><MappingFragment StoreEntitySet="tbProducts">
+            <ScalarProperty Name="ProductNo" ColumnName="ProductNo" />
+            <ScalarProperty Name="ModelNo" ColumnName="ModelNo" />
+            <ScalarProperty Name="Picture" ColumnName="Picture" />
+            <ScalarProperty Name="PicturePath" ColumnName="PicturePath" />
+            <ScalarProperty Name="RelatedPicture" ColumnName="RelatedPicture" />
+            <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Features" ColumnName="Features" />
+            <ScalarProperty Name="Literature" ColumnName="Literature" />
+            <ScalarProperty Name="created_date" ColumnName="created_date" />
+            <ScalarProperty Name="created_by" ColumnName="created_by" />
+            <ScalarProperty Name="ProductGroup" ColumnName="ProductGroup" />
+            <ScalarProperty Name="RohsStatus" ColumnName="RohsStatus" />
+            <ScalarProperty Name="Siebelstatus" ColumnName="Siebelstatus" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="es_Config_Item_new">
+            <EntityTypeMapping TypeName="AdvStoreModel.es_Config_Item_new">
+              <MappingFragment StoreEntitySet="es_Config_Item_new">
+                <ScalarProperty Name="short_features" ColumnName="short_features" />
+                <ScalarProperty Name="con_item_id" ColumnName="con_item_id" />
+                <ScalarProperty Name="Con_item_features" ColumnName="Con_item_features" />
+                <ScalarProperty Name="Height_I" ColumnName="Height_I" />
+                <ScalarProperty Name="Width_I" ColumnName="Width_I" />
+                <ScalarProperty Name="Depth_I" ColumnName="Depth_I" />
+                <ScalarProperty Name="Height_M" ColumnName="Height_M" />
+                <ScalarProperty Name="Width_M" ColumnName="Width_M" />
+                <ScalarProperty Name="Depth_M" ColumnName="Depth_M" />
+                <ScalarProperty Name="Con_Item_Data_Sheet" ColumnName="Con_Item_Data_Sheet" />
+                <ScalarProperty Name="Con_Item_Desc" ColumnName="Con_Item_Desc" />
+                <ScalarProperty Name="Con_Item_Line" ColumnName="Con_Item_Line" />
+                <ScalarProperty Name="Con_Item_MBID" ColumnName="Con_Item_MBID" />
+                <ScalarProperty Name="Con_Item_virtual_part" ColumnName="Con_Item_virtual_part" />
+                <ScalarProperty Name="Con_Item_Number" ColumnName="Con_Item_Number" />
+                <ScalarProperty Name="Con_Item_AutoID" ColumnName="Con_Item_AutoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vCTOS">
+            <EntityTypeMapping TypeName="AdvStoreModel.vCTO">
+              <MappingFragment StoreEntitySet="vCTOS">
+                <ScalarProperty Name="Promotemarkup" ColumnName="Promotemarkup" />
+                <ScalarProperty Name="short_features" ColumnName="short_features" />
+                <ScalarProperty Name="Con_item_features" ColumnName="Con_item_features" />
+                <ScalarProperty Name="con_item_id" ColumnName="con_item_id" />
+                <ScalarProperty Name="Width_I" ColumnName="Width_I" />
+                <ScalarProperty Name="Height_I" ColumnName="Height_I" />
+                <ScalarProperty Name="Depth_I" ColumnName="Depth_I" />
+                <ScalarProperty Name="Height_M" ColumnName="Height_M" />
+                <ScalarProperty Name="Width_M" ColumnName="Width_M" />
+                <ScalarProperty Name="Depth_M" ColumnName="Depth_M" />
+                <ScalarProperty Name="Con_Item_Data_Sheet" ColumnName="Con_Item_Data_Sheet" />
+                <ScalarProperty Name="Con_Item_Desc" ColumnName="Con_Item_Desc" />
+                <ScalarProperty Name="Con_Item_Line" ColumnName="Con_Item_Line" />
+                <ScalarProperty Name="keywords" ColumnName="keywords" />
+                <ScalarProperty Name="pro_price" ColumnName="pro_price" />
+                <ScalarProperty Name="pro_enddate" ColumnName="pro_enddate" />
+                <ScalarProperty Name="pro_startdate" ColumnName="pro_startdate" />
+                <ScalarProperty Name="pro_msg" ColumnName="pro_msg" />
+                <ScalarProperty Name="price_sum" ColumnName="price_sum" />
+                <ScalarProperty Name="createtime" ColumnName="createtime" />
+                <ScalarProperty Name="end_date" ColumnName="end_date" />
+                <ScalarProperty Name="eff_date" ColumnName="eff_date" />
+                <ScalarProperty Name="base_list_price_type" ColumnName="base_list_price_type" />
+                <ScalarProperty Name="base_list_price" ColumnName="base_list_price" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="storeid" ColumnName="storeid" />
+                <ScalarProperty Name="cbom_desc" ColumnName="cbom_desc" />
+                <ScalarProperty Name="cbom_name" ColumnName="cbom_name" />
+                <ScalarProperty Name="Con_Item_MBID" ColumnName="Con_Item_MBID" />
+                <ScalarProperty Name="Con_Item_virtual_part" ColumnName="Con_Item_virtual_part" />
+                <ScalarProperty Name="Con_Item_Number" ColumnName="Con_Item_Number" />
+                <ScalarProperty Name="cbomid" ColumnName="cbomid" />
+                <ScalarProperty Name="system_id" ColumnName="system_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CART_Line_DETAIL">
+            <EntityTypeMapping TypeName="AdvStoreModel.CART_Line_DETAIL">
+              <MappingFragment StoreEntitySet="CART_Line_DETAIL">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Line_Detail_Type_Ref" ColumnName="Line_Detail_Type_Ref" />
+                <ScalarProperty Name="Line_Detail_Type" ColumnName="Line_Detail_Type" />
+                <ScalarProperty Name="UNIT_PRICE" ColumnName="UNIT_PRICE" />
+                <ScalarProperty Name="LIST_PRICE" ColumnName="LIST_PRICE" />
+                <ScalarProperty Name="REQUIRED_DATE" ColumnName="REQUIRED_DATE" />
+                <ScalarProperty Name="DUE_DATE" ColumnName="DUE_DATE" />
+                <ScalarProperty Name="QTY" ColumnName="QTY" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="PART_NO" ColumnName="PART_NO" />
+                <ScalarProperty Name="MODEL_NO" ColumnName="MODEL_NO" />
+                <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+                <ScalarProperty Name="LINE_NO" ColumnName="LINE_NO" />
+                <ScalarProperty Name="CART_ID" ColumnName="CART_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CART_MASTER">
+            <EntityTypeMapping TypeName="AdvStoreModel.CART_MASTER">
+              <MappingFragment StoreEntitySet="CART_MASTER">
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="Courier_phone" ColumnName="Courier_phone" />
+                <ScalarProperty Name="Courier_account" ColumnName="Courier_account" />
+                <ScalarProperty Name="Courier" ColumnName="Courier" />
+                <ScalarProperty Name="Promote_Code" ColumnName="Promote_Code" />
+                <ScalarProperty Name="CBOM_MESSAGE" ColumnName="CBOM_MESSAGE" />
+                <ScalarProperty Name="QUOTE_MESSAGE" ColumnName="QUOTE_MESSAGE" />
+                <ScalarProperty Name="Protection_Status" ColumnName="Protection_Status" />
+                <ScalarProperty Name="Protect_Due_Date" ColumnName="Protect_Due_Date" />
+                <ScalarProperty Name="Lead_ID" ColumnName="Lead_ID" />
+                <ScalarProperty Name="VAT_Address" ColumnName="VAT_Address" />
+                <ScalarProperty Name="Reseller_ID" ColumnName="Reseller_ID" />
+                <ScalarProperty Name="Ship_Collect" ColumnName="Ship_Collect" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CONFIRMED_BY" ColumnName="CONFIRMED_BY" />
+                <ScalarProperty Name="CONFIRMED_DATE" ColumnName="CONFIRMED_DATE" />
+                <ScalarProperty Name="CART_DESC" ColumnName="CART_DESC" />
+                <ScalarProperty Name="CART_NUMBER" ColumnName="CART_NUMBER" />
+                <ScalarProperty Name="STORE_ID" ColumnName="STORE_ID" />
+                <ScalarProperty Name="LAST_UPDATED_DATE" ColumnName="LAST_UPDATED_DATE" />
+                <ScalarProperty Name="LAST_UPDATED_BY" ColumnName="LAST_UPDATED_BY" />
+                <ScalarProperty Name="QUOTE_EXPIRED_DATE" ColumnName="QUOTE_EXPIRED_DATE" />
+                <ScalarProperty Name="QUOTE_DATE" ColumnName="QUOTE_DATE" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="CART_TYPE" ColumnName="CART_TYPE" />
+                <ScalarProperty Name="CART_TOTAL_DISCOUNT" ColumnName="CART_TOTAL_DISCOUNT" />
+                <ScalarProperty Name="ORDER_NOTE" ColumnName="ORDER_NOTE" />
+                <ScalarProperty Name="AUTO_ORDER_FLAG" ColumnName="AUTO_ORDER_FLAG" />
+                <ScalarProperty Name="CUSTOMER_ATTENTION" ColumnName="CUSTOMER_ATTENTION" />
+                <ScalarProperty Name="TAX" ColumnName="TAX" />
+                <ScalarProperty Name="INSURANCE" ColumnName="INSURANCE" />
+                <ScalarProperty Name="FREIGHT" ColumnName="FREIGHT" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="SHIP_METHOD" ColumnName="SHIP_METHOD" />
+                <ScalarProperty Name="SHIP_VIA" ColumnName="SHIP_VIA" />
+                <ScalarProperty Name="EARLY_SHIP_FLAG" ColumnName="EARLY_SHIP_FLAG" />
+                <ScalarProperty Name="COMBINE_ORDER_FLAG" ColumnName="COMBINE_ORDER_FLAG" />
+                <ScalarProperty Name="PARTIAL_FLAG" ColumnName="PARTIAL_FLAG" />
+                <ScalarProperty Name="SHIPMENT_TERM" ColumnName="SHIPMENT_TERM" />
+                <ScalarProperty Name="ATTENTION" ColumnName="ATTENTION" />
+                <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+                <ScalarProperty Name="TOTAL_AMOUNT" ColumnName="TOTAL_AMOUNT" />
+                <ScalarProperty Name="TOTAL_ATP_DATE" ColumnName="TOTAL_ATP_DATE" />
+                <ScalarProperty Name="PAYMENT_ID" ColumnName="PAYMENT_ID" />
+                <ScalarProperty Name="PAYMENT_TYPE" ColumnName="PAYMENT_TYPE" />
+                <ScalarProperty Name="PO_NO" ColumnName="PO_NO" />
+                <ScalarProperty Name="SHIPTO_ID" ColumnName="SHIPTO_ID" />
+                <ScalarProperty Name="BILLTO_ID" ColumnName="BILLTO_ID" />
+                <ScalarProperty Name="SOLDTO_ID" ColumnName="SOLDTO_ID" />
+                <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+                <ScalarProperty Name="CURRENCY" ColumnName="CURRENCY" />
+                <ScalarProperty Name="REQUIRED_DATE" ColumnName="REQUIRED_DATE" />
+                <ScalarProperty Name="DUE_DATE" ColumnName="DUE_DATE" />
+                <ScalarProperty Name="CART_ID" ColumnName="CART_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EAPRO_ORDER_DETAIL">
+            <EntityTypeMapping TypeName="AdvStoreModel.EAPRO_ORDER_DETAIL">
+              <MappingFragment StoreEntitySet="EAPRO_ORDER_DETAIL">
+                <ScalarProperty Name="ProductGroup" ColumnName="ProductGroup" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="PARENT_LINE_NO" ColumnName="PARENT_LINE_NO" />
+                <ScalarProperty Name="Supplier_due_date" ColumnName="Supplier_due_date" />
+                <ScalarProperty Name="AUTO_ORDER_QTY" ColumnName="AUTO_ORDER_QTY" />
+                <ScalarProperty Name="AUTO_ORDER_FLAG" ColumnName="AUTO_ORDER_FLAG" />
+                <ScalarProperty Name="ERP_LOCATION" ColumnName="ERP_LOCATION" />
+                <ScalarProperty Name="ERP_SITE" ColumnName="ERP_SITE" />
+                <ScalarProperty Name="DUE_DATE" ColumnName="DUE_DATE" />
+                <ScalarProperty Name="REQUIRED_DATE" ColumnName="REQUIRED_DATE" />
+                <ScalarProperty Name="UNIT_PRICE" ColumnName="UNIT_PRICE" />
+                <ScalarProperty Name="LIST_PRICE" ColumnName="LIST_PRICE" />
+                <ScalarProperty Name="QTY" ColumnName="QTY" />
+                <ScalarProperty Name="ORDER_LINE_TYPE" ColumnName="ORDER_LINE_TYPE" />
+                <ScalarProperty Name="PART_NO" ColumnName="PART_NO" />
+                <ScalarProperty Name="PRODUCT_LINE" ColumnName="PRODUCT_LINE" />
+                <ScalarProperty Name="LINE_NO" ColumnName="LINE_NO" />
+                <ScalarProperty Name="ORDER_NO" ColumnName="ORDER_NO" />
+                <ScalarProperty Name="ORDER_ID" ColumnName="ORDER_ID" />
+                <ScalarProperty Name="Store_Id" ColumnName="Store_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EAPRO_ORDER_MASTER">
+            <EntityTypeMapping TypeName="AdvStoreModel.EAPRO_ORDER_MASTER">
+              <MappingFragment StoreEntitySet="EAPRO_ORDER_MASTER">
+                <ScalarProperty Name="TDS_Cost" ColumnName="TDS_Cost" />
+                <ScalarProperty Name="SAP_Sync_status" ColumnName="SAP_Sync_status" />
+                <ScalarProperty Name="SAP_Sync_date" ColumnName="SAP_Sync_date" />
+                <ScalarProperty Name="SAP_Sync_by" ColumnName="SAP_Sync_by" />
+                <ScalarProperty Name="Z2" ColumnName="Z2" />
+                <ScalarProperty Name="ZM" ColumnName="ZM" />
+                <ScalarProperty Name="Cart_Total_Discount" ColumnName="Cart_Total_Discount" />
+                <ScalarProperty Name="Shippingmethod" ColumnName="Shippingmethod" />
+                <ScalarProperty Name="Courier_phone" ColumnName="Courier_phone" />
+                <ScalarProperty Name="Courier_account" ColumnName="Courier_account" />
+                <ScalarProperty Name="Courier" ColumnName="Courier" />
+                <ScalarProperty Name="CartID" ColumnName="CartID" />
+                <ScalarProperty Name="ChannelName" ColumnName="ChannelName" />
+                <ScalarProperty Name="ChannelID" ColumnName="ChannelID" />
+                <ScalarProperty Name="VAT_Address" ColumnName="VAT_Address" />
+                <ScalarProperty Name="CBOM_MESSAGE" ColumnName="CBOM_MESSAGE" />
+                <ScalarProperty Name="Reseller_ID" ColumnName="Reseller_ID" />
+                <ScalarProperty Name="Payment_ID" ColumnName="Payment_ID" />
+                <ScalarProperty Name="AUTO_ORDER_FLAG" ColumnName="AUTO_ORDER_FLAG" />
+                <ScalarProperty Name="CUSTOMER_ATTENTION" ColumnName="CUSTOMER_ATTENTION" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+                <ScalarProperty Name="LAST_UPDATED" ColumnName="LAST_UPDATED" />
+                <ScalarProperty Name="TOTAL_LINE" ColumnName="TOTAL_LINE" />
+                <ScalarProperty Name="TOTAL_AMOUNT" ColumnName="TOTAL_AMOUNT" />
+                <ScalarProperty Name="ORDER_STATUS" ColumnName="ORDER_STATUS" />
+                <ScalarProperty Name="ORDER_NOTE" ColumnName="ORDER_NOTE" />
+                <ScalarProperty Name="CURRENCY" ColumnName="CURRENCY" />
+                <ScalarProperty Name="SHIP_VIA" ColumnName="SHIP_VIA" />
+                <ScalarProperty Name="SHIPMENT_TERM" ColumnName="SHIPMENT_TERM" />
+                <ScalarProperty Name="REQUIRED_DATE" ColumnName="REQUIRED_DATE" />
+                <ScalarProperty Name="DUE_DATE" ColumnName="DUE_DATE" />
+                <ScalarProperty Name="PRODUCT_SITE" ColumnName="PRODUCT_SITE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="TAX" ColumnName="TAX" />
+                <ScalarProperty Name="INSURANCE" ColumnName="INSURANCE" />
+                <ScalarProperty Name="FREIGHT" ColumnName="FREIGHT" />
+                <ScalarProperty Name="EARLY_SHIP_FLAG" ColumnName="EARLY_SHIP_FLAG" />
+                <ScalarProperty Name="COMBINE_ORDER_FLAG" ColumnName="COMBINE_ORDER_FLAG" />
+                <ScalarProperty Name="PARTIAL_FLAG" ColumnName="PARTIAL_FLAG" />
+                <ScalarProperty Name="ATTENTION" ColumnName="ATTENTION" />
+                <ScalarProperty Name="PAYMENT_TYPE" ColumnName="PAYMENT_TYPE" />
+                <ScalarProperty Name="ORDER_DATE" ColumnName="ORDER_DATE" />
+                <ScalarProperty Name="SALES_ID" ColumnName="SALES_ID" />
+                <ScalarProperty Name="BILLTO_ID" ColumnName="BILLTO_ID" />
+                <ScalarProperty Name="SHIPTO_ID" ColumnName="SHIPTO_ID" />
+                <ScalarProperty Name="SOLDTO_ID" ColumnName="SOLDTO_ID" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="PO_NO" ColumnName="PO_NO" />
+                <ScalarProperty Name="ORDER_TYPE" ColumnName="ORDER_TYPE" />
+                <ScalarProperty Name="ORDER_NO" ColumnName="ORDER_NO" />
+                <ScalarProperty Name="ORDER_ID" ColumnName="ORDER_ID" />
+                <ScalarProperty Name="Store_Id" ColumnName="Store_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EBIZ_ADDRESS">
+            <EntityTypeMapping TypeName="AdvStoreModel.EBIZ_ADDRESS">
+              <MappingFragment StoreEntitySet="EBIZ_ADDRESS">
+                <ScalarProperty Name="EXTENTED_DATE" ColumnName="EXTENTED_DATE" />
+                <ScalarProperty Name="ROW_ID" ColumnName="ROW_ID" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+                <ScalarProperty Name="LAST_UPDATED" ColumnName="LAST_UPDATED" />
+                <ScalarProperty Name="ZIP_CODE" ColumnName="ZIP_CODE" />
+                <ScalarProperty Name="REGION" ColumnName="REGION" />
+                <ScalarProperty Name="COUNTY" ColumnName="COUNTY" />
+                <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="CITY" ColumnName="CITY" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="TEL_EXT" ColumnName="TEL_EXT" />
+                <ScalarProperty Name="TEL_NO" ColumnName="TEL_NO" />
+                <ScalarProperty Name="FAX_NO" ColumnName="FAX_NO" />
+                <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+                <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+                <ScalarProperty Name="ATTENTION_Company_Name" ColumnName="ATTENTION_Company_Name" />
+                <ScalarProperty Name="ATTENTION" ColumnName="ATTENTION" />
+                <ScalarProperty Name="Address_Type" ColumnName="Address_Type" />
+                <ScalarProperty Name="Address_ID" ColumnName="Address_ID" />
+                <ScalarProperty Name="Store_Id" ColumnName="Store_Id" />
+                <ScalarProperty Name="ORG_ID" ColumnName="ORG_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="AdvStore">
+        <EntityTypeShape EntityType="AdvStoreModel.es_cbom" Width="1.5" PointX="5.75" PointY="0.75" Height="3.8931689453124996" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvStoreModel.es_cbomtree" Width="1.5" PointX="3" PointY="1" Height="3.7288216145833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvStoreModel.es_sharebomtree" Width="1.875" PointX="0.5" PointY="1.625" Height="2.5783902994791656" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvStoreModel.tbProductOffering" Width="1.875" PointX="1.75" PointY="5.75" Height="4.5505582682291665" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvStoreModel.tbProduct" Width="2.25" PointX="4.125" PointY="5.875" Height="3.2357796223958335" IsExpanded="true" />
+        <AssociationConnector Association="AdvStoreModel.FK_es_cbomtree_es_sharebomtree" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.375" PointY="2.9141951497395828" />
+          <ConnectorPoint PointX="3" PointY="2.9141951497395828" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="AdvStoreModel.es_Config_Item_new" Width="2.25" PointX="7.375" PointY="5.75" Height="3.5644742838541674" />
+        <EntityTypeShape EntityType="AdvStoreModel.vCTO" Width="1.5" PointX="10.375" PointY="0.75" Height="6.1940315755208317" />
+        <EntityTypeShape EntityType="AdvStoreModel.CART_Line_DETAIL" Width="1.5" PointX="7" PointY="14.75" Height="3.4001269531249818" />
+        <EntityTypeShape EntityType="AdvStoreModel.CART_MASTER" Width="1.5" PointX="4.75" PointY="11.375" Height="10.138367513020853" />
+        <EntityTypeShape EntityType="AdvStoreModel.EAPRO_ORDER_DETAIL" Width="1.5" PointX="10.75" PointY="8.75" Height="4.221863606770853" />
+        <EntityTypeShape EntityType="AdvStoreModel.EAPRO_ORDER_MASTER" Width="1.5" PointX="0.75" PointY="11.75" Height="9.645325520833353" />
+        <EntityTypeShape EntityType="AdvStoreModel.EBIZ_ADDRESS" Width="1.5" PointX="12.75" PointY="0.75" Height="4.8792529296874818" />
+        <AssociationConnector Association="AdvStoreModel.FK_CART_Line_DETAIL_CART_MASTER" >
+          <ConnectorPoint PointX="6.25" PointY="16.450063476562491" />
+          <ConnectorPoint PointX="7" PointY="16.450063476562491" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

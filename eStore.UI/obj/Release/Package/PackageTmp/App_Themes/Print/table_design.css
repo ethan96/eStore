@@ -1,0 +1,62 @@
+/* roScripts
+Table Design by Mihalcea Romeo
+www.roscripts.com
+----------------------------------------------- */
+
+ table.estoretable{
+		border-collapse:collapse;
+		 	width:100%;margin:0;
+}
+
+.estoretable  th {
+		padding:5px 3px 5px 5px; border-style:solid; border-width:2px; border-color:#FFF;  color:#000;text-align:center;
+}
+.estoretable  th.adminonly{color:#FF6633; border-color:#FFF;}
+.estoretable td {
+		padding:5px 3px 5px 10px; text-align:left; border-bottom-style:dotted; border-bottom-width:1px ; border-bottom-color:#00008B; 
+}
+.estoretable tr
+{border-bottom-style:dotted; border-bottom-width:1px ; border-bottom-color:#00008B; 
+   background-color:#fff;}
+
+.estoretable td.left{text-align:left;}
+.estoretable td.right{text-align:right;}
+.estoretable caption {
+		padding: 0 0 .5em 0;
+		text-align: left;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #333;
+		background: transparent;
+}
+
+ 
+
+.estoretable a {
+		color:#4D79BB;
+		text-decoration:none;
+}
+
+.estoretable table a:link {}
+
+.estoretable table a:visited {
+		font-weight:normal;
+		color:#666;
+		text-decoration: line-through;
+}
+
+ .estoretable th a,
+ .estoretable th {
+	 	white-space:nowrap;
+		 font-family:Arial;
+		   background-color:#dddddd; color:#000000; 
+		
+}
+.productMatrixTable th{ background-color:#a9b6cb;}
+.estoretable tfoot td {
+		text-align:right
+}
+.estoretable  li
+{list-style:none; padding-left:15px;}
+.estoretable  li a
+{color:#FF5809;}

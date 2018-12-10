@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F9FEDAB2-CD5A-41EF-A819-5F54FFEC3F6E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestProject1</RootNamespace>
+    <AssemblyName>TestProject1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>WebTest</TestProjectType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'uStore|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\uStore\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\TestProject1.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\eStore.OMBusiness\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ctcbMac, Version=1.0.2.1211, Culture=neutral, PublicKeyToken=671f9be3118de246, processorArchitecture=x86" />
+    <Reference Include="INIpayNet, Version=5.0.1.9, Culture=neutral, PublicKeyToken=baf9dc2e190f803c, processorArchitecture=AMD64" />
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Payflow_dotNET, Version=4.3.1.0, Culture=neutral, PublicKeyToken=14aa1e8d77f2a97c" />
+    <Reference Include="PayWayAPI, Version=1.0.9.0, Culture=neutral, PublicKeyToken=86c0c62b0047d694" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="VTPayment, Version=1.0.2329.28306, Culture=neutral" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABN_AMRODirectLinkTest.cs" />
+    <Compile Include="AddressValidationTest.cs" />
+    <Compile Include="AdvertisementHelperTest.cs" />
+    <Compile Include="AllSequenceHelperTest.cs" />
+    <Compile Include="BoxHelperTest.cs" />
+    <Compile Include="CampaignStrategyTest.cs" />
+    <Compile Include="CartHelperTest.cs" />
+    <Compile Include="CartUnitTest.cs" />
+    <Compile Include="CTCBPosSolutionTest.cs" />
+    <Compile Include="CTOSAttributeLangHelperTest.cs" />
+    <Compile Include="CTOSComparisionHelperTest.cs" />
+    <Compile Include="CTOSComponentHelperTest.cs" />
+    <Compile Include="CTOSComponentSyncTest.cs" />
+    <Compile Include="CurrencyHelperTest.cs" />
+    <Compile Include="DHLRateHelperTest.cs" />
+    <Compile Include="DMFHelperTest.cs" />
+    <Compile Include="EmailBasicTemplateUnitTest.cs" />
+    <Compile Include="EMailNoticeTemplateTest.cs" />
+    <Compile Include="EMailTest.cs" />
+    <Compile Include="eStoreLogerTest.cs" />
+    <Compile Include="eStoreWebServiceTest.cs" />
+    <Compile Include="es_StoreTest.cs" />
+    <Compile Include="INIpaySolutionTest.cs" />
+    <Compile Include="LookupUtilUnitTest.cs" />
+    <Compile Include="MenuHelperTest.cs" />
+    <Compile Include="OrderHelperTest.cs" />
+    <Compile Include="OrderImportTest.cs" />
+    <Compile Include="PackingMethodTest.cs" />
+    <Compile Include="PartHelperTest.cs" />
+    <Compile Include="PartTest.cs" />
+    <Compile Include="PeripheralHelperTest.cs" />
+    <Compile Include="PISSyncTest.cs" />
+    <Compile Include="ProductBoxHelperTest.cs" />
+    <Compile Include="ProductCategoryHelperTest.cs" />
+    <Compile Include="ProductCategoryUnitTest.cs" />
+    <Compile Include="ProductHelperTest.cs" />
+    <Compile Include="ProductSpecProcessTest.cs" />
+    <Compile Include="Product_CtosHelperTest.cs" />
+    <Compile Include="Product_CtosUnitTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuotationHelperTest.cs" />
+    <Compile Include="QuotationUnitTest.cs" />
+    <Compile Include="SAPOrderTest.cs" />
+    <Compile Include="SAPOrderTrackingTest.cs" />
+    <Compile Include="SAPProxyTest.cs" />
+    <Compile Include="ServiceRequestHelperTest.cs" />
+    <Compile Include="ShippingCarierHelperTest.cs" />
+    <Compile Include="ShippingCarrierFedExTest.cs" />
+    <Compile Include="ShippingCarrierTDSTest.cs" />
+    <Compile Include="ShippingCarrierUPSTest.cs" />
+    <Compile Include="SpecHelperTest.cs" />
+    <Compile Include="StateZipHelperTest.cs" />
+    <Compile Include="StoreConfigHelperTest.cs" />
+    <Compile Include="StoreHelperTest.cs" />
+    <Compile Include="StoreSolutionUnitTest.cs" />
+    <Compile Include="StoreUnitTest.cs" />
+    <Compile Include="StoreUnitTestLogin.cs" />
+    <Compile Include="UserActivityLogTest.cs" />
+    <Compile Include="UserHelperTest.cs" />
+    <Compile Include="UserShortCutHelperTest.cs" />
+    <Compile Include="UserUnitTest.cs" />
+    <Compile Include="VATvalidationTest.cs" />
+    <Compile Include="VendorHelperTest.cs" />
+    <Compile Include="ViewLogHelperTest.cs" />
+    <Compile Include="WebPostRequestTest.cs" />
+    <Compile Include="Web\eStoreUIAutoTest.cs" />
+    <Compile Include="WidgetHandlerUnitTest.cs" />
+    <Compile Include="WidgetPageHelperTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <Shadow Include="Test References\eStore.BusinessModules.accessor" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\esPOCOS\eStore.POCOS.csproj">
+      <Project>{D7F65428-E52C-481C-A7D7-B5216170A028}</Project>
+      <Name>eStore.POCOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eStore.BusinessModules\eStore.BusinessModules.csproj">
+      <Project>{DFB9ECA4-E67F-4AAC-B6B1-9358075BB61E}</Project>
+      <Name>eStore.BusinessModules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eStore.Presentation\eStore.Presentation.csproj">
+      <Project>{87286F2E-8CB2-484D-B9CF-87EA382E2BCE}</Project>
+      <Name>eStore.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\estore.proxy\eStore.Proxy.csproj">
+      <Project>{990A7A56-F875-431B-BAF2-0DC5F906AC60}</Project>
+      <Name>eStore.Proxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eStore.UI\eStore.UI.csproj">
+      <Project>{0029332A-3B50-49AE-9FEB-8329A99AE4AA}</Project>
+      <Name>eStore.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eStoreEntity\eStore.Entities.csproj">
+      <Project>{4E600E03-BF18-44D0-BDA5-A3EF76EDC9AE}</Project>
+      <Name>eStore.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\esUtilities\eStore.Utilities.csproj">
+      <Project>{C427CB0D-E042-4FC3-9395-5B7ED1F21C09}</Project>
+      <Name>eStore.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="bin\log4net.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\log4net.xml" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

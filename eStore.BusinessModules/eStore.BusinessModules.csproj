@@ -1,0 +1,1201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFB9ECA4-E67F-4AAC-B6B1-9358075BB61E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eStore.BusinessModules</RootNamespace>
+    <AssemblyName>eStore.BusinessModules</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\QA\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\eStore.BusinessModules.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Local\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\eStore.BusinessModules.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'uStore|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\uStore\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\eStore.BusinessModules.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AopSdk, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AopSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="AuthorizeNet, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AuthorizeNet.1.9.3\lib\AuthorizeNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ctcbPos, Version=1.0.3.812, Culture=neutral, PublicKeyToken=671f9be3118de246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\ctcbPos.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="INIpayNet, Version=5.0.1.9, Culture=neutral, PublicKeyToken=baf9dc2e190f803c, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\INIpayNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.TaskScheduler, Version=2.2.0.18504, Culture=neutral, PublicKeyToken=0d013ddd5178a2ae, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Microsoft.Win32.TaskScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Payflow_dotNET">
+      <HintPath>Libraries\Payflow_dotNET.dll</HintPath>
+    </Reference>
+    <Reference Include="PayWayAPI, Version=1.0.9.0, Culture=neutral, PublicKeyToken=86c0c62b0047d694">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\PayWayAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Uol.PagSeguro, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Uol.PagSeguro.dll</HintPath>
+    </Reference>
+    <Reference Include="VTPayment, Version=1.0.2329.28306, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\VTPayment.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABN_AMRODirectLink.cs" />
+    <Compile Include="ABN_AMROSolution.cs" />
+    <Compile Include="AddressValidation.cs" />
+    <Compile Include="AddressValidator.cs" />
+    <Compile Include="AdvantechCmsModel.cs" />
+    <Compile Include="AdvantechOnlineRequestAdapter.cs" />
+    <Compile Include="AEUPaymentResponse.cs" />
+    <Compile Include="AuthorizeNetSolution.cs" />
+    <Compile Include="BaseService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Carrier.cs" />
+    <Compile Include="CMSManager.cs" />
+    <Compile Include="ContactInfo.cs" />
+    <Compile Include="DaouPaySolution.cs" />
+    <Compile Include="FreightFix\FreightQTY.cs" />
+    <Compile Include="FreightFix\IFreightEx.cs" />
+    <Compile Include="PackingRule_AEU.cs" />
+    <Compile Include="CTCBRedirect.cs" />
+    <Compile Include="DeliveryCategoryAJP.cs" />
+    <Compile Include="DeliveryCategoryAUS.cs" />
+    <Compile Include="DeliveryCategoryMGT.cs" />
+    <Compile Include="ePAPSShippingService.cs" />
+    <Compile Include="FtpHelper.cs" />
+    <Compile Include="HDIResponseFilter.cs" />
+    <Compile Include="IDeliveryCategory.cs" />
+    <Compile Include="InternalHDIResponseFilter.cs" />
+    <Compile Include="IPackingRule.cs" />
+    <Compile Include="LandedCost.cs" />
+    <Compile Include="LandedCostManager.cs" />
+    <Compile Include="LTron\ConfigurationSystem.cs" />
+    <Compile Include="LTron\ExportManager.cs" />
+    <Compile Include="LTron\Product.cs" />
+    <Compile Include="LTron\ProductCategory.cs" />
+    <Compile Include="NetTermSolution.cs" />
+    <Compile Include="CTCBPosSolution.cs" />
+    <Compile Include="INIpaySolution.cs" />
+    <Compile Include="IPaymentSolutionProvider.cs" />
+    <Compile Include="OgoneDirectLink.cs" />
+    <Compile Include="PackingRule_ABB.cs" />
+    <Compile Include="PackingRule_AUS.cs" />
+    <Compile Include="PackingRule_TDS.cs" />
+    <Compile Include="PagamentoDigitalSolution.cs" />
+    <Compile Include="PagSeguroSolution.cs" />
+    <Compile Include="PayDirectlySolution.cs" />
+    <Compile Include="PaymentSolution.cs" />
+    <Compile Include="PayPalRedirectSolution.cs" />
+    <Compile Include="PayPalRedirectSolutionMY.cs" />
+    <Compile Include="PayWaySolution.cs" />
+    <Compile Include="ProductDelivery.cs" />
+    <Compile Include="PStore.cs" />
+    <Compile Include="Reward\IReward.cs" />
+    <Compile Include="Reward\IRewardPoint.cs" />
+    <Compile Include="Reward\RewardBase.cs" />
+    <Compile Include="Reward\RewardMgt.cs" />
+    <Compile Include="Reward\RewardNumber.cs" />
+    <Compile Include="Reward\RewardPointBase.cs" />
+    <Compile Include="Reward\RewardPointFromDB.cs" />
+    <Compile Include="Reward\RewardPointFromUnica.cs" />
+    <Compile Include="Reward\RewardPointMgt.cs" />
+    <Compile Include="Reward\RewardRate.cs" />
+    <Compile Include="SAPOrder.cs" />
+    <Compile Include="SAPOrderTracking.cs" />
+    <Compile Include="ShippingCarrierABBUPS.cs" />
+    <Compile Include="ShippingCarrierABBUSPS.cs" />
+    <Compile Include="ShippingCarrierAEUUPS.cs" />
+    <Compile Include="ShippingCarrierABBFedEx.cs" />
+    <Compile Include="ShippingCarrierUSPS.cs" />
+    <Compile Include="ShippingCarrierWillCall.cs" />
+    <Compile Include="SSLHDIResponseFilter.cs" />
+    <Compile Include="Task\AbandonedCartEventPublisher.cs" />
+    <Compile Include="Task\DeferAgent.cs" />
+    <Compile Include="Task\FTPFileUploader.cs" />
+    <Compile Include="Task\ITask.cs" />
+    <Compile Include="Task\EventPublisher.cs" />
+    <Compile Include="Task\PopularProductReporter.cs" />
+    <Compile Include="Task\SendMailEvent.cs" />
+    <Compile Include="Task\SyncBBorderToMyAdvantech.cs" />
+    <Compile Include="Task\SyncFilesToBackupServer.cs" />
+    <Compile Include="Task\TaskBase.cs" />
+    <Compile Include="Task\EventManager.cs" />
+    <Compile Include="Task\TaskScheduler.cs" />
+    <Compile Include="Task\TrackingDataPublisher.cs" />
+    <Compile Include="TaxService\BBTax.cs" />
+    <Compile Include="TaxService\SGRate.cs" />
+    <Compile Include="TaxService\TaxManager.cs" />
+    <Compile Include="TaxService\TaxCalculator.cs" />
+    <Compile Include="TaxService\BRRate.cs" />
+    <Compile Include="TaxService\EURate.cs" />
+    <Compile Include="TaxService\FixRate.cs" />
+    <Compile Include="TaxService\SAPTax.cs" />
+    <Compile Include="Templates\EMailDiscountRequest.cs" />
+    <Compile Include="Templates\EmailECOPartner.cs" />
+    <Compile Include="Templates\EMailNoticeTemplate.cs" />
+    <Compile Include="IPriceProvider.cs" />
+    <Compile Include="IProductInfoProvider.cs" />
+    <Compile Include="IShippingCarrier.cs" />
+    <Compile Include="ITaxCalculationMethod.cs" />
+    <Compile Include="PackingManager.cs" />
+    <Compile Include="PackingMethod.cs" />
+    <Compile Include="PaymentManager.cs" />
+    <Compile Include="PayPalSolution.cs" />
+    <Compile Include="ProductInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ShippingCarrierAAU.cs" />
+    <Compile Include="ShippingCarrierDHL.cs" />
+    <Compile Include="ShippingCarrierFedEx.cs" />
+    <Compile Include="ShippingCarrierFixRate.cs" />
+    <Compile Include="ShippingCarrierTDS.cs" />
+    <Compile Include="ShippingCarrierUPS.cs" />
+    <Compile Include="ShippingManager.cs" />
+    <Compile Include="ShippingMethod.cs" />
+    <Compile Include="Store.cs" />
+    <Compile Include="StoreManager.cs" />
+    <Compile Include="StoreSolution.cs" />
+    <Compile Include="Tax.cs" />
+    <Compile Include="Templates\EmailBasicTemplate.cs" />
+    <Compile Include="Templates\EmailProductPage.cs" />
+    <Compile Include="KuaiQianSolution.cs" />
+    <Compile Include="ThreeDimensionBoxing.cs" />
+    <Compile Include="TrustAllCertificatePolicy.cs" />
+    <Compile Include="UrlRewriting\FormRewriterControlAdapter.cs" />
+    <Compile Include="UrlRewriting\RewriteBaseModule.cs" />
+    <Compile Include="UrlRewriting\RewriteConfigHandler.cs" />
+    <Compile Include="UrlRewriting\RewriteModule.cs" />
+    <Compile Include="UrlRewriting\UrlRewriteModel.cs" />
+    <Compile Include="VATvalidation.cs" />
+    <Compile Include="Vendor.cs" />
+    <Compile Include="VendorManager.cs" />
+    <Compile Include="VeriTransSolution.cs" />
+    <Compile Include="Web References\FedExAddressValidation\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\FedexRateWebServiceNew\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\FedExWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\iAbleClub.MyAdvantech\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\iAbleClub\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MyAdvantechBB\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MyAdvantechOrderTrkWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MyAdvantechSAPCustomerNew\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MyAdvantechSAPCustomer\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SAPOrderWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServicePartner\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SiebelWS4EMKT\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SSO.Advantech\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\tw.com.advantech.unica\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\UnicaServiceInt\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\UPSAddressValidation\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\UPSLandedCostWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\UPSWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\USAdvOrderTrkWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\USTax\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebPostRequest.cs" />
+    <Compile Include="Widget\HtmlNodeManager.cs" />
+    <Compile Include="WireTransferSolution.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\esPOCOS\eStore.POCOS.csproj">
+      <Project>{D7F65428-E52C-481C-A7D7-B5216170A028}</Project>
+      <Name>eStore.POCOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\esUtilities\eStore.Utilities.csproj">
+      <Project>{C427CB0D-E042-4FC3-9395-5B7ED1F21C09}</Project>
+      <Name>eStore.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartThreadPool\SmartThreadPool.csproj">
+      <Project>{74D4C33F-7CC8-4B2A-A7DF-D8B6E63B6EBD}</Project>
+      <Name>SmartThreadPool</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Configurations\ACN\ACNcert\99bill-rsa-ushop.pfx" />
+    <None Include="Configurations\ACN\ACNcert\99bill-rsa.pfx" />
+    <None Include="Configurations\ACN\ACNcert\99bill.cert.rsa.20140728.cer" />
+    <None Include="Configurations\ACN\ACNcert\99bill.cert.rsa.20340630-ushop.cer" />
+    <None Include="Configurations\AJP\flexlib.conf" />
+    <None Include="Configurations\AJP\msg_table.en" />
+    <None Include="Configurations\AJP\msg_table.ja" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\ResolveAssemblyReference.cache" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UPSWebService\common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UPSWebService\Error1.1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UPSWebService\RateWebServiceSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UPSWebService\RateWS.wsdl" />
+    <None Include="Service References\UPSWebService\UPSSecurity.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\USTaxWebService\USTaxService.wsdl" />
+    <None Include="Web References\FedExAddressValidation\AddressValidationReply.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\FedExAddressValidation\AddressValidationServiceDefinitions.wsdl" />
+    <None Include="Web References\FedExAddressValidation\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\FedexRateWebServiceNew\RateReply.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\FedexRateWebServiceNew\RateServiceDefinitions.wsdl" />
+    <None Include="Web References\FedexRateWebServiceNew\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\FedExWebService\RateReply.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\FedExWebService\RateServiceDefinitions.wsdl" />
+    <None Include="Web References\FedExWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\iAbleClub.MyAdvantech\CreateSAPSoForeStore.wsdl" />
+    <None Include="Web References\iAbleClub.MyAdvantech\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\iAbleClub.MyAdvantech\SalesOrder.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\iAbleClub.MyAdvantech\SalesOrder.xsd" />
+    <None Include="Web References\iAbleClub\IMartPointService.wsdl" />
+    <None Include="Web References\iAbleClub\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MyAdvantechBB\BBCustomer.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyAdvantechBB\BBorderAPI.wsdl" />
+    <None Include="Web References\MyAdvantechBB\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MyAdvantechBB\WebServiceResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyAdvantechOrderTrkWebService\eBizAEU_WS.wsdl" />
+    <None Include="Web References\MyAdvantechOrderTrkWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MyAdvantechSAPCustomerNew\MAMigration.wsdl" />
+    <None Include="Web References\MyAdvantechSAPCustomerNew\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MyAdvantechSAPCustomer\CreateSAPCustomer.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MyAdvantechSAPCustomer\CreateSAPCustomer.xsd" />
+    <None Include="Web References\MyAdvantechSAPCustomer\CreateSAPCustomerDAL.wsdl" />
+    <None Include="Web References\MyAdvantechSAPCustomer\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SAPOrderWebService\orderwebservice.wsdl" />
+    <None Include="Web References\SAPOrderWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServicePartner\AdminWebService.wsdl" />
+    <None Include="Web References\ServicePartner\eduAgendaMaster.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServicePartner\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServicePartner\Solutions_Company_ServiceArea.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServicePartner\Solutions_Company_VIEW.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SiebelWS4EMKT\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SiebelWS4EMKT\RESULT.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SiebelWS4EMKT\ws4emkt.wsdl" />
+    <None Include="Web References\SSO.Advantech\MemberRegStepOne.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSO.Advantech\membershipwebservice.wsdl" />
+    <None Include="Web References\SSO.Advantech\MEMBER_SIMPLE.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSO.Advantech\MEMBER_SIMPLE_FORM_QUESTIONNAIRE.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSO.Advantech\OnlineRequest1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSO.Advantech\OnlineRequestV2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSO.Advantech\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SSO.Advantech\ReportMemberRBU.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSO.Advantech\SSOUSER1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSO.Advantech\UserLevel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\tw.com.advantech.unica\AkrPoint.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\tw.com.advantech.unica\ExtApi.wsdl" />
+    <None Include="Web References\tw.com.advantech.unica\LeadRetInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\tw.com.advantech.unica\PoolDAL.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\tw.com.advantech.unica\PoolDAL.xsd" />
+    <None Include="Web References\tw.com.advantech.unica\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\UnicaServiceInt\CreateContactResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UnicaServiceInt\IntApi.wsdl" />
+    <None Include="Web References\UnicaServiceInt\LDRBU1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UnicaServiceInt\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\UnicaServiceInt\URL_Product1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UPSAddressValidation\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\UPSAddressValidation\XAV.wsdl" />
+    <None Include="Web References\UPSAddressValidation\XAVResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UPSLandedCostWS\LandedCost.wsdl" />
+    <None Include="Web References\UPSLandedCostWS\LandedCostResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UPSLandedCostWS\LandedCostWebServiceSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\UPSLandedCostWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\UPSWebService\common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\UPSWebService\Error1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\UPSWebService\RateResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UPSWebService\RateWebServiceSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\UPSWebService\RateWS.wsdl" />
+    <None Include="Web References\UPSWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\UPSWebService\UPSSecurity.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\USAdvOrderTrkWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\USAdvOrderTrkWebService\USAdvOrdTrk.wsdl" />
+    <None Include="Web References\USTax\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\USTax\USTaxService.wsdl" />
+    <None Include="XMLSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\esPOCOS.dll" />
+    <Content Include="bin\Debug\esPOCOS.pdb" />
+    <Content Include="bin\Debug\eStore.BusinessModules.dll" />
+    <Content Include="bin\Debug\eStore.BusinessModules.pdb" />
+    <Content Include="bin\Debug\esUtilities.dll" />
+    <Content Include="bin\Debug\esUtilities.pdb" />
+    <Content Include="bin\Debug\log4net.dll" />
+    <Content Include="bin\Debug\log4net.xml" />
+    <Content Include="Configurations\AJP\actioncode.def" />
+    <Content Include="Libraries\ctcbPos.dll" />
+    <Content Include="Libraries\HtmlAgilityPack.dll" />
+    <Content Include="Libraries\INIcrypto.dll" />
+    <Content Include="Libraries\INIpayNet.dll" />
+    <Content Include="Libraries\Microsoft.Win32.TaskScheduler.dll" />
+    <Content Include="Libraries\Payflow_dotNET.dll" />
+    <Content Include="Libraries\PayWayAPI.dll" />
+    <Content Include="Libraries\Uol.PagSeguro.dll" />
+    <Content Include="Libraries\VTPayment.dll" />
+    <Content Include="obj\Debug\eStore.BusinessModules.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\eStore.BusinessModules.dll" />
+    <Content Include="obj\Debug\eStore.BusinessModules.pdb" />
+    <Content Include="Templates\AAU\CallMeNow_AAU.htm" />
+    <Content Include="Templates\AAU\EstablishAccount_AAU.htm" />
+    <Content Include="Templates\AAU\PayByBankConfirmation_AAU.htm" />
+    <Content Include="Templates\AAU\PayByCardConfirmation_AAU.htm" />
+    <Content Include="Templates\AAU\PrivacyPolicy_AAU.htm" />
+    <Content Include="Templates\AAU\ProductEvaluation_AAU.htm" />
+    <Content Include="Templates\AAU\ProductReferral_AAU.htm" />
+    <Content Include="Templates\AAU\QuotationConfirmation_AAU.htm" />
+    <Content Include="Templates\AAU\QuotationInPDF_AAU.htm" />
+    <Content Include="Templates\AAU\ReturnPolicy_AAU.htm" />
+    <Content Include="Templates\AAU\ShippingDamage_AAU.htm" />
+    <Content Include="Templates\AAU\TransferredQuotationNotice_AAU.htm" />
+    <Content Include="Templates\AAU\UserAgreement_AAU.htm" />
+    <Content Include="Templates\AAU\VolumnDiscountRequest_AAU.htm" />
+    <Content Include="Templates\AAU\WarrantyPolicy_AAU.htm" />
+    <Content Include="Templates\ABR\AccountEstablish_ABR.htm" />
+    <Content Include="Templates\ABR\CallMeNow_ABR.htm" />
+    <Content Include="Templates\ABR\EstablishAccount_ABR.htm" />
+    <Content Include="Templates\ABR\Glossary_ABR.htm" />
+    <Content Include="Templates\ABR\OrderEMailNotice.htm" />
+    <Content Include="Templates\ABR\PayByBankConfirmation_ABR.htm" />
+    <Content Include="Templates\ABR\PayByCardConfirmation_ABR.htm" />
+    <Content Include="Templates\ABR\PayByNetTermConfirmation_ABR.htm" />
+    <Content Include="Templates\ABR\PrivacyPolicy_ABR.htm" />
+    <Content Include="Templates\ABR\ProductEvaluation_ABR.htm" />
+    <Content Include="Templates\ABR\ProductReferral_ABR.htm" />
+    <Content Include="Templates\ABR\QuotationConfirmation_ABR.htm" />
+    <Content Include="Templates\ABR\QuotationInPDF_ABR.htm" />
+    <Content Include="Templates\ABR\ReturnPolicy_ABR.htm" />
+    <Content Include="Templates\ABR\ShippingDamage_ABR.htm" />
+    <Content Include="Templates\ABR\TransferredQuotationNotice_ABR.htm" />
+    <Content Include="Templates\ABR\UserAgreement_ABR.htm" />
+    <Content Include="Templates\ABR\VolumnDiscountRequest_ABR.htm" />
+    <Content Include="Templates\ABR\WarrantyPolicy_ABR.htm" />
+    <Content Include="Templates\ACN\CallMeNow_ACN.htm" />
+    <Content Include="Templates\ACN\EstablishAccount_ACN.htm" />
+    <Content Include="Templates\ACN\PayByBankConfirmation_ACN.htm" />
+    <Content Include="Templates\ACN\PayByCardConfirmation_ACN.htm" />
+    <Content Include="Templates\ACN\PrivacyPolicy_ACN.htm" />
+    <Content Include="Templates\ACN\ProductEvaluation_ACN.htm" />
+    <Content Include="Templates\ACN\ProductReferral_ACN.htm" />
+    <Content Include="Templates\ACN\QuotationConfirmation_ACN.htm" />
+    <Content Include="Templates\ACN\QuotationInPDF_ACN.htm" />
+    <Content Include="Templates\ACN\ReturnPolicy_ACN.htm" />
+    <Content Include="Templates\ACN\ShippingDamage_ACN.htm" />
+    <Content Include="Templates\ACN\TransferredQuotationNotice_ACN.htm" />
+    <Content Include="Templates\ACN\UserAgreement_ACN.htm" />
+    <Content Include="Templates\ACN\Ushop\CallMeNow_ACN.htm" />
+    <Content Include="Templates\ACN\Ushop\EstablishAccount_ACN.htm" />
+    <Content Include="Templates\ACN\Ushop\PayByBankConfirmation_ACN.htm" />
+    <Content Include="Templates\ACN\Ushop\PayByCardConfirmation_ACN.htm" />
+    <Content Include="Templates\ACN\Ushop\PrivacyPolicy_ACN.htm" />
+    <Content Include="Templates\ACN\Ushop\ProductEvaluation_ACN.htm" />
+    <Content Include="Templates\ACN\Ushop\ProductReferral_ACN.htm" />
+    <Content Include="Templates\ACN\Ushop\QuotationConfirmation_ACN.htm" />
+    <Content Include="Templates\ACN\Ushop\QuotationInPDF_ACN.htm" />
+    <Content Include="Templates\ACN\Ushop\RateGift_ACN.htm" />
+    <Content Include="Templates\ACN\Ushop\ReturnPolicy_ACN.htm" />
+    <Content Include="Templates\ACN\Ushop\ShippingDamage_ACN.htm" />
+    <Content Include="Templates\ACN\Ushop\TransferredQuotationNotice_ACN.htm" />
+    <Content Include="Templates\ACN\Ushop\UserAgreement_ACN.htm" />
+    <Content Include="Templates\ACN\Ushop\VolumnDiscountRequest_ACN.htm" />
+    <Content Include="Templates\ACN\Ushop\WarrantyPolicy_ACN.htm" />
+    <Content Include="Templates\ACN\VolumnDiscountRequest_ACN.htm" />
+    <Content Include="Templates\ACN\WarrantyPolicy_ACN.htm" />
+    <Content Include="Templates\AEU\CallMeNow_AEU.htm" />
+    <Content Include="Templates\AEU\de-DE\CallMeNow_AEU.htm" />
+    <Content Include="Templates\AEU\de-DE\PayByBankConfirmation_AEU.htm" />
+    <Content Include="Templates\AEU\de-DE\PayByCardConfirmation_AEU.htm" />
+    <Content Include="Templates\AEU\de-DE\QuotationConfirmation_AEU.htm" />
+    <Content Include="Templates\AEU\de-DE\TransferredQuotationNotice_AEU.htm" />
+    <Content Include="Templates\AEU\de-DE\VolumnDiscountRequest_AEU.htm" />
+    <Content Include="Templates\AEU\es-ES\CallMeNow_AEU.htm" />
+    <Content Include="Templates\AEU\es-ES\PayByBankConfirmation_AEU.htm" />
+    <Content Include="Templates\AEU\es-ES\PayByCardConfirmation_AEU.htm" />
+    <Content Include="Templates\AEU\es-ES\QuotationConfirmation_AEU.htm" />
+    <Content Include="Templates\AEU\es-ES\TransferredQuotationNotice_AEU.htm" />
+    <Content Include="Templates\AEU\es-ES\VolumnDiscountRequest_AEU.htm" />
+    <Content Include="Templates\AEU\EstablishAccount_AEU.htm" />
+    <Content Include="Templates\AEU\fr-FR\CallMeNow_AEU.htm" />
+    <Content Include="Templates\AEU\fr-FR\PayByBankConfirmation_AEU.htm" />
+    <Content Include="Templates\AEU\fr-FR\PayByCardConfirmation_AEU.htm" />
+    <Content Include="Templates\AEU\fr-FR\QuotationConfirmation_AEU.htm" />
+    <Content Include="Templates\AEU\fr-FR\TransferredQuotationNotice_AEU.htm" />
+    <Content Include="Templates\AEU\fr-FR\VolumnDiscountRequest_AEU.htm" />
+    <Content Include="Templates\AEU\OrderSyncConfirmation_AEU.htm" />
+    <Content Include="Templates\AEU\PayByBankConfirmation_AEU.htm" />
+    <Content Include="Templates\AEU\PayByCardConfirmation_AEU.htm" />
+    <Content Include="Templates\AEU\PrivacyPolicy_AEU.htm" />
+    <Content Include="Templates\AEU\ProductEvaluation_AEU.htm" />
+    <Content Include="Templates\AEU\ProductReferral_AEU.htm" />
+    <Content Include="Templates\AEU\QuotationConfirmation_AEU.htm" />
+    <Content Include="Templates\AEU\QuotationInPDF_AEU.htm" />
+    <Content Include="Templates\AEU\ReturnPolicy_AEU.htm" />
+    <Content Include="Templates\AEU\ShippingDamage_AEU.htm" />
+    <Content Include="Templates\AEU\TransferredQuotationNotice_AEU.htm" />
+    <Content Include="Templates\AEU\UserAgreement_AEU.htm" />
+    <Content Include="Templates\AEU\VolumnDiscountRequest_AEU.htm" />
+    <Content Include="Templates\AEU\WarrantyPolicy_AEU.htm" />
+    <Content Include="Templates\AIN\AccountEstablish_AIN.htm" />
+    <Content Include="Templates\AIN\CallMeNow_AIN.htm" />
+    <Content Include="Templates\AIN\EstablishAccount_AIN.htm" />
+    <Content Include="Templates\AIN\PayByBankConfirmation_AIN.htm" />
+    <Content Include="Templates\AIN\PayByCardConfirmation_AIN.htm" />
+    <Content Include="Templates\AIN\PayByDirectlyConfirmation_AIN.htm" />
+    <Content Include="Templates\AIN\PrivacyPolicy_AIN.htm" />
+    <Content Include="Templates\AIN\ProductEvaluation_AIN.htm" />
+    <Content Include="Templates\AIN\ProductReferral_AIN.htm" />
+    <Content Include="Templates\AIN\QuotationConfirmation_AIN.htm" />
+    <Content Include="Templates\AIN\QuotationInPDF_AIN.htm" />
+    <Content Include="Templates\AIN\ReturnPolicy_AIN.htm" />
+    <Content Include="Templates\AIN\ShippingDamage_AIN.htm" />
+    <Content Include="Templates\AIN\TransferredQuotationNotice_AIN.htm" />
+    <Content Include="Templates\AIN\UserAgreement_AIN.htm" />
+    <Content Include="Templates\AIN\VolumnDiscountRequest_AIN.htm" />
+    <Content Include="Templates\AIN\WarrantyPolicy_AIN.htm" />
+    <Content Include="Templates\AJP\CallMeNow_AJP.htm" />
+    <Content Include="Templates\AJP\EstablishAccount_AJP.htm" />
+    <Content Include="Templates\AJP\PayByBankConfirmation_AJP.htm" />
+    <Content Include="Templates\AJP\PayByCardConfirmation_AJP.htm" />
+    <Content Include="Templates\AJP\PrivacyPolicy_AJP.htm" />
+    <Content Include="Templates\AJP\ProductEvaluation_AJP.htm" />
+    <Content Include="Templates\AJP\ProductReferral_AJP.htm" />
+    <Content Include="Templates\AJP\QuotationConfirmation_AJP.htm" />
+    <Content Include="Templates\AJP\QuotationInPDF_AJP.htm" />
+    <Content Include="Templates\AJP\ReturnPolicy_AJP.htm" />
+    <Content Include="Templates\AJP\ShippingDamage_AJP.htm" />
+    <Content Include="Templates\AJP\Support_MailOrder_AJP.htm" />
+    <Content Include="Templates\AJP\Support_Membership_AJP.htm" />
+    <Content Include="Templates\AJP\TransferredQuotationNotice_AJP.htm" />
+    <Content Include="Templates\AJP\UserAgreement_AJP.htm" />
+    <Content Include="Templates\AJP\VolumnDiscountRequest_AJP.htm" />
+    <Content Include="Templates\AJP\WarrantyPolicy_AJP.htm" />
+    <Content Include="Templates\AKR\CallMeNow_AKR.htm" />
+    <Content Include="Templates\AKR\EstablishAccount_AKR.htm" />
+    <Content Include="Templates\AKR\PayByBankConfirmation_AKR.htm" />
+    <Content Include="Templates\AKR\PayByCardConfirmation_AKR.htm" />
+    <Content Include="Templates\AKR\PrivacyPolicy_AKR.htm" />
+    <Content Include="Templates\AKR\ProductEvaluation_AKR.htm" />
+    <Content Include="Templates\AKR\ProductReferral_AKR.htm" />
+    <Content Include="Templates\AKR\QuotationConfirmation_AKR.htm" />
+    <Content Include="Templates\AKR\QuotationInPDF_AKR.htm" />
+    <Content Include="Templates\AKR\ReturnPolicy_AKR.htm" />
+    <Content Include="Templates\AKR\ShippingDamage_AKR.htm" />
+    <Content Include="Templates\AKR\TransferredQuotationNotice_AKR.htm" />
+    <Content Include="Templates\AKR\UserAgreement_AKR.htm" />
+    <Content Include="Templates\AKR\VolumnDiscountRequest_AKR.htm" />
+    <Content Include="Templates\AKR\WarrantyPolicy_AKR.htm" />
+    <Content Include="Templates\ANC\AccountEstablish_ANC.htm" />
+    <Content Include="Templates\ANC\CallMeNow_ANC.htm" />
+    <Content Include="Templates\ANC\EstablishAccount_ANC.htm" />
+    <Content Include="Templates\ANC\Glossary_ANC.htm" />
+    <Content Include="Templates\ANC\OrderEMailNotice.htm" />
+    <Content Include="Templates\ANC\PayByBankConfirmation_ANC.htm" />
+    <Content Include="Templates\ANC\PayByCardConfirmation_ANC.htm" />
+    <Content Include="Templates\ANC\PayByNetTermConfirmation_ANC.htm" />
+    <Content Include="Templates\ANC\PrivacyPolicy_ANC.htm" />
+    <Content Include="Templates\ANC\ProductEvaluation_ANC.htm" />
+    <Content Include="Templates\ANC\ProductReferral_ANC.htm" />
+    <Content Include="Templates\ANC\QuotationConfirmation_ANC.htm" />
+    <Content Include="Templates\ANC\QuotationInPDF_ANC.htm" />
+    <Content Include="Templates\ANC\ReturnPolicy_ANC.htm" />
+    <Content Include="Templates\ANC\ShippingDamage_ANC.htm" />
+    <Content Include="Templates\ANC\TransferredQuotationNotice_ANC.htm" />
+    <Content Include="Templates\ANC\UserAgreement_ANC.htm" />
+    <Content Include="Templates\ANC\VolumnDiscountRequest_ANC.htm" />
+    <Content Include="Templates\ANC\WarrantyPolicy_ANC.htm" />
+    <Content Include="Templates\ATW\CallMeNow_ATW.htm" />
+    <Content Include="Templates\ATW\EstablishAccount_ATW.htm" />
+    <Content Include="Templates\ATW\PayByBankConfirmation_ATW.htm" />
+    <Content Include="Templates\ATW\PayByCardConfirmation_ATW.htm" />
+    <Content Include="Templates\ATW\PrivacyPolicy_ATW.htm" />
+    <Content Include="Templates\ATW\ProductEvaluation_ATW.htm" />
+    <Content Include="Templates\ATW\ProductReferral_ATW.htm" />
+    <Content Include="Templates\ATW\QuotationConfirmation_ATW.htm" />
+    <Content Include="Templates\ATW\QuotationInPDF_ATW.htm" />
+    <Content Include="Templates\ATW\ReturnPolicy_ATW.htm" />
+    <Content Include="Templates\ATW\ShippingDamage_ATW.htm" />
+    <Content Include="Templates\ATW\TransferredQuotationNotice_ATW.htm" />
+    <Content Include="Templates\ATW\UserAgreement_ATW.htm" />
+    <Content Include="Templates\ATW\VolumnDiscountRequest_ATW.htm" />
+    <Content Include="Templates\ATW\WarrantyPolicy_ATW.htm" />
+    <Content Include="Templates\AUS\AccountEstablish_AUS.htm" />
+    <Content Include="Templates\AUS\CallMeNow_AUS.htm" />
+    <Content Include="Templates\AUS\ECOPartner_Customer_AUS.htm" />
+    <Content Include="Templates\AUS\ECOPartner_LDR_AUS.htm" />
+    <Content Include="Templates\AUS\ForgotPassWord_AUS.htm" />
+    <Content Include="Templates\AUS\PayByNetTermConfirmation_AUS.htm" />
+    <Content Include="Templates\AUS\EstablishAccount_AUS.htm" />
+    <Content Include="Templates\AUS\OrderEMailNotice.htm" />
+    <Content Include="Templates\AUS\PayByBankConfirmation_AUS.htm" />
+    <Content Include="Templates\AUS\PayByCardConfirmation_AUS.htm" />
+    <Content Include="Templates\AUS\PrivacyPolicy_AUS.htm" />
+    <Content Include="Templates\AUS\ProductEvaluation_AUS.htm" />
+    <Content Include="Templates\AUS\ProductReferral_AUS.htm" />
+    <Content Include="Templates\AUS\PStoreReturnPolicy_AUS.htm" />
+    <Content Include="Templates\AUS\QuotationConfirmation_AUS.htm" />
+    <Content Include="Templates\AUS\QuotationInPDF_AUS.htm" />
+    <Content Include="Templates\AUS\Recommend2Friend_Customer_AUS.htm" />
+    <Content Include="Templates\AUS\Register_AUS.htm" />
+    <Content Include="Templates\AUS\RequestAssistance_Customer_AUS.htm" />
+    <Content Include="Templates\AUS\RequestAssistance_LDR_AUS.htm" />
+    <Content Include="Templates\AUS\RequestAssistance_Vendor_AUS.htm" />
+    <Content Include="Templates\AUS\ReturnPolicy_AUS.htm" />
+    <Content Include="Templates\AUS\ShippingDamage_AUS.htm" />
+    <Content Include="Templates\AUS\SubscribeUs_AUS.htm" />
+    <Content Include="Templates\AUS\TransferredQuotationNotice_AUS.htm" />
+    <Content Include="Templates\AUS\UserAgreement_AUS.htm" />
+    <Content Include="Templates\AUS\VolumnDiscountRequest_AUS.htm" />
+    <Content Include="Templates\AUS\WarrantyPolicy_AUS.htm" />
+    <Content Include="Templates\AUS\WidgetRequest_AUS.htm" />
+    <Content Include="Templates\Default\AccountEstablish.htm" />
+    <Content Include="Templates\Default\EstablishAccount.htm" />
+    <Content Include="Templates\Default\PayByBankConfirmation.htm" />
+    <Content Include="Templates\Default\PayByCardConfirmation.htm" />
+    <Content Include="Templates\Default\PrivacyPolicy.htm" />
+    <Content Include="Templates\Default\ProductEvaluation.htm" />
+    <Content Include="Templates\Default\ProductReferral.htm" />
+    <Content Include="Templates\Default\QuotationConfirmation.htm" />
+    <Content Include="Templates\Default\QuotationInPDF.htm" />
+    <Content Include="Templates\Default\ReturnPolicy.htm" />
+    <Content Include="Templates\Default\ShippingDamage.htm" />
+    <Content Include="Templates\Default\TransferredQuotationNotice.htm" />
+    <Content Include="Templates\Default\UserAgreement.htm" />
+    <Content Include="Templates\Default\VolumnDiscountRequest.htm" />
+    <Content Include="Templates\Default\WarrantyPolicy.htm" />
+    <Content Include="Templates\EMT\AccountEstablish_EMT.htm" />
+    <Content Include="Templates\EMT\CallMeNow_EMT.htm" />
+    <Content Include="Templates\EMT\EstablishAccount_EMT.htm" />
+    <Content Include="Templates\EMT\Glossary_EMT.htm" />
+    <Content Include="Templates\EMT\OrderEMailNotice.htm" />
+    <Content Include="Templates\EMT\PayByBankConfirmation_EMT.htm" />
+    <Content Include="Templates\EMT\PayByCardConfirmation_EMT.htm" />
+    <Content Include="Templates\EMT\PayByNetTermConfirmation_EMT.htm" />
+    <Content Include="Templates\EMT\PrivacyPolicy_EMT.htm" />
+    <Content Include="Templates\EMT\ProductEvaluation_EMT.htm" />
+    <Content Include="Templates\EMT\ProductReferral_EMT.htm" />
+    <Content Include="Templates\EMT\QuotationConfirmation_EMT.htm" />
+    <Content Include="Templates\EMT\QuotationInPDF_EMT.htm" />
+    <Content Include="Templates\EMT\ReturnPolicy_EMT.htm" />
+    <Content Include="Templates\EMT\ru-RU\PayByBankConfirmation_EMT.htm" />
+    <Content Include="Templates\EMT\ru-RU\PayByCardConfirmation_EMT.htm" />
+    <Content Include="Templates\EMT\ShippingDamage_EMT.htm" />
+    <Content Include="Templates\EMT\TransferredQuotationNotice_EMT.htm" />
+    <Content Include="Templates\EMT\UserAgreement_EMT.htm" />
+    <Content Include="Templates\EMT\VolumnDiscountRequest_EMT.htm" />
+    <Content Include="Templates\EMT\WarrantyPolicy_EMT.htm" />
+    <Content Include="Templates\SAP\AccountEstablish_SAP.htm" />
+    <Content Include="Templates\SAP\CallMeNow_SAP.htm" />
+    <Content Include="Templates\SAP\EstablishAccount_SAP.htm" />
+    <Content Include="Templates\SAP\PayByBankConfirmation_SAP.htm" />
+    <Content Include="Templates\SAP\PayByCardConfirmation_SAP.htm" />
+    <Content Include="Templates\SAP\PrivacyPolicy_SAP.htm" />
+    <Content Include="Templates\SAP\ProductEvaluation_SAP.htm" />
+    <Content Include="Templates\SAP\ProductReferral_SAP.htm" />
+    <Content Include="Templates\SAP\QuotationConfirmation_SAP.htm" />
+    <Content Include="Templates\SAP\QuotationInPDF_SAP.htm" />
+    <Content Include="Templates\SAP\ReturnPolicy_SAP.htm" />
+    <Content Include="Templates\SAP\ShippingDamage_SAP.htm" />
+    <Content Include="Templates\SAP\TransferredQuotationNotice_SAP.htm" />
+    <Content Include="Templates\SAP\UserAgreement_SAP.htm" />
+    <Content Include="Templates\SAP\VolumnDiscountRequest_SAP.htm" />
+    <Content Include="Templates\SAP\WarrantyPolicy_SAP.htm" />
+    <None Include="Web References\MyAdvantechBB\BBorderAPI.disco" />
+    <None Include="Web References\UnicaServiceInt\IntApi.disco" />
+    <None Include="Web References\iAbleClub.MyAdvantech\CreateSAPSoForeStore.disco" />
+    <None Include="Web References\iAbleClub\IMartPointService.disco" />
+    <None Include="Web References\tw.com.advantech.unica\ExtApi.disco" />
+    <None Include="Web References\MyAdvantechSAPCustomerNew\MAMigration.disco" />
+    <None Include="Web References\ServicePartner\AdminWebService.disco" />
+    <None Include="Web References\MyAdvantechSAPCustomer\CreateSAPCustomerDAL.disco" />
+    <None Include="Web References\SiebelWS4EMKT\ws4emkt.disco" />
+    <None Include="Web References\MyAdvantechOrderTrkWebService\eBizAEU_WS.disco" />
+    <None Include="Web References\USTax\USTaxService.disco" />
+    <None Include="Web References\USAdvOrderTrkWebService\USAdvOrdTrk.disco">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SAPOrderWebService\orderwebservice.disco" />
+    <None Include="Web References\SSO.Advantech\membershipwebservice.disco">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="Configurations\AAU\" />
+    <Folder Include="Configurations\AKR\" />
+    <Folder Include="Logs\AAU\" />
+    <Folder Include="Logs\AJP\pending\" />
+    <Folder Include="MailRepository\AUS\" />
+    <Folder Include="MailRepository\Others\" />
+    <Folder Include="MailRepository\System\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="C:\Documents and Settings\xiaoya\Desktop\AddressValidationServiceDefinitions.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\FedExAddressValidation\</RelPath>
+      <UpdateFromURL>C:\Documents and Settings\xiaoya\Desktop\AddressValidationServiceDefinitions.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_FedExAddressValidation_AddressValidationService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="C:\Documents and Settings\xiaoya\Desktop\XAV.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\UPSAddressValidation\</RelPath>
+      <UpdateFromURL>C:\Documents and Settings\xiaoya\Desktop\XAV.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_UPSAddressValidation_XAVService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="C:\Users\Alex.Chiu\Desktop\b+b related\fedex\RateService\RateService_v22.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\FedexRateWebServiceNew\</RelPath>
+      <UpdateFromURL>C:\Users\Alex.Chiu\Desktop\b+b related\fedex\RateService\RateService_v22.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_FedexRateWebServiceNew_RateService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="C:\Users\Edward.Keh\Desktop\ups\LandedCost\DotNet\LandedCostWSSample\LandedCostWSSample\Web References\LandedCostWebReference\LandedCost.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\UPSLandedCostWS\</RelPath>
+      <UpdateFromURL>C:\Users\Edward.Keh\Desktop\ups\LandedCost\DotNet\LandedCostWSSample\LandedCostWSSample\Web References\LandedCostWebReference\LandedCost.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_UPSLandedCostWS_LC</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://my.advantech.com:4002/Services/BBorderAPI.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MyAdvantechBB\</RelPath>
+      <UpdateFromURL>http://my.advantech.com:4002/Services/BBorderAPI.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_MyAdvantechBB_BBorderAPI</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://iableclub.advantech.com.tw/Services/IMartPointService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\iAbleClub\</RelPath>
+      <UpdateFromURL>http://iableclub.advantech.com.tw/Services/IMartPointService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_iAbleClub_IMartPointService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://admin.advantech.com.tw/ws/AdminWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServicePartner\</RelPath>
+      <UpdateFromURL>http://admin.advantech.com.tw/ws/AdminWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_ServicePartner_AdminWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://ags.advantech.com/WebService/USTaxService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\USTax\</RelPath>
+      <UpdateFromURL>http://ags.advantech.com/WebService/USTaxService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_USTax_USTaxService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="C:\Users\jimmy.xiao.ADVANTECH\Documents\Visual Studio 2010\Projects\Advantech eStore\trunk\eStore_3C\eStore.BusinessModules\Service References\UPSWebService\RateWS.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\UPSWebService\</RelPath>
+      <UpdateFromURL>C:\Users\jimmy.xiao.ADVANTECH\Documents\Visual Studio 2010\Projects\Advantech eStore\trunk\eStore_3C\eStore.BusinessModules\Service References\UPSWebService\RateWS.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_UPSWebService_RateService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="C:\Users\Public\Documents\Projects\Advantech eStore\Shipping\Fedex Developer Kit\WSDL\RateService_v8\RateService_v8.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\FedExWebService\</RelPath>
+      <UpdateFromURL>C:\Users\Public\Documents\Projects\Advantech eStore\Shipping\Fedex Developer Kit\WSDL\RateService_v8\RateService_v8.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_FedExWebService_RateService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.20.1.102/USAdvOdrTrk/USAdvOrdTrk.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\USAdvOrderTrkWebService\</RelPath>
+      <UpdateFromURL>http://172.20.1.102/USAdvOdrTrk/USAdvOrdTrk.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_USAdvOrderTrkWebService_USAdvOrdTrk</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://ecoverage:8089/ws4emkt.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SiebelWS4EMKT\</RelPath>
+      <UpdateFromURL>http://ecoverage:8089/ws4emkt.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_SiebelWS4EMKT_WS4EMKT</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://member.advantech.com/membershipwebservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SSO.Advantech\</RelPath>
+      <UpdateFromURL>http://member.advantech.com/membershipwebservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_eStore_SSO_Advantech_MembershipWebservice</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://my.advantech.com/services/CreateSAPCustomerDAL.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MyAdvantechSAPCustomer\</RelPath>
+      <UpdateFromURL>http://my.advantech.com/services/CreateSAPCustomerDAL.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_MyAdvantechSAPCustomer_CreateSAPCustomerDAL</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://my.advantech.com/services/MAMigration.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MyAdvantechSAPCustomerNew\</RelPath>
+      <UpdateFromURL>http://my.advantech.com/services/MAMigration.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_MyAdvantechSAPCustomerNew_MAMigration</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://my.advantech.com/services/eBizAEU_WS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MyAdvantechOrderTrkWebService\</RelPath>
+      <UpdateFromURL>http://my.advantech.com/services/eBizAEU_WS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_MyAdvantechOrderTrkWebService_eBizAEU_WS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://my.advantech.com/Services/CreateSAPSoForeStore.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\iAbleClub.MyAdvantech\</RelPath>
+      <UpdateFromURL>http://my.advantech.com/Services/CreateSAPSoForeStore.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_iAbleClub_MyAdvantech_CreateSAPSoForeStore</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://server1.advantech.com/orderwebservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SAPOrderWebService\</RelPath>
+      <UpdateFromURL>http://server1.advantech.com/orderwebservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_SAPOrderWebService_OrderWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://unica.advantech.com.tw/Services/ExtApi.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\tw.com.advantech.unica\</RelPath>
+      <UpdateFromURL>http://unica.advantech.com.tw/Services/ExtApi.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_tw_com_advantech_unica_ExtApi</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://unica.advantech.com.tw/Services/IntApi.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\UnicaServiceInt\</RelPath>
+      <UpdateFromURL>http://unica.advantech.com.tw/Services/IntApi.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eStore_BusinessModules_UnicaInitService_IntApi</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

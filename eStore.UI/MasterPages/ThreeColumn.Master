@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ThreeColumn.master.cs"
+    Inherits="eStore.UI.MasterPages.ThreeColumn" %>
+
+<%@ Register Src="../Modules/Header.ascx" TagName="Header" TagPrefix="eStore" %>
+<%@ Register Src="../Modules/Footer.ascx" TagName="Footer" TagPrefix="eStore" %>
+<%@ Register Src="../Modules/liveperson.ascx" TagName="liveperson" TagPrefix="eStore" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <base href="<%= BaseUrl %>" />
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="eStoreMainForm" runat="server">
+    <asp:ScriptManager ID="eStoreScriptManager" runat="server">
+        <Services>
+            <asp:ServiceReference Path="/eStoreScripts.asmx" />
+        </Services>
+    </asp:ScriptManager>
+    <div class="master-wrapper-page">
+        <div class="master-wrapper-content">
+            <eStore:Header ID="eStoreHeader" runat="server" />
+            <div class="master-wrapper-leftside-3">
+                <eStore:liveperson ID="liveperson1" runat="server" />
+                <asp:PlaceHolder ID="phLeftSide" runat="server"></asp:PlaceHolder>
+            </div>
+            <div class="master-wrapper-center-3">
+                <div class="master-wrapper-cph-3">
+                    <asp:ContentPlaceHolder ID="eStoreMainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="master-wrapper-rightside-3">
+                <asp:PlaceHolder ID="phRightSide" runat="server"></asp:PlaceHolder>
+                <asp:ContentPlaceHolder ID="eStoreRightContent" runat="server">
+                    </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <eStore:Footer ID="eStoreFooter" runat="server" />
+    </div>
+
+    
+<script type="text/javascript"> 
+//<![CDATA[
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); 
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+var firstTracker = _gat._getTracker("GoogleAnalyticsGlobal");firstTracker._initData();firstTracker._trackPageview();
+var secondTracker = _gat._getTracker("GoogleAnalytics for store");secondTracker._initData();secondTracker._trackPageview();
+//]]>
+</script>
+
+    </form>
+</body>
+</html>

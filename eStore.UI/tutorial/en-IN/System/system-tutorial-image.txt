@@ -1,0 +1,9 @@
+﻿<div class="tutorial-product tutorial-pop">
+    <span class="arrowLeft"></span><span class="close"></span>
+    <div class="title">
+        <p>
+            Fast zoom in for more details</p>
+    </div>
+    <div class="img">
+        <img src="/tutorial/en-US/System/tutorial-system-1.jpg" /></div>
+</div>

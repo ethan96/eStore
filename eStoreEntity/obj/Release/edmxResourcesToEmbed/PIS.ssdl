@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PISModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="PISModelStoreContainer">
+    <EntitySet Name="PAPS" EntityType="PISModel.Store.PAPS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PRODUCT" EntityType="PISModel.Store.PRODUCT" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SAP_PRODUCT" EntityType="PISModel.Store.SAP_PRODUCT" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SAP_PRODUCT_STATUS" EntityType="PISModel.Store.SAP_PRODUCT_STATUS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="V_Spec_V2" EntityType="PISModel.Store.V_Spec_V2" store:Type="Views" store:Schema="dbo" store:Name="V_Spec_V2">
+      <DefiningQuery>SELECT 
+      [V_Spec_V2].[ItemType] AS [ItemType], 
+      [V_Spec_V2].[ProductNo] AS [ProductNo], 
+      [V_Spec_V2].[AttrCatID] AS [AttrCatID], 
+      [V_Spec_V2].[AttrCatName] AS [AttrCatName], 
+      [V_Spec_V2].[AttrID] AS [AttrID], 
+      [V_Spec_V2].[AttrName] AS [AttrName], 
+      [V_Spec_V2].[AttrValueID] AS [AttrValueID], 
+      [V_Spec_V2].[AttrValueName] AS [AttrValueName], 
+      [V_Spec_V2].[DataSheet_Sequence] AS [DataSheet_Sequence], 
+      [V_Spec_V2].[Is_Filter] AS [Is_Filter], 
+      [V_Spec_V2].[SpecSetID] AS [SpecSetID]
+      FROM [dbo].[V_Spec_V2] AS [V_Spec_V2]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <EntityType Name="PAPS">
+    <Key>
+      <PropertyRef Name="SN" />
+    </Key>
+    <Property Name="SN" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Board_Form_Factor" Type="nvarchar" MaxLength="50" />
+    <Property Name="Board_CPU" Type="nvarchar" MaxLength="50" />
+    <Property Name="Board_Model_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Monitor_Part_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cable_Type" Type="nvarchar" MaxLength="10" />
+    <Property Name="Cable_Part_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cable_Bit" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="PRODUCT">
+    <Key>
+      <PropertyRef Name="PART_NO" />
+    </Key>
+    <Property Name="PRODUCT_ID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PART_NO" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="PRODUCT_DESC" Type="nvarchar(max)" />
+    <Property Name="PRODUCT_DESC2" Type="nvarchar(max)" />
+    <Property Name="STATUS" Type="nvarchar" MaxLength="50" />
+    <Property Name="LAST_UPDATED" Type="datetime" />
+    <Property Name="LAST_UPDATED_BY" Type="nvarchar" MaxLength="50" />
+    <Property Name="CREATED" Type="datetime" />
+    <Property Name="CREATED_BY" Type="nvarchar" MaxLength="50" />
+    <Property Name="TUMBNAIL_IMAGE_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="IMAGE_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ONLINE_PUBLISH" Type="nvarchar" MaxLength="100" />
+    <Property Name="EXTENTED_DESC" Type="nvarchar" MaxLength="255" />
+    <Property Name="NEW_PRODUCT_DATE" Type="datetime" />
+    <Property Name="ship_weight" Type="float" />
+    <Property Name="net_weight" Type="float" />
+    <Property Name="DimensionW" Type="int" />
+    <Property Name="DimensionH" Type="int" />
+    <Property Name="DimensionL" Type="int" />
+  </EntityType>
+  <EntityType Name="SAP_PRODUCT">
+    <Key>
+      <PropertyRef Name="PART_NO" />
+    </Key>
+    <Property Name="PART_NO" Type="nvarchar" Nullable="false" MaxLength="54" />
+    <Property Name="MODEL_NO" Type="nvarchar" Nullable="false" MaxLength="54" />
+    <Property Name="MATERIAL_GROUP" Type="nvarchar" Nullable="false" MaxLength="27" />
+    <Property Name="DIVISION" Type="nvarchar" Nullable="false" MaxLength="6" />
+    <Property Name="PRODUCT_HIERARCHY" Type="nvarchar" Nullable="false" MaxLength="54" />
+    <Property Name="PRODUCT_GROUP" Type="nvarchar" Nullable="false" MaxLength="54" />
+    <Property Name="PRODUCT_DIVISION" Type="nvarchar" Nullable="false" MaxLength="54" />
+    <Property Name="PRODUCT_LINE" Type="nvarchar" Nullable="false" MaxLength="54" />
+    <Property Name="GENITEMCATGRP" Type="nvarchar" Nullable="false" MaxLength="12" />
+    <Property Name="PRODUCT_DESC" Type="nvarchar" MaxLength="120" />
+    <Property Name="ROHS_FLAG" Type="nvarchar" Nullable="false" MaxLength="12" />
+    <Property Name="STATUS" Type="nvarchar" MaxLength="50" />
+    <Property Name="EGROUP" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIVISION" Type="nvarchar" MaxLength="50" />
+    <Property Name="NET_WEIGHT" Type="float" />
+    <Property Name="GROSS_WEIGHT" Type="float" />
+    <Property Name="WEIGHT_UNIT" Type="nvarchar" MaxLength="50" />
+    <Property Name="VOLUME" Type="float" />
+    <Property Name="VOLUME_UNIT" Type="nvarchar" MaxLength="50" />
+    <Property Name="CREATE_DATE" Type="nvarchar" MaxLength="24" />
+    <Property Name="LAST_UPD_DATE" Type="nvarchar" MaxLength="24" />
+    <Property Name="PRODUCT_TYPE" Type="nvarchar" MaxLength="30" />
+    <Property Name="GIP_CODE" Type="nvarchar" MaxLength="20" />
+    <Property Name="SIZE_DIMENSIONS" Type="nvarchar" MaxLength="96" />
+    <Property Name="SOURCE_LOCATION" Type="nvarchar" MaxLength="20" />
+    <Property Name="PRODUCT_FAMILY" Type="nvarchar" MaxLength="54" />
+    <Property Name="PLM_STATUS" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="SAP_PRODUCT_STATUS">
+    <Key>
+      <PropertyRef Name="PART_NO" />
+      <PropertyRef Name="DLV_PLANT" />
+    </Key>
+    <Property Name="PART_NO" Type="nvarchar" Nullable="false" MaxLength="54" />
+    <Property Name="DLV_PLANT" Type="nvarchar" Nullable="false" MaxLength="12" />
+    <Property Name="MIN_ORDER_QTY" Type="decimal" Precision="13" Scale="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'PIS.dbo.V_Spec_V2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="V_Spec_V2">
+    <Key>
+      <PropertyRef Name="ItemType" />
+      <PropertyRef Name="ProductNo" />
+      <PropertyRef Name="AttrCatID" />
+      <PropertyRef Name="AttrID" />
+      <PropertyRef Name="AttrValueID" />
+      <PropertyRef Name="DataSheet_Sequence" />
+      <PropertyRef Name="Is_Filter" />
+      <PropertyRef Name="SpecSetID" />
+    </Key>
+    <Property Name="ItemType" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="ProductNo" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="AttrCatID" Type="int" Nullable="false" />
+    <Property Name="AttrCatName" Type="nvarchar" MaxLength="50" />
+    <Property Name="AttrID" Type="int" Nullable="false" />
+    <Property Name="AttrName" Type="nvarchar" MaxLength="50" />
+    <Property Name="AttrValueID" Type="int" Nullable="false" />
+    <Property Name="AttrValueName" Type="nvarchar" MaxLength="500" />
+    <Property Name="DataSheet_Sequence" Type="int" Nullable="false" />
+    <Property Name="Is_Filter" Type="bit" Nullable="false" />
+    <Property Name="SpecSetID" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <Function Name="GetFullCategoryHierarchy_ByFrank" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetFullCategoryHierarchyBB_ByFrank" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getPublishedModelByDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_GetBBAllPartNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_GetCertificateByModelID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="model_ID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_GetCertificateByModelIDV2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="model_ID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_GetLiteratureInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_GetLiteratureTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Product_ID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_GetLiteratureTableByLANG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="model_ID" Type="nvarchar" Mode="In" />
+    <Parameter Name="ID1" Type="nvarchar" Mode="In" />
+    <Parameter Name="ID2" Type="nvarchar" Mode="In" />
+    <Parameter Name="LANG" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_GetModelInfo_estore" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Model_ID" Type="nvarchar" Mode="In" />
+    <Parameter Name="Lang_ID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_GetProductFeature" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ModelName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Lang_ID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_GetRelatedProducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PART_NO" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spGetModelByPN_estore_NEW" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID1" Type="nvarchar" Mode="In" />
+    <Parameter Name="ID2" Type="nvarchar" Mode="In" />
+    <Parameter Name="PN" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spGetModelByPN_NoFilter_estore" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID1" Type="nvarchar" Mode="In" />
+    <Parameter Name="ID2" Type="nvarchar" Mode="In" />
+    <Parameter Name="PN" Type="nvarchar" Mode="In" />
+  </Function>
+</Schema>

@@ -1,0 +1,22 @@
+﻿<div class="tutorial-indexTab tutorial-pop">
+    <span class="arrowLeft"></span><span class="close"></span>
+    <div class="title">
+        免換頁即可快速篩選品項，立即點擊目錄瀏覽更多資訊！</div>
+    <div class="tutorial-animate" id="tutorial-animateIndexTab">
+        <ul>
+            <li>
+                <div class="img">
+                    <img src="/tutorial/en-US/HomePage/tutorial-indexTab-1.jpg" /></div>
+            </li>
+            <li>
+                <div class="img">
+                    <img src="/tutorial/en-US/HomePage/tutorial-indexTab-2.jpg" /></div>
+            </li>
+        </ul>
+        <div class="clearfix">
+        </div>
+        <div class="carousel-controlCenter">
+            <span class="pager"></span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+﻿@media (max-width: 767px) {
+    .eStore_logo {
+        height: 25px;
+    }
+
+    .eStore_index_otherType .block {
+        width: 100% !important ;
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    .eStore_logo {
+        height: 35px;
+    }
+}
+@media (min-width: 980px)  {
+    .eStore_logo {
+        height: 55px;
+    }
+
+    .eStore_topMsg {
+        font-size: 12px;
+        position: absolute;
+        top: -52px;
+        right: 0px;
+    }
+}
+
+
+
+.eStore_footerAreaTop .logo {
+    width: 160px;
+    height: 18px;
+    display: inline-block;
+}
+
+.eStore_menuLink_linkListBG{ top:132px; }
+.eStore_menuLink_linkTxt.linkDown{
+	background:url(/images/eStore_menu_iconDown.png) right center no-repeat;
+	padding-right: 12px !important;
+}
+.eStore_index_Highlight.noBG{border:none; background-color:transparent; padding:15px 10px}
+.eStore_index_otherType .block{width: 23%; padding: 10px 1%; float: left; text-align: center;}
+.eStore_index_otherType  a{width: 100%; display: inline-block; transition: all .2s ease-in-out; }
+.eStore_index_otherType .img{width:100%; max-width: 180px; margin: 10px auto;}
+.eStore_index_otherType .block a:hover {transform: scale(1.1);}
+.eStore_footer .eStore_col_B, .eStore_footer .eStore_col_S {
+    width: 22%;
+}
+.eStore_footer .eStore_col_B ol li {
+     float: none; 
+     width: 100%; 
+}

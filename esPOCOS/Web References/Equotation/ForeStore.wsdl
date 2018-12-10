@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetQuotationMasterByQuoteID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="quoteID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQuotationMasterByQuoteIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQuotationMasterByQuoteIDResult" type="tns:Quote" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Quote">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="QuoteID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QuoteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AttentionEmail" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExpiredDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalAmount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="QuoteItems" type="tns:ArrayOfQuoteItem" />
+          <s:element minOccurs="0" maxOccurs="1" name="QuotePartners" type="tns:ArrayOfQuotePartner" />
+          <s:element minOccurs="1" maxOccurs="1" name="DoctStatus" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Tax" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Org" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfQuoteItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="QuoteItem" nillable="true" type="tns:QuoteItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="QuoteItem">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="quoteId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="line_No" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="partNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="qty" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="listPrice" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="unitPrice" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="newUnitPrice" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="category" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="classABC" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="reqDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="dueDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="inventory" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HigherLevel" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ItemType" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayUnitPrice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayQty" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayLineNo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfQuotePartner">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="QuotePartner" nillable="true" type="tns:QuotePartner" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="QuotePartner">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="QuoteID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERPID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LasteName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attention" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZipCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="District" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetQuotationTotalByQuoteID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="quoteID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQuotationTotalByQuoteIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQuotationTotalByQuoteIDResult" type="tns:Quote" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetQuotationMasterByQuoteIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQuotationMasterByQuoteID" />
+  </wsdl:message>
+  <wsdl:message name="GetQuotationMasterByQuoteIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQuotationMasterByQuoteIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetQuotationTotalByQuoteIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQuotationTotalByQuoteID" />
+  </wsdl:message>
+  <wsdl:message name="GetQuotationTotalByQuoteIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQuotationTotalByQuoteIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ForeStoreSoap">
+    <wsdl:operation name="GetQuotationMasterByQuoteID">
+      <wsdl:input message="tns:GetQuotationMasterByQuoteIDSoapIn" />
+      <wsdl:output message="tns:GetQuotationMasterByQuoteIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuotationTotalByQuoteID">
+      <wsdl:input message="tns:GetQuotationTotalByQuoteIDSoapIn" />
+      <wsdl:output message="tns:GetQuotationTotalByQuoteIDSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ForeStoreSoap" type="tns:ForeStoreSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetQuotationMasterByQuoteID">
+      <soap:operation soapAction="http://tempuri.org/GetQuotationMasterByQuoteID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuotationTotalByQuoteID">
+      <soap:operation soapAction="http://tempuri.org/GetQuotationTotalByQuoteID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ForeStoreSoap12" type="tns:ForeStoreSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetQuotationMasterByQuoteID">
+      <soap12:operation soapAction="http://tempuri.org/GetQuotationMasterByQuoteID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuotationTotalByQuoteID">
+      <soap12:operation soapAction="http://tempuri.org/GetQuotationTotalByQuoteID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ForeStore">
+    <wsdl:port name="ForeStoreSoap" binding="tns:ForeStoreSoap">
+      <soap:address location="http://eq.advantech.com:8300/Services/ForeStore.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ForeStoreSoap12" binding="tns:ForeStoreSoap12">
+      <soap12:address location="http://eq.advantech.com:8300/Services/ForeStore.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

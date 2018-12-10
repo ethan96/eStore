@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PISModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="PISModelStoreContainer">
+          <EntitySet Name="PAPS" EntityType="PISModel.Store.PAPS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PRODUCT" EntityType="PISModel.Store.PRODUCT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SAP_PRODUCT" EntityType="PISModel.Store.SAP_PRODUCT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SAP_PRODUCT_STATUS" EntityType="PISModel.Store.SAP_PRODUCT_STATUS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="V_Spec_V2" EntityType="PISModel.Store.V_Spec_V2" store:Type="Views" store:Schema="dbo" store:Name="V_Spec_V2">
+            <DefiningQuery>SELECT 
+      [V_Spec_V2].[ItemType] AS [ItemType], 
+      [V_Spec_V2].[ProductNo] AS [ProductNo], 
+      [V_Spec_V2].[AttrCatID] AS [AttrCatID], 
+      [V_Spec_V2].[AttrCatName] AS [AttrCatName], 
+      [V_Spec_V2].[AttrID] AS [AttrID], 
+      [V_Spec_V2].[AttrName] AS [AttrName], 
+      [V_Spec_V2].[AttrValueID] AS [AttrValueID], 
+      [V_Spec_V2].[AttrValueName] AS [AttrValueName], 
+      [V_Spec_V2].[DataSheet_Sequence] AS [DataSheet_Sequence], 
+      [V_Spec_V2].[Is_Filter] AS [Is_Filter], 
+      [V_Spec_V2].[SpecSetID] AS [SpecSetID]
+      FROM [dbo].[V_Spec_V2] AS [V_Spec_V2]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <EntityType Name="PAPS">
+          <Key>
+            <PropertyRef Name="SN" />
+          </Key>
+          <Property Name="SN" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Board_Form_Factor" Type="nvarchar" MaxLength="50" />
+          <Property Name="Board_CPU" Type="nvarchar" MaxLength="50" />
+          <Property Name="Board_Model_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Monitor_Part_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cable_Type" Type="nvarchar" MaxLength="10" />
+          <Property Name="Cable_Part_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cable_Bit" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="PRODUCT">
+          <Key>
+            <PropertyRef Name="PART_NO" />
+          </Key>
+          <Property Name="PRODUCT_ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PART_NO" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PRODUCT_DESC" Type="nvarchar(max)" />
+          <Property Name="PRODUCT_DESC2" Type="nvarchar(max)" />
+          <Property Name="STATUS" Type="nvarchar" MaxLength="50" />
+          <Property Name="LAST_UPDATED" Type="datetime" />
+          <Property Name="LAST_UPDATED_BY" Type="nvarchar" MaxLength="50" />
+          <Property Name="CREATED" Type="datetime" />
+          <Property Name="CREATED_BY" Type="nvarchar" MaxLength="50" />
+          <Property Name="TUMBNAIL_IMAGE_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="IMAGE_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="ONLINE_PUBLISH" Type="nvarchar" MaxLength="100" />
+          <Property Name="EXTENTED_DESC" Type="nvarchar" MaxLength="255" />
+          <Property Name="NEW_PRODUCT_DATE" Type="datetime" />
+          <Property Name="ship_weight" Type="float" />
+          <Property Name="net_weight" Type="float" />
+          <Property Name="DimensionW" Type="int" />
+          <Property Name="DimensionH" Type="int" />
+          <Property Name="DimensionL" Type="int" />
+        </EntityType>
+        <EntityType Name="SAP_PRODUCT">
+          <Key>
+            <PropertyRef Name="PART_NO" />
+          </Key>
+          <Property Name="PART_NO" Type="nvarchar" Nullable="false" MaxLength="54" />
+          <Property Name="MODEL_NO" Type="nvarchar" Nullable="false" MaxLength="54" />
+          <Property Name="MATERIAL_GROUP" Type="nvarchar" Nullable="false" MaxLength="27" />
+          <Property Name="DIVISION" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="PRODUCT_HIERARCHY" Type="nvarchar" Nullable="false" MaxLength="54" />
+          <Property Name="PRODUCT_GROUP" Type="nvarchar" Nullable="false" MaxLength="54" />
+          <Property Name="PRODUCT_DIVISION" Type="nvarchar" Nullable="false" MaxLength="54" />
+          <Property Name="PRODUCT_LINE" Type="nvarchar" Nullable="false" MaxLength="54" />
+          <Property Name="GENITEMCATGRP" Type="nvarchar" Nullable="false" MaxLength="12" />
+          <Property Name="PRODUCT_DESC" Type="nvarchar" MaxLength="120" />
+          <Property Name="ROHS_FLAG" Type="nvarchar" Nullable="false" MaxLength="12" />
+          <Property Name="STATUS" Type="nvarchar" MaxLength="50" />
+          <Property Name="EGROUP" Type="nvarchar" MaxLength="50" />
+          <Property Name="EDIVISION" Type="nvarchar" MaxLength="50" />
+          <Property Name="NET_WEIGHT" Type="float" />
+          <Property Name="GROSS_WEIGHT" Type="float" />
+          <Property Name="WEIGHT_UNIT" Type="nvarchar" MaxLength="50" />
+          <Property Name="VOLUME" Type="float" />
+          <Property Name="VOLUME_UNIT" Type="nvarchar" MaxLength="50" />
+          <Property Name="CREATE_DATE" Type="nvarchar" MaxLength="24" />
+          <Property Name="LAST_UPD_DATE" Type="nvarchar" MaxLength="24" />
+          <Property Name="PRODUCT_TYPE" Type="nvarchar" MaxLength="30" />
+          <Property Name="GIP_CODE" Type="nvarchar" MaxLength="20" />
+          <Property Name="SIZE_DIMENSIONS" Type="nvarchar" MaxLength="96" />
+          <Property Name="SOURCE_LOCATION" Type="nvarchar" MaxLength="20" />
+          <Property Name="PRODUCT_FAMILY" Type="nvarchar" MaxLength="54" />
+          <Property Name="PLM_STATUS" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="SAP_PRODUCT_STATUS">
+          <Key>
+            <PropertyRef Name="PART_NO" />
+            <PropertyRef Name="DLV_PLANT" />
+          </Key>
+          <Property Name="PART_NO" Type="nvarchar" Nullable="false" MaxLength="54" />
+          <Property Name="DLV_PLANT" Type="nvarchar" Nullable="false" MaxLength="12" />
+          <Property Name="MIN_ORDER_QTY" Type="decimal" Precision="13" Scale="3" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PIS.dbo.V_Spec_V2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Spec_V2">
+          <Key>
+            <PropertyRef Name="ItemType" />
+            <PropertyRef Name="ProductNo" />
+            <PropertyRef Name="AttrCatID" />
+            <PropertyRef Name="AttrID" />
+            <PropertyRef Name="AttrValueID" />
+            <PropertyRef Name="DataSheet_Sequence" />
+            <PropertyRef Name="Is_Filter" />
+            <PropertyRef Name="SpecSetID" />
+          </Key>
+          <Property Name="ItemType" Type="varchar" Nullable="false" MaxLength="5" />
+          <Property Name="ProductNo" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="AttrCatID" Type="int" Nullable="false" />
+          <Property Name="AttrCatName" Type="nvarchar" MaxLength="50" />
+          <Property Name="AttrID" Type="int" Nullable="false" />
+          <Property Name="AttrName" Type="nvarchar" MaxLength="50" />
+          <Property Name="AttrValueID" Type="int" Nullable="false" />
+          <Property Name="AttrValueName" Type="nvarchar" MaxLength="500" />
+          <Property Name="DataSheet_Sequence" Type="int" Nullable="false" />
+          <Property Name="Is_Filter" Type="bit" Nullable="false" />
+          <Property Name="SpecSetID" Type="nvarchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <Function Name="GetFullCategoryHierarchy_ByFrank" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetFullCategoryHierarchyBB_ByFrank" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="getPublishedModelByDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="StartDate" Type="datetime" Mode="In" />
+          <Parameter Name="EndDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_GetBBAllPartNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_GetCertificateByModelID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="model_ID" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_GetCertificateByModelIDV2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="model_ID" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_GetLiteratureInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_GetLiteratureTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Product_ID" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_GetLiteratureTableByLANG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="model_ID" Type="nvarchar" Mode="In" />
+          <Parameter Name="ID1" Type="nvarchar" Mode="In" />
+          <Parameter Name="ID2" Type="nvarchar" Mode="In" />
+          <Parameter Name="LANG" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_GetModelInfo_estore" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Model_ID" Type="nvarchar" Mode="In" />
+          <Parameter Name="Lang_ID" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_GetProductFeature" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ModelName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Lang_ID" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_GetRelatedProducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PART_NO" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spGetModelByPN_estore_NEW" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID1" Type="nvarchar" Mode="In" />
+          <Parameter Name="ID2" Type="nvarchar" Mode="In" />
+          <Parameter Name="PN" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spGetModelByPN_NoFilter_estore" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID1" Type="nvarchar" Mode="In" />
+          <Parameter Name="ID2" Type="nvarchar" Mode="In" />
+          <Parameter Name="PN" Type="nvarchar" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PISModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="PISEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <FunctionImport Name="sp_GetLiteratureInfo" ReturnType="Collection(PISModel.sp_GetLiteratureInfo_Result)">
+          <Parameter Name="ID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_GetLiteratureTable" ReturnType="Collection(PISModel.sp_GetLiteratureTable_Result)">
+          <Parameter Name="Product_ID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_GetModelInfo_estore" ReturnType="Collection(PISModel.sp_GetModelInfo_estore_Result)">
+            <Parameter Name="Model_ID" Mode="In" Type="String" />
+            <Parameter Name="Lang_ID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_GetRelatedProducts" ReturnType="Collection(PISModel.sp_GetRelatedProducts_Result)">
+          <Parameter Name="PART_NO" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spGetModelByPN_estore" ReturnType="Collection(PISModel.spGetModelByPN_estore_Result)">
+            <Parameter Name="ID1" Mode="In" Type="String" />
+            <Parameter Name="ID2" Mode="In" Type="String" />
+            <Parameter Name="PN" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_GetProductFeature" ReturnType="Collection(PISModel.sp_GetProductFeature_Result)">
+            <Parameter Name="ModelName" Mode="In" Type="String" />
+            <Parameter Name="Lang_ID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_GetLiteratureTableByLANG" ReturnType="Collection(PISModel.sp_GetLiteratureTableByLANG_Result)">
+            <Parameter Name="model_ID" Mode="In" Type="String" />
+            <Parameter Name="ID1" Mode="In" Type="String" />
+            <Parameter Name="ID2" Mode="In" Type="String" />
+            <Parameter Name="LANG" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getPublishedModelByDate" ReturnType="Collection(PISModel.getPublishedModelByDate_Result)">
+            <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+            <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="spGetModelByPN_estore_NEW" ReturnType="Collection(PISModel.spGetModelByPN_estore_Result)">
+            <Parameter Name="ID1" Mode="In" Type="String" />
+            <Parameter Name="ID2" Mode="In" Type="String" />
+            <Parameter Name="PN" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="SAP_PRODUCT_STATUS" EntityType="PISModel.SAP_PRODUCT_STATUS" />
+          <FunctionImport Name="sp_GetCertificateByModelID" ReturnType="Collection(PISModel.sp_GetCertificateByModelID_Result)">
+          <Parameter Name="model_ID" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="PRODUCTs" EntityType="PISModel.PRODUCT" />
+          <FunctionImport Name="GetPISFullCategory" ReturnType="Collection(PISModel.GetPISFullCategory_Result)" />
+          <EntitySet Name="PAPS" EntityType="PISModel.PAP" />
+          <EntitySet Name="V_Spec_V2" EntityType="PISModel.V_Spec_V2" />
+          <FunctionImport Name="sp_GetBBAllPartNo" ReturnType="Collection(PISModel.sp_GetBBAllPartNo_Result)" />
+          <EntitySet Name="SAP_PRODUCT" EntityType="PISModel.SAP_PRODUCT" />
+          <FunctionImport Name="GetPISFullBBCategory" ReturnType="Collection(PISModel.GetPISFullCategory_Result)" />
+        </EntityContainer>
+        <ComplexType Name="sp_GetLiteratureInfo_Result">
+          <Property Type="String" Name="SIEBEL_FILENAME" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="LIT_NAME" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="FILE_NAME" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="FILE_EXT" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LIT_DESC" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="LIT_TYPE" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="FILE_SIZE" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_GetLiteratureTable_Result">
+          <Property Type="String" Name="LITERATURE_ID" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="LIT_TYPE" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FILE_NAME" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="LIT_DESC" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="FILE_EXT" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="FILE_SIZE" Nullable="true" Precision="10" Scale="0" />
+          <Property Type="DateTime" Name="LAST_UPDATED" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="sp_GetModelInfo_estore_Result">
+          <Property Type="String" Name="CATALOG_ID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PARENT_CATEGORY_ID" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="CATEGORY_ID" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="CATEGORY_NAME" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="DISPLAY_NAME" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="CATEGORY_DESC" Nullable="false" MaxLength="2000" />
+          <Property Type="String" Name="EXTENDED_DESC" Nullable="false" MaxLength="4000" />
+          <Property Type="String" Name="PRODUCT_DESC" Nullable="true" MaxLength="2000" />
+          <Property Type="String" Name="IMAGE_ID" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="tumbnail_image_id" Nullable="true" MaxLength="604" />
+          <Property Type="String" Name="product_id" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="BLang" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="DLang" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_GetRelatedProducts_Result">
+          <Property Type="String" Name="part_no" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="ACCPN" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="PRODUCT_DESC" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="relation_type" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="spGetModelByPN_estore_Result">
+          <Property Type="String" Name="DISPLAY_NAME" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="PART_NO" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="CATEGORY_ID" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_GetProductFeature_Result">
+          <Property Type="String" Name="model_name" Nullable="false" MaxLength="255" />
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="Model_id" Nullable="true" MaxLength="50" />
+          <Property Type="Int64" Name="FEATURE_SEQ" Nullable="false" />
+          <Property Type="String" Name="FEATURE_DESC" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="LANG_ID" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ORG_ID" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="LAST_UPDATED" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Last_updateby" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_GetLiteratureTableByLANG_Result">
+          <Property Type="String" Name="LITERATURE_ID" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="LIT_TYPE" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FILE_NAME" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="LIT_DESC" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="FILE_EXT" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="FILE_SIZE" Nullable="true" Precision="10" Scale="0" />
+          <Property Type="DateTime" Name="LAST_UPDATED" Nullable="true" Precision="23" />
+          <Property Type="String" Name="LANG" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="getPublishedModelByDate_Result">
+          <Property Type="String" Name="modelname" Nullable="false" MaxLength="100" />
+          <Property Type="DateTime" Name="publisheddate" Nullable="false" Precision="23" />
+        </ComplexType>
+        <EntityType Name="SAP_PRODUCT_STATUS">
+          <Key>
+            <PropertyRef Name="PART_NO" />
+            <PropertyRef Name="DLV_PLANT" />
+          </Key>
+          <Property Type="String" Name="PART_NO" Nullable="false" MaxLength="54" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DLV_PLANT" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="MIN_ORDER_QTY" Precision="13" Scale="3" />
+        </EntityType>
+        <ComplexType Name="sp_GetCertificateByModelID_Result">
+          <Property Type="String" Name="MODEL_NAME" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="MODEL_ID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="certpicpath" Nullable="true" MaxLength="146" />
+          <Property Type="String" Name="certname" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <EntityType Name="PRODUCT">
+          <Key>
+            <PropertyRef Name="PART_NO" />
+          </Key>
+          <Property Type="String" Name="PRODUCT_ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PART_NO" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PRODUCT_DESC" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PRODUCT_DESC2" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="STATUS" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LAST_UPDATED" />
+          <Property Type="String" Name="LAST_UPDATED_BY" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CREATED" />
+          <Property Type="String" Name="CREATED_BY" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TUMBNAIL_IMAGE_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IMAGE_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ONLINE_PUBLISH" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EXTENTED_DESC" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NEW_PRODUCT_DATE" />
+          <Property Type="Double" Name="ship_weight" />
+          <Property Type="Double" Name="net_weight" />
+          <Property Type="Int32" Name="DimensionW" />
+          <Property Type="Int32" Name="DimensionH" />
+          <Property Type="Int32" Name="DimensionL" />
+        </EntityType>
+        <ComplexType Name="GetPISFullCategory_Result">
+          <Property Type="Int32" Name="ItemLevel" Nullable="true" />
+          <Property Type="String" Name="DISPLAY_NAME" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="Sub_Count" Nullable="true" />
+          <Property Type="String" Name="EXTENDED_DESC" Nullable="true" />
+          <Property Type="String" Name="category_id" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PARENT_CATEGORY_ID" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="RowOrder" Nullable="true" MaxLength="200" />
+        </ComplexType>
+        <EntityType Name="PAP">
+          <Key>
+            <PropertyRef Name="SN" />
+          </Key>
+          <Property Type="Int32" Name="SN" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="Board_Form_Factor" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Board_CPU" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Board_Model_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Monitor_Part_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Cable_Type" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Cable_Part_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Cable_Bit" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="V_Spec_V2">
+          <Key>
+            <PropertyRef Name="ItemType" />
+            <PropertyRef Name="ProductNo" />
+            <PropertyRef Name="AttrCatID" />
+            <PropertyRef Name="AttrID" />
+            <PropertyRef Name="AttrValueID" />
+            <PropertyRef Name="DataSheet_Sequence" />
+            <PropertyRef Name="Is_Filter" />
+            <PropertyRef Name="SpecSetID" />
+          </Key>
+          <Property Type="String" Name="ItemType" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProductNo" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="AttrCatID" Nullable="false" />
+          <Property Type="String" Name="AttrCatName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="AttrID" Nullable="false" />
+          <Property Type="String" Name="AttrName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="AttrValueID" Nullable="false" />
+          <Property Type="String" Name="AttrValueName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DataSheet_Sequence" Nullable="false" />
+          <Property Type="Boolean" Name="Is_Filter" Nullable="false" />
+          <Property Type="String" Name="SpecSetID" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <ComplexType Name="sp_GetBBAllPartNo_Result">
+          <Property Type="String" Name="part_no" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <EntityType Name="SAP_PRODUCT">
+          <Key>
+            <PropertyRef Name="PART_NO" />
+          </Key>
+          <Property Type="String" Name="PART_NO" Nullable="false" MaxLength="54" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MODEL_NO" Nullable="false" MaxLength="54" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MATERIAL_GROUP" Nullable="false" MaxLength="27" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIVISION" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PRODUCT_HIERARCHY" Nullable="false" MaxLength="54" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PRODUCT_GROUP" Nullable="false" MaxLength="54" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PRODUCT_DIVISION" Nullable="false" MaxLength="54" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PRODUCT_LINE" Nullable="false" MaxLength="54" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GENITEMCATGRP" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PRODUCT_DESC" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ROHS_FLAG" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="STATUS" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EGROUP" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EDIVISION" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="NET_WEIGHT" />
+          <Property Type="Double" Name="GROSS_WEIGHT" />
+          <Property Type="String" Name="WEIGHT_UNIT" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="VOLUME" />
+          <Property Type="String" Name="VOLUME_UNIT" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CREATE_DATE" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAST_UPD_DATE" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PRODUCT_TYPE" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GIP_CODE" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SIZE_DIMENSIONS" MaxLength="96" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SOURCE_LOCATION" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PRODUCT_FAMILY" MaxLength="54" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PLM_STATUS" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PISModelStoreContainer" CdmEntityContainer="PISEntities">
+          <FunctionImportMapping FunctionImportName="sp_GetLiteratureInfo" FunctionName="PISModel.Store.sp_GetLiteratureInfo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PISModel.sp_GetLiteratureInfo_Result">
+                <ScalarProperty Name="SIEBEL_FILENAME" ColumnName="SIEBEL_FILENAME" />
+                <ScalarProperty Name="LIT_NAME" ColumnName="LIT_NAME" />
+                <ScalarProperty Name="FILE_NAME" ColumnName="FILE_NAME" />
+                <ScalarProperty Name="FILE_EXT" ColumnName="FILE_EXT" />
+                <ScalarProperty Name="LIT_DESC" ColumnName="LIT_DESC" />
+                <ScalarProperty Name="LIT_TYPE" ColumnName="LIT_TYPE" />
+                <ScalarProperty Name="FILE_SIZE" ColumnName="FILE_SIZE" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetLiteratureTable" FunctionName="PISModel.Store.sp_GetLiteratureTable">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PISModel.sp_GetLiteratureTable_Result">
+                <ScalarProperty Name="LITERATURE_ID" ColumnName="LITERATURE_ID" />
+                <ScalarProperty Name="LIT_TYPE" ColumnName="LIT_TYPE" />
+                <ScalarProperty Name="FILE_NAME" ColumnName="FILE_NAME" />
+                <ScalarProperty Name="LIT_DESC" ColumnName="LIT_DESC" />
+                <ScalarProperty Name="FILE_EXT" ColumnName="FILE_EXT" />
+                <ScalarProperty Name="FILE_SIZE" ColumnName="FILE_SIZE" />
+                <ScalarProperty Name="LAST_UPDATED" ColumnName="LAST_UPDATED" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetModelInfo_estore" FunctionName="PISModel.Store.sp_GetModelInfo_estore">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PISModel.sp_GetModelInfo_estore_Result">
+                <ScalarProperty Name="CATALOG_ID" ColumnName="CATALOG_ID" />
+                <ScalarProperty Name="PARENT_CATEGORY_ID" ColumnName="PARENT_CATEGORY_ID" />
+                <ScalarProperty Name="CATEGORY_ID" ColumnName="CATEGORY_ID" />
+                <ScalarProperty Name="CATEGORY_NAME" ColumnName="CATEGORY_NAME" />
+                <ScalarProperty Name="DISPLAY_NAME" ColumnName="DISPLAY_NAME" />
+                <ScalarProperty Name="CATEGORY_DESC" ColumnName="CATEGORY_DESC" />
+                <ScalarProperty Name="EXTENDED_DESC" ColumnName="EXTENDED_DESC" />
+                <ScalarProperty Name="PRODUCT_DESC" ColumnName="PRODUCT_DESC" />
+                <ScalarProperty Name="IMAGE_ID" ColumnName="IMAGE_ID" />
+                <ScalarProperty Name="tumbnail_image_id" ColumnName="tumbnail_image_id" />
+                <ScalarProperty Name="product_id" ColumnName="product_id" />
+                <ScalarProperty Name="BLang" ColumnName="BLang" />
+                <ScalarProperty Name="DLang" ColumnName="DLang" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetRelatedProducts" FunctionName="PISModel.Store.sp_GetRelatedProducts">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PISModel.sp_GetRelatedProducts_Result">
+                <ScalarProperty Name="part_no" ColumnName="part_no" />
+                <ScalarProperty Name="ACCPN" ColumnName="ACCPN" />
+                <ScalarProperty Name="PRODUCT_DESC" ColumnName="PRODUCT_DESC" />
+                <ScalarProperty Name="relation_type" ColumnName="relation_type" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetProductFeature" FunctionName="PISModel.Store.sp_GetProductFeature">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PISModel.sp_GetProductFeature_Result">
+                <ScalarProperty Name="model_name" ColumnName="model_name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Model_id" ColumnName="Model_id" />
+                <ScalarProperty Name="FEATURE_SEQ" ColumnName="FEATURE_SEQ" />
+                <ScalarProperty Name="FEATURE_DESC" ColumnName="FEATURE_DESC" />
+                <ScalarProperty Name="LANG_ID" ColumnName="LANG_ID" />
+                <ScalarProperty Name="ORG_ID" ColumnName="ORG_ID" />
+                <ScalarProperty Name="LAST_UPDATED" ColumnName="LAST_UPDATED" />
+                <ScalarProperty Name="Last_updateby" ColumnName="Last_updateby" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetLiteratureTableByLANG" FunctionName="PISModel.Store.sp_GetLiteratureTableByLANG">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PISModel.sp_GetLiteratureTableByLANG_Result">
+                <ScalarProperty Name="LITERATURE_ID" ColumnName="LITERATURE_ID" />
+                <ScalarProperty Name="LIT_TYPE" ColumnName="LIT_TYPE" />
+                <ScalarProperty Name="FILE_NAME" ColumnName="FILE_NAME" />
+                <ScalarProperty Name="LIT_DESC" ColumnName="LIT_DESC" />
+                <ScalarProperty Name="FILE_EXT" ColumnName="FILE_EXT" />
+                <ScalarProperty Name="FILE_SIZE" ColumnName="FILE_SIZE" />
+                <ScalarProperty Name="LAST_UPDATED" ColumnName="LAST_UPDATED" />
+                <ScalarProperty Name="LANG" ColumnName="LANG" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="getPublishedModelByDate" FunctionName="PISModel.Store.getPublishedModelByDate">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PISModel.getPublishedModelByDate_Result">
+                <ScalarProperty Name="modelname" ColumnName="modelname" />
+                <ScalarProperty Name="publisheddate" ColumnName="publisheddate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spGetModelByPN_estore_NEW" FunctionName="PISModel.Store.spGetModelByPN_NoFilter_estore">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PISModel.spGetModelByPN_estore_Result">
+                <ScalarProperty Name="DISPLAY_NAME" ColumnName="DISPLAY_NAME" />
+                <ScalarProperty Name="PART_NO" ColumnName="PART_NO" />
+                <ScalarProperty Name="CATEGORY_ID" ColumnName="CATEGORY_ID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="SAP_PRODUCT_STATUS">
+            <EntityTypeMapping TypeName="PISModel.SAP_PRODUCT_STATUS">
+              <MappingFragment StoreEntitySet="SAP_PRODUCT_STATUS">
+                <ScalarProperty Name="MIN_ORDER_QTY" ColumnName="MIN_ORDER_QTY" />
+                <ScalarProperty Name="DLV_PLANT" ColumnName="DLV_PLANT" />
+                <ScalarProperty Name="PART_NO" ColumnName="PART_NO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetCertificateByModelID" FunctionName="PISModel.Store.sp_GetCertificateByModelIDV2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PISModel.sp_GetCertificateByModelID_Result">
+                <ScalarProperty Name="MODEL_NAME" ColumnName="MODEL_NAME" />
+                <ScalarProperty Name="MODEL_ID" ColumnName="MODEL_ID" />
+                <ScalarProperty Name="certpicpath" ColumnName="certpicpath" />
+                <ScalarProperty Name="certname" ColumnName="certname" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="PRODUCTs">
+            <EntityTypeMapping TypeName="PISModel.PRODUCT">
+              <MappingFragment StoreEntitySet="PRODUCT">
+                <ScalarProperty Name="DimensionL" ColumnName="DimensionL" />
+                <ScalarProperty Name="DimensionH" ColumnName="DimensionH" />
+                <ScalarProperty Name="DimensionW" ColumnName="DimensionW" />
+                <ScalarProperty Name="net_weight" ColumnName="net_weight" />
+                <ScalarProperty Name="ship_weight" ColumnName="ship_weight" />
+                <ScalarProperty Name="NEW_PRODUCT_DATE" ColumnName="NEW_PRODUCT_DATE" />
+                <ScalarProperty Name="EXTENTED_DESC" ColumnName="EXTENTED_DESC" />
+                <ScalarProperty Name="ONLINE_PUBLISH" ColumnName="ONLINE_PUBLISH" />
+                <ScalarProperty Name="IMAGE_ID" ColumnName="IMAGE_ID" />
+                <ScalarProperty Name="TUMBNAIL_IMAGE_ID" ColumnName="TUMBNAIL_IMAGE_ID" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="CREATED" ColumnName="CREATED" />
+                <ScalarProperty Name="LAST_UPDATED_BY" ColumnName="LAST_UPDATED_BY" />
+                <ScalarProperty Name="LAST_UPDATED" ColumnName="LAST_UPDATED" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="PRODUCT_DESC2" ColumnName="PRODUCT_DESC2" />
+                <ScalarProperty Name="PRODUCT_DESC" ColumnName="PRODUCT_DESC" />
+                <ScalarProperty Name="PART_NO" ColumnName="PART_NO" />
+                <ScalarProperty Name="PRODUCT_ID" ColumnName="PRODUCT_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetPISFullCategory" FunctionName="PISModel.Store.GetFullCategoryHierarchy_ByFrank">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PISModel.GetPISFullCategory_Result">
+                <ScalarProperty Name="ItemLevel" ColumnName="ItemLevel" />
+                <ScalarProperty Name="DISPLAY_NAME" ColumnName="DISPLAY_NAME" />
+                <ScalarProperty Name="Sub_Count" ColumnName="Sub_Count" />
+                <ScalarProperty Name="EXTENDED_DESC" ColumnName="EXTENDED_DESC" />
+                <ScalarProperty Name="category_id" ColumnName="category_id" />
+                <ScalarProperty Name="PARENT_CATEGORY_ID" ColumnName="PARENT_CATEGORY_ID" />
+                <ScalarProperty Name="RowOrder" ColumnName="RowOrder" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="PAPS">
+            <EntityTypeMapping TypeName="PISModel.PAP">
+              <MappingFragment StoreEntitySet="PAPS">
+                <ScalarProperty Name="Cable_Bit" ColumnName="Cable_Bit" />
+                <ScalarProperty Name="Cable_Part_No" ColumnName="Cable_Part_No" />
+                <ScalarProperty Name="Cable_Type" ColumnName="Cable_Type" />
+                <ScalarProperty Name="Monitor_Part_No" ColumnName="Monitor_Part_No" />
+                <ScalarProperty Name="Board_Model_Name" ColumnName="Board_Model_Name" />
+                <ScalarProperty Name="Board_CPU" ColumnName="Board_CPU" />
+                <ScalarProperty Name="Board_Form_Factor" ColumnName="Board_Form_Factor" />
+                <ScalarProperty Name="SN" ColumnName="SN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_Spec_V2">
+            <EntityTypeMapping TypeName="PISModel.V_Spec_V2">
+              <MappingFragment StoreEntitySet="V_Spec_V2">
+                <ScalarProperty Name="SpecSetID" ColumnName="SpecSetID" />
+                <ScalarProperty Name="Is_Filter" ColumnName="Is_Filter" />
+                <ScalarProperty Name="DataSheet_Sequence" ColumnName="DataSheet_Sequence" />
+                <ScalarProperty Name="AttrValueName" ColumnName="AttrValueName" />
+                <ScalarProperty Name="AttrValueID" ColumnName="AttrValueID" />
+                <ScalarProperty Name="AttrName" ColumnName="AttrName" />
+                <ScalarProperty Name="AttrID" ColumnName="AttrID" />
+                <ScalarProperty Name="AttrCatName" ColumnName="AttrCatName" />
+                <ScalarProperty Name="AttrCatID" ColumnName="AttrCatID" />
+                <ScalarProperty Name="ProductNo" ColumnName="ProductNo" />
+                <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetBBAllPartNo" FunctionName="PISModel.Store.sp_GetBBAllPartNo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PISModel.sp_GetBBAllPartNo_Result">
+                <ScalarProperty Name="part_no" ColumnName="part_no" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="SAP_PRODUCT">
+            <EntityTypeMapping TypeName="PISModel.SAP_PRODUCT">
+              <MappingFragment StoreEntitySet="SAP_PRODUCT">
+                <ScalarProperty Name="PLM_STATUS" ColumnName="PLM_STATUS" />
+                <ScalarProperty Name="PRODUCT_FAMILY" ColumnName="PRODUCT_FAMILY" />
+                <ScalarProperty Name="SOURCE_LOCATION" ColumnName="SOURCE_LOCATION" />
+                <ScalarProperty Name="SIZE_DIMENSIONS" ColumnName="SIZE_DIMENSIONS" />
+                <ScalarProperty Name="GIP_CODE" ColumnName="GIP_CODE" />
+                <ScalarProperty Name="PRODUCT_TYPE" ColumnName="PRODUCT_TYPE" />
+                <ScalarProperty Name="LAST_UPD_DATE" ColumnName="LAST_UPD_DATE" />
+                <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+                <ScalarProperty Name="VOLUME_UNIT" ColumnName="VOLUME_UNIT" />
+                <ScalarProperty Name="VOLUME" ColumnName="VOLUME" />
+                <ScalarProperty Name="WEIGHT_UNIT" ColumnName="WEIGHT_UNIT" />
+                <ScalarProperty Name="GROSS_WEIGHT" ColumnName="GROSS_WEIGHT" />
+                <ScalarProperty Name="NET_WEIGHT" ColumnName="NET_WEIGHT" />
+                <ScalarProperty Name="EDIVISION" ColumnName="EDIVISION" />
+                <ScalarProperty Name="EGROUP" ColumnName="EGROUP" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="ROHS_FLAG" ColumnName="ROHS_FLAG" />
+                <ScalarProperty Name="PRODUCT_DESC" ColumnName="PRODUCT_DESC" />
+                <ScalarProperty Name="GENITEMCATGRP" ColumnName="GENITEMCATGRP" />
+                <ScalarProperty Name="PRODUCT_LINE" ColumnName="PRODUCT_LINE" />
+                <ScalarProperty Name="PRODUCT_DIVISION" ColumnName="PRODUCT_DIVISION" />
+                <ScalarProperty Name="PRODUCT_GROUP" ColumnName="PRODUCT_GROUP" />
+                <ScalarProperty Name="PRODUCT_HIERARCHY" ColumnName="PRODUCT_HIERARCHY" />
+                <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+                <ScalarProperty Name="MATERIAL_GROUP" ColumnName="MATERIAL_GROUP" />
+                <ScalarProperty Name="MODEL_NO" ColumnName="MODEL_NO" />
+                <ScalarProperty Name="PART_NO" ColumnName="PART_NO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetPISFullBBCategory" FunctionName="PISModel.Store.GetFullCategoryHierarchyBB_ByFrank">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PISModel.GetPISFullCategory_Result">
+                <ScalarProperty Name="ItemLevel" ColumnName="ItemLevel" />
+                <ScalarProperty Name="DISPLAY_NAME" ColumnName="DISPLAY_NAME" />
+                <ScalarProperty Name="Sub_Count" ColumnName="Sub_Count" />
+                <ScalarProperty Name="EXTENDED_DESC" ColumnName="EXTENDED_DESC" />
+                <ScalarProperty Name="category_id" ColumnName="category_id" />
+                <ScalarProperty Name="PARENT_CATEGORY_ID" ColumnName="PARENT_CATEGORY_ID" />
+                <ScalarProperty Name="RowOrder" ColumnName="RowOrder" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="True" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <edmx:Diagram Name="Model1">
+        <edmx:EntityTypeShape EntityType="PISModel.VPISSpec" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9210009765624818" />
+        <edmx:EntityTypeShape EntityType="PISModel.SAP_PRODUCT_STATUS" Width="1.5" PointX="3.375" PointY="0.75" Height="1.5879931640624996" />
+        <edmx:EntityTypeShape EntityType="PISModel.PRODUCT" Width="1.5" PointX="0.75" PointY="3.75" Height="4.0575162760416656" />
+        <edmx:EntityTypeShape EntityType="PISModel.PAP" Width="1.5" PointX="3.375" PointY="3.75" Height="2.5430916341145835" />
+        <edmx:EntityTypeShape EntityType="PISModel.V_Spec_V2" Width="1.5" PointX="5.375" PointY="0.75" Height="2.9251310221354156" />
+        <edmx:EntityTypeShape EntityType="PISModel.SAP_PRODUCT" Width="1.5" PointX="5.375" PointY="4.75" Height="6.21091796875" />
+      </edmx:Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

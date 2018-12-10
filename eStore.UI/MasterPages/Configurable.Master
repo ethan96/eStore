@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Configurable.master.cs"
+    Inherits="eStore.UI.MasterPages.Configurable" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#" xmlns:v="urn:schemas-microsoft-com:vml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <base href="<%= BaseUrl %>" />
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="eStoreMainForm" runat="server">
+    <asp:ScriptManager ID="eStoreScriptManager" runat="server">
+        <Services>
+            <asp:ServiceReference Path="~/eStoreScripts.asmx" />
+        </Services>
+    </asp:ScriptManager>
+    <div class="master-wrapper-page">
+        <asp:ContentPlaceHolder ID="eStoreHeaderContent" runat="server"></asp:ContentPlaceHolder>
+        <div class="master-wrapper-content">
+            <div class="master-wrapper-side">
+                <asp:ContentPlaceHolder ID="eStoreConfigurableRightContent" runat="server" ></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="eStoreRightContent" runat="server" >
+                    <div id="storeSideAds">
+                    </div>
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="master-wrapper-center">
+                <div class="master-wrapper-cph">
+                    <asp:ContentPlaceHolder ID="eStoreMainContent" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <eStore:Advertisement ID="Advertisement1" runat="server" />
+            <div class="clear">
+            </div>
+            <asp:ContentPlaceHolder ID="eStoreFooterContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

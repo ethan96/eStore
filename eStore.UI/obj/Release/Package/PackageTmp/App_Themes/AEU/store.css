@@ -1,0 +1,9 @@
+﻿.footerCallme{  background-image:url(btn_call_off.gif); }
+.footerCallmehover{ background-image:url(btn_call_over.gif);}
+
+.footerLiveperson{ background-image:url(btn_online_off.gif);}
+.footerLivepersonhover{background-image:url(btn_online_over.gif);}
+.solutiontitle {
+    text-align: left;
+    display: block;
+}

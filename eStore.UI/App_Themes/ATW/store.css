@@ -1,0 +1,28 @@
+﻿body{ font-family:微軟正黑體, Microsoft JhengHei,Arial, "新細明體", sans-serif;}
+.SubCategory p {word-break:break-all;} 
+.HeaderList {width: 450px;}
+.eStoreLivePerson-LargerImage .iplanet_online_chat{
+  height:89px; 
+  padding:5px 0 0 10px; 
+  background:url(chat_bg_big.jpg) no-repeat;
+  font-weight:bold; 
+  font-size:12px;
+  line-height:16px;
+  background-repeat: no-repeat;
+  background-position  : right;
+}
+.eStoreLivePerson-SmallImage .iplanet_online_chat{
+  height:83px; 
+  padding:5px 0 0 10px; 
+  background:url(chat_bg.jpg) no-repeat;
+  font-weight:bold; 
+  font-size:12px;
+  line-height:16px;
+  background-repeat: no-repeat;
+  background-position  : right;
+}
+.HeaderList {width: 450px;}
+.iot-header .iot-topMsg { width: 550px;}
+.iot-header .ExtTitleLabel {float: left;height: 35px;overflow: hidden;width: 105px; font-weight:normal; font-style:inherit;margin-top: 30px;line-height: 15px;font-family: "Microsoft JhengHei";}
+.eStore_productBlock .eStore_productBlock_price{ padding-bottom:5px;}
+.priceOrange span, .regularprice span{ font-size:21px;}

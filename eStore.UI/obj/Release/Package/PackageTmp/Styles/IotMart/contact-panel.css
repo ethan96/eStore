@@ -1,0 +1,124 @@
+/* Created by Angie Lu 20140811 */
+
+/*----------------------------------------
+  Contact Advantech Slide Panel Basic & Reset
+----------------------------------------*/
+.slide-out-div {
+	color: #4d4d4d;
+	background: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;/*font-size: 100%;*/	
+}
+.slide-out-div a {
+	color: #004280;
+	text-decoration: none;
+	outline: none;
+	font-weight: normal;
+}
+.slide-out-div a:hover, .slide-out-div a:active, .slide-out-div a:focus {
+	color: #004280;
+	text-decoration: underline;
+}
+.slide-out-div br {
+	height: 1px;
+	font-size: 1px;
+}
+.slide-out-div .clear {
+	background: none;
+	border: 0;
+	clear: both;
+	display: block;
+	float: none;
+	font-size: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+/*----------------------------------------
+  Contact Advantech Slide Panel
+----------------------------------------*/
+.slide-out-div {
+	width: 270px;
+	height: 145px;
+	background: #fafafa;
+	border: 5px solid #b3b3b3;
+}
+.slide-out-div .handle {
+	margin-top: -5px;
+	margin-left: -5px;
+	/*	
+	transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+	
+	width: 155px;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 0 0 10px;
+	margin-top: 62px;
+	margin-left: 63px;
+	
+	background-color: #18548b;
+	color: #fff;
+	font-size: 15px;
+    font-family: inherit;
+    */
+}
+/*
+.handle:hover, .handle:active, .handle:focus {
+	text-decoration: none;
+}
+*/
+.slide-out-div .panel-left {
+	float: left;
+	width:135px;
+	padding: 20px 0px 20px 15px;
+}
+.slide-out-div .panel-left h3{
+	margin: 0;
+	font-size: 18px;
+	font-weight: normal;
+	padding: 5px 0;
+}
+.slide-out-div .panel-left h4{
+	margin: 0;
+	line-height: 5px;
+	font-size: 12px;
+	font-weight: normal;
+	padding: 0 0 12px;	
+}
+.slide-out-div .panel-left ul{
+	margin: 0;
+	padding: 0;
+}
+.slide-out-div .panel-left li{
+	list-style: none;
+	font-size: 13px;
+	line-height: 16px;
+	padding:0 0 4px 25px;
+}
+.slide-out-div .panel-left li.callback {
+	background: url(../../images/IotMart/contact-callback.gif) no-repeat;
+}
+.slide-out-div .panel-left li.livechat {
+	background: url(../../images/IotMart/contact-livechat.gif) no-repeat;
+}
+.slide-out-div .panel-left li.emailus {
+	background: url(../../images/IotMart/contact-emailus.gif) no-repeat;
+}
+.slide-out-div .panel-left li.qq {
+	background: url(../../images/IotMart/contact-qq-offical.gif) no-repeat;
+}
+.slide-out-div .panel-right{
+	float: right;
+	padding: 20px 15px;
+}
+.slide-out-div .panel-right img{
+	border: 2px solid #e5e5e5;
+}

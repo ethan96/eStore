@@ -1,0 +1,29 @@
+﻿<div class="storeInfo" style="width: 480px;">
+    <center>
+        <h1>
+          <b> Return Policy</b> </h1>
+    </center>
+      <br />
+    <h3>View Return Policy
+    </h3>
+    <p>
+        Advantech eStore sells both Advantech manufactured and non-manufactured products.
+        Individual return policy is listed on each product and system page under “Resources”.
+    </p>
+    <br />
+    <h3>Start Return Process
+    </h3>
+    <p>
+        You have read and understood the policy for the product you are returning. Start
+        the process here:
+    </p>
+    <p>
+        <center>
+            <a href="http://erma.advantech.com.tw/Pro/CustomerForm/creditform" style="text-decoration:underline; color:#4398ef;">Credit RMA </a>&nbsp;&nbsp;
+            <a href="http://erma.advantech.com.tw/Pro/CustomerForm/requestform/repair_aonline" style="text-decoration:underline; color:#4398ef;">Repair
+                RMA</a>
+        </center>
+    </p>
+      <br />
+      <br />
+</div>

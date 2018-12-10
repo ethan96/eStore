@@ -1,0 +1,395 @@
+select {
+    border: 1px solid;
+    border-color: Gray;
+    background-color: white;
+}
+h5 {
+    font-weight: bolder;
+    font-size: 12px;
+    line-height: 28px;
+}
+.icgContext { padding-top: 10px;}
+.icgleftline { border-right: 1px solid #CCC; padding-right: 4px; margin-right: 5px;}
+.ecgLeftline { width: 115px; border-right: 1px solid #CCC; padding-right: 2px;}
+.icgContext div#main{
+	width: 780px;
+	height: 140px;
+	text-align: center;
+	float: left;
+	position:relative;
+	overflow:auto;
+	display:inline-block;
+}
+.icgContext #wizard {
+	background-color: #efefef;
+    border: 1px solid #e4e4e4;
+	text-align:left;
+	width:245px;
+	vertical-align: top;
+	float: left;
+	vertical-align: top;
+	}
+.icgContext .results{
+	padding: 10px 0px 20px 10px;
+	float: right;
+	vertical-align: top;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+	}
+	
+.icgContext td.category{
+	background-color: #0099cc;
+	color:#ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 5px 5px 5px;
+	}
+	
+.icgContext table{
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		color: #000000;
+		border-spacing:0px;
+		border-collapse : collapse;
+		}
+		.icgContext table td{vertical-align:top; }
+.icgContext .configuration{
+	padding: 5px 5px 5px 5px;
+	line-height: 11px;
+	border-spacing:0px;
+	border-collapse : collapse;
+	}
+.icgContext .select {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;}
+
+.icgContext .a{
+	text-decoration: none;
+	}
+.icgContext .button{
+	background-color: #2985b8;
+	color: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	border: none;
+	border-radius: 5px;
+	padding: 5px 10px 5px 10px;
+	}
+.icgContext .button:hover{
+	background-color: #2e99d5;
+}
+.icgContext .button:active{
+	background-color: #226e99;
+	}
+.icgContext .compare {
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 2px solid #e4e4e4;
+    }
+.icgContext .compare:hover{
+	border: 2px solid #0099cc;
+}
+.icgContext h3 {
+	text-align: center;	font-weight: bold;
+	font-size: 14px;
+	line-height:28px;
+	}
+.icgContext .buttomLine
+{
+    color: #EF6000;	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+    }
+.icgContext h5 {
+	text-align: center;}
+.icgContext img {
+	margin 0 auto;
+	}
+.icgContext .datasheet{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 2px solid #e4e4e4;
+    vertical-align: middle;
+	}
+.icgContext .datasheet:hover{
+	border: 2px solid #0099cc;
+	cursor:pointer;
+}
+.icgContext .wizard td{ vertical-align: top;}
+.icgContext td.buttons{padding-left: 20px;}
+.icgContext .more {
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 2px solid #e4e4e4;
+    vertical-align: middle;
+}
+.icgContext .more:hover{
+	border: 2px solid #0099cc;
+	cursor:pointer;
+	text-decoration: none;
+}
+.icgContext .sproduct {
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 2px solid #e4e4e4;
+}
+.icgContext .sproduct:hover{
+	border: 2px solid #0099cc;
+	text-decoration: none;
+}
+.icgContext .datasheet a:hover, .icgContext .more a:hover
+{
+    color: black;
+	text-decoration: none;
+}
+.icgContext #products { margin-bottom: 10px; }
+.icgContext #productContext {float: left; width: 525px; margin-left: 10px;}
+.icgContext #productContext #productsTemp { width:420px; text-align:center; float: left;}
+.icgContext #icgTree { }
+.icgContext #ictTreeContext {
+	float: left;
+	width: 245px;
+}
+.icgContext .icg-addSubCatelay { margin-top: 5px; margin-bottom:5px; }
+.icgContext .icg-addSubCate .ckbItemLine
+{
+    padding: 3px 5px 2px 5px;
+}
+.icgContext .icgSubList
+{
+    font-weight: bold;
+}
+.icgContext .icgListCate { width: 105px; float: left; margin-left:10px;}
+.icgContext .icgListCate:after { clear:both;}
+.icgContext #wizard .icgListCate select { width:100px;}
+.icgContext .results ul { padding-left: 25px;}
+.icgContext .results h3 { padding-top: 10px; padding-bottom: 10px;}
+
+.icgContext  span {
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	}
+.icgContext  span.icgThreeList {
+	font-weight: normal;
+	padding: 10px 0px 0px 0px;
+    display: block;
+}
+.icgContext #price {
+	color: #ef6000;
+	white-space: nowrap;
+	font-size: 14px;
+	font-weight: bold;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.icgContext .description {
+	font-family: Arial, Arial, Helvetica, sans-serif;
+	Font-size: 12px;
+	color: #666666;
+	line-height: 18px;
+}
+.icgContext h3.model {
+	color: #004889;
+	font-size: 13px;
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.icgContext .displayblock
+{
+    display: block;        
+}
+.icgContext .proBottomLinelay tr td
+{
+    padding-right: 5px;    
+}
+.icgContext .willgetSelect{
+	font-size: 12px; margin:6px 0px; color:#666666;
+}
+.icgContext .doubleListSelect{
+	font-size: 12px; margin:6px 0px; color:#666666;
+}
+.icgContext .compareBoxTable {margin-top: 10px; border:0px;}
+.icgContext .regularprice span, .regularprice label {color: #EF6000;white-space: nowrap;font-size: 14px;font-weight: bold;}
+.icgContext .paddingleft10 {padding-left: 10px}
+
+.icg-addSubCatelay {
+	width: 241px;
+}
+.icg-addSubCatelay .icg-addSubCate-ECG div {
+	float: left;
+	/*width: 115px;*/
+}
+.ecg-addSubCatelayHalf
+{
+    float: left;
+    width: 114px;
+    padding: 0px 3px;
+}
+.ecg-addSubCatelayFull
+{
+    float: left;
+    width: 235px;
+}
+/**** 广告样式 ******/
+#storeSideAds ul,#storeSideAds li{
+	margin: 0px;
+	padding: 0px;
+}
+ul#sidemenu{
+	width: 169px;
+}
+ul#sidemenu, ul#submen {
+	list-style-type: none;
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 8px;
+}
+ul#submen{
+	padding: 5px 5px 5px 15px;
+	}
+ul#sidemenu{
+	border: 1px solid #e4e4e4;
+	background-color: #fbfbfb;
+	}
+ul#sidemenu>li>a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #004889;
+	line-height: 24px;
+	font-weight: bold;
+	text-decoration: none;}
+ul#submen>li>a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #9C9C9C;
+	line-height: 18px;
+	text-decoration: none;
+	}
+ul#sidemenu>li>a:hover{
+	text-decoration: underline;}
+ul#submen>li>a:hover{
+	text-decoration: underline;}
+#storeSideAds img {
+width: auto;
+margin: 3px 0px;
+}
+/**** end 广告样式 ******/
+
+	
+div.emptymessage>p {
+	font-family: Arial, Helvetica, sans-serif;
+	padding-bottom: 15px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #EF6000;
+}
+div.emptymessage {
+text-align: center;
+	padding-top: 25px;
+	}
+div#homeBannerheader div#slide-holder div#slide-controls p#slide-nav{ display:none!important;}
+.SliderBanner781 #homeBannerheader #slide-holder{ z-index:1!important;}
+
+.fancybox-lock {
+    overflow: visible !important;
+}
+
+.unoCate {
+    width: 105px;
+    float: left;
+}
+
+.unoFont {
+    font-size: 12px;
+    color: black;
+    font-weight: 500;
+    -webkit-transform: scale(0.91);
+}
+
+.appendix_table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.appendix_tr {
+    display: block, table-row;
+    height: 25%;
+    border-bottom: 2px solid #ebebeb;
+}
+
+.appendix_td {
+    display: table-cell;
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.appendix_tr .appendix_td:first-child {
+    background-color: #f3f3f3;
+}
+
+.appendix_title {
+    padding-top: 30px;
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.fancybox-nav {
+    position: absolute;
+    top: 0;
+    width: 5%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    background: transparent url('images/blank.gif');
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    z-index: 8040;
+}
+
+.fancybox-nav span {
+    position: absolute;
+	top: 50%;
+	width: 40px;
+	height: 34px;
+	margin-top: -18px;
+	cursor: pointer;
+	z-index: 8040;
+  visibility: visible !important;
+}
+
+.fancybox-prev span {
+	left: -15px;
+	background-position: 0 -36px;
+}
+
+.fancybox-next span {
+	right: -15px;
+	background-position: 0 -72px;
+}
+.fancybox-skin {
+    position: relative;
+    background: #fff !important;
+    color: #636161;
+    text-shadow: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+@-moz-document url-prefix() {
+    .callforprice{color:#f39800;font-size: 12px; text-align:left; line-height: 22px;}
+}

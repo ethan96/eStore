@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PISModelStoreContainer" CdmEntityContainer="PISEntities">
+    <FunctionImportMapping FunctionImportName="sp_GetLiteratureInfo" FunctionName="PISModel.Store.sp_GetLiteratureInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PISModel.sp_GetLiteratureInfo_Result">
+          <ScalarProperty Name="SIEBEL_FILENAME" ColumnName="SIEBEL_FILENAME" />
+          <ScalarProperty Name="LIT_NAME" ColumnName="LIT_NAME" />
+          <ScalarProperty Name="FILE_NAME" ColumnName="FILE_NAME" />
+          <ScalarProperty Name="FILE_EXT" ColumnName="FILE_EXT" />
+          <ScalarProperty Name="LIT_DESC" ColumnName="LIT_DESC" />
+          <ScalarProperty Name="LIT_TYPE" ColumnName="LIT_TYPE" />
+          <ScalarProperty Name="FILE_SIZE" ColumnName="FILE_SIZE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetLiteratureTable" FunctionName="PISModel.Store.sp_GetLiteratureTable">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PISModel.sp_GetLiteratureTable_Result">
+          <ScalarProperty Name="LITERATURE_ID" ColumnName="LITERATURE_ID" />
+          <ScalarProperty Name="LIT_TYPE" ColumnName="LIT_TYPE" />
+          <ScalarProperty Name="FILE_NAME" ColumnName="FILE_NAME" />
+          <ScalarProperty Name="LIT_DESC" ColumnName="LIT_DESC" />
+          <ScalarProperty Name="FILE_EXT" ColumnName="FILE_EXT" />
+          <ScalarProperty Name="FILE_SIZE" ColumnName="FILE_SIZE" />
+          <ScalarProperty Name="LAST_UPDATED" ColumnName="LAST_UPDATED" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetModelInfo_estore" FunctionName="PISModel.Store.sp_GetModelInfo_estore">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PISModel.sp_GetModelInfo_estore_Result">
+          <ScalarProperty Name="CATALOG_ID" ColumnName="CATALOG_ID" />
+          <ScalarProperty Name="PARENT_CATEGORY_ID" ColumnName="PARENT_CATEGORY_ID" />
+          <ScalarProperty Name="CATEGORY_ID" ColumnName="CATEGORY_ID" />
+          <ScalarProperty Name="CATEGORY_NAME" ColumnName="CATEGORY_NAME" />
+          <ScalarProperty Name="DISPLAY_NAME" ColumnName="DISPLAY_NAME" />
+          <ScalarProperty Name="CATEGORY_DESC" ColumnName="CATEGORY_DESC" />
+          <ScalarProperty Name="EXTENDED_DESC" ColumnName="EXTENDED_DESC" />
+          <ScalarProperty Name="PRODUCT_DESC" ColumnName="PRODUCT_DESC" />
+          <ScalarProperty Name="IMAGE_ID" ColumnName="IMAGE_ID" />
+          <ScalarProperty Name="tumbnail_image_id" ColumnName="tumbnail_image_id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="BLang" ColumnName="BLang" />
+          <ScalarProperty Name="DLang" ColumnName="DLang" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetRelatedProducts" FunctionName="PISModel.Store.sp_GetRelatedProducts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PISModel.sp_GetRelatedProducts_Result">
+          <ScalarProperty Name="part_no" ColumnName="part_no" />
+          <ScalarProperty Name="ACCPN" ColumnName="ACCPN" />
+          <ScalarProperty Name="PRODUCT_DESC" ColumnName="PRODUCT_DESC" />
+          <ScalarProperty Name="relation_type" ColumnName="relation_type" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetProductFeature" FunctionName="PISModel.Store.sp_GetProductFeature">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PISModel.sp_GetProductFeature_Result">
+          <ScalarProperty Name="model_name" ColumnName="model_name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Model_id" ColumnName="Model_id" />
+          <ScalarProperty Name="FEATURE_SEQ" ColumnName="FEATURE_SEQ" />
+          <ScalarProperty Name="FEATURE_DESC" ColumnName="FEATURE_DESC" />
+          <ScalarProperty Name="LANG_ID" ColumnName="LANG_ID" />
+          <ScalarProperty Name="ORG_ID" ColumnName="ORG_ID" />
+          <ScalarProperty Name="LAST_UPDATED" ColumnName="LAST_UPDATED" />
+          <ScalarProperty Name="Last_updateby" ColumnName="Last_updateby" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetLiteratureTableByLANG" FunctionName="PISModel.Store.sp_GetLiteratureTableByLANG">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PISModel.sp_GetLiteratureTableByLANG_Result">
+          <ScalarProperty Name="LITERATURE_ID" ColumnName="LITERATURE_ID" />
+          <ScalarProperty Name="LIT_TYPE" ColumnName="LIT_TYPE" />
+          <ScalarProperty Name="FILE_NAME" ColumnName="FILE_NAME" />
+          <ScalarProperty Name="LIT_DESC" ColumnName="LIT_DESC" />
+          <ScalarProperty Name="FILE_EXT" ColumnName="FILE_EXT" />
+          <ScalarProperty Name="FILE_SIZE" ColumnName="FILE_SIZE" />
+          <ScalarProperty Name="LAST_UPDATED" ColumnName="LAST_UPDATED" />
+          <ScalarProperty Name="LANG" ColumnName="LANG" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getPublishedModelByDate" FunctionName="PISModel.Store.getPublishedModelByDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PISModel.getPublishedModelByDate_Result">
+          <ScalarProperty Name="modelname" ColumnName="modelname" />
+          <ScalarProperty Name="publisheddate" ColumnName="publisheddate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetModelByPN_estore_NEW" FunctionName="PISModel.Store.spGetModelByPN_NoFilter_estore">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PISModel.spGetModelByPN_estore_Result">
+          <ScalarProperty Name="DISPLAY_NAME" ColumnName="DISPLAY_NAME" />
+          <ScalarProperty Name="PART_NO" ColumnName="PART_NO" />
+          <ScalarProperty Name="CATEGORY_ID" ColumnName="CATEGORY_ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="SAP_PRODUCT_STATUS">
+      <EntityTypeMapping TypeName="PISModel.SAP_PRODUCT_STATUS">
+        <MappingFragment StoreEntitySet="SAP_PRODUCT_STATUS">
+          <ScalarProperty Name="MIN_ORDER_QTY" ColumnName="MIN_ORDER_QTY" />
+          <ScalarProperty Name="DLV_PLANT" ColumnName="DLV_PLANT" />
+          <ScalarProperty Name="PART_NO" ColumnName="PART_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetCertificateByModelID" FunctionName="PISModel.Store.sp_GetCertificateByModelIDV2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PISModel.sp_GetCertificateByModelID_Result">
+          <ScalarProperty Name="MODEL_NAME" ColumnName="MODEL_NAME" />
+          <ScalarProperty Name="MODEL_ID" ColumnName="MODEL_ID" />
+          <ScalarProperty Name="certpicpath" ColumnName="certpicpath" />
+          <ScalarProperty Name="certname" ColumnName="certname" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="PRODUCTs">
+      <EntityTypeMapping TypeName="PISModel.PRODUCT">
+        <MappingFragment StoreEntitySet="PRODUCT">
+          <ScalarProperty Name="DimensionL" ColumnName="DimensionL" />
+          <ScalarProperty Name="DimensionH" ColumnName="DimensionH" />
+          <ScalarProperty Name="DimensionW" ColumnName="DimensionW" />
+          <ScalarProperty Name="net_weight" ColumnName="net_weight" />
+          <ScalarProperty Name="ship_weight" ColumnName="ship_weight" />
+          <ScalarProperty Name="NEW_PRODUCT_DATE" ColumnName="NEW_PRODUCT_DATE" />
+          <ScalarProperty Name="EXTENTED_DESC" ColumnName="EXTENTED_DESC" />
+          <ScalarProperty Name="ONLINE_PUBLISH" ColumnName="ONLINE_PUBLISH" />
+          <ScalarProperty Name="IMAGE_ID" ColumnName="IMAGE_ID" />
+          <ScalarProperty Name="TUMBNAIL_IMAGE_ID" ColumnName="TUMBNAIL_IMAGE_ID" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="CREATED" ColumnName="CREATED" />
+          <ScalarProperty Name="LAST_UPDATED_BY" ColumnName="LAST_UPDATED_BY" />
+          <ScalarProperty Name="LAST_UPDATED" ColumnName="LAST_UPDATED" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="PRODUCT_DESC2" ColumnName="PRODUCT_DESC2" />
+          <ScalarProperty Name="PRODUCT_DESC" ColumnName="PRODUCT_DESC" />
+          <ScalarProperty Name="PART_NO" ColumnName="PART_NO" />
+          <ScalarProperty Name="PRODUCT_ID" ColumnName="PRODUCT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetPISFullCategory" FunctionName="PISModel.Store.GetFullCategoryHierarchy_ByFrank">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PISModel.GetPISFullCategory_Result">
+          <ScalarProperty Name="ItemLevel" ColumnName="ItemLevel" />
+          <ScalarProperty Name="DISPLAY_NAME" ColumnName="DISPLAY_NAME" />
+          <ScalarProperty Name="Sub_Count" ColumnName="Sub_Count" />
+          <ScalarProperty Name="EXTENDED_DESC" ColumnName="EXTENDED_DESC" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="PARENT_CATEGORY_ID" ColumnName="PARENT_CATEGORY_ID" />
+          <ScalarProperty Name="RowOrder" ColumnName="RowOrder" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="PAPS">
+      <EntityTypeMapping TypeName="PISModel.PAP">
+        <MappingFragment StoreEntitySet="PAPS">
+          <ScalarProperty Name="Cable_Bit" ColumnName="Cable_Bit" />
+          <ScalarProperty Name="Cable_Part_No" ColumnName="Cable_Part_No" />
+          <ScalarProperty Name="Cable_Type" ColumnName="Cable_Type" />
+          <ScalarProperty Name="Monitor_Part_No" ColumnName="Monitor_Part_No" />
+          <ScalarProperty Name="Board_Model_Name" ColumnName="Board_Model_Name" />
+          <ScalarProperty Name="Board_CPU" ColumnName="Board_CPU" />
+          <ScalarProperty Name="Board_Form_Factor" ColumnName="Board_Form_Factor" />
+          <ScalarProperty Name="SN" ColumnName="SN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_Spec_V2">
+      <EntityTypeMapping TypeName="PISModel.V_Spec_V2">
+        <MappingFragment StoreEntitySet="V_Spec_V2">
+          <ScalarProperty Name="SpecSetID" ColumnName="SpecSetID" />
+          <ScalarProperty Name="Is_Filter" ColumnName="Is_Filter" />
+          <ScalarProperty Name="DataSheet_Sequence" ColumnName="DataSheet_Sequence" />
+          <ScalarProperty Name="AttrValueName" ColumnName="AttrValueName" />
+          <ScalarProperty Name="AttrValueID" ColumnName="AttrValueID" />
+          <ScalarProperty Name="AttrName" ColumnName="AttrName" />
+          <ScalarProperty Name="AttrID" ColumnName="AttrID" />
+          <ScalarProperty Name="AttrCatName" ColumnName="AttrCatName" />
+          <ScalarProperty Name="AttrCatID" ColumnName="AttrCatID" />
+          <ScalarProperty Name="ProductNo" ColumnName="ProductNo" />
+          <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetBBAllPartNo" FunctionName="PISModel.Store.sp_GetBBAllPartNo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PISModel.sp_GetBBAllPartNo_Result">
+          <ScalarProperty Name="part_no" ColumnName="part_no" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="SAP_PRODUCT">
+      <EntityTypeMapping TypeName="PISModel.SAP_PRODUCT">
+        <MappingFragment StoreEntitySet="SAP_PRODUCT">
+          <ScalarProperty Name="PLM_STATUS" ColumnName="PLM_STATUS" />
+          <ScalarProperty Name="PRODUCT_FAMILY" ColumnName="PRODUCT_FAMILY" />
+          <ScalarProperty Name="SOURCE_LOCATION" ColumnName="SOURCE_LOCATION" />
+          <ScalarProperty Name="SIZE_DIMENSIONS" ColumnName="SIZE_DIMENSIONS" />
+          <ScalarProperty Name="GIP_CODE" ColumnName="GIP_CODE" />
+          <ScalarProperty Name="PRODUCT_TYPE" ColumnName="PRODUCT_TYPE" />
+          <ScalarProperty Name="LAST_UPD_DATE" ColumnName="LAST_UPD_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="VOLUME_UNIT" ColumnName="VOLUME_UNIT" />
+          <ScalarProperty Name="VOLUME" ColumnName="VOLUME" />
+          <ScalarProperty Name="WEIGHT_UNIT" ColumnName="WEIGHT_UNIT" />
+          <ScalarProperty Name="GROSS_WEIGHT" ColumnName="GROSS_WEIGHT" />
+          <ScalarProperty Name="NET_WEIGHT" ColumnName="NET_WEIGHT" />
+          <ScalarProperty Name="EDIVISION" ColumnName="EDIVISION" />
+          <ScalarProperty Name="EGROUP" ColumnName="EGROUP" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="ROHS_FLAG" ColumnName="ROHS_FLAG" />
+          <ScalarProperty Name="PRODUCT_DESC" ColumnName="PRODUCT_DESC" />
+          <ScalarProperty Name="GENITEMCATGRP" ColumnName="GENITEMCATGRP" />
+          <ScalarProperty Name="PRODUCT_LINE" ColumnName="PRODUCT_LINE" />
+          <ScalarProperty Name="PRODUCT_DIVISION" ColumnName="PRODUCT_DIVISION" />
+          <ScalarProperty Name="PRODUCT_GROUP" ColumnName="PRODUCT_GROUP" />
+          <ScalarProperty Name="PRODUCT_HIERARCHY" ColumnName="PRODUCT_HIERARCHY" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="MATERIAL_GROUP" ColumnName="MATERIAL_GROUP" />
+          <ScalarProperty Name="MODEL_NO" ColumnName="MODEL_NO" />
+          <ScalarProperty Name="PART_NO" ColumnName="PART_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetPISFullBBCategory" FunctionName="PISModel.Store.GetFullCategoryHierarchyBB_ByFrank">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PISModel.GetPISFullCategory_Result">
+          <ScalarProperty Name="ItemLevel" ColumnName="ItemLevel" />
+          <ScalarProperty Name="DISPLAY_NAME" ColumnName="DISPLAY_NAME" />
+          <ScalarProperty Name="Sub_Count" ColumnName="Sub_Count" />
+          <ScalarProperty Name="EXTENDED_DESC" ColumnName="EXTENDED_DESC" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="PARENT_CATEGORY_ID" ColumnName="PARENT_CATEGORY_ID" />
+          <ScalarProperty Name="RowOrder" ColumnName="RowOrder" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

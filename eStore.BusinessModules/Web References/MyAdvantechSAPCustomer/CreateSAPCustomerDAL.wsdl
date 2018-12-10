@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://tempuri.org/CreateSAPCustomer.xsd" />
+      <s:import schemaLocation="http://my.advantech.com/services/CreateSAPCustomerDAL.asmx?schema=CreateSAPCustomer" namespace="http://tempuri.org/CreateSAPCustomer.xsd" />
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetApplicationNO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AplicationID" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetApplicationNOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetApplicationNOResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetApplicationByApplicationIDForeStore">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApplicationDt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/CreateSAPCustomer.xsd" name="namespace" />
+                <s:attribute fixed="GetAllDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="errorStr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetApplicationByApplicationIDForeStoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetApplicationByApplicationIDForeStoreResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApplicationDt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/CreateSAPCustomer.xsd" name="namespace" />
+                <s:attribute fixed="GetAllDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="errorStr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateSAPCustomerForeStore">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dT">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/CreateSAPCustomer.xsd" name="namespace" />
+                <s:attribute fixed="GetAllDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsCreate" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorStr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateSAPCustomerForeStoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateSAPCustomerForeStoreResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorStr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetApplicationDT">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetApplicationDTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetApplicationDTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/CreateSAPCustomer.xsd" name="namespace" />
+                <s:attribute fixed="GetAllDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="GetAllDataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+          <s:attribute fixed="http://tempuri.org/CreateSAPCustomer.xsd" name="namespace" />
+          <s:attribute fixed="GetAllDataTable" name="tableTypeName" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationNOSoapIn">
+    <wsdl:part name="parameters" element="tns:GetApplicationNO" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationNOSoapOut">
+    <wsdl:part name="parameters" element="tns:GetApplicationNOResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationByApplicationIDForeStoreSoapIn">
+    <wsdl:part name="parameters" element="tns:GetApplicationByApplicationIDForeStore" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationByApplicationIDForeStoreSoapOut">
+    <wsdl:part name="parameters" element="tns:GetApplicationByApplicationIDForeStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateSAPCustomerForeStoreSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateSAPCustomerForeStore" />
+  </wsdl:message>
+  <wsdl:message name="CreateSAPCustomerForeStoreSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateSAPCustomerForeStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationDTSoapIn">
+    <wsdl:part name="parameters" element="tns:GetApplicationDT" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationDTSoapOut">
+    <wsdl:part name="parameters" element="tns:GetApplicationDTResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpGetIn" />
+  <wsdl:message name="HelloWorldHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationDTHttpGetIn" />
+  <wsdl:message name="GetApplicationDTHttpGetOut">
+    <wsdl:part name="Body" element="tns:GetAllDataTable" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpPostIn" />
+  <wsdl:message name="HelloWorldHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationDTHttpPostIn" />
+  <wsdl:message name="GetApplicationDTHttpPostOut">
+    <wsdl:part name="Body" element="tns:GetAllDataTable" />
+  </wsdl:message>
+  <wsdl:portType name="CreateSAPCustomerDALSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationNO">
+      <wsdl:input message="tns:GetApplicationNOSoapIn" />
+      <wsdl:output message="tns:GetApplicationNOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationByApplicationIDForeStore">
+      <wsdl:input message="tns:GetApplicationByApplicationIDForeStoreSoapIn" />
+      <wsdl:output message="tns:GetApplicationByApplicationIDForeStoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSAPCustomerForeStore">
+      <wsdl:input message="tns:CreateSAPCustomerForeStoreSoapIn" />
+      <wsdl:output message="tns:CreateSAPCustomerForeStoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationDT">
+      <wsdl:input message="tns:GetApplicationDTSoapIn" />
+      <wsdl:output message="tns:GetApplicationDTSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CreateSAPCustomerDALHttpGet">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpGetIn" />
+      <wsdl:output message="tns:HelloWorldHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationDT">
+      <wsdl:input message="tns:GetApplicationDTHttpGetIn" />
+      <wsdl:output message="tns:GetApplicationDTHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CreateSAPCustomerDALHttpPost">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpPostIn" />
+      <wsdl:output message="tns:HelloWorldHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationDT">
+      <wsdl:input message="tns:GetApplicationDTHttpPostIn" />
+      <wsdl:output message="tns:GetApplicationDTHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CreateSAPCustomerDALSoap" type="tns:CreateSAPCustomerDALSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationNO">
+      <soap:operation soapAction="http://tempuri.org/GetApplicationNO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationByApplicationIDForeStore">
+      <soap:operation soapAction="http://tempuri.org/GetApplicationByApplicationIDForeStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSAPCustomerForeStore">
+      <soap:operation soapAction="http://tempuri.org/CreateSAPCustomerForeStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationDT">
+      <soap:operation soapAction="http://tempuri.org/GetApplicationDT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CreateSAPCustomerDALSoap12" type="tns:CreateSAPCustomerDALSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationNO">
+      <soap12:operation soapAction="http://tempuri.org/GetApplicationNO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationByApplicationIDForeStore">
+      <soap12:operation soapAction="http://tempuri.org/GetApplicationByApplicationIDForeStore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSAPCustomerForeStore">
+      <soap12:operation soapAction="http://tempuri.org/CreateSAPCustomerForeStore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationDT">
+      <soap12:operation soapAction="http://tempuri.org/GetApplicationDT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CreateSAPCustomerDALHttpGet" type="tns:CreateSAPCustomerDALHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationDT">
+      <http:operation location="/GetApplicationDT" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CreateSAPCustomerDALHttpPost" type="tns:CreateSAPCustomerDALHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationDT">
+      <http:operation location="/GetApplicationDT" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CreateSAPCustomerDAL">
+    <wsdl:port name="CreateSAPCustomerDALSoap" binding="tns:CreateSAPCustomerDALSoap">
+      <soap:address location="http://my.advantech.com/services/CreateSAPCustomerDAL.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CreateSAPCustomerDALSoap12" binding="tns:CreateSAPCustomerDALSoap12">
+      <soap12:address location="http://my.advantech.com/services/CreateSAPCustomerDAL.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CreateSAPCustomerDALHttpGet" binding="tns:CreateSAPCustomerDALHttpGet">
+      <http:address location="http://my.advantech.com/services/CreateSAPCustomerDAL.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CreateSAPCustomerDALHttpPost" binding="tns:CreateSAPCustomerDALHttpPost">
+      <http:address location="http://my.advantech.com/services/CreateSAPCustomerDAL.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

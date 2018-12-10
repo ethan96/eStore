@@ -1,0 +1,85 @@
+﻿.centerpopupadvertisement
+{
+  position:absolute;
+  top:300px !important;
+  left:275px;
+  /*z-index:99;*/
+}
+/*.adclose
+{
+
+width: 40px;
+height: 31px;
+top: -32px;
+left: 260px;
+position: relative;
+cursor:pointer;
+display:block;background-image:none;
+}*/
+.adcookiecheckbox
+{
+padding-top:6px;
+background-color:Black;
+width: 21px;
+height: 25px;
+top: -1px;
+left: 165px;
+position: relative;
+display:block;
+
+}
+.kradvertimentlink
+{
+width: 300px;
+height: 319px;
+top: 0px;
+left: 0px;
+position: relative;
+display:block;
+}
+.kradvertiment
+{
+background: url(201207_New_customer_popup.jpg) no-repeat bottom #666666;
+display:block;
+width:300px;
+height:350px;
+}
+.eStoreLivePerson-LargerImage .iplanet_online_chat{
+  height:89px; 
+  padding:5px 0 0 10px; 
+  background:url(chat_bg_big.jpg) no-repeat;
+  font-weight:bold; 
+  font-size:12px;
+  line-height:16px;
+  background-repeat: no-repeat;
+  background-position  : right;
+}
+.eStoreLivePerson-SmallImage .iplanet_online_chat{
+  height:83px; 
+  padding:5px 0 0 10px; 
+  background:url(chat_bg.jpg) no-repeat;
+  font-weight:bold; 
+  font-size:12px;
+  line-height:16px;
+  background-repeat: no-repeat;
+  background-position  : right;
+}
+.footerkeywords ul li:last-child{ clear:both; float:left;}
+.kradvertimentctos{display: block;height: 225px;}
+.kradvertimentlinkctos{height: 224px;top: 0px;left: 0px;position: relative;display: block;}
+.adcookiecheckboxctos{padding-top: 3px;background-color: black;width: 21px;height: 11px;top: -20px;left: 105px;position: relative;display: block;}
+
+.iot-header .iot-topMsg { width: 550px;}
+.iot-header .ExtTitleLabel {float: left;height: 35px;overflow: hidden;width: 105px; font-weight:normal; font-style:inherit;margin-top: 30px;line-height: 15px;font-family: "Microsoft JhengHei";}
+.slide-out-div .panel-left h4 {margin: 0;line-height: 15px;margin-top: -5px;padding-bottom: 8px;padding-top: 0px;padding-right: 0px;padding-left: 0px;}
+
+.eStore_productBlock .callforprice,.eStore_index_Solution .eStore_productBlock_price span.callforprice{ font-size:20px;}
+.eStore_index_Highlight .eStore_index_HighlightContainer .eStore_productBlock .eStore_productBlock_txt,.eStore_index_Highlight .eStore_index_HighlightContainer .eStore_productBlock .priceOrange { text-align:center;}
+#tab-PRODUCTS .eStore_index_proContent .eStore_productBlock .eStore_productBlock_txt,#tab-PRODUCTS .eStore_index_proContent .eStore_productBlock .priceOrange { text-align:center;}
+#tab-SYSTEMS .eStore_index_proContent .eStore_productBlock .eStore_productBlock_txt,#tab-SYSTEMS .eStore_index_proContent .eStore_productBlock .priceOrange { text-align:center;}
+.eStore_index_proContent h5{ text-align:left;}
+#moreCategoryInfor .eStore_other_BGBlock .eStore_productBlock_txt,#moreCategoryInfor .eStore_product_moreInfo .eStore_productBlock_price .priceOrange { text-align:center;}
+.eStore_chatBox_txt{border:5px solid #b3b3b3; background:#fafafa; width:240px;height:155px;padding:10px 15px;}
+.eStore_chatBox .chatboxController{ bottom:-25px;}
+
+.eStore_listPoint_font{font-size: 11px; -webkit-transform: scale(0.91);}

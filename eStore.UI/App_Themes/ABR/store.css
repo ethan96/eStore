@@ -1,0 +1,35 @@
+﻿.banndebg
+{
+background: url(adv-fhbd.jpg) no-repeat top #36F;
+width: 356px;
+height: 254px;
+position: relative;
+}
+.adclose
+{
+background: url(btn-close.jpg) no-repeat top #333333;
+width: 20px;
+height: 20px;
+top: 5px;
+right: 5px;
+position: absolute;
+cursor: pointer;
+}
+.adclose:hover, .adclose:active
+{
+background: url(btn-close.jpg) no-repeat bottom #666666;
+}
+.fblike
+{
+top: 150px;
+left: 186px;
+position: absolute;
+}
+#configurationsystem .module a
+{ text-decoration:underline;}
+.eStoreLivePerson-LargerImage .iplanet_online_chat{height:95px;}
+.eStoreLivePerson-SmallImage .iplanet_online_chat{  height:85px;}
+.footerCallme{background-image:url(btn_call_off.gif);}
+.footerCallmehover{background-image:url(btn_call_over.gif);}
+#configItemsTitle span 
+{width:300px;}

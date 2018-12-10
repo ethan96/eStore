@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="eStore.POCOS.Payment">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <NestedTypes>
+      <Enum Name="eStore.POCOS.Payment.PaymentStatus" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\PaymentX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AEEhEIEWCACEAoUXACAUBYDAiBwAAlEAKgAQAAKAbAI=</HashCode>
+      <FileName>Payment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.StorePayment">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAIAAAAAgAgATAAAQAAAAABAAAAAABAAAAUAAAEA=</HashCode>
+      <FileName>StorePayment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.PaymentAccount">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAACAAAACAAAAAQIAAAgAAAAACBAAAAAAAAQ=</HashCode>
+      <FileName>PaymentAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.Menu">
+    <Position X="6" Y="0.5" Width="2" />
+    <NestedTypes>
+      <Enum Name="eStore.POCOS.Menu.DataSource" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\MenuX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="eStore.POCOS.Menu.RenderStyle" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\MenuX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>FAAYCoAWSACAFgASEEAQBQEAADBABAICBAggAUUGAAE=</HashCode>
+      <FileName>Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.Advertisement">
+    <Position X="8.25" Y="0.5" Width="1.75" />
+    <NestedTypes>
+      <Enum Name="eStore.POCOS.Advertisement.AdvertisementType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\AdvertisementX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ghABAIBAQRjABGQiAEAAASAgABEgAAEgAAQgAEAAwgA=</HashCode>
+      <FileName>Advertisement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

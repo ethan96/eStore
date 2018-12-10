@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="eStore.POCOS.Product">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <NestedTypes>
+      <Enum Name="eStore.POCOS.Product.PRODUCTSTATUS" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\ProductX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="eStore.POCOS.Product.PUBLISHSTATUS" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\ProductX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="eStore.POCOS.Product.PRODUCTTYPE" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\ProductX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="eStore.POCOS.Product.PRICINGMODE" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\ProductX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gBSAkJAEQQ+EggACBIOkgwcAyMAEANHCFEEwMUWgoFA=</HashCode>
+      <FileName>Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.Product_Ctos">
+    <Position X="2.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AASgAIYEIAAAagACgIWQEQBAQAiCxaACIoAAZwAgAAA=</HashCode>
+      <FileName>Product_Ctos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.ProductResource">
+    <Position X="5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAAIgAYAAAAAgSEICAQAAAABAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductResource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.ProductCategory">
+    <Position X="7" Y="0.5" Width="2" />
+    <NestedTypes>
+      <Enum Name="eStore.POCOS.ProductCategory.Category_Type" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\ProductCategoryX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="eStore.POCOS.ProductCategory.RenderStyle" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\ProductCategoryX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AIiAIoCHSUSgAiBCNGcCEUQBQShCIIMDQwmwAUEogAE=</HashCode>
+      <FileName>ProductCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.ProductCategroyMapping">
+    <Position X="2.75" Y="11.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAIAGQAAAAAASAgCAAAAAARAAAAAAAIAAAAAAEIA=</HashCode>
+      <FileName>ProductCategroyMapping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.Part">
+    <Position X="9.25" Y="0.5" Width="2" />
+    <NestedTypes>
+      <Enum Name="eStore.POCOS.Part.PackingTag" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\PartX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="eStore.POCOS.Part.PARTSTATUS" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\PartX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="eStore.POCOS.Part.PRICESOURCE" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PocoX\PartX.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BCoCAOIy0QIYAA1ygIyhxvHKyXHUTEIggkEQFEMwgAE=</HashCode>
+      <FileName>Part.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eStore.POCOS.CTOSComparision">
+    <Position X="5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAIACQACAAAQSAAAAAQAAABAAAACAAIAAAAEAAIA=</HashCode>
+      <FileName>CTOSComparision.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
